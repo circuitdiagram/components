@@ -4,3 +4,5 @@ dir -recurse Icons/**/*.svg | Foreach { ./convert -density 192 $_.FullName "PNGI
 
 # Build XML to CDCOM
 ./cdcompile.exe -i Components -o Build --icondir PNGIcons -r -v -c -s
+
+exit $LASTEXITCODE
