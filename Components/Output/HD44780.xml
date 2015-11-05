@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="HD44780" />
+    <meta name="minsize" value="220" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="1322B493-8FDF-4F5D-A8F0-40CE23B1EEDE" />
+
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection start="_Start-40y" end="_Middle-100x-40y" edge="Start" />
+      <connection start="_Start-30y" end="_Middle-100x-30y" edge="Start" />
+      <connection start="_Start-20y" end="_Middle-100x-20y" edge="Start" />
+      <connection start="_Start-10y" end="_Middle-100x-10y" edge="Start" />
+      <connection start="_Start" end="_Middle-100x" edge="Start" />
+      <connection start="_Start+10y" end="_Middle-100x+10y" edge="Start" />
+      <connection start="_Start+20y" end="_Middle-100x+20y" edge="Start" />
+      <connection start="_Start+30y" end="_Middle-100x+30y" edge="Start" />
+      <connection start="_Middle-70x+50y" end="_Middle-70x+60y" edge="End" />
+      <connection start="_Middle-40x+50y" end="_Middle-40x+60y" edge="End" />
+      <connection start="_Middle-10x+50y" end="_Middle-10x+60y" edge="End" />
+      <connection start="_Middle+20x+50y" end="_Middle+20x+60y" edge="End" />
+      <connection start="_Middle+50x+50y" end="_Middle+50x+60y" edge="End" />
+      <connection start="_Middle+80x+50y" end="_Middle+80x+60y" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <group>
+      <!-- Container -->
+      <rect x="_Middle-100" y="_Middle-60" width="205" height="110" />
+
+      <!-- IO Wires -->
+      <line start="_Start-40y" end="_Middle-100x-40y" />
+      <line start="_Start-30y" end="_Middle-100x-30y" />
+      <line start="_Start-20y" end="_Middle-100x-20y" />
+      <line start="_Start-10y" end="_Middle-100x-10y" />
+      <line start="_Start" end="_Middle-100x" />
+      <line start="_Start+10y" end="_Middle-100x+10y" />
+      <line start="_Start+20y" end="_Middle-100x+20y" />
+      <line start="_Start+30y" end="_Middle-100x+30y" />
+      <line start="_Middle-70x+50y" end="_Middle-70x+60y" />
+      <line start="_Middle-40x+50y" end="_Middle-40x+60y" />
+      <line start="_Middle-10x+50y" end="_Middle-10x+60y" />
+      <line start="_Middle+20x+50y" end="_Middle+20x+60y" />
+      <line start="_Middle+50x+50y" end="_Middle+50x+60y" />
+      <line start="_Middle+80x+50y" end="_Middle+80x+60y" />
+
+      <!-- IO Labels -->
+      <text value="D0" x="_Middle-96" y="_Middle-40" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>0</sub>
+        </value>
+      </text>
+      <text value="D1" x="_Middle-96" y="_Middle-30" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>1</sub>
+        </value>
+      </text>
+      <text value="D2" x="_Middle-96" y="_Middle-20" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>2</sub>
+        </value>
+      </text>
+      <text value="D3" x="_Middle-96" y="_Middle-10" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>3</sub>
+        </value>
+      </text>
+      <text value="D4" x="_Middle-96" y="_Middle" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>4</sub>
+        </value>
+      </text>
+      <text value="D5" x="_Middle-96" y="_Middle+10" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>5</sub>
+        </value>
+      </text>
+      <text value="D6" x="_Middle-96" y="_Middle+20" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>6</sub>
+        </value>
+      </text>
+      <text value="D7" x="_Middle-96" y="_Middle+30" align="CentreLeft">
+        <value>
+          <span>D</span>
+          <sub>7</sub>
+        </value>
+      </text>
+      <text value="EN" x="_Middle-70" y="_Middle+46" align="BottomCentre" />
+      <text value="R/W" x="_Middle-40" y="_Middle+46" align="BottomCentre" />
+      <text value="RS" x="_Middle-10" y="_Middle+46" align="BottomCentre" />
+      <text value="GND" x="_Middle+20" y="_Middle+46" align="BottomCentre" />
+      <text value="V0" x="_Middle+50" y="_Middle+46" align="BottomCentre" />
+      <text value="VDD" x="_Middle+80" y="_Middle+46" align="BottomCentre" />
+      
+      <!-- Other -->
+      <ellipse centre="_Middle-93x-53y" radiusx="3" radiusy="3" />
+      <ellipse centre="_Middle-93x+43y" radiusx="3" radiusy="3" />
+      <ellipse centre="_Middle+98x-53y" radiusx="3" radiusy="3" />
+      <ellipse centre="_Middle+98x+43y" radiusx="3" radiusy="3" />
+      <rect x="_Middle-70x" y="_Middle-40x" width="160" height="50" />
+      <text value="HD44780" x="_Middle+10" y="_Middle+20" align="CentreCentre" size="large" />
+    </group>
+  </render>
+</component>

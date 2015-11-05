@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Arduino Nano" />
+    <meta name="minsize" value="40" />
+    <meta name="canflip" value="false" />
+    <meta name="author" value="spork" />
+    <meta name="guid" value="f5edad9f-0be1-441c-92aa-0fe8d70078b1" />
+  </declaration>
+
+<connections>
+   <group conditions="_Horizontal">
+      <connection name="0" start="_Start-20x-20y"    end="_Middle-45x-20y"  edge="Start"/>
+      <connection name="1" start="_Start-20x-10y"    end="_Middle-45x-10y"   edge="Start"/>
+      <connection name="2" start="_Start-20x"        end="_Middle-45x"       edge="Start"/>
+      <connection name="3" start="_Start-20x+10y"    end="_Middle-45x+10y"   edge="Start"/>
+      <connection name="4" start="_Start-20x+20y"    end="_Middle-45x+20y"   edge="Start"/>
+      <connection name="5" start="_Start-20x+30y"    end="_Middle-45x+30y"   edge="Start"/>
+      <connection name="6" start="_Start-20x+40y"    end="_Middle-45x+40y"   edge="Start"/>
+      <connection name="7" start="_Start-20x+50y"    end="_Middle-45x+50y"   edge="Start"/>
+      <connection name="8" start="_Start-20x+60y"    end="_Middle-45x+60y"   edge="Start"/>
+      <connection name="9" start="_Start-20x+70y"    end="_Middle-45x+70y"   edge="Start"/>
+      <connection name="10" start="_Start-20x+80y"   end="_Middle-45x+80y"   edge="Start"/>
+      <connection name="11" start="_Start-20x+90y"   end="_Middle-45x+90y"   edge="Start"/>
+      <connection name="12" start="_Start-20x+100y"  end="_Middle-45x+100y"  edge="Start"/>
+      <connection name="13" start="_Start-20x+110y"  end="_Middle-45x+110y"  edge="Start"/>
+      <connection name="14" start="_Start-20x+120y"  end="_Middle-45x+120y"  edge="Start"/>
+
+      <connection name="29" start="_Middle+45x-20y"  end="_End+20x-20y"  edge="End"/>
+      <connection name="28" start="_Middle+45x-10y"  end="_End+20x-10y"  edge="End"/>
+      <connection name="27" start="_Middle+45x"      end="_End+20x"      edge="End"/>
+      <connection name="26" start="_Middle+45x+10y"  end="_End+20x+10y"  edge="End"/>
+      <connection name="25" start="_Middle+45x+20y"  end="_End+20x+20y"  edge="End"/>
+      <connection name="24" start="_Middle+45x+30y"  end="_End+20x+30y"  edge="End"/>
+      <connection name="23" start="_Middle+45x+40y"  end="_End+20x+40y"  edge="End"/>
+      <connection name="22" start="_Middle+45x+50y"  end="_End+20x+50y"  edge="End"/>
+      <connection name="21" start="_Middle+45x+60y"  end="_End+20x+60y"  edge="End"/>
+      <connection name="20" start="_Middle+45x+70y"  end="_End+20x+70y"  edge="End"/>
+      <connection name="19" start="_Middle+45x+80y"  end="_End+20x+80y"  edge="End"/>
+      <connection name="18" start="_Middle+45x+90y"  end="_End+20x+90y"  edge="End"/>
+      <connection name="17" start="_Middle+45x+100y" end="_End+20x+100y" edge="End"/>
+      <connection name="16" start="_Middle+45x+110y" end="_End+20x+110y" edge="End"/>
+      <connection name="15" start="_Middle+45x+120y" end="_End+20x+120y" edge="End"/>
+   </group>
+</connections>
+
+<render>
+   <group conditions="_Horizontal">
+      <rect x="_Middle-45x" y="_Middle-30y" width="90" height="160" />
+      <rect x="_Middle-12x" y="_Middle-30y" width="24" height="28" />
+      <rect x="_Middle-15x" y="_Middle+98y" width="30" height="28" />
+
+      <ellipse centre="_Middle-10x+120y" radiusx="2" radiusy="2" />
+      <ellipse centre="_Middle+120y"     radiusx="2" radiusy="2" />
+      <ellipse centre="_Middle+10x+120y" radiusx="2" radiusy="2" />
+
+      <ellipse centre="_Middle-10x+105y" radiusx="2" radiusy="2" />
+      <ellipse centre="_Middle+105y"     radiusx="2" radiusy="2" />
+      <ellipse centre="_Middle+10x+105y" radiusx="2" radiusy="2" />
+
+      <line start="_Start-20x-20y"  end="_Middle-45x-20y" />
+      <line start="_Start-20x-10y"  end="_Middle-45x-10y" />
+      <line start="_Start-20x"      end="_Middle-45x" />
+      <line start="_Start-20x+10y"  end="_Middle-45x+10y" />
+      <line start="_Start-20x+20y"  end="_Middle-45x+20y" />
+      <line start="_Start-20x+30y"  end="_Middle-45x+30y" />
+      <line start="_Start-20x+40y"  end="_Middle-45x+40y" />
+      <line start="_Start-20x+50y"  end="_Middle-45x+50y" />
+      <line start="_Start-20x+60y"  end="_Middle-45x+60y" />
+      <line start="_Start-20x+70y"  end="_Middle-45x+70y" />
+      <line start="_Start-20x+80y"  end="_Middle-45x+80y" />
+      <line start="_Start-20x+90y"  end="_Middle-45x+90y" />
+      <line start="_Start-20x+100y" end="_Middle-45x+100y" />
+      <line start="_Start-20x+110y" end="_Middle-45x+110y" />
+      <line start="_Start-20x+120y" end="_Middle-45x+120y" />
+
+      <line start="_Middle+45x-20y"  end="_End+20x-20y" />
+      <line start="_Middle+45x-10y"  end="_End+20x-10y" />
+      <line start="_Middle+45x"      end="_End+20x" />
+      <line start="_Middle+45x+10y"  end="_End+20x+10y" />
+      <line start="_Middle+45x+20y"  end="_End+20x+20y" />
+      <line start="_Middle+45x+30y"  end="_End+20x+30y" />
+      <line start="_Middle+45x+40y"  end="_End+20x+40y" />
+      <line start="_Middle+45x+50y"  end="_End+20x+50y" />
+      <line start="_Middle+45x+60y"  end="_End+20x+60y" />
+      <line start="_Middle+45x+70y"  end="_End+20x+70y" />
+      <line start="_Middle+45x+80y"  end="_End+20x+80y" />
+      <line start="_Middle+45x+90y"  end="_End+20x+90y" />
+      <line start="_Middle+45x+100y" end="_End+20x+100y" />
+      <line start="_Middle+45x+110y" end="_End+20x+110y" />
+      <line start="_Middle+45x+120y" end="_End+20x+120y" />
+
+      <text value="Arduino" x="_Middle" y="_Middle+20"  align="CentreCentre" />
+      <text value="Nano"    x="_Middle" y="_Middle+30"  align="CentreCentre" />
+
+      <text value="D13" x="_Middle-42" y="_Middle-20"  align="CentreLeft" />
+      <text value="3V3" x="_Middle-42" y="_Middle-10"  align="CentreLeft" />
+      <text value="REF" x="_Middle-42" y="_Middle"     align="CentreLeft" />
+      <text value="A0 " x="_Middle-42" y="_Middle+10"  align="CentreLeft" />
+      <text value="A1 " x="_Middle-42" y="_Middle+20"  align="CentreLeft" />
+      <text value="A2 " x="_Middle-42" y="_Middle+30"  align="CentreLeft" />
+      <text value="A3 " x="_Middle-42" y="_Middle+40"  align="CentreLeft" />
+      <text value="A4 " x="_Middle-42" y="_Middle+50"  align="CentreLeft" />
+      <text value="A5 " x="_Middle-42" y="_Middle+60"  align="CentreLeft" />
+      <text value="A6 " x="_Middle-42" y="_Middle+70"  align="CentreLeft" />
+      <text value="A7 " x="_Middle-42" y="_Middle+80"  align="CentreLeft" />
+      <text value="5V " x="_Middle-42" y="_Middle+90"  align="CentreLeft" />
+      <text value="RST" x="_Middle-42" y="_Middle+100" align="CentreLeft" />
+      <text value="GND" x="_Middle-42" y="_Middle+110" align="CentreLeft" />
+      <text value="VIN" x="_Middle-42" y="_Middle+120" align="CentreLeft" />
+
+      <text value="D12" x="_Middle+42" y="_Middle-20"  align="CentreRight" />
+      <text value="D11" x="_Middle+42" y="_Middle-10"  align="CentreRight" />
+      <text value="D10" x="_Middle+42" y="_Middle"     align="CentreRight" />
+      <text value="D9"  x="_Middle+42" y="_Middle+10"  align="CentreRight" />
+      <text value="D8"  x="_Middle+42" y="_Middle+20"  align="CentreRight" />
+      <text value="D7"  x="_Middle+42" y="_Middle+30"  align="CentreRight" />
+      <text value="D6"  x="_Middle+42" y="_Middle+40"  align="CentreRight" />
+      <text value="D5"  x="_Middle+42" y="_Middle+50"  align="CentreRight" />
+      <text value="D4"  x="_Middle+42" y="_Middle+60"  align="CentreRight" />
+      <text value="D3"  x="_Middle+42" y="_Middle+70"  align="CentreRight" />
+      <text value="D2"  x="_Middle+42" y="_Middle+80"  align="CentreRight" />
+      <text value="GND" x="_Middle+42" y="_Middle+90"  align="CentreRight" />
+      <text value="RST" x="_Middle+42" y="_Middle+100" align="CentreRight" />
+      <text value="RX0" x="_Middle+42" y="_Middle+110" align="CentreRight" />
+      <text value="TX1" x="_Middle+42" y="_Middle+120" align="CentreRight" />
+
+   </group>
+</render>
+
+</component>

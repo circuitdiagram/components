@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml" version="1.0" target="1.2">
+
+  <declaration>
+    <meta name="name" value="Alternative Ground" />
+    <meta name="author" value="O Luasa" />
+    <meta name="guid" value="6d2faabd-1070-489b-a8d4-f5b839ccde5e" />
+    <meta name="minsize" value="30" />
+
+    <property name="Type" type="enum" default="Earth" serialize="type" display="Type">
+      <option>Earth</option>
+      <option>Chassis</option>
+      <option>Return</option>
+    </property>
+   
+    <configurations>
+      <configuration name="Earth" value="Type:Earth" />
+      <configuration name="Chassis Return" value="Type:Chassis" />
+      <configuration name="Common Return" value="Type:Return" />
+    </configurations>    
+  </declaration>
+
+  <connections>
+    <group conditions="_Horizontal,$Type(eq_Earth)">
+      <connection name="a" start="_Start" end="_End" edge="end" />
+    </group>
+    <group conditions="!_Horizontal,$Type(eq_Earth)">
+      <connection name="a" start="_Start" end="_End-12y" edge="start" />
+    </group>
+
+    <group conditions="_Horizontal,$Type(eq_Chassis)">
+      <connection name="a" start="_Start" end="_End" edge="end" />
+    </group>
+
+    <group conditions="!_Horizontal,$Type(eq_Chassis)">
+      <connection name="a" start="_Start" end="_End-7y" edge="start" />
+    </group>
+
+    <group conditions="_Horizontal,$Type(eq_Return)">
+      <connection name="a" start="_Start" end="_End" edge="bend" />
+    </group>
+
+    <group conditions="!_Horizontal,$Type(eq_Return)">
+      <connection name="a" start="_Start" end="_End-15y" edge="start" />
+    </group>
+
+  </connections>
+
+  <render>
+    <group conditions="_Horizontal,$Type(eq_Earth)">
+      <line start="_Start-4x+30y" end="_Start+4x+30y" />
+      <line start="_Start-8x+24y" end="_Start+8x+24y" />
+      <line start="_Start-12x+18y" end="_Start+12x+18y" />
+      <line start="_Start" end="_Start+18y" />
+      <line start="_Start" end="_End" />
+    </group>
+
+    <group conditions="!_Horizontal,$Type(eq_Earth)">
+      <line start="_End-4x" end="_End+4x" />
+      <line start="_End-8x-6y" end="_End+8x-6y" />
+      <line start="_End-12x-12y" end="_End+12x-12y" />
+      <line start="_Start" end="_End-12y" />
+    </group>
+
+
+    <group conditions="_Horizontal,$Type(eq_Chassis)">
+      <line start="_Start-10x+23y" end="_Start-18x+30y" />
+      <line start="_Start+23y" end="_Start-8x+30y" />
+      <line start="_Start+10x+23y" end="_Start+2x+30y" />
+      <line start="_Start-10x+23y" end="_Start+10x+23y" />
+      <line start="_Start" end="_Start+23y" />
+      <line start="_Start" end="_End" />
+    </group>
+
+    <group conditions="!_Horizontal,$Type(eq_Chassis)">
+      <line start="_End-18x" end="_End-10x-7y" />
+      <line start="_End-8x" end="_End-7y" />
+      <line start="_End+2x" end="_End+10x-7y" />
+      <line start="_End-10x-7y" end="_End+10x-7y" />
+      <line start="_Start" end="_End-7y" />
+    </group>
+
+    <group conditions="_Horizontal,$Type(eq_Return)">
+      <line start="_Start+30y" end="_Start-12x+15y" />
+      <line start="_Start+30y" end="_Start+12x+15y" />
+      <line start="_Start-12x+15y" end="_Start+12x+15y" />
+      <line start="_Start" end="_Start+15y" />
+      <line start="_Start" end="_End" />
+    </group>
+
+    <group conditions="!_Horizontal,$Type(eq_Return)">
+      <line start="_End" end="_End-12x-15y" />
+      <line start="_End" end="_End+12x-15y" />
+      <line start="_End-12x-15y" end="_End+12x-15y" />
+      <line start="_Start" end="_End-15y" />
+    </group>
+  </render>
+</component>
+
+

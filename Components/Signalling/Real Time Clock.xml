@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml" version="1.0">
+  <declaration>
+    <meta name="name" value="Real Time Clock" />
+    <meta name="minsize" value="110" />
+    <meta name="canflip" value="true" />
+    <meta name="author" value="Walter Carrer Neto" />
+    <meta name="additionalinformation" value="http://www.carr3r.com/" />
+    <meta name="guid" value="4d043da7-02fc-417c-a30a-87f204d79da1" />
+  </declaration>
+
+<connections>
+   <group conditions="_Horizontal">
+      <connection name="0" start="_Start-20y"   end="_Middle-55x-20y"  edge="Both"/>
+      <connection name="1" start="_Start-10y"   end="_Middle-55x-10y"  edge="Both"/>
+      <connection name="2" start="_Start"       end="_Middle-55x"      edge="Both"/>
+      <connection name="3" start="_Start+10y"   end="_Middle-55x+10y"  edge="Both"/>
+      <connection name="4" start="_Start+20y"   end="_Middle-55x+20y"  edge="Both"/>
+      <connection name="5" start="_Start+30y"   end="_Middle-55x+30y"  edge="Both"/>
+      <connection name="6" start="_Start+40y"   end="_Middle-55x+40y"  edge="Both"/>
+
+      <connection name="11"  start="_Middle+55x-10y"   end="_End-10y"    edge="Both"/>
+      <connection name="10"  start="_Middle+55x"       end="_End"        edge="Both"/>
+      <connection name="9"   start="_Middle+55x+10y"   end="_Endx+10y"   edge="Both"/>
+      <connection name="8"   start="_Middle+55x+20y"   end="_Endx+20y"   edge="Both"/>
+      <connection name="7"   start="_Middle+55x+30y"   end="_Endx+30y"   edge="Both"/>
+
+   </group>
+</connections>
+
+<render>
+   <group conditions="_Horizontal">
+      <rect x="_Middle-55x" y="_Middle-55y" width="110" height="110" />
+
+      <ellipse x="_Middle-44" y="_Middle-44" radiusx="5" radiusy="5" />
+      <ellipse x="_Middle+44" y="_Middle-44" radiusx="5" radiusy="5" />
+
+      <line start="_Start-20y"   end="_Middle-55x-20y" />
+      <line start="_Start-10y"   end="_Middle-55x-10y" />
+      <line start="_Start"       end="_Middle-55x" />
+      <line start="_Start+10y"   end="_Middle-55x+10y" />
+      <line start="_Start+20y"   end="_Middle-55x+20y" />
+      <line start="_Start+30y"   end="_Middle-55x+30y" />
+      <line start="_Start+40y"   end="_Middle-55x+40y" />
+
+      <line start="_Middle+55x-10y"  end="_End-10y" />
+      <line start="_Middle+55x"      end="_End" />
+      <line start="_Middle+55x+10y"  end="_End+10y" />
+      <line start="_Middle+55x+20y"  end="_End+20y" />
+      <line start="_Middle+55x+30y"  end="_End+30y" />
+
+      <text value="Design" x="_Middle" y="_Middle-44"  align="CentreCentre" />
+      <text value="by Waiman" x="_Middle" y="_Middle-34"  align="CentreCentre" />
+      <text value="RTC" x="_Middle" y="_Middle"  align="CentreCentre" />
+
+      <text value="BAT" x="_Middle-52" y="_Middle-20"  align="CentreLeft" />
+      <text value="GND" x="_Middle-52" y="_Middle-10"  align="CentreLeft" />
+      <text value="VCC" x="_Middle-52" y="_Middle-0"   align="CentreLeft" />
+      <text value="SDA" x="_Middle-52" y="_Middle+10"  align="CentreLeft" />
+      <text value="SCL" x="_Middle-52" y="_Middle+20"  align="CentreLeft" />
+      <text value="DS " x="_Middle-52" y="_Middle+30"  align="CentreLeft" />
+      <text value="SQ " x="_Middle-52" y="_Middle+40"  align="CentreLeft" />
+
+      <text value="GND"  x="_Middle+52" y="_Middle-10"  align="CentreRight" />
+      <text value="VCC"  x="_Middle+52" y="_Middle-0"   align="CentreRight" />
+      <text value="SDA"  x="_Middle+52" y="_Middle+10"  align="CentreRight" />
+      <text value="SCL"  x="_Middle+52" y="_Middle+20"  align="CentreRight" />
+      <text value="DS "  x="_Middle+52" y="_Middle+30"  align="CentreRight" />
+
+   </group>
+</render>
+
+</component>
