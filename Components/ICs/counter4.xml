@@ -8,6 +8,7 @@
     <meta name="guid" value="c73b2bac-cb8e-4153-8454-3dfdc30c4d7d" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="counter4" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
     <flags>
       <option>horizontalonly</option>
       <option>middlemustalign</option>

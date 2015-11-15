@@ -9,6 +9,7 @@
     <meta name="guid" value="E5F38005-4715-44A2-B746-A25D3B6C1980" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="microcontroller" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
 
     <property name="size" type="enum" default="8" serialize="sz" display="Size">
       <option>4</option>

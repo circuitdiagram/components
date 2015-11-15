@@ -8,6 +8,7 @@
     <meta name="guid" value="e6ebc838-fb6a-4078-8d03-7fed04cc6938" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="inductor" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
 
     <property name="Inductance" type="double" default="0.1" serialize="inductance" display="Inductance">
       <formatting>

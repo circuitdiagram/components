@@ -8,6 +8,7 @@
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="4eaeba15-24b6-4a28-bba5-d25e52ada278" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
 
     <property name="Type" type="enum" default="NAND" serialize="t" display="Type">
       <option>AND</option>

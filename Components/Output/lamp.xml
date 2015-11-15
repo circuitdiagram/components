@@ -8,6 +8,7 @@
     <meta name="guid" value="C0DA4646-FFAF-48F0-8A56-2E8E07148ECF" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="lamp" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
   </declaration>
   <connections>
     <group conditions="_Horizontal">

@@ -8,6 +8,7 @@
     <meta name="guid" value="d126275e-8243-42e0-ad83-a80db9764e97" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="speaker" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
   </declaration>
   <connections>
     <group conditions="_Horizontal">

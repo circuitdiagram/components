@@ -8,6 +8,7 @@
     <meta name="guid" value="B70E90E8-3A48-4E48-9630-96DAEA600695" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="heater" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
   </declaration>
   <connections>
     <group conditions="_Horizontal">
