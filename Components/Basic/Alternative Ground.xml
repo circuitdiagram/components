@@ -6,6 +6,7 @@
     <meta name="author" value="O Luasa" />
     <meta name="guid" value="6d2faabd-1070-489b-a8d4-f5b839ccde5e" />
     <meta name="minsize" value="30" />
+    <meta name="description" value="Three ground symbols: earth, chassis return and common return/voltage reference. Slightly larger than the default earth and ground symbols." />
 
     <property name="Type" type="enum" default="Earth" serialize="type" display="Type">
       <option>Earth</option>

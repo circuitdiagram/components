@@ -5,7 +5,8 @@
     <meta name="minsize" value="130" />
     <meta name="author" value="pross151" />
     <meta name="guid" value="ab56a1d0-6da8-46cb-8179-4ca92638dfb5" />
-
+    <meta name="description" value="A component representing the Raspberry Pi B, with connections for each of its GPIO pins." />
+    
     <property name="Type" type="enum" default="ModelBGPIO" serialize="t" display="Type">
         <option>ModelB</option>
         <option>ModelBGPIO</option>

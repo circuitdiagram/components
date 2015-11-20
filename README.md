@@ -30,4 +30,4 @@ Your component will only be accepted if the it satisfies the following:
   - For example, the *meter* component has two configurations: voltmeter and ammeter
   - It has a default icon at `Icons/Sensors/meter.svg` which is used for the voltmeter configuration
   - It has an additional icon at `Icons/Sensors/meter_ammeter.svg` for the ammeter configuration
-- The SVG icon must be in the same style as the existing ones - i.e. black on white only, with width and height 32
+- The SVG icon must be in the same style as the existing ones - i.e. black on transparent only, with width and height 32
