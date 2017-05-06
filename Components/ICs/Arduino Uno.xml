@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
-    <meta name="name" value="Arduino" />
+    <meta name="name" value="Arduino Uno" />
     <meta name="minsize" value="130" />
     <meta name="author" value="GB" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
