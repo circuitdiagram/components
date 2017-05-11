@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+	<declaration>
+		
+		<!-- Describe the component -->
+		<meta name="name" value="Resistor (Standardized)" />
+		<meta name="version" value="1.0" />
+		<meta name="minsize" value="50" />
+		<meta name="author" value="Finn Sinclair" />
+		<meta name="additionalinformation" value="A resistor for Circuit Diagram that doesn't have a stupid box-like appearance." />
+		<meta name="guid" value="6a17bfb5-4efb-49ee-8088-28c3ba8eb2e1" />
+
+		<!-- Define a property to hold the resistance value -->
+		<property name="Resistance" type="decimal" default="1000" serialize="resistance" display="Resistance">
+			<formatting>
+				<format conditions="$Resistance[lt]1000" value="$Resistance  \u2126" />
+				<format conditions="$Resistance[lt]1000000" value="$Resistance(div_1000_)(round_1)  k\u2126" />
+				<format value="$Resistance(div_1000000)(round_1)  M\u2126" />
+			</formatting>
+		</property>
+		
+	</declaration>
+	<connections>
+		
+		<!-- Specify where other components can be connected to -->
+		
+		<group conditions="horizontal">
+			<connection name="a" start="_Start" end="_Middle-21x" edge="start" />
+			<connection name="b" start="_Middle+21x" end="_End" edge="end" />
+		</group>
+		<group conditions="!horizontal">
+			<connection name="a" start="_Start" end="_Middle-21y" edge="start" />
+			<connection name="b" start="_Middle+21y" end="_End" edge="end" />
+		</group>
+		
+	</connections>
+	<render>
+		
+		<!-- Draw the component -->
+		
+		<!-- When placed horizontally, draw from left to right -->
+		<group conditions="horizontal">
+			
+			<!-- Draw the lines from the start and end points -->
+			<line start="_Start" end="_Middle-20x" />
+			<line start="_Middle+20x" end="_End" />
+
+          	<line start="_Middle-20x" end ="_Middle-15x-10y" />
+          	<line start="_Middle-15x-10y" end ="_Middle-10x+10y" />
+          	<line start="_Middle-10x+10y" end ="_Middle-5x-10y" />
+			<line start="_Middle-5x-10y" end ="_Middle+10y" />
+			<line start="_Middle+10y" end ="_Middle+5x-10y" />
+          	<line start="_Middle+5x-10y" end ="_Middle+10x+10y" />
+          	<line start="_Middle+10x+10y" end = "_Middle+15x-10y"/>
+          	<line start="_Middle+15x-10y" end ="_Middle+20x"/>
+          
+			<!-- Draw the resistance value -->
+			<text value="$Resistance" x="_Middle" y="_Middle-18" align="CentreCentre" />
+			
+		</group>
+		
+		<!-- When placed vertically, draw from top to bottom -->
+		<group conditions="!horizontal">
+
+			<!-- Draw the lines from the start and end points -->
+			<line start="_Start" end="_Middle-20y" />
+			<line start="_Middle+20y" end="_End" />
+
+			<line start="_Middle-20y" end ="_Middle-15y-10x" />
+          	<line start="_Middle-15y-10x" end ="_Middle-10y+10x" />
+          	<line start="_Middle-10y+10x" end ="_Middle-5y-10x" />
+			<line start="_Middle-5y-10x" end ="_Middle+10x" />
+			<line start="_Middle+10x" end ="_Middle+5y-10x" />
+          	<line start="_Middle+5y-10x" end ="_Middle+10y+10x" />
+          	<line start="_Middle+10y+10x" end = "_Middle+15y-10x"/>
+          	<line start="_Middle+15y-10x" end ="_Middle+20y"/>
+
+			<!-- Draw the resistance value -->
+			<text value="$Resistance" x="_Middle-14" y="_Middle" align="CentreRight" />
+			
+		</group>
+
+	</render>
+</component>
