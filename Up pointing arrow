@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Up" />
+    <meta name="minsize" value="10" />
+    <meta name="author" value="Jonas Furbo" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="b1e52f4a-60a2-49bb-948f-004cc3ff6fd5" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
+
+    <property name="Value" type="string" default="5" serialize="value" display="Value">
+    </property>
+
+    <property name="Type" type="enum" default="Uptextleft" serialize="t" display="Type">
+      <option>Uptextleft</option>
+      <option>Uptextright</option>
+    </property>
+    
+    <configurations>
+      <configuration name="Uptextleft" value="Type:Uptextleft" implements="uptextleft" />
+      <configuration name="Uptextright" value="Type:Uptextright" implements="uptextright" />
+    </configurations>
+ 
+  </declaration>
+  	<connections>
+      	<group conditions="$Type(eq_Uptextleft)">
+      		<connection name="com" start="_Start" end="_End" edge="both" />
+    	</group>
+     	<group conditions="$Type(eq_Uptextright)">
+      		<connection name="com" start="_Start" end="_End" edge="both" />
+    	</group>
+    </connections>
+  <render>
+
+    <!-- Uptextleft -->
+    <group conditions="$Type(eq_Uptextleft),_Horizontal">
+      <path start="_Start-5x-6y" data="l 10,0 l -5,-10, l -5,10" />
+      <line start="_Start-6y" end="_Start" />
+      <text value="$Value" x="_Start-6" y="_Start-12" align="CentreRight" size="large" />
+    </group>
+    <group conditions="$Type(eq_Uptextleft),!_Horizontal">
+      <path start="_Start-5x" data="l 10,0 l -5,-10, l -5,10" />
+      <text value="$Value" x="_Start-6" y="_Middle" align="CentreRight" size="large" />
+    </group>
+    <group conditions="$Type(eq_Uptextleft)">
+      <line start="_Start" end="_End" />
+    </group>
+    
+    <!-- Uptextright -->
+    <group conditions="$Type(eq_Uptextright),_Horizontal">
+      <path start="_Start-5x-6y" data="l 10,0 l -5,-10, l -5,10" />
+      <line start="_Start-6y" end="_Start" />
+      <text value="$Value" x="_Start+6" y="_Start-12" align="CentreLeft" size="large" />
+    </group>
+    <group conditions="$Type(eq_Uptextright),!_Horizontal">
+      <path start="_Start-5x" data="l 10,0 l -5,-10, l -5,10" />
+      <text value="$Value" x="_Start+6" y="_Middle" align="CentreLeft" size="large" />
+    </group>
+    <group conditions="$Type(eq_Uptextright)">
+      <line start="_Start" end="_End" />
+    </group>
+  
+  </render>
+</component>
