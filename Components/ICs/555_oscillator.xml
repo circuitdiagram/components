@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml" version="1.0" target="1.2">
+
+  <declaration>
+    <meta name="name" value="555 Oscillator" />
+    <meta name="author" value="O Luasa" />
+    <meta name="guid" value="19c03d9c-f521-4ffc-b1dd-bbacae85b973" />
+    <meta name="minsize" value="180" />
+    <meta name="canflip" value="true" />
+
+    <property name="Reference" type="string" default="IC1" serialize="reference" display="Reference No." />
+
+    <property name="Type" type="enum" default="555" serialize="t" display="Type">
+      <option>555</option>
+      <option>566</option>
+    </property>
+        
+    <flags>
+      <option>MiddleMustAlign</option>
+      <option>HorizontalOnly</option>
+    </flags>
+    
+    <configurations>
+      <configuration name="555 Oscillator" value="Type:555" />
+      <configuration name="566 Oscillator" value="Type:566" />
+    </configurations>   
+  </declaration>
+
+  <connections>
+    <group conditions="$Type(eq_555)">
+      <connection name="a" start="_Middle+30x-80y" end="_Middle+30x-100y" edge="end" />
+      <connection name="b" start="_Middle-30x-80y" end="_Middle-30x-100y" edge="end" />
+      <connection name="c" start="_Start-50y" end="_Middle-70x-50y" edge="start" />
+      <connection name="d" start="_Start" end="_Middle-70x" edge="start" />
+      <connection name="e" start="_Start+50y" end="_Middle-70x+50y" edge="start" />
+      <connection name="f" start="_Middle-30x+80y" end="_Middle-30x+100y" edge="end" />
+      <connection name="g" start="_Middle+30x+80y" end="_Middle+30x+100y" edge="end" />
+      <connection name="h" start="_Middle+70x" end="_End" edge="end" />
+    </group>
+
+    <group conditions="$Type(eq_566)">
+      <connection name="a" start="_Middle+40x-90y" end="_Middle+40x-70y" edge="start" />
+      <connection name="b" start="_Middle-40x-90y" end="_Middle-40x-70y" edge="start" />
+      <connection name="c" start="_Start" end="_Middle-80x" edge="start" />
+      <connection name="d" start="_Middle-40x+70y" end="_Middle-40x+90y" edge="end" />
+      <connection name="e" start="_Middle+40x+70y" end="_Middle+40x+90y" edge="end" />
+      <connection name="f" start="_Middle+80x-30y" end="_End-30y" edge="end" />
+      <connection name="g" start="_Middle+80x+30y" end="_End+30y" edge="end" />
+    </group>
+  </connections>
+
+  <render>
+  <group conditions="$Type(eq_555)">
+      <line start="_Middle+30x-80y" end="_Middle+30x-100y" />
+      <line start="_Middle-30x-80y" end="_Middle-30x-100y" />
+      <line start="_Start-50y" end="_Middle-70x-50y" />
+      <line start="_Start" end="_Middle-70x" />
+      <line start="_Start+50y" end="_Middle-70x+50y" />
+      <line start="_Middle-30x+80y" end="_Middle-30x+100y" />
+      <line start="_Middle+30x+80y" end="_Middle+30x+100y" />
+      <line start="_Middle+70x" end="_End" />
+      <rect x="_Middle-70x" y="_Middle-80y" width="140" height="160" />
+
+      <text value="Reset" x="_Middle+30" y="_Middle-75" align="TopCentre" />
+      <text value="Vcc" x="_Middle-30" y="_Middle-75" align="TopCentre" />
+      <text value="Discharge" x="_Middle-65" y="_Middle-50" align="CentreLeft" />
+      <text value="Trigger" x="_Middle-65" y="_Middle" align="CentreLeft" />
+      <text value="Threshold" x="_Middle-65" y="_Middle+50" align="CentreLeft" />
+      <text value="Ground" x="_Middle-30" y="_Middle+75" align="BottomCentre" />
+      <text value="Control" x="_Middle+30" y="_Middle+75" align="BottomCentre" />
+      <text value="Output" x="_Middle+65" y="_Middle" align="CentreRight" />
+      <text value="555" x="_Middle" y="_Middle-25" align="CentreCentre" />
+
+      <text value="4" x="_Middle+27" y="_Middle-83" align="BottomRight" />
+      <text value="8" x="_Middle-33" y="_Middle-83" align="BottomRight" />
+      <text value="7" x="_Middle-73" y="_Middle-53" align="BottomRight" />
+      <text value="2" x="_Middle-73" y="_Middle-3" align="BottomRight" />
+      <text value="6" x="_Middle-73" y="_Middle+47" align="BottomRight" />
+      <text value="1" x="_Middle-33" y="_Middle+83" align="TopRight" />
+      <text value="5" x="_Middle+27" y="_Middle+83" align="TopRight" />
+      <text value="3" x="_Middle+73" y="_Middle-3" align="BottomLeft" />
+      <text value="$Reference" x="_Middle" y="_Middle-85" align="BottomCentre" />
+    </group>
+  
+    <group conditions="$Type(eq_566)">
+      <line start="_Middle+40x-90y" end="_Middle+40x-70y" />
+      <line start="_Middle-40x-90y" end="_Middle-40x-70y" />
+      <line start="_Start" end="_Middle-80x" />
+      <line start="_Middle-40x+70y" end="_Middle-40x+90y" />
+      <line start="_Middle+40x+70y" end="_Middle+40x+90y" />
+      <line start="_Middle+80x-30y" end="_End-30y" />
+      <line start="_Middle+80x+30y" end="_End+30y" />
+      <rect x="_Middle-80x" y="_Middle-70y" width="160" height="140" />
+
+      <text value="Vcc" x="_Middle+40" y="_Middle-65" align="TopCentre" />
+      <text value="R1" x="_Middle-40" y="_Middle-65" align="TopCentre" />
+      <text value="Modulation Input" x="_Middle-75" y="_Middle" align="CentreLeft" />
+      <text value="C1" x="_Middle-40" y="_Middle+65" align="BottomCentre" />
+      <text value="Ground" x="_Middle+40" y="_Middle+65" align="BottomCentre" />
+      <text value="Squarewave Output" x="_Middle+75" y="_Middle-30" align="CentreRight" />
+      <text value="Triangular Wave Output" x="_Middle+75" y="_Middle+30" align="CentreRight" />
+      <text value="566" x="_Middle" y="_Middle-50" align="CentreCentre" />
+
+      <text value="8" x="_Middle+37" y="_Middle-73" align="BottomRight" />
+      <text value="6" x="_Middle-43" y="_Middle-73" align="BottomRight" />
+      <text value="5" x="_Middle-83" y="_Middle-3" align="BottomRight" />
+      <text value="7" x="_Middle-43" y="_Middle+73" align="TopRight" />
+      <text value="1" x="_Middle+37" y="_Middle+73" align="TopRight" />
+      <text value="4" x="_Middle+83" y="_Middle+27" align="BottomLeft" />
+      <text value="3" x="_Middle+83" y="_Middle-33" align="BottomLeft" />
+      <text value="$Reference" x="_Middle" y="_Middle-75" align="BottomCentre" />
+    </group>
+  </render>
+</component>
