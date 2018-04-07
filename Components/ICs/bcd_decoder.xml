@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="BCD Decoder" />
+    <meta name="description" value="Decodes a binary-coded decimal for use on a 7-segment display." />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="90" />
+    <meta name="author" value="circuitdiagram" />
+    <meta name="guid" value="a45e7fb6-561b-4fa1-b688-7764d881e114" />
+
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <!-- Left side pins -->
+      <connection name="in_a" start="_Start-30y" end="_Middle-40x-30y" edge="Start" />
+      <connection name="in_b" start="_Start-10y" end="_Middle-40x-10y" edge="Start" />
+      <connection name="in_c" start="_Start+10y" end="_Middle-40x+10y" edge="Start" />
+      <connection name="in_d" start="_Start+30y" end="_Middle-40x+30y" edge="Start" />
+
+      <!-- Right side pins -->
+      <connection name="out_a" start="_Middle+40x-30y" end="_End-30y" edge="End" />
+      <connection name="out_b" start="_Middle+40x-20y" end="_End-20y" edge="End" />
+      <connection name="out_c" start="_Middle+40x-10y" end="_End-10y" edge="End" />
+      <connection name="out_d" start="_Middle+40x" end="_End" edge="End" />
+      <connection name="out_e" start="_Middle+40x+10y" end="_End+10y" edge="End" />
+      <connection name="out_f" start="_Middle+40x+20y" end="_End+20y" edge="End" />
+      <connection name="out_g" start="_Middle+40x+30y" end="_End+30y" edge="End" />
+    </group>
+  </connections>
+  <render>
+
+    <group>
+      <path start="_Middle"
+            data="m -40,-40 l 35,0 a 5 5 180 0 0 10 0 l 35,0 l 0,80 l -80,0 l 0,-80 z" />
+      <text value="BCD" x="_Middle" y="_Middle-5" align="CentreCentre" />
+      <text value="Decoder" x="_Middle" y="_Middle+5" align="CentreCentre" />
+
+      <!-- Left side pins -->
+      <text value="A" x="_Middle-36" y="_Middle-30" align="CentreLeft" />
+      <line start="_Start-30y" end="_Middle-40x-30y" />
+      <text value="B" x="_Middle-36" y="_Middle-10" align="CentreLeft" />
+      <line start="_Start-10y" end="_Middle-40x-10y" />
+      <text value="C" x="_Middle-36" y="_Middle+10" align="CentreLeft" />
+      <line start="_Start+10y" end="_Middle-40x+10y" />
+      <text value="D" x="_Middle-36" y="_Middle+30" align="CentreLeft" />
+      <line start="_Start+30y" end="_Middle-40x+30y" />
+
+      <!-- Right side pins -->
+      <text value="a" x="_Middle+36" y="_Middle-30" align="CentreRight" />
+      <line start="_Middle+40x-30y" end="_End-30y" />
+      <text value="b" x="_Middle+36" y="_Middle-20" align="CentreRight" />
+      <line start="_Middle+40x-20y" end="_End-20y" />
+      <text value="c" x="_Middle+36" y="_Middle-10" align="CentreRight" />
+      <line start="_Middle+40x-10y" end="_End-10y" />
+      <text value="d" x="_Middle+36" y="_Middle" align="CentreRight" />
+      <line start="_Middle+40x" end="_End" />
+      <text value="e" x="_Middle+36" y="_Middle+10" align="CentreRight" />
+      <line start="_Middle+40x+10y" end="_End+10y" />
+      <text value="f" x="_Middle+36" y="_Middle+20" align="CentreRight" />
+      <line start="_Middle+40x+20y" end="_End+20y" />
+      <text value="g" x="_Middle+36" y="_Middle+30" align="CentreRight" />
+      <line start="_Middle+40x+30y" end="_End+30y" />
+    </group>
+  </render>
+</component>
