@@ -1,57 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Relay" />
-    <meta name="minsize" value="40" />
+    <meta name="version" value="2.0" />
+    <meta name="minsize" value="100" />
     <meta name="canflip" value="false" />
     <meta name="author" value="Unknown" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="726d39fa-c46c-48e4-aada-625a906448af" />
+
+    <flags>
+      <option>HorizontalOnly</option>
+    </flags>
   </declaration>
 
-<connections>
-   <group conditions="_Horizontal">
-      <connection name="1" start="_Start-10x+30y" end="_Middle-20x+30y"  edge="Start"/>
-      <connection name="2" start="_Middle+20x+30y" end="_End+10x+30y"    edge="End"/>
+  <connections>
+    <group>
+      <connection name="1" start="_Start+30y" end="_Middle-20x+30y" edge="Start"/>
+      <connection name="2" start="_Middle+20x+30y" end="_End+30y" edge="End"/>
+      <connection name="3" start="_Start-10y" end="_Middle-20x-10y" edge="Start"/> // Input
+      <connection name="4" start="_Middle+20x-20y" end="_End-20y" edge="End"/>   // Upper output
+      <connection name="5" start="_Middle+20x" end="_End" edge="End"/>   // Lower Output
+    </group>
+  </connections>
 
-      <connection name="3" start="_Start-10x-10y" end="_Middle-20x-10y"   edge="Start"/> // Input
-      <connection name="4" start="_Middle+20x-20y" end="_End+10x-20y"     edge="End"/>   // Upper output
-      <connection name="5" start="_Middle+20x" end="_End+10x"             edge="End"/>   // Lower Output
-   </group>
-</connections>
-
-
-<render>
-   <group conditions="_Horizontal">
+  <render>
+    <group>
       <rect x="_Middle-40x" y="_Middle-40y" width="80" height="80" />
 
-      <ellipse centre="_Middle-20x+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle-15x+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle-10x+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle-5x+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle+5x+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle+10x+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle+15x+20y" radiusx="5" radiusy="10" />
-      <ellipse centre="_Middle+20x+20y" radiusx="5" radiusy="10" />
+      <ellipse centre="_Middle-20x+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle-15x+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle-10x+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle-5x+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle+5x+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle+10x+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle+15x+20y" rx="5" ry="10" />
+      <ellipse centre="_Middle+20x+20y" rx="5" ry="10" />
 
-      <line start="_Start-10x+30y" end="_Middle-20x+30y" />
-      <line start="_Middle+20x+30y" end="_End+10x+30y" />
+      <line start="_Start+30y" end="_Middle-20x+30y" />
+      <line start="_Middle+20x+30y" end="_End+30y" />
 
-      <line start="_Middle+20x-20y" end="_End+10x-20y" />
-      <line start="_Start-10x-10y" end="_Middle-20x-10y" />
-      <line start="_Middle+20x" end="_End+10x" />
+      <line start="_Middle+20x-20y" end="_End-20y" />
+      <line start="_Start-10y" end="_Middle-20x-10y" />
+      <line start="_Middle+20x" end="_End" />
       <line start="_Middle-20x-10y" end="_Middle+20x-20y" />
-      <ellipse centre="_Middle+20x-20y" radiusx="1" radiusy="1" />
-      <ellipse centre="_Middle+20x"     radiusx="1" radiusy="1" />
-
+      <ellipse centre="_Middle+20x-20y" rx="2" ry="2" />
+      <ellipse centre="_Middle+20x" rx="2" ry="2" />
 
       <text value="Relay" x="_Middle" y="_Middle-30"  align="CentreCentre" />
-
-      <text value="NC"  x="_Middle+47" y="_Middle-20" align="BottomLeft" />
-      <text value="NO" x="_Middle+47" y="_Middle" align="BottomLeft" />
-
-   </group>
-</render>
-
+      <text value="NC"  x="_Middle+44" y="_Middle-24" align="BottomLeft" />
+      <text value="NO" x="_Middle+44" y="_Middle-4" align="BottomLeft" />
+    </group>
+  </render>
 </component>
