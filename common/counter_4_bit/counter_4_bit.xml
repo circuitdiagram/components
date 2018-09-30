@@ -2,6 +2,7 @@
 <component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Counter (4-bit)" />
+    <meta name="description" value="4-bit counter" />
     <meta name="minsize" value="140" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
