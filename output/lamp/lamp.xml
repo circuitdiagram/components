@@ -1,39 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+<component version="1.2"
+           xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml"
+           xmlns:sim="http://schemas.circuit-diagram.org/circuitDiagramDocument/2018/component/simulation">
   <declaration>
     <meta name="name" value="Lamp" />
     <meta name="minsize" value="40" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="version" value="2.0" />
     <meta name="guid" value="C0DA4646-FFAF-48F0-8A56-2E8E07148ECF" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="lamp" />
     <meta name="org.circuit-diagram.bundled" value="true" />
+    
+    <property name="Lit" type="bool" default="true" serialize="islit" display="Light On"
+              sim:settable="true" />
   </declaration>
   <connections>
-    <group conditions="_Horizontal">
+    <group conditions="horizontal">
       <connection name="a" start="_Start" end="_Middle-15x" edge="start" />
       <connection name="b" start="_Middle+15x" end="_End" edge="end" />
     </group>
-    <group conditions="!_Horizontal">
+    <group conditions="!horizontal">
       <connection name="a" start="_Start" end="_Middle-15y" edge="start" />
       <connection name="b" start="_Middle+15y" end="_End" edge="end" />
     </group>
   </connections>
   <render>
-    <group conditions="_Horizontal">
+    <group conditions="horizontal">
       <line start="_Start" end="_Middle-12x" />
       <line start="_Middle+12x" end="_End" />
       <line start="_Middle-8x-8y" end="_Middle+8x+8y" />
       <line start="_Middle-8x+8y" end="_Middle+8x-8y" />
-      <ellipse x="_Middle" y="_Middle" radiusx="12" radiusy="12" />
+      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
     </group>
-    <group conditions="!_Horizontal">
+    
+    <group conditions="!horizontal">
       <line start="_Start" end="_Middle-12y" />
       <line start="_Middle+12y" end="_End" />
       <line start="_Middle-8x-8y" end="_Middle+8x+8y" />
       <line start="_Middle-8x+8y" end="_Middle+8x-8y" />
-      <ellipse x="_Middle" y="_Middle" radiusx="12" radiusy="12" />
+      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
+    </group>
+    
+    <group conditions="$Lit">
+      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" fill="true" />
     </group>
   </render>
 </component>

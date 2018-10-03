@@ -2,15 +2,16 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="7 Segment Display" />
+    <meta name="description" value="Displays decimal numerals and optionally a decimal point using 7 + 1 LEDs." />
     <meta name="version" value="1.0" />
     <meta name="minsize" value="70" />
     <meta name="author" value="circuitdiagram" />
     <meta name="guid" value="4fa8d87e-d312-4b8d-979a-93888c521ff7" />
-    
+
     <flags>
       <option>horizontalonly</option>
     </flags>
-    
+
     <property name="Type" type="enum" default="CommonCathode" serialize="t" display="Type">
       <option>CommonAnode</option>
       <option>CommonCathode</option>
@@ -75,7 +76,7 @@
 
     <group>
       <rect x="_End-60" y="_End-50" width="60" height="100" />
-      
+
       <!-- Left side pins -->
       <text value="a" x="_End-58" y="_End-40" align="CentreLeft" />
       <line start="_Start-40y" end="_End-60x-40y" />
@@ -94,42 +95,42 @@
       <text value="dp" x="_End-58" y="_End+30" align="CentreLeft" />
       <line start="_Start+30y" end="_End-60x+30y" />
       <line start="_Start+40y" end="_End-60x+40y" />
-            
+
       <!-- LED segments -->
-      
+
       <!-- a -->
       <path start="_End-30x-28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
-      
+
       <!-- b -->
       <path start="_End-16x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
-      
+
       <!-- c -->
       <path start="_End-16x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
-      
+
       <!-- d -->
       <path start="_End-30x+28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
-      
+
       <!-- e -->
       <path start="_End-44x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
-      
+
       <!-- f -->
       <path start="_End-44x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
-      
+
       <!-- g -->
       <path start="_End-30x" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
-      
+
       <!-- dp -->
       <ellipse centre="_End-10x+30y" rx="2" ry="2" />
     </group>
-    
+
     <!-- Common anode/cathode -->
-	<group conditions="$Type==CommonAnode">
+	  <group conditions="$Type==CommonAnode">
       <text value="+" x="_End-58" y="_End+40" align="CentreLeft" />
     </group>
     <group conditions="$Type==CommonCathode">
       <text value="-" x="_End-58" y="_End+40" align="CentreLeft" />
     </group>
-    
+
     <!-- LED segment fills -->
     <group conditions="$LED_A">
       <path start="_End-30x-28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" fill="true" />
