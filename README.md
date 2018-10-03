@@ -17,7 +17,7 @@ You can create new components using either:
 
 The Component Editor website contains [documentation](https://componenteditor.com/help/) to get started making components.
 
-### Where to put your component
+### Folders
 
 If your component is an alternative design for an existing component, place it in
 the same top-level folder as the original component. For example, the `us_resistor` component is an alternative design for the `resistor` component. They are both in the `/common` folder of this repository.
