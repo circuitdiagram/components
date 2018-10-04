@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Down" />
+    <meta name="minsize" value="10" />
+    <meta name="author" value="Jonas Furbo" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="c0392281-a8c4-4027-a858-b18c556a2251" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
+
+    <property name="Value" type="string" default="5" serialize="value" display="Value">
+    </property>
+
+    <property name="Type" type="enum" default="Downtextleft" serialize="t" display="Type">
+      <option>Downtextleft</option>
+      <option>Downtextright</option>
+    </property>
+    
+    <configurations>
+      <configuration name="Downtextleft" value="Type:Downtextleft" implements="downtextleft" />
+      <configuration name="Downtextright" value="Type:Downtextright" implements="downtextright" />
+    </configurations>
+ 
+  </declaration>
+  	<connections>
+      	<group conditions="$Type(eq_Downtextleft)">
+      		<connection name="com" start="_Start" end="_End" edge="both" />
+    	</group>
+      	<group conditions="$Type(eq_Downtextright)">
+      		<connection name="com" start="_Start" end="_End" edge="both" />
+    	</group>
+    </connections>
+  <render>
+
+    <!-- Downtextleft -->
+    <group conditions="$Type(eq_Downtextleft),_Horizontal">
+      <line start="_Start" end="_Start+6y" />
+      <path start="_Start-5x+6y" data="l 10,0 l -5,10, l -5,-10" />
+      <text value="$Value" x="_Start-8" y="_Middle+10" align="CentreRight" size="large" />
+    </group>
+    <group conditions="$Type(eq_Downtextleft),!_Horizontal">
+      <path start="_End-5x" data="l 10,0 l -5,10, l -5,-10" />
+      <text value="$Value" x="_Start-6" y="_Middle" align="CentreRight" size="large" />
+    </group>
+    <group conditions="$Type(eq_Downtextleft)">
+      <line start="_Start" end="_End" />
+    </group>
+    
+    <!-- Downtextright -->
+    <group conditions="$Type(eq_Downtextright),_Horizontal">
+      <line start="_Start" end="_Start+6y" />
+      <path start="_Start-5x+6y" data="l 10,0 l -5,10, l -5,-10" />
+      <text value="$Value" x="_Start+10" y="_Middle+10" align="CentreLeft" size="large" />
+    </group>
+    <group conditions="$Type(eq_Downtextright),!_Horizontal">
+      <path start="_End-5x" data="l 10,0 l -5,10, l -5,-10" />
+      <text value="$Value" x="_Start+6" y="_Middle" align="Centreleft" size="large" />
+    </group>
+    <group conditions="$Type(eq_Downtextright)">
+      <line start="_Start" end="_End" />
+    </group>
+    
+  </render>
+</component>
