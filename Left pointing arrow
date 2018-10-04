@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Left" />
+    <meta name="minsize" value="10" />
+    <meta name="author" value="Jonas Furbo" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="b3b62d7d-a368-4fec-b216-e32e707ce637" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
+
+    <property name="Value" type="string" default="5" serialize="value" display="Value">
+    </property>
+
+    <property name="Type" type="enum" default="Lefttexttop" serialize="t" display="Type">
+      <option>Lefttexttop</option>
+      <option>Lefttextdown</option>
+    </property>
+    
+     <configurations>
+      <configuration name="Lefttexttop" value="Type:Lefttexttop" implements="lefttexttop" />
+      <configuration name="Lefttextdown" value="Type:Lefttextdown" implements="lefttextdown" />
+    </configurations>
+ 
+  </declaration>
+  	<connections>
+      	<group conditions="$Type(eq_Lefttexttop)">
+      		<connection name="com" start="_Start" end="_End" edge="both" />
+    	</group>
+      	<group conditions="$Type(eq_Lefttextdown)">
+      		<connection name="com" start="_Start" end="_End" edge="both" />
+    	</group>
+    </connections>
+  <render>
+
+    <!-- Lefttexttop -->
+    <group conditions="$Type(eq_Lefttexttop),_Horizontal">
+      <path start="_Start-5y" data="l 0,10 l -10,-5, l 10,-5" />
+      <text value="$Value" x="_Middle" y="_Middle-13" align="CentreRight" size="large" />
+    </group>
+    <group conditions="$Type(eq_Lefttexttop),!_Horizontal">
+      <line start="_End-5x" end="_End" />
+      <path start="_End-5x-5y" data="l 0,10 l -10,-5, l 10,-5" />
+      <text value="$Value" x="_Start-6" y="_Middle" align="CentreRight" size="large" />
+    </group>
+    <group conditions="$Type(eq_Lefttexttop)">
+      <line start="_Start" end="_End" />
+    </group>
+    
+    <!-- Lefttextdown -->
+    <group conditions="$Type(eq_Lefttextdown),_Horizontal">
+      <path start="_Start-5y" data="l 0,10 l -10,-5, l 10,-5" />
+      <text value="$Value" x="_Middle" y="_Middle+13" align="CentreRight" size="large" />
+    </group>
+    <group conditions="$Type(eq_Lefttextdown),!_Horizontal">
+      <line start="_End-5x" end="_End" />
+      <path start="_End-5x-5y" data="l 0,10 l -10,-5, l 10,-5" />
+      <text value="$Value" x="_Start+6" y="_Middle" align="CentreLeft" size="large" />
+    </group>
+    <group conditions="$Type(eq_Lefttextdown)">
+      <line start="_Start" end="_End" />
+    </group>
+    
+  </render>
+</component>
