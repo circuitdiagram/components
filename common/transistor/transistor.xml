@@ -45,7 +45,7 @@
       <connection name="base" start="_Middle+16x" end="_End" edge="End" />
       <connection name="col" start="_Middle-40y" end="_Middle-16y" edge="Start" />
     </group>
-    <group conditions="!horizontal,!$Type==PNP">
+    <group conditions="!horizontal,$Type==PNP">
       <connection name="emit" start="_Start" end="_Middle-16y" edge="Start" />
       <connection name="base" start="_Middle+16y" end="_End" edge="End" />
       <connection name="col" start="_Middle-40x" end="_Middle-16x" edge="Start" />
