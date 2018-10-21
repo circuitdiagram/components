@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
-    <meta name="name" value="Transistor" />
+    <meta name="name" value="Mosfet" />
     <meta name="minsize" value="50" />
     <meta name="canflip" value="true" />
     <meta name="author" value="Circuit Diagram" />
