@@ -13,6 +13,10 @@
     <property name="Type" type="enum" default="NPN" serialize="t" display="Type">
       <option>NPN</option>
       <option>PNP</option>
+      <option>NPNPhototransistor2</option>
+      <option>PNPPhototransistor2</option>
+      <option>NPNPhototransistor3</option>
+      <option>PNPPhototransistor3</option>
     </property>
 
     <flags>
@@ -24,28 +28,37 @@
     <configurations>
       <configuration name="NPN Transistor" value="Type:NPN" implements="transnpn" />
       <configuration name="PNP Transistor" value="Type:PNP" implements="transpnp" />
+      <configuration name="NPN Phototransistor (2 pin)" value="Type:NPNPhototransistor2" implements="phototransnpn2" />
+      <configuration name="PNP Phototransistor (2 pin)" value="Type:PNPPhototransistor2" implements="phototranspnp2" />
+      <configuration name="NPN Phototransistor (3 pin)" value="Type:NPNPhototransistor3" implements="phototransnpn3" />
+      <configuration name="PNP Phototransistor (3 pin)" value="Type:PNPPhototransistor3" implements="phototranspnp3" />
     </configurations>
 
   </declaration>
   <connections>
-    <group conditions="horizontal,$Type==NPN">
+    <!-- Common -->
+    <group conditions="horizontal,($Type==NPN|$Type==NPNPhototransistor2|$Type==NPNPhototransistor3)">
       <connection name="col" start="_Start" end="_Middle-16x" edge="Start" />
       <connection name="emit" start="_Middle+16x" end="_End" edge="End" />
-      <connection name="base" start="_Middle-40y" end="_Middle-16y" edge="Start" />
     </group>
-    <group conditions="!horizontal,$Type==NPN">
+    <group conditions="!horizontal,($Type==NPN|$Type==NPNPhototransistor2|$Type==NPNPhototransistor3)">
       <connection name="col" start="_Start" end="_Middle-16y" edge="Start" />
       <connection name="emit" start="_Middle+16y" end="_End" edge="End" />
-      <connection name="base" start="_Middle-40x" end="_Middle-16x" edge="Start" />
     </group>
-    <group conditions="horizontal,$Type==PNP">
+    <group conditions="horizontal,($Type==PNP|$Type==PNPPhototransistor2|$Type==PNPPhototransistor3)">
       <connection name="emit" start="_Start" end="_Middle-16x" edge="Start" />
       <connection name="col" start="_Middle+16x" end="_End" edge="End" />
-      <connection name="base" start="_Middle-40y" end="_Middle-16y" edge="Start" />
     </group>
-    <group conditions="!horizontal,$Type==PNP">
+    <group conditions="!horizontal,($Type==PNP|$Type==PNPPhototransistor2|$Type==PNPPhototransistor3)">
       <connection name="emit" start="_Start" end="_Middle-16y" edge="Start" />
       <connection name="col" start="_Middle+16y" end="_End" edge="End" />
+    </group>
+
+    <!-- 3-pin -->
+    <group conditions="horizontal,$Type!=NPNPhototransistor2,$Type!=PNPPhototransistor2">
+      <connection name="base" start="_Middle-40y" end="_Middle-16y" edge="Start" />
+    </group>
+    <group conditions="!horizontal,$Type!=NPNPhototransistor2,$Type!=PNPPhototransistor2">
       <connection name="base" start="_Middle-40x" end="_Middle-16x" edge="Start" />
     </group>
   </connections>
@@ -54,7 +67,6 @@
     <group conditions="horizontal">
       <line start="_Start" end="_Middle-13x" />
       <line start="_Middle+13x" end="_End" />
-      <line start="_Middle-40y" end="_Middle-14y" />
       <line start="_Middle-14.5y-8x" end="_Middle-14.5y+8x" thickness="3" />
       <line start="_Middle-13x" end="_Middle-14.5y-4x" />
       <line start="_Middle-14.5y+4x" end="_Middle+13x" />
@@ -63,27 +75,44 @@
     <group conditions="!horizontal">
       <line start="_Start" end="_Middle-13y" />
       <line start="_Middle+13y" end="_End" />
-      <line start="_Middle-40x" end="_Middle-14x" />
       <line start="_Middle-14.5x-8y" end="_Middle-14.5x+8y" thickness="3" />
       <line start="_Middle-13y" end="_Middle-14.5x-4y" />
       <line start="_Middle-14.5x+4y" end="_Middle+13y" />
       <ellipse centre="_Middle-10x" rx="16" ry="16" />
     </group>
 
+    <!-- 3-pin -->
+    <group conditions="horizontal,($Type!=NPNPhototransistor2,$Type!=PNPPhototransistor2)">
+      <line start="_Middle-40y" end="_Middle-14y" />      
+    </group>
+    <group conditions="!horizontal,($Type!=NPNPhototransistor2,$Type!=PNPPhototransistor2)">
+      <line start="_Middle-40x" end="_Middle-14x" />      
+    </group>
+
     <!-- NPN -->
-    <group conditions="horizontal,$Type==NPN">
+    <group conditions="horizontal,($Type==NPN|$Type==NPNPhototransistor2|$Type==NPNPhototransistor3)">
       <path start="_Middle+7x-8y" data="l -2,4 l 7,1 l -4,-6 l -1,2" fill="true" />
     </group>
-    <group conditions="!horizontal,$Type==NPN">
+    <group conditions="!horizontal,($Type==NPN|$Type==NPNPhototransistor2|$Type==NPNPhototransistor3)">
       <path start="_Middle-8x+7y" data="l 4,-2 l 1,7 l -6,-4 l 2,-1" fill="true" />
     </group>
 
     <!-- PNP -->
-    <group conditions="horizontal,$Type==PNP">
+    <group conditions="horizontal,($Type==PNP|$Type==PNPPhototransistor2|$Type==PNPPhototransistor3)">
       <path start="_Middle-10x-7y" data="l 4,2 l 1,-7 l -6,4 l 2,1" fill="true" />
     </group>
-    <group conditions="!horizontal,$Type==PNP">
+    <group conditions="!horizontal,($Type==PNP|$Type==PNPPhototransistor2|$Type==PNPPhototransistor3)">
       <path start="_Middle-7x-10y" data="l 2,4 l -7,1 l 4,-6 l 1,2" fill="true" />
+    </group>
+
+    <!-- Phototransistor -->
+    <group conditions="horizontal,($Type==NPNPhototransistor2|$Type==NPNPhototransistor3|$Type==PNPPhototransistor2|$Type==PNPPhototransistor3)">
+      <path start="_Middle-28x-30y" data="l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4 z" />
+      <path start="_Middle-22x-36y" data="l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4 z" />
+    </group>
+    <group conditions="!horizontal,($Type==NPNPhototransistor2|$Type==NPNPhototransistor3|$Type==PNPPhototransistor2|$Type==PNPPhototransistor3)">
+      <path start="_Middle-30x-28y" data="l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4 z" />
+      <path start="_Middle-36x-22y" data="l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4 z" />
     </group>
   </render>
 </component>
