@@ -55,6 +55,12 @@
       <connection name="a" start="_Start" end="_Middle-21y" edge="start" />
       <connection name="b" start="_Middle+21y" end="_End" edge="end" />
     </group>
+    <group conditions="horizontal,$Type==Potentiometer">
+      <connection name="c" start="_Middle+15y" end="_Middle+30y" edge="end" />
+    </group>
+    <group conditions="!horizontal,$Type==Potentiometer">
+      <connection name="c" start="_Middle+15x" end="_Middle+30x" edge="end" />
+    </group>
   </connections>
   <render>
     <!-- Standard -->
