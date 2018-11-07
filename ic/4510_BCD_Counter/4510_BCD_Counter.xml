@@ -32,6 +32,10 @@
 			<connection start="_Middle+48x" end="_End" edge="End" />
 			<connection start="_Start+20y" end="_Middle-48x+20y" edge="Start" />
 			<connection start="_Middle+48x+20y" end="_End+20y" edge="End" />
+			<connection start="_Start+40y" end="_Middle-48x+40y" edge="Start" />
+			<connection start="_Middle+48x+40y" end="_End+40y" edge="End"/>
+			<connection start="_Start+60y" end="_Middle-48x+60y" edge="Start" />
+			<connection start="_Middle+48x+60y" end="_End+60y" edge="End"/>
 		</group>
 		
 	</connections>
