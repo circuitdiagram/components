@@ -64,20 +64,20 @@
 			<line start="_Middle+50x+60y" end="_End+60y" />
 
 			<!-- Draw a label at each pin -->
-			<!-- TODO: change "pin0"..."pin11" to the values for your chip -->
           	<text x="_Middle-13" y="_Middle-100" align="CentreLeft" size="large" value="4510" />
+			<text x="_Middle-13" y="_Middle-100" align="CentreLeft" size="large" value="4510" />
 			<text x="_Middle-46" y="_Middle-80" align="CentreLeft" size="large" value="Load" />
-			<text x="_Middle-46" y="_Middle-60" align="CentreLeft" size="large" value="Out3" />
+			<text x="_Middle-46" y="_Middle-60" align="CentreLeft" size="large" value="L0" />
 			<text x="_Middle+46" y="_Middle-80" align="CentreRight" size="large" value="Vcc" />
-			<text x="_Middle+46" y="_Middle-60" align="CentreRight" size="large" value="Clock" />
-			<text x="_Middle-46" y="_Middle-40" align="CentreLeft" size="large" value="L3" />
-			<text x="_Middle+46" y="_Middle-40" align="CentreRight" size="large" value="Out2" />
-			<text x="_Middle-46" y="_Middle-20" align="CentreLeft" size="large" value="L0" />
-			<text x="_Middle+46" y="_Middle-20" align="CentreRight" size="large" value="L2" />
-			<text x="_Middle-46" y="_Middle" align="CentreLeft" size="large" value="CE" />
-			<text x="_Middle+46" y="_Middle" align="CentreRight" size="large" value="L1" />
-			<text x="_Middle-46" y="_Middle+20" align="CentreLeft" size="large" value="Out0" />
-			<text x="_Middle+46" y="_Middle+20" align="CentreRight" size="large" value="Out1" />
+			<text x="_Middle+46" y="_Middle-60" align="CentreRight" size="large" value="A" />
+			<text x="_Middle-46" y="_Middle-40" align="CentreLeft" size="large" value="L1" />
+			<text x="_Middle+46" y="_Middle-40" align="CentreRight" size="large" value="B" />
+			<text x="_Middle-46" y="_Middle-20" align="CentreLeft" size="large" value="L2" />
+			<text x="_Middle+46" y="_Middle-20" align="CentreRight" size="large" value="C" />
+			<text x="_Middle-46" y="_Middle" align="CentreLeft" size="large" value="L3" />
+			<text x="_Middle+46" y="_Middle" align="CentreRight" size="large" value="D" />
+			<text x="_Middle-46" y="_Middle+20" align="CentreLeft" size="large" value="Clock" />
+			<text x="_Middle+46" y="_Middle+20" align="CentreRight" size="large" value="CE" />
           	<text x="_Middle-46" y="_Middle+40" align="CentreLeft" size="large" value="TC" />
 			<text x="_Middle+46" y="_Middle+40" align="CentreRight" size="large" value="UP/DN" />
           	<text x="_Middle-46" y="_Middle+60" align="CentreLeft" size="large" value="Gnd" />
