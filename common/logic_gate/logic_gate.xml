@@ -16,6 +16,7 @@
       <option>OR</option>
       <option>NOR</option>
       <option>XOR</option>
+      <option>XNOR</option>
       <option>NOT</option>
       <option>Schmitt</option>
     </property>
@@ -26,6 +27,7 @@
       <configuration name="OR Gate" value="Type:OR" implements="or2" />
       <configuration name="NOR Gate" value="Type:NOR" implements="nor2" />
       <configuration name="XOR Gate" value="Type:XOR" implements="xor2" />
+      <configuration name="XNOR Gate" value="Type:XNOR" implements="xnor2" />
       <configuration name="NOT Gate" value="Type:NOT" implements="not" />
       <configuration name="Schmitt Trigger NOT Gate" value="Type:Schmitt" implements="schmittnot" />
     </configurations>
@@ -117,6 +119,16 @@
     <group conditions="!_Horizontal,$Type(eq_XOR)">
       <path start="_Middle-10x-26y" data="m -10,0 q 20,20 40,0 m -40,8 q 20,20 40,0 m 0,-1 q -5,35 -20,50 q -15,-15 -20,-50" />
       <line start="_Middle+30y" end="_End" />
+    </group>
+
+    <!-- XNOR -->
+    <group conditions="_Horizontal,$Type(eq_XNOR)">
+      <path start="_Middle-26x-10y" data="m 0,-10 q 20,20 0,40 m 8,-40 q 20,20 0,40 m -1,0 q 35,-5 50,-20 q -15,-15 -50,-20m 51,20 a 2,2 -5 0,1 6,0 a 2,2 -5 0,1 -6,0" />
+      <line start="_Middle+38x" end="_End" />
+    </group>
+    <group conditions="!_Horizontal,$Type(eq_XNOR)">
+      <path start="_Middle-10x-26y" data="m -10,0 q 20,20 40,0 m -40,8 q 20,20 40,0 m 0,-1 q -5,35 -20,50 q -15,-15 -20,-50 m 20,51 a 2,2 5 1,0 0,6 a 2,2 5 1,0 0,-6" />
+      <line start="_Middle+38y" end="_End" />
     </group>
 
     <!-- NOT -->
