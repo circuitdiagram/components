@@ -65,7 +65,6 @@
 
 			<!-- Draw a label at each pin -->
           	<text x="_Middle-13" y="_Middle-100" align="CentreLeft" size="large" value="4510" />
-			<text x="_Middle-13" y="_Middle-100" align="CentreLeft" size="large" value="4510" />
 			<text x="_Middle-46" y="_Middle-80" align="CentreLeft" size="large" value="Load" />
 			<text x="_Middle-46" y="_Middle-60" align="CentreLeft" size="large" value="L0" />
 			<text x="_Middle+46" y="_Middle-80" align="CentreRight" size="large" value="Vcc" />
