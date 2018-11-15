@@ -120,6 +120,7 @@
             <text x="_Middle-46" y="_Middle+180" align="CentreLeft" size="large" value="CS" />
             <text x="_Middle-46" y="_Middle+200" align="CentreLeft" size="large" value="XDCS" />
             <text x="_Middle-46" y="_Middle+220" align="CentreLeft" size="large" value="SDCS" />
+
             <text x="_Middle+46" y="_Middle+40" align="CentreRight" size="large" value="1" />
             <text x="_Middle+46" y="_Middle+60" align="CentreRight" size="large" value="2" />
             <text x="_Middle+46" y="_Middle+80" align="CentreRight" size="large" value="3" />
