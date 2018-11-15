@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+	<declaration>
+
+		<!-- Describe the component -->
+		<meta name="name" value="VS1053 Output Board" />
+		<meta name="version" value="1.0" />
+		<meta name="minsize" value="120" />
+		<meta name="author" value="Matthew-Pollock" />
+		<meta name="additionalinformation" value="Headphone Out" />
+		<meta name="guid" value="f4e17f84-2670-4c52-8884-132f9e969449" />
+
+		<!-- Can only be displayed horizontally -->
+		<flags>
+			<option>horizontalonly</option>
+		</flags>
+		
+	</declaration>
+	<connections>
+
+		<!-- Allow other components to connect to each of the pins -->
+		<group>
+			<connection start="_Start-80y" end="_Middle-48x-80y" edge="Start" />
+			<connection start="_Start-60y" end="_Middle-48x-60y" edge="Start" />
+			<connection start="_Start-40y" end="_Middle-48x-40y" edge="Start" />
+		</group>
+		
+	</connections>
+	<render>
+		
+		<group>
+			<!-- Draw the rectangle representing the chip -->
+			<rect x="_Middle-50" y="_Middle-90" width="50" height="60" />
+
+			<!-- Draw a line to each pin -->
+			<line start="_Start-80y" end="_Middle-50x-80y" />
+			<line start="_Start-60y" end="_Middle-50x-60y" />
+			<line start="_Start-40y" end="_Middle-50x-40y" />
+
+			<!-- Draw a label at each pin -->
+			<!-- TODO: change "pin0"..."pin11" to the values for your chip -->
+			<text x="_Middle-46" y="_Middle-80" align="CentreLeft" size="large" value="LEFT" />
+			<text x="_Middle-46" y="_Middle-60" align="CentreLeft" size="large" value="GND" />
+			<text x="_Middle-46" y="_Middle-40" align="CentreLeft" size="large" value="RIGHT" />
+
+		</group>
+		
+	</render>
+</component>
