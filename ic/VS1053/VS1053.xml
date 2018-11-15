@@ -108,7 +108,7 @@
             <text x="_Middle+46" y="_Middle-20" align="CentreRight" size="large" value="3V3" />
             <text x="_Middle-46" y="_Middle" align="CentreLeft" size="large" value="AGND" />
             <text x="_Middle+46" y="_Middle" align="CentreRight" size="large" value="GND" />
-            <text x="_Middle-46" y="_Middle+20" align="CentreLeft" size="large" value="DREG" />
+            <text x="_Middle-46" y="_Middle+20" align="CentreLeft" size="large" value="DREQ" />
             <text x="_Middle+46" y="_Middle+20" align="CentreRight" size="large" value="0" />
             <text x="_Middle-46" y="_Middle+40" align="CentreLeft" size="large" value="VCC" />
             <text x="_Middle-46" y="_Middle+60" align="CentreLeft" size="large" value="3V3" />
@@ -118,8 +118,8 @@
             <text x="_Middle-46" y="_Middle+140" align="CentreLeft" size="large" value="SCLK" />
             <text x="_Middle-46" y="_Middle+160" align="CentreLeft" size="large" value="RST" />
             <text x="_Middle-46" y="_Middle+180" align="CentreLeft" size="large" value="CS" />
-            <text x="_Middle-46" y="_Middle+200" align="CentreLeft" size="large" value="DCS" />
-            <text x="_Middle-46" y="_Middle+220" align="CentreLeft" size="large" value="DCS" />
+            <text x="_Middle-46" y="_Middle+200" align="CentreLeft" size="large" value="XDCS" />
+            <text x="_Middle-46" y="_Middle+220" align="CentreLeft" size="large" value="SDCS" />
             <text x="_Middle+46" y="_Middle+40" align="CentreRight" size="large" value="1" />
             <text x="_Middle+46" y="_Middle+60" align="CentreRight" size="large" value="2" />
             <text x="_Middle+46" y="_Middle+80" align="CentreRight" size="large" value="3" />
