@@ -14,9 +14,10 @@ You can create new components using either:
 
 - The Visual Studio Code [extension](https://github.com/circuitdiagram/circuitdiagram-vscode)
 **(recommended)**
-- [Component Editor](), an online tool for creating components
+- [Component Editor](https://componenteditor.com/), an online tool for creating components
 
-The Component Editor website contains [documentation](https://componenteditor.com/help/) to get started making components.
+The Component Editor website contains [documentation](https://componenteditor.com/help/) to get
+started making components.
 
 ### Folders
 
