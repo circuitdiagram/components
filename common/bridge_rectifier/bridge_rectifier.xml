@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
-
-
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Bridge Rectifier" />
     <meta name="minsize" value="60" />
@@ -9,165 +7,92 @@
     <meta name="author" value="Jeremy J" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="42e4abfc-ce38-43eb-991e-21e628f3161b" />
+
+    <flags>
+      <option>MiddleMustAlign</option>
+    </flags>
   </declaration>
-
-  <flags conditions="CONDITIONS">
-    	<option>MiddleMustAlign</option>
-  </flags>
-
   <connections>
-    <group conditions="_Horizontal">
-
-     	<connection name="Pos" start="_Start" end="_Middle+30x" edge="Start" />
-
-     	 <connection name="Neg" start="_Middle-30x" end="_End" edge="End" />
-
-	<connection name="AC1" start="_Middle-30y" end="_End" edge="End" />
-
-	<connection name="AC2" start="_Middle+30y" end="_End" edge="End" />
-
-
+    <group conditions="horizontal">
+      <connection name="Neg" start="_Start" end="_Middle-30x" edge="Start" />
+      <connection name="Pos" start="_Middle+30x" end="_End" edge="End" />
+      <connection name="AC1" start="_Middle-40y" end="_Middle-30y" edge="Start" />
+      <connection name="AC2" start="_Middle+30y" end="_Middle+40y" edge="End" />
     </group>
-
-    <group conditions="!_Horizontal">
-
- 	<connection name="Pos" start="_Start" end="_Middle-30y" edge="Start" />
-
-     	 <connection name="Neg" start="_Middle+30y" end="_End" edge="End" />
-
-	<connection name="AC1" start="_Middle-30x" end="_End" edge="End" />
-
-	<connection name="AC2" start="_Middle+30x" end="_End" edge="End" />
-      
-
+    <group conditions="!horizontal">
+      <connection name="Neg" start="_Start" end="_Middle-30y" edge="Start" />
+      <connection name="Pos" start="_Middle+30y" end="_End" edge="End" />
+      <connection name="AC1" start="_Middle-40x" end="_Middle-30x" edge="Start" />
+      <connection name="AC2" start="_Middle+30x" end="_Middle+40x" edge="End" />
     </group>
   </connections>
-
-
-
   <render>
+    <group conditions="horizontal">
+      <!-- Connectors -->
+      <line start="_Start" end="_Middle-30x" />
+      <line start="_Middle+30x" end="_End" />
+      <line start="_Middle-40y" end="_Middle-30y" />
+      <line start="_Middle+30y" end="_Middle+40y" />
 
-    <!-- NOT -->
+      <!-- Connectors to diodes, clockwise from W -->
+      <line start="_Middle-30x" end="_Middle-19x-11y" />
+      <line start="_Middle-9x-21y" end="_Middle-30y" />
+      <line start="_Middle-30y" end="_Middle+11x-19y" />
+      <line start="_Middle+30x" end="_Middle+21x-9y" />
+      <line start="_Middle+30x" end="_Middle+21x+9y" />
+      <line start="_Middle+30y" end="_Middle+11x+19y" />
+      <line start="_Middle+30y" end="_Middle-9x+21y" />
+      <line start="_Middle-30x" end="_Middle-19x+11y" />
 
-	<group conditions="_Horizontal">
+      <!-- Diodes, clockwise from W -->
+      <path start="_Middle-19x-11y" data="l -5,-5 l 15,-5 l -5,15 l -5,-5 z" />
+      <line start="_Middle-4x-16y" end="_Middle-14x-26y" />
+      <path start="_Middle+11x-19y" data="l 5,-5 l 5,15 l -15,-5 l 5,-5 z" />
+      <line start="_Middle+26x-14y" end="_Middle+16x-4y" />
+      <path start="_Middle+11x+19y" data="l -5,-5 l 15,-5 l -5,15 l -5,-5" />
+      <line start="_Middle+26x+14y" end="_Middle+16x+4y" />
+      <path start="_Middle-19x+11y" data="l 5,-5 l 5,15 l -15,-5 l 5,-5 z" />
+      <line start="_Middle-4x+16y" end="_Middle-14x+26y" />
 
-	
-	<line start="_Middle-30y" end="_Middle+11x-19y" />
-	<line start="_Middle-30y" end="_Middle-9x-21y" />
-
-
-	<line start="_Middle+30x" end="_Middle+21x-9y" />
-	<line start="_Middle+30x" end="_Middle+21x+9y" />
-
-
-	<line start="_Middle+30y" end="_Middle+11x+19y" />
-	<line start="_Middle+30y" end="_Middle-9x+21y" />
-
-
-	<line start="_Middle-30x" end="_Middle-19x+11y" />
-	<line start="_Middle-30x" end="_Middle-19x-11y" />
-
-	<line start="_Middle+26x-14y" end="_Middle+16x-4y" />
-
-	<line start="_Middle+26x+14y" end="_Middle+16x+4y" />
-
-	<line start="_Middle-4x-16y" end="_Middle-14x-26y" />
-
-	<line start="_Middle-4x+16y" end="_Middle-14x+26y" />
-
-
-	
-	<line start="_Middle+21x-9y" end="_Middle+16x-24y" />
-	<line start="_Middle+16x-24y" end="_Middle+6x-14y" />
-	<line start="_Middle+6x-14y" end="_Middle+21x-9y" />
-
-	
-	<line start="_Middle+21x+9y" end="_Middle+16x+24y" />
-	<line start="_Middle+16x+24y" end="_Middle+6x+14y" />
-	<line start="_Middle+6x+14y" end="_Middle+21x+9y" />
-
-
-
-	<line start="_Middle-9x+21y" end="_Middle-14x+6y" />
-	<line start="_Middle-14x+6y" end="_Middle-24x+16y" />
-	<line start="_Middle-24x+16y" end="_Middle-9x+21y" />
-
-
-	<line start="_Middle-9x-21y" end="_Middle-24x-16y" />
-	<line start="_Middle-24x-16y" end="_Middle-14x-6y" />
-	<line start="_Middle-14x-6y" end="_Middle-9x-21y" />
-
-
-	<text value="~" x="_Middle" y="_Middle-20" align="CentreCentre" /> 
-	<text value="~" x="_Middle" y="_Middle+20" align="CentreCentre" /> 
-	<text value="+" x="_Middle+20" y="_Middle" align="CentreCentre" />
-	<text value="-" x="_Middle-20" y="_Middle" align="CentreCentre" />
-
-
-
-      
+      <!-- Labels -->
+      <text value="~" x="_Middle" y="_Middle-20" align="CentreCentre" /> 
+      <text value="~" x="_Middle" y="_Middle+20" align="CentreCentre" /> 
+      <text value="+" x="_Middle+20" y="_Middle" align="CentreCentre" />
+      <text value="-" x="_Middle-20" y="_Middle" align="CentreCentre" />
     </group>
 
+    <group conditions="!horizontal">
+      <!-- Connectors -->
+      <line start="_Start" end="_Middle-30y" />
+      <line start="_Middle+30y" end="_End" />
+      <line start="_Middle-40x" end="_Middle-30x" />
+      <line start="_Middle+30x" end="_Middle+40x" />
 
-	<group conditions="!_Horizontal">
+      <!-- Connectors to diodes, clockwise from N -->
+      <line start="_Middle-30y" end="_Middle+11x-19y" />
+      <line start="_Middle+21x-9y" end="_Middle+30x" />
+      <line start="_Middle+30x" end="_Middle+19x+11y" />
+      <line start="_Middle+9x+21y" end="_Middle+30y" />
+      <line start="_Middle+30y" end="_Middle-9x+21y" />
+      <line start="_Middle-19x+11y" end="_Middle-30x" />
+      <line start="_Middle-30x" end="_Middle-21x-9y" />
+      <line start="_Middle-11x-19y" end="_Middle-30y" />
 
-      
-	
-	<line start="_Middle-30y" end="_Middle+9x-21y" />
-	<line start="_Middle-30y" end="_Middle-9x-21y" />
+      <!-- Diodes, clockwise from N -->
+      <path start="_Middle+11x-19y" data="l 5,-5 l 5,15 l -15,-5 l 5,-5 z" />
+      <line start="_Middle+26x-14y" end="_Middle+16x-4y" />
+      <path start="_Middle+19x+11y" data="l 5,5 l -15,5 l 5,-15 l 5,5 z" />
+      <line start="_Middle+4x+16y" end="_Middle+14x+26y" />
+      <path start="_Middle-19x+11y" data="l 5,-5 l 5,15 l -15,-5 l 5,-5 z" />
+      <line start="_Middle-4x+16y" end="_Middle-14x+26y" />
+      <path start="_Middle-11x-19y" data="l 5,5 l -15,5 l 5,-15 l 5,5 z" />
+      <line start="_Middle-26x-14y" end="_Middle-16x-4y" />
 
-
-	<line start="_Middle+30x" end="_Middle+19x-11y" />
-	<line start="_Middle+30x" end="_Middle+21x+9y" />
-
-
-	<line start="_Middle+30y" end="_Middle+11x+19y" />
-	<line start="_Middle+30y" end="_Middle-11x+19y" />
-
-
-	<line start="_Middle-30x" end="_Middle-21x+9y" />
-	<line start="_Middle-30x" end="_Middle-19x-11y" />
-
-	<line start="_Middle-14x-26y" end="_Middle-4x-16y" />
-
-	<line start="_Middle+14x-26y" end="_Middle+4x-16y" />
-
-
-	<line start="_Middle-16x+4y" end="_Middle-26x+14y" />
-
-	<line start="_Middle+16x+4y" end="_Middle+26x+14y" />
-
-	
-	<line start="_Middle-9x-21y" end="_Middle-24x-16y" />
-	<line start="_Middle-24x-16y" end="_Middle-14x-6y" />
-	<line start="_Middle-14x-6y" end="_Middle-9x-21y" />
-
-	
-	<line start="_Middle+9x-21y" end="_Middle+24x-16y" />
-	<line start="_Middle+24x-16y" end="_Middle+14x-6y" />
-	<line start="_Middle+14x-6y" end="_Middle+9x-21y" />
-
-
-	<line start="_Middle+21x+9y" end="_Middle+16x+24y" />
-	<line start="_Middle+16x+24y" end="_Middle+6x+14y" />
-	<line start="_Middle+6x+14y" end="_Middle+21x+9y" />
-
-
-	<line start="_Middle-21x+9y" end="_Middle-16x+24y" />
-	<line start="_Middle-16x+24y" end="_Middle-6x+14y" />
-	<line start="_Middle-6x+14y" end="_Middle-21x+9y" />
-
-
-	<text value="~" x="_Middle-20" y="_Middle" align="CentreCentre" /> 
-	<text value="~" x="_Middle+20" y="_Middle" align="CentreCentre" /> 
-	<text value="+" x="_Middle" y="_Middle-20" align="CentreCentre" />
-	<text value="-" x="_Middle" y="_Middle+20" align="CentreCentre" />
-
-
+      <!-- Labels -->
+      <text value="-" x="_Middle" y="_Middle-20" align="CentreCentre" /> 
+      <text value="+" x="_Middle" y="_Middle+20" align="CentreCentre" /> 
+      <text value="~" x="_Middle+20" y="_Middle" align="CentreCentre" />
+      <text value="~" x="_Middle-20" y="_Middle" align="CentreCentre" />
     </group>
-
   </render>
-
-
-
 </component>
