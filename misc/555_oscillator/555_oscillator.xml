@@ -6,7 +6,6 @@
     <meta name="author" value="O Luasa" />
     <meta name="guid" value="19c03d9c-f521-4ffc-b1dd-bbacae85b973" />
     <meta name="minsize" value="180" />
-    <meta name="canflip" value="true" />
 
     <property name="Reference" type="string" default="IC1" serialize="reference" display="Reference No." />
 
