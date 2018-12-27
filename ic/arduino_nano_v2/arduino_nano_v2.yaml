@@ -1,0 +1,74 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 714d4c0f-3aed-4fa7-a8a8-b8aa6ec6d5ef
+  name: Arduino Nano v2
+  description: >-
+    Pins for the Arduino Nano v2.
+template:
+  name: Integrated Circuit 2
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+  - name: Header
+    value: Arduino Nano v2
+  - name: Size
+    value: 30
+  - name: Pin0
+    value: D1 TX
+  - name: Pin1
+    value: Vin
+  - name: Pin2
+    value: D0 RX
+  - name: Pin3
+    value: GND
+  - name: Pin4
+    value: RST
+  - name: Pin5
+    value: RST
+  - name: Pin6
+    value: GND
+  - name: Pin7
+    value: 5V
+  - name: Pin8
+    value: D2
+  - name: Pin9
+    value: A0
+  - name: Pin10
+    value: D3
+  - name: Pin11
+    value: A1
+  - name: Pin12
+    value: D4
+  - name: Pin13
+    value: A2
+  - name: Pin14
+    value: D5
+  - name: Pin15
+    value: A3
+  - name: Pin16
+    value: D6
+  - name: Pin17
+    value: A4
+  - name: Pin18
+    value: D7
+  - name: Pin19
+    value: A5
+  - name: Pin20
+    value: D8
+  - name: Pin21
+    value: A6
+  - name: Pin22
+    value: D9
+  - name: Pin23
+    value: A7
+  - name: Pin24
+    value: D10
+  - name: Pin25
+    value: AREF
+  - name: Pin26
+    value: D11
+  - name: Pin27
+    value: 3V3
+  - name: Pin28
+    value: D12
+  - name: Pin29
+    value: D13
