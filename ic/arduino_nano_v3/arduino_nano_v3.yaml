@@ -1,7 +1,9 @@
 kind: ComponentConfiguration/v1
-guid: 12b926b7-a05a-46b8-aa02-86e1265f2420
 metadata:
+  guid: 12b926b7-a05a-46b8-aa02-86e1265f2420
   name: Arduino Nano v3
+  description: >-
+    Pins for the Arduino Nano v3.
 template:
   name: Integrated Circuit 2
   guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
