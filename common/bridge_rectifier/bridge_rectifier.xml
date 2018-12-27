@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Bridge Rectifier" />
-    <meta name="minsize" value="60" />
+    <meta name="minsize" value="80" />
     <meta name="canflip" value="true" />
     <meta name="author" value="Jeremy J" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
