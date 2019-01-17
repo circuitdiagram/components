@@ -1,0 +1,74 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 12b926b7-a05a-46b8-aa02-86e1265f2420
+  name: NodeMCU
+  description: >-
+    Pins for the NodeMCU.
+template:
+  name: Integrated Circuit 2
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+  - name: Header
+    value: NodeMCU
+  - name: Size
+    value: 30
+  - name: Pin0
+    value: A0
+  - name: Pin1
+    value: D0
+  - name: Pin2
+    value: RSV
+  - name: Pin3
+    value: D1
+  - name: Pin4
+    value: RSV
+  - name: Pin5
+    value: D2
+  - name: Pin6
+    value: SD3
+  - name: Pin7
+    value: D3
+  - name: Pin8
+    value: SD2
+  - name: Pin9
+    value: D4
+  - name: Pin10
+    value: SD1
+  - name: Pin11
+    value: 3V3
+  - name: Pin12
+    value: CMD
+  - name: Pin13
+    value: GND
+  - name: Pin14
+    value: SD0
+  - name: Pin15
+    value: D5
+  - name: Pin16
+    value: CLK
+  - name: Pin17
+    value: D6
+  - name: Pin18
+    value: GND
+  - name: Pin19
+    value: D7
+  - name: Pin20
+    value: 3V3
+  - name: Pin21
+    value: D8
+  - name: Pin22
+    value: EN
+  - name: Pin23
+    value: RX
+  - name: Pin24
+    value: RST
+  - name: Pin25
+    value: TX
+  - name: Pin26
+    value: GND
+  - name: Pin27
+    value: GND
+  - name: Pin28
+    value: Vin
+  - name: Pin29
+    value: 3V3
