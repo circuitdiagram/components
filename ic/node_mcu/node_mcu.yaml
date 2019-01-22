@@ -1,6 +1,6 @@
 kind: ComponentConfiguration/v1
 metadata:
-  guid: 12b926b7-a05a-46b8-aa02-86e1265f2420
+  guid: 4a8d2a10-f719-4b2c-834f-7bbb30f03406
   name: NodeMCU
   description: >-
     Pins for the NodeMCU.
