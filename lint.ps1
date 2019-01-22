@@ -32,14 +32,14 @@ if ($duplicateGuids)
 }
 
 # Check file names
-$invalidFileNames = $inputs | Where-Object{$_.Item1 -notmatch "^[a-z0-9/\._]+$"}
+$invalidFileNames = $inputs | Where-Object{$_.Item1 -cnotmatch "^[a-z0-9\/\._]+$"}
 if ($invalidFileNames)
 {
     Write-Output "File names must be lowercase alphanumeric with underscores."
 
     foreach ($invalidFileName in $invalidFileNames)
     {
-        Write-Output "[ERROR] Invalid file name: $invalidFileName"
+        Write-Output "[ERROR] Invalid file name: $($invalidFileName.Item1)"
     }
     Write-Output ""
 
