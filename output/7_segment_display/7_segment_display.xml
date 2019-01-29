@@ -124,7 +124,7 @@
     </group>
 
     <!-- Common anode/cathode -->
-	  <group conditions="$Type==CommonAnode">
+    <group conditions="$Type==CommonAnode">
       <text value="+" x="_End-58" y="_End+40" align="CentreLeft" />
     </group>
     <group conditions="$Type==CommonCathode">

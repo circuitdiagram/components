@@ -1,3 +1,14 @@
+$script:exit = 0
+
+Get-ChildItem . -Recurse -Filter *.xml | Foreach-Object {
+    $content = Get-Content $_.FullName
+
+    if ($content -match "\t") {
+        $script:exit = 1
+        Write-Output "[ERROR] Indented with tabs: $($_.FullName)"
+    }
+}
+
 [xml]$manifest = Get-Content "Build/manifest.xml"
 
 $inputs = @()
@@ -28,7 +39,7 @@ if ($duplicateGuids)
         Write-Output ""
     }
 
-    exit 1
+    $script:exit = 1
 }
 
 # Check file names
@@ -43,7 +54,12 @@ if ($invalidFileNames)
     }
     Write-Output ""
 
-    exit 1
+    $script:exit = 1
 }
 
-Write-Output "All components pass linting."
+if (!$script:exit)
+{
+    Write-Output "All components pass linting."
+}
+
+exit $script:exit
