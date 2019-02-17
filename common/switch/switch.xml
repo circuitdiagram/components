@@ -23,6 +23,10 @@
       <option>MiddleMustAlign</option>
     </flags>
 
+    <flags conditions="$Type==Changeover">
+      <option>FlipPrimary</option>
+    </flags>
+
     <configurations>
       <configuration name="Push Switch" value="Type:Push" implements="pushswitch" />
       <configuration name="Toggle Switch" value="Type:Toggle" implements="toggleswitch" />
