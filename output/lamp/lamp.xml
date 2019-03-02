@@ -13,7 +13,7 @@
     <meta name="implementitem" value="lamp" />
     <meta name="org.circuit-diagram.bundled" value="true" />
     
-    <property name="Lit" type="bool" default="true" serialize="islit" display="Light On"
+    <property name="Lit" type="bool" default="false" serialize="islit" display="Light On"
               sim:settable="true" />
   </declaration>
   <connections>
