@@ -55,55 +55,52 @@
     
   </declaration>
   <connections>
-    <group conditions="$Type==Rail">
-      <connection name="com" start="_Start" end="_End" edge="both" />
-    </group>
-    <group conditions="$Type==Rail2">
+    <group conditions="$Type==Rail|$Type==Rail2">
       <connection name="com" start="_Start" end="_End" edge="both" />
     </group>
     <group conditions="$Type==Ground,horizontal">
-      <connection start="_Start+10x" end="_End" edge="both" />
+      <connection name="com" start="_Start+10x" end="_End" edge="both" />
     </group>
     <group conditions="$Type==Ground,!horizontal">
-      <connection start="_Start" end="_End-8y" edge="both" />
+      <connection name="com" start="_Start" end="_End-8y" edge="both" />
     </group>
     <group conditions="$Type==Earth,horizontal">
-      <connection start="_Start+10x" end="_End" edge="both" />
+      <connection name="com" start="_Start+10x" end="_End" edge="both" />
     </group>
     <group conditions="$Type==Earth,!horizontal">
-      <connection start="_Start" end="_End-12y" edge="both" />
+      <connection name="com" start="_Start" end="_End-12y" edge="both" />
     </group>
     <group conditions="$Type==AC,horizontal">
-      <connection start="_Start" end="_Middle-12x" edge="start" />
-      <connection start="_Middle+12x" end="_End" edge="end" />
+      <connection name="a" start="_Start" end="_Middle-12x" edge="start" />
+      <connection name="b" start="_Middle+12x" end="_End" edge="end" />
     </group>
     <group conditions="$Type==AC,!horizontal">
-      <connection start="_Start" end="_Middle-12y" edge="start" />
-      <connection start="_Middle+12y" end="_End" edge="end" />
+      <connection name="a" start="_Start" end="_Middle-12y" edge="start" />
+      <connection name="b" start="_Middle+12y" end="_End" edge="end" />
     </group>
     <group conditions="($Type==DC|$Type==Current),horizontal">
-      <connection start="_Start" end="_Middle-16x" edge="start" />
-      <connection start="_Middle+16x" end="_End" edge="end" />
+      <connection name="pos" start="_Start" end="_Middle-16x" edge="start" />
+      <connection name="neg" start="_Middle+16x" end="_End" edge="end" />
     </group>
     <group conditions="($Type==DC|$Type==Current),!horizontal">
-      <connection start="_Start" end="_Middle-16y" edge="start" />
-      <connection start="_Middle+16y" end="_End" edge="end" />
+      <connection name="pos" start="_Start" end="_Middle-16y" edge="start" />
+      <connection name="neg" start="_Middle+16y" end="_End" edge="end" />
     </group>
     <group conditions="$Type==Cell,horizontal">
-      <connection start="_Start" end="_Middle-6x" edge="start" />
-      <connection start="_Middle+6x" end="_End" edge="end" />
+      <connection name="pos" start="_Start" end="_Middle-6x" edge="start" />
+      <connection name="neg" start="_Middle+6x" end="_End" edge="end" />
     </group>
     <group conditions="$Type==Cell,!horizontal">
-      <connection start="_Start" end="_Middle-6y" edge="start" />
-      <connection start="_Middle+6y" end="_End" edge="end" />
+      <connection name="pos" start="_Start" end="_Middle-6y" edge="start" />
+      <connection name="neg" start="_Middle+6y" end="_End" edge="end" />
     </group>
     <group conditions="$Type==Battery,horizontal">
-      <connection start="_Start" end="_Middle-12x" edge="start" />
-      <connection start="_Middle+12x" end="_End" edge="end" />
+      <connection name="pos" start="_Start" end="_Middle-12x" edge="start" />
+      <connection name="neg" start="_Middle+12x" end="_End" edge="end" />
     </group>
     <group conditions="$Type==Battery,!horizontal">
-      <connection start="_Start" end="_Middle-12y" edge="start" />
-      <connection start="_Middle+12y" end="_End" edge="end" />
+      <connection name="pos" start="_Start" end="_Middle-12y" edge="start" />
+      <connection name="neg" start="_Middle+12y" end="_End" edge="end" />
     </group>
   </connections>
   <render>
