@@ -9,7 +9,7 @@
     <meta name="guid" value="22bbfc5a-29d9-455f-b0bf-c582e7c71de9" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
 
-    <property name="Type" type="enum" default="NPN" serialize="t" display="Type">
+    <property name="Type" type="enum" default="NPNPhototransistor2" serialize="t" display="Type">
       <option>NPNPhototransistor2</option>
       <option>PNPPhototransistor2</option>
       <option>NPNPhototransistor3</option>
