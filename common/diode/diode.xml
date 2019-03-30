@@ -42,8 +42,7 @@
       <line start="_Start" end="_End" />
     </group>
     <group conditions="_Horizontal">
-      <path start="_Middle+7x" data="m 0,-8 l 0,16 m 0,-8 l -15,8 l 0,-16 l 15,8" />
-      <line start="_Middle+7x" end="_Middle-7x" /> 
+      <path start="_Middle+7x" data="m 0,-8 l 0,16 m 0,-8 l -15,8 l 0,-16 l 15,8" /> 
     </group>
     <group conditions="!_Horizontal">
       <path start="_Middle+7y" data="m -8,0 l 16,0 m-8,0 l 8,-15 l-16,0 l 8,15" />
