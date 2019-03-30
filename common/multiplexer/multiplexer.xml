@@ -5,7 +5,7 @@
     <meta name="minsize" value="60" />
     <meta name="author" value="Corsaka" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
-    <meta name="guid" value="53ff8195-72f4-4137-b114-b69828389dc9" />
+    <meta name="guid" value="d0ec6fb3-9f79-44db-957d-0a5b5f00dde0" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
 
     <property name="Enabled" type="bool" default="True" serialize="en" display="Enabled" />
