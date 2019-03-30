@@ -77,7 +77,7 @@
     </group>
 	
     <!-- Schottky -->
-	<group conditions="_Horizontal,$Type(eq_Schottky)">
+	  <group conditions="_Horizontal,$Type(eq_Schottky)">
       <line start="_Middle+7x+9y" end="_Middle+2x+9y" />
       <line start="_Middle+2x+9y" end="_Middle+2x+7y" />
       <line start="_Middle+7x-9y" end="_Middle+12x-9y" />
