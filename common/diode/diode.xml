@@ -10,7 +10,7 @@
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="org.circuit-diagram.bundled" value="true" />
 
-    <property name="Type" type="enum" default="Schottky" serialize="t" display="Type">
+    <property name="Type" type="enum" default="Standard" serialize="t" display="Type">
       <option>Standard</option>
       <option>Zener</option>
       <option>LED</option>
