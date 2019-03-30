@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Diode" />
@@ -15,6 +15,7 @@
       <option>Zener</option>
       <option>LED</option>
       <option>Photo</option>
+      <option>Schottky</option>
     </property>
 
     <configurations>
@@ -22,6 +23,7 @@
       <configuration name="Zener Diode" value="Type:Zener" implements="zenerdiode" />
       <configuration name="LED" value="Type:LED" implements="led" />
       <configuration name="Photodiode" value="Type:Photo" implements="photodiode" />
+      <configuration name="Schottky Diode" value="Type:Schottky" implements="schottkydiode" />
     </configurations>
   </declaration>
   <connections>
@@ -41,6 +43,7 @@
     </group>
     <group conditions="_Horizontal">
       <path start="_Middle+7x" data="m 0,-8 l 0,16 m 0,-8 l -15,8 l 0,-16 l 15,8" />
+      <line start="_Middle+7x" end="_Middle-7x" /> 
     </group>
     <group conditions="!_Horizontal">
       <path start="_Middle+7y" data="m -8,0 l 16,0 m-8,0 l 8,-15 l-16,0 l 8,15" />
@@ -72,6 +75,16 @@
     <group conditions="!_Horizontal,$Type(eq_Photo)">
       <path start="_Middle+5y" data="m -22,-22 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" />
       <path start="_Middle+5y" data="m -26,-17 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" />
+    </group>
+	
+    <!-- Schottky -->
+	<group conditions="_Horizontal,$Type(eq_Schottky)">
+      <line start="_Middle+7x+9y" end="_Middle+2x+9y" />
+      <line start="_Middle+7x-9y" end="_Middle+12x-9y" />
+    </group>
+    <group conditions="!_Horizontal,$Type(eq_Schottky)">
+      <line start="_Middle+9x+7y" end="_Middle+9x+2y" />
+      <line start="_Middle-9x+7y" end="_Middle-9x+12y" />
     </group>
   </render>
 </component>
