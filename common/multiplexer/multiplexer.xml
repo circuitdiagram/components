@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Multiplexer" />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="Corsaka" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="53ff8195-72f4-4137-b114-b69828389dc9" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+
+    <property name="Enabled" type="bool" default="True" serialize="en" display="Enabled" />
+
+    <flags>
+      <option>MiddleMustAlign</option>
+      <option>HorizontalOnly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection start="_Start-10y" end="_Middle-21x-10y" edge="Start" />
+      <connection start="_Start+10y" end="_Middle-21x+10y" edge="Start" />
+      <connection start="_Middle+21y" end="_Middle+30y" edge="End" />
+      <connection start="_Middle+21x" end="_End" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <!-- Common -->
+    <group>
+      <line start="_Start-10y" end="_Middle-17x-10y" />
+      <line start="_Start+10y" end="_Middle-17x+10y" />
+      <line start="_Middle+20y" end="_Middle+30y" />
+      <rect x="_Middle-20" y="_Middle-20" width="40" height="40" />
+      <ellipse centre="_Middle-13x+10y" rx="3" ry="3" />
+      <ellipse centre="_Middle-13x-10y" rx="3" ry="3" />
+      <ellipse centre="_Middle+13x" rx="3" ry="3" />
+      <line start="_Middle+17x" end="_End" />
+    </group>
+
+    <group conditions="$Enabled">
+      <line start="_Middle-10x-10y" end="_Middle+10x" />
+      <path start="_Middle+9x+1y" data="l -6,-1 l 2,-4 l 4,4" fill="true" />
+    </group>
+
+    <group conditions="!$Enabled">
+      <line start="_Middle-10x+10y" end="_Middle+10x" />
+      <path start="_Middle+9x" data="l -4,4 l -2,-4 l 6,-1" fill="true" />
+    </group>
+  </render>
+</component>
