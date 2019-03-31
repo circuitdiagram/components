@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Diode" />
@@ -9,19 +9,21 @@
     <meta name="guid" value="50cc071a-0abc-4276-a7a0-a5bff9cc0374" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="org.circuit-diagram.bundled" value="true" />
-
+    
     <property name="Type" type="enum" default="Standard" serialize="t" display="Type">
       <option>Standard</option>
       <option>Zener</option>
       <option>LED</option>
       <option>Photo</option>
+      <option>Schottky</option>
     </property>
-
+    
     <configurations>
       <configuration name="Diode" value="Type:Standard" implements="diode" />
       <configuration name="Zener Diode" value="Type:Zener" implements="zenerdiode" />
       <configuration name="LED" value="Type:LED" implements="led" />
       <configuration name="Photodiode" value="Type:Photo" implements="photodiode" />
+      <configuration name="Schottky Diode" value="Type:Schottky" implements="schottkydiode" />
     </configurations>
   </declaration>
   <connections>
@@ -72,6 +74,20 @@
     <group conditions="!_Horizontal,$Type(eq_Photo)">
       <path start="_Middle+5y" data="m -22,-22 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" />
       <path start="_Middle+5y" data="m -26,-17 l 8,8 m 1,1 l -2,-4 l -2,2 l 4,2 l -2,-4" />
+    </group>
+    
+    <!-- Schottky -->
+    <group conditions="_Horizontal,$Type(eq_Schottky)">
+      <line start="_Middle+7x+9y" end="_Middle+2x+9y" />
+      <line start="_Middle+2x+9y" end="_Middle+2x+7y" />
+      <line start="_Middle+7x-9y" end="_Middle+12x-9y" />
+      <line start="_Middle+12x-9y" end="_Middle+12x-7y" />
+    </group>
+    <group conditions="!_Horizontal,$Type(eq_Schottky)">
+      <line start="_Middle-9x+7y" end="_Middle-9x+2y" />
+      <line start="_Middle-9x+2y" end="_Middle-7x+2y" />
+      <line start="_Middle+9x+7y" end="_Middle+9x+12y" />
+      <line start="_Middle+9x+12y" end="_Middle+7x+12y" />
     </group>
   </render>
 </component>
