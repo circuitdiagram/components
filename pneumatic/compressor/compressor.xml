@@ -2,13 +2,13 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     
-		<!-- Describe the component -->
-		<meta name="name" value="Compressor" />
-		<meta name="version" value="1.0" />
-		<meta name="minsize" value="120" />
-		<meta name="author" value="Corsaka" />
-		<meta name="additionalinformation" value="Pnematic component" />
-		<meta name="guid" value="2043bd5e-da77-46bf-b78d-5eb141e78080" />
+    <!-- Describe the component -->
+    <meta name="name" value="Compressor" />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="120" />
+    <meta name="author" value="Corsaka" />
+    <meta name="additionalinformation" value="Pnematic component" />
+    <meta name="guid" value="2043bd5e-da77-46bf-b78d-5eb141e78080" />
     
     <!-- Can only be displayed vertically -->
     <flags>
