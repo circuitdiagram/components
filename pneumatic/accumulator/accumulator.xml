@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+	<declaration>
+
+		<!-- Describe the component -->
+		<meta name="name" value="Accumulator" />
+		<meta name="version" value="1.0" />
+		<meta name="minsize" value="120" />
+		<meta name="author" value="Corsaka" />
+		<meta name="additionalinformation" value="Pneumatic component" />
+		<meta name="guid" value="b22018a8-ab76-48a0-9fde-688f02ca4e9f" />
+
+		<!-- Can only be displayed horizontally -->
+		<flags>
+			<option>verticalonly</option>
+		</flags>
+		
+	</declaration>
+	<connections>
+		
+		<!-- Allow other components to connect to each of the pins -->
+		<group>
+			<connection start="_Start-80y" end="_Middle-48x-80y" edge="Start" />
+		</group>
+		
+	</connections>
+	<render>
+		
+		<group>
+			<!-- Draw the component -->
+			<line start="_Start-60y" end="_Middle-100y" />
+			<ellipse centre="_Start-80y" rx="6" ry="20" />
+		</group>
+		
+	</render>
+</component>
