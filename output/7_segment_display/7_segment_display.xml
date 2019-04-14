@@ -3,10 +3,12 @@
   <declaration>
     <meta name="name" value="7 Segment Display" />
     <meta name="description" value="Displays decimal numerals and optionally a decimal point using 7 + 1 LEDs." />
-    <meta name="version" value="1.0" />
+    <meta name="version" value="1.1" />
     <meta name="minsize" value="70" />
     <meta name="author" value="circuitdiagram" />
     <meta name="guid" value="4fa8d87e-d312-4b8d-979a-93888c521ff7" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="7segment" />
 
     <flags>
       <option>horizontalonly</option>

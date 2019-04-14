@@ -3,10 +3,12 @@
   <declaration>
     <meta name="name" value="BCD Decoder" />
     <meta name="description" value="Decodes a binary-coded decimal for use on a 7-segment display." />
-    <meta name="version" value="1.0" />
+    <meta name="version" value="1.1" />
     <meta name="minsize" value="90" />
     <meta name="author" value="circuitdiagram" />
     <meta name="guid" value="a45e7fb6-561b-4fa1-b688-7764d881e114" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="bcddecoder" />
 
     <flags>
       <option>horizontalonly</option>
