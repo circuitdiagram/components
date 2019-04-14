@@ -2,6 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Source" />
+    <meta name="version" value="1.1" />
     <meta name="minsize" value="10" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -37,7 +38,7 @@
       <option>Current</option>
     </property>
 
-    <flags conditions="$Type==Current">
+    <flags conditions="$Type==Cell|$Type==Battery|$Type==DC|$Type==Current">
       <option>FlipPrimary</option>
     </flags>
 
