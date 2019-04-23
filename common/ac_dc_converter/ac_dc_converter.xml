@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="AC-DC Converter" />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="237bdf11-0675-4de4-a324-3941e868ecf4" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+
+    <property name="Primary" type="enum" default="AC" serialize="primary" display="Primary Type">
+      <option>AC</option>
+      <option>DC</option>
+    </property>
+
+    <property name="Secondary" type="enum" default="AC" serialize="secondary" display="Secondary Type">
+      <option>AC</option>
+      <option>DC</option>
+    </property>
+
+    <configurations>
+      <configuration name="AC-DC Converter" value="Primary:AC,Secondary:DC" implements="acdcconverter" />
+      <configuration name="DC-AC Converter" value="Primary:DC,Secondary:AC" implements="dcacconverter" />
+      <configuration name="DC-DC Converter" value="Primary:DC,Secondary:DC" implements="dcdcconverter" />
+    </configurations>
+  </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="primary" start="_Start" end="_Middle-25x" edge="start" />
+      <connection name="secondary" start="_Middle+25x" end="_End" edge="end" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="primary" start="_Start" end="_Middle-25y" edge="start" />
+      <connection name="secondary" start="_Middle+25y" end="_End" edge="end" />
+    </group>
+  </connections>
+  <render>
+    <group conditions="horizontal">
+      <line start="_Start" end="_Middle-25x" />
+      <line start="_Middle+25x" end="_End" />  
+    </group>
+    <group conditions="!horizontal">
+        <line start="_Start" end="_Middle-25y" />
+      <line start="_Middle+25y" end="_End" />
+    </group>
+
+    <group>
+      <rect x="_Middle-25x" y="_Middle-25x" width="50" height="50" />
+      <line start="_Middle-24x+24y" end="_Middle+24x-24y" />
+    </group>
+
+    <group conditions="$Primary==AC">
+      <path start="_Middle-10x-10y" data="m -8,0 a 4 4 180 0 1 8 0 a 4 4 180 0 0 8 0" />
+    </group>
+    <group conditions="$Primary==DC">
+      <line start="_Middle-2x-14y" end="_Middle-19x-14y" />
+      <line start="_Middle-2x-10y" end="_Middle-5x-10y" />
+      <line start="_Middle-9x-10y" end="_Middle-12x-10y" />
+      <line start="_Middle-16x-10y" end="_Middle-19x-10y" />
+    </group>
+
+    <group conditions="$Secondary==AC">
+      <path start="_Middle+10x+10y" data="m -8,0 a 4 4 180 0 1 8 0 a 4 4 180 0 0 8 0" />
+    </group>
+    <group conditions="$Secondary==DC">
+      <line start="_Middle+2x+10y" end="_Middle+19x+10y" />
+      <line start="_Middle+2x+14y" end="_Middle+5x+14y" />
+      <line start="_Middle+9x+14y" end="_Middle+12x+14y" />
+      <line start="_Middle+16x+14y" end="_Middle+19x+14y" />
+    </group>
+  </render>
+</component>
