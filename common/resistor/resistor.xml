@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Resistor" />
-    <meta name="version" value="3.0" />
+    <meta name="version" value="3.0.1" />
     <meta name="minsize" value="50" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -82,7 +82,7 @@
       <rect x="_Middle-20x" y="_Start-8y" width="40" height="16" />
     </group>
     <group conditions="horizontal,$Style==US">
-      <path start="_Middle-20x" data="l 1,0 l 3,-7 6,14 6,-14 6,14 6,-14 6,14 3,-7 1,0" />
+      <path start="_Middle-20x" data="l 2,0 l 3,-7 6,14 6,-14 6,14 6,-14 6,14 3,-7 2,0" />
     </group>
     <group conditions="horizontal,$Type!=Variable,$Type!=Thermistor,$Type!=LDR,$Show==Resistance">
       <text value="$Resistance" x="_Middle" y="_Start-17" align="CentreCentre" />
@@ -95,7 +95,7 @@
       <rect x="_Start-8x" y="_Middle-20y" width="16" height="40" />
     </group>
     <group conditions="!horizontal,$Style==US">
-      <path start="_Middle-20y" data="l 0,1 l -7,3 14,6 -14,6 14,6 -14,6 14,6 -7,3 0,1" />
+      <path start="_Middle-20y" data="l 0,2 l -7,3 14,6 -14,6 14,6 -14,6 14,6 -7,3 0,2" />
     </group>
     <group conditions="!horizontal,$Type!=Variable,$Type!=Thermistor,$Type!=LDR,$Show==Resistance">
       <text value="$Resistance" x="_Start-14" y="_Middle" align="CentreRight" />
@@ -151,7 +151,7 @@
       <path start="_Middle" data="m -17,-20 l 0,13 l 34,14" />
     </group>
     <group conditions="!horizontal,$Type==Thermistor,$Style==US">
-      <path start="_Middle" data="m -17,-15 l 0,13 l 34,14" />
+      <path start="_Middle" data="m -17,-14 l 0,13 l 34,14" />
     </group>
 
     <!-- LDR -->
