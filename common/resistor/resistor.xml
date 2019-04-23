@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Resistor" />
-    <meta name="version" value="2.0" />
+    <meta name="version" value="3.0" />
     <meta name="minsize" value="50" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -13,6 +13,11 @@
     <property name="Show" type="enum" default="Resistance" serialize="show" display="Show">
       <option>Text</option>
       <option>Resistance</option>
+    </property>
+
+    <property name="Style" type="enum" default="IEC" serialize="style" display="Style">
+      <option>IEC</option>
+      <option>US</option>
     </property>
 
     <property name="Text" type="string" default="R1" serialize="text" display="Text" />
@@ -38,11 +43,16 @@
     </flags>
 
     <configurations>
-      <configuration name="Resistor" value="Type:Standard" implements="resistor" />
-      <configuration name="Variable Resistor" value="Type:Variable" implements="variableresistor" />
-      <configuration name="Potentiometer" value="Type:Potentiometer" implements="potentiometer" />
-      <configuration name="Thermistor" value="Type:Thermistor" implements="thermistor" />
-      <configuration name="LDR" value="Type:LDR" implements="ldr" />
+      <configuration name="Resistor (IEC)" value="Type:Standard,Style:IEC" implements="resistor" />
+      <configuration name="Variable Resistor (IEC)" value="Type:Variable,Style:IEC" implements="variableresistor" />
+      <configuration name="Potentiometer (IEC)" value="Type:Potentiometer,Style:IEC" implements="potentiometer" />
+      <configuration name="Thermistor (IEC)" value="Type:Thermistor,Style:IEC" implements="thermistor" />
+      <configuration name="LDR (IEC)" value="Type:LDR,Style:IEC" implements="ldr" />
+      <configuration name="Resistor (US)" value="Type:Standard,Style:US" implements="resistor" />
+      <configuration name="Variable Resistor (US)" value="Type:Variable,Style:US" implements="variableresistor" />
+      <configuration name="Potentiometer (US)" value="Type:Potentiometer,Style:US" implements="potentiometer" />
+      <configuration name="Thermistor (US)" value="Type:Thermistor,Style:US" implements="thermistor" />
+      <configuration name="LDR (US)" value="Type:LDR,Style:US" implements="ldr" />
     </configurations>
 
   </declaration>
@@ -66,27 +76,43 @@
     <!-- Standard -->
     <group conditions="horizontal">
       <line start="_Start" end="_Middle-20x" />
-      <rect x="_Middle-20x" y="_Start-8y" width="40" height="16" />
       <line start="_Middle+20x" end="_End" />
+    </group>
+    <group conditions="horizontal,$Style!=US">
+      <rect x="_Middle-20x" y="_Start-8y" width="40" height="16" />
+    </group>
+    <group conditions="horizontal,$Style==US">
+      <path start="_Middle-20x" data="l 1,0 l 3,-7 6,14 6,-14 6,14 6,-14 6,14 3,-7 1,0" />
     </group>
     <group conditions="horizontal,$Type!=Variable,$Type!=Thermistor,$Type!=LDR,$Show==Resistance">
       <text value="$Resistance" x="_Middle" y="_Start-17" align="CentreCentre" />
     </group>
     <group conditions="!horizontal">
       <line start="_Start" end="_Middle-20y" />
-      <rect x="_Start-8x" y="_Middle-20y" width="16" height="40" />
       <line start="_Middle+20y" end="_End" />
+    </group>
+    <group conditions="!horizontal,$Style!=US">
+      <rect x="_Start-8x" y="_Middle-20y" width="16" height="40" />
+    </group>
+    <group conditions="!horizontal,$Style==US">
+      <path start="_Middle-20y" data="l 0,1 l -7,3 14,6 -14,6 14,6 -14,6 14,6 -7,3 0,1" />
     </group>
     <group conditions="!horizontal,$Type!=Variable,$Type!=Thermistor,$Type!=LDR,$Show==Resistance">
       <text value="$Resistance" x="_Start-14" y="_Middle" align="CentreRight" />
     </group>
 
     <!-- Text -->
-    <group conditions="horizontal,$Show==Text,$Type!=LDR">
+    <group conditions="horizontal,$Show==Text,$Type!=Variable,$Type!=Thermistor,$Type!=LDR">
       <text value="$Text" x="_Middle" y="_Start-17" align="CentreCentre" />
     </group>
-    <group conditions="!horizontal,$Show==Text,$Type!=LDR">
+    <group conditions="!horizontal,$Show==Text,$Type!=Variable,$Type!=Thermistor,$Type!=LDR">
       <text value="$Text" x="_Start-14" y="_Middle" align="CentreRight" />
+    </group>
+    <group conditions="horizontal,$Show==Text,($Type==Variable|$Type==Thermistor)">
+      <text value="$Text" x="_Middle" y="_Start-25" align="CentreCentre" />
+    </group>
+    <group conditions="!horizontal,$Show==Text,($Type==Variable|$Type==Thermistor)">
+      <text value="$Text" x="_Start-25" y="_Middle" align="CentreRight" />
     </group>
     <group conditions="horizontal,$Show==Text,$Type==LDR">
       <text value="$Text" x="_Middle" y="_Start-33" align="CentreCentre" />
@@ -104,19 +130,28 @@
     </group>
 
     <!-- Variable -->
-    <group conditions="horizontal,$Type==Variable">
+    <group conditions="horizontal,$Type==Variable,$Style!=US">
       <path start="_Middle-20x" data="m 3,17 l 32,-35 m -6,0 l 6,0 l 0,6" />
     </group>
-    <group conditions="!horizontal,$Type==Variable">
+    <group conditions="!horizontal,$Type==Variable,$Style!=US">
       <path start="_Middle" data="m -17,17 l 35,-32 m 0,6 l 0,-6 l -6,0" />
+    </group>
+    <group conditions="horizontal,$Type==Variable,$Style==US">
+      <path start="_Middle" data="m -7,17 l 14,-34 m -5,2 l 5,-2 l 2,5" />
+    </group>
+    <group conditions="!horizontal,$Type==Variable,$Style==US">
+      <path start="_Middle" data="m -17,7 l 34,-14 m -5,-2 l 5,2 l -2,5" />
     </group>
 
     <!-- Thermistor -->
     <group conditions="horizontal,$Type==Thermistor">
-      <path start="_Middle" data="m -20,17 l 10,0 l 32,-35" />
+      <path start="_Middle" data="m -20,17 l 13,0 l 14,-34" />
     </group>
-    <group conditions="!horizontal,$Type==Thermistor">
-      <path start="_Middle" data="m -17,-20 l 0,10 l 35,32" />
+    <group conditions="!horizontal,$Type==Thermistor,$Style!=US">
+      <path start="_Middle" data="m -17,-20 l 0,13 l 34,14" />
+    </group>
+    <group conditions="!horizontal,$Type==Thermistor,$Style==US">
+      <path start="_Middle" data="m -17,-15 l 0,13 l 34,14" />
     </group>
 
     <!-- LDR -->
