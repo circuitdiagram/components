@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+
+    <!-- Describe the component -->
+    <meta name="name" value="Linear Actuator" />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="100" />
+    <meta name="author" value="Michael Salvini" />
+    <meta name="guid" value="92616277-5725-436f-b860-02e3bba18f40" />
+    
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+
+  </declaration>
+  <connections>
+
+    <group conditions="horizontal">
+      <connection name="a" start="_Start-15x+5y" end="_Start+5y" edge="start" />
+      <connection name="b" start="_Start-15x+15y" end="_Start+15y" edge="start" />
+    </group>
+
+  </connections>
+  <render>
+    <!-- Draw the component -->
+
+    <!-- When placed horizontally, draw from left to right -->
+    <group conditions="horizontal">
+      <rect x="_Start" y="_End" width="100" height="20" />
+      <rect x="_Start" y="_End-10" width="35" height="10" />
+      <rect x="_Start+100" y="_End+5" width="20" height="10" />
+
+      <line start="_Start-15x+5y" end="_Start+5y" />
+      <line start="_Start-15x+15y" end="_Start+15y" />
+    </group>
+
+  </render>
+</component>
