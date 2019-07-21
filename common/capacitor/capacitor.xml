@@ -2,7 +2,7 @@
 <component xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml" version="1.0" target="1.2">
   <declaration>
     <meta name="name" value="Capacitor" />
-    <meta name="version" value="2.0" />
+    <meta name="version" value="2.1.0" />
     <meta name="minsize" value="50" />
     <meta name="canflip" value="true" />
     <meta name="author" value="Circuit Diagram" />
@@ -23,7 +23,8 @@
         <format conditions="$Capacitance(gt_1)" value="$Capacitance  F" />
         <format conditions="$Capacitance(gteq_0.001)" value="$Capacitance(mul_1000)(round_1)  mF" />
         <format conditions="$Capacitance(gteq_0.000001)" value="$Capacitance(mul_1000000)(round_1)  \u00B5F" />
-        <format value="$Capacitance(mul_1000000000)(round_1)  nF" />
+        <format conditions="$Capacitance(gteq_0.000000001)" value="$Capacitance(mul_1000000000)(round_1)  nF" />
+        <format value="$Capacitance(mul_1000000000000)(round_1)  pF" />
       </formatting>
     </property>
 
