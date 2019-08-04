@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Multi-Pole Switch" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="40" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="27701dba-b023-43ad-9f88-b8a2dd0af1d1" />
+
+    <flags>
+      <option>HorizontalOnly</option>
+    </flags>
+
+    <property name="Type" type="enum" default="DPST" serialize="t" display="Type">
+      <option>DPST</option>
+      <option>DPDT</option>
+    </property>
+
+    <configurations>
+      <configuration name="DPST Switch" value="Type:DPST" />
+      <configuration name="DPDT Switch" value="Type:DPDT" />
+    </configurations>
+  </declaration>
+  <connections>
+    <!-- DPST -->
+    <group conditions="$Type==DPST">
+      <connection name="a1" start="_Start-10y" end="_Middle-14x-10y" edge="Start" />
+      <connection name="b1" start="_Middle+14x-10y" end="_End-10y" edge="End" />
+
+      <connection name="a2" start="_Start+10y" end="_Middle-14x+10y" edge="Start" />
+      <connection name="b2" start="_Middle+14x+10y" end="_End+10y" edge="End" />
+    </group>
+    
+    <!-- DPDT -->
+    <group conditions="$Type==DPDT">
+      <connection name="a1" start="_Start-20y" end="_Middle-14x-20y" edge="Start" />
+      <connection name="b1" start="_Middle+14x-30y" end="_End-30y" edge="End" />
+      <connection name="c1" start="_Middle+14x-10y" end="_End-10y" edge="End" />
+
+      <connection name="a2" start="_Start+20y" end="_Middle-14x+20y" edge="Start" />
+      <connection name="b2" start="_Middle+14x+10y" end="_End+10y" edge="End" />
+      <connection name="c2" start="_Middle+14x+30y" end="_End+30y" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <!-- DPST -->
+    <group conditions="$Type==DPST">
+      <line start="_Start-10y" end="_Middle-14x-10y" />
+      <line start="_Middle+14x-10y" end="_End-10y" />
+      <ellipse centre="_Middle-11x-10y" rx="3" ry="3" />
+      <ellipse centre="_Middle+11x-10y" rx="3" ry="3" />
+      <line start="_Middle-8x-12y" end="_Middle+9x-18y" />
+
+      <line start="_Start+10y" end="_Middle-14x+10y" />
+      <line start="_Middle+14x+10y" end="_End+10y" />
+      <ellipse centre="_Middle-11x+10y" rx="3" ry="3" />
+      <ellipse centre="_Middle+11x+10y" rx="3" ry="3" />
+      <line start="_Middle-8x+8y" end="_Middle+9x+2y" />
+
+      <path start="_Middle-13y" data="l 0,1 m 0,4 l 0,1 m 0,4 l 0,1 m 0,4 l 0,1" />
+    </group>
+    
+    <!-- DPDT -->
+    <group conditions="$Type==DPDT">
+      <line start="_Start-20y" end="_Middle-14x-20y" />
+      <line start="_Middle+14x-30y" end="_End-30y" />
+      <line start="_Middle+14x-10y" end="_End-10y" />
+      <line start="_Middle-8x-21y" end="_Middle+8x-29y" />
+      <ellipse centre="_Middle-11x-20y" rx="3" ry="3" />
+      <ellipse centre="_Middle+11x-30y" rx="3" ry="3" />
+      <ellipse centre="_Middle+11x-10y" rx="3" ry="3" />
+
+      <line start="_Start+20y" end="_Middle-14x+20y" />
+      <line start="_Middle+14x+10y" end="_End+10y" />
+      <line start="_Middle+14x+30y" end="_End+30y" />
+      <line start="_Middle-8x+19y" end="_Middle+8x+11y" />
+      <ellipse centre="_Middle-11x+20y" rx="3" ry="3" />
+      <ellipse centre="_Middle+11x+10y" rx="3" ry="3" />
+      <ellipse centre="_Middle+11x+30y" rx="3" ry="3" />
+
+      <path start="_Middle-23y" data="l 0,1 m 0,4 l 0,1 m 0,4 l 0,1 m 0,4 l 0,1 m 0,4 l 0,1 m 0,4 l 0,1 m 0,4 l 0,1 m 0,4 l 0,1" />
+    </group>
+  </render>
+</component>
