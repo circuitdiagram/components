@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+	<declaration>
+
+		<!-- Describe the component -->
+		<meta name="name" value="L293D" />
+		<meta name="version" value="1.0" />
+		<meta name="minsize" value="120" />
+		<meta name="author" value="abarnes4" />
+		<meta name="additionalinformation" value="Controls two motors." />
+		<meta name="guid" value="18f0f06d-a5a5-46e8-b5d8-57cd3d02c615" />
+
+		<!-- Can only be displayed horizontally -->
+		<flags>
+			<option>horizontalonly</option>
+		</flags>
+		
+	</declaration>
+	<connections>
+
+		<!-- Allow other components to connect to each of the pins -->
+		<group>
+			<connection start="_Start-80y" end="_Middle-48x-80y" edge="Start" />
+			<connection start="_Start-60y" end="_Middle-48x-60y" edge="Start" />
+			<connection start="_Middle+48x-80y" end="_End-80y" edge="End" />
+			<connection start="_Middle+48x-60y" end="_End-60y" edge="End" />
+			<connection start="_Start-40y" end="_Middle-48x-40y" edge="Start" />
+			<connection start="_Middle+48x-40y" end="_End-40y" edge="End" />
+			<connection start="_Start-20y" end="_Middle-48x-20y" edge="Start" />
+			<connection start="_Middle+48x-20y" end="_End-20y" edge="End" />
+			<connection start="_Start" end="_Middle-48x" edge="Start" />
+			<connection start="_Middle+48x" end="_End" edge="End" />
+			<connection start="_Start+20y" end="_Middle-48x+20y" edge="Start" />
+			<connection start="_Middle+48x+20y" end="_End+20y" edge="End" />
+		</group>
+		
+	</connections>
+	<render>
+		
+		<group>
+			<!-- Draw the rectangle representing the chip -->
+			<rect x="_Middle-50" y="_Middle-90" width="120" height="160" />
+
+			<!-- Draw a line to each pin -->
+			<line start="_Start-80y" end="_Middle-50x-80y" /> <!-- pin 1 -->
+			<line start="_Start-60y" end="_Middle-50x-60y" /> <!-- pin 2 -->
+			<line start="_Start-40y" end="_Middle-50x-40y" /> <!-- pin 3 -->
+			<line start="_Start-20y" end="_Middle-50x-20y" /> <!-- pin 4 -->
+			<line start="_Start" end="_Middle-50x" /> <!-- pin 5 -->
+			<line start="_Start+20y" end="_Middle-50x+20y" /> <!-- pin 6 -->
+          	<line start="_Start+40y" end="_Middle-50x+40y" /> <!-- pin 7 -->
+          	<line start="_Start+60y" end="_Middle-50x+60y" /> <!-- pin 8 -->
+          
+			<line start="_Middle+80x-80y" end="_Middle+70x-80y" /> <!-- pin 16 -->
+			<line start="_Middle+80x-60y" end="_Middle+70x-60y" /> <!-- pin 15 -->
+          	<line start="_Middle+80x-40y" end="_Middle+70x-40y" /> <!-- pin 14 -->
+          	<line start="_Middle+80x-20y" end="_Middle+70x-20y" /> <!-- pin 13 -->
+			<line start="_Middle+80x" end="_Middle+70x" /> <!-- pin 12 -->
+			<line start="_Middle+80x+20y" end="_Middle+70x+20y" /> <!-- pin 11 -->
+          	<line start="_Middle+80x+40y" end="_Middle+70x+40y" /> <!-- pin 10 -->
+          	<line start="_Middle+80x+60y" end="_Middle+70x+60y" /> <!-- pin 9 -->
+          	
+
+			<!-- Draw a label at each pin -->
+			<!-- TODO: change "pin0"..."pin11" to the values for your chip -->
+			<text x="_Middle-46" y="_Middle-80" align="CentreLeft" size="small" value="01 ENA1" />
+			<text x="_Middle-46" y="_Middle-60" align="CentreLeft" size="small" value="02 IN1" />
+			<text x="_Middle-46" y="_Middle-40" align="CentreLeft" size="small" value="03 OUT1" />
+			<text x="_Middle-46" y="_Middle-20" align="CentreLeft" size="small" value="04 GRD" />
+			<text x="_Middle-46" y="_Middle" align="CentreLeft" size="small" value="05 GRD" />
+			<text x="_Middle-46" y="_Middle+20" align="CentreLeft" size="small" value="06 OUT1" />
+        	<text x="_Middle-46" y="_Middle+40" align="CentreLeft" size="small" value="07 IN2" />
+        	<text x="_Middle-46" y="_Middle+60" align="CentreLeft" size="small" value="08 VCC2" />
+			
+          	<text x="_Middle+66" y="_Middle+60" align="CentreRight" size="small" value="ENA2 09" />
+          	<text x="_Middle+66" y="_Middle+40" align="CentreRight" size="small" value="IN3 10" />
+			<text x="_Middle+66" y="_Middle+20" align="CentreRight" size="small" value="OUT2 11" />
+			<text x="_Middle+66" y="_Middle" align="CentreRight" size="small" value="GRD 12" />
+			<text x="_Middle+66" y="_Middle-20" align="CentreRight" size="small" value="GRD 13" />
+			<text x="_Middle+66" y="_Middle-40" align="CentreRight" size="small" value="OUT2 14" />
+          	<text x="_Middle+66" y="_Middle-60" align="CentreRight" size="small" value="IN4 15" />
+          	<text x="_Middle+66" y="_Middle-80" align="CentreRight" size="small" value="VCC1 16" />
+          
+			<text x="_Middle+32" y="_Middle-100" align="CentreRight" size="large" value="L293D IC" />
+          
+		</group>
+		
+	</render>
+</component>
