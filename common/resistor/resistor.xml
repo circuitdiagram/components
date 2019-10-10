@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Resistor" />
-    <meta name="version" value="3.0.1" />
+    <meta name="version" value="3.1.0" />
     <meta name="minsize" value="50" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -40,6 +40,7 @@
 
     <flags conditions="$Type==Potentiometer">
       <option>MiddleMustAlign</option>
+      <option>FlipSecondary</option>
     </flags>
 
     <configurations>
