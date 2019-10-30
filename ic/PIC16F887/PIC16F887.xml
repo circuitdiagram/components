@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="PIC16F887" />
+    <meta name="minsize" value="240" />
+    <meta name="author" value="Jacob Moulton" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="77a76446-55d7-4abe-8387-c53f39234664" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="microcontroller" />
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection start="_Start-180y" end="_Middle-48x-180y" edge="Start" />
+      <connection start="_Start-160y" end="_Middle-48x-160y" edge="Start" />
+      <connection start="_Start-140y" end="_Middle-48x-140y" edge="Start" />
+      <connection start="_Start-120y" end="_Middle-48x-120y" edge="Start" />
+      <connection start="_Start-100y" end="_Middle-48x-100y" edge="Start" />
+      <connection start="_Start-80y" end="_Middle-48x-80y" edge="Start" />
+      <connection start="_Start-60y" end="_Middle-48x-60y" edge="Start" />
+      <connection start="_Start-40y" end="_Middle-48x-40y" edge="Start" />
+      <connection start="_Start-20y" end="_Middle-48x-20y" edge="Start" />
+      <connection start="_Start" end="_Middle-48x" edge="Start" />
+      <connection start="_Start+20y" end="_Middle-48x+20y" edge="Start" />
+      <connection start="_Start+40y" end="_Middle-48x+40y" edge="Start" />
+      <connection start="_Start+60y" end="_Middle-48x+60y" edge="Start" />
+      <connection start="_Start+80y" end="_Middle-48x+80y" edge="Start" />
+      <connection start="_Start+100y" end="_Middle-48x+100y" edge="Start" />
+      <connection start="_Start+120y" end="_Middle-48x+120y" edge="Start" />
+      <connection start="_Start+140y" end="_Middle-48x+140y" edge="Start" />
+      <connection start="_Start+160y" end="_Middle-48x+160y" edge="Start" />
+      <connection start="_Start+180y" end="_Middle-48x+180y" edge="Start" />
+      <connection start="_Start+200y" end="_Middle-48x+200y" edge="Start" />
+
+
+      <connection start="_Middle+48x-80y" end="_End-80y" edge="End" />
+      <connection start="_Middle+48x-60y" end="_End-60y" edge="End" />
+      <connection start="_Middle+48x-40y" end="_End-40y" edge="End" />
+      <connection start="_Middle+48x-20y" end="_End-20y" edge="End" />
+      <connection start="_Middle+48x" end="_End" edge="End" />
+      <connection start="_Middle+48x+20y" end="_End+20y" edge="End" />
+      <connection start="_Middle+48x+40y" end="_End+40y" edge="End" />
+      <connection start="_Middle+48x+60y" end="_End+60y" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <group>
+      <!-- Container -->
+      <rect x="_Middle-50" y="_Middle-90" width="100" height="400" />
+      <!-- IO Wires -->
+      <line start="_Start-80y" end="_Middle-50x-80y" />
+      <line start="_Start-60y" end="_Middle-50x-60y" />
+      <line start="_Start-40y" end="_Middle-50x-40y" />
+      <line start="_Start-20y" end="_Middle-50x-20y" />
+      <line start="_Start" end="_Middle-50x" />
+      <line start="_Start+20y" end="_Middle-50x+20y" />
+      <line start="_Start+40y" end="_Middle-50x+40y" />
+      <line start="_Start+60y" end="_Middle-50x+60y" />
+      <line start="_Start+80y" end="_Middle-50x+80y" />
+      <line start="_Start+100y" end="_Middle-50x+100y" />
+      <line start="_Start+120y" end="_Middle-50x+120y" />
+      <line start="_Start+140y" end="_Middle-50x+140y" />
+      <line start="_Start+160y" end="_Middle-50x+160y" />
+      <line start="_Start+180y" end="_Middle-50x+180y" />
+      <line start="_Start+200y" end="_Middle-50x+200y" />
+      <line start="_Start+220y" end="_Middle-50x+220y" />
+      <line start="_Start+240y" end="_Middle-50x+240y" />
+      <line start="_Start+260y" end="_Middle-50x+260y" />
+      <line start="_Start+280y" end="_Middle-50x+280y" />
+      <line start="_Start+300y" end="_Middle-50x+300y" />
+      
+
+
+      <line start="_Middle+50x-80y" end="_End-80y" />
+      <line start="_Middle+50x-60y" end="_End-60y" />
+      <line start="_Middle+50x-40y" end="_End-40y" />
+      <line start="_Middle+50x-20y" end="_End-20y" />
+      <line start="_Middle+50x" end="_End" />
+      <line start="_Middle+50x+20y" end="_End+20y" />
+      <line start="_Middle+50x+40y" end="_End+40y" />
+      <line start="_Middle+50x+60y" end="_End+60y" />
+      <line start="_Middle+50x+80y" end="_End+80y" />
+      <line start="_Middle+50x+100y" end="_End+100y" />
+      <line start="_Middle+50x+120y" end="_End+120y" />
+      <line start="_Middle+50x+140y" end="_End+140y" />
+      <line start="_Middle+50x+160y" end="_End+160y" />
+      <line start="_Middle+50x+180y" end="_End+180y" />
+      <line start="_Middle+50x+200y" end="_End+200y" />
+      <line start="_Middle+50x+220y" end="_End+220y" />
+      <line start="_Middle+50x+240y" end="_End+240y" />
+      <line start="_Middle+50x+260y" end="_End+260y" />
+      <line start="_Middle+50x+280y" end="_End+280y" />
+      <line start="_Middle+50x+300y" end="_End+300y" />
+      
+      <!-- IO Labels -->
+      <text value="1" x="_Middle-46" y="_Middle-80" align="CentreLeft" size="large" />
+      <text value="2" x="_Middle-46" y="_Middle-60" align="CentreLeft" size="large" />
+      <text value="3" x="_Middle-46" y="_Middle-40" align="CentreLeft" size="large" />
+      <text value="4" x="_Middle-46" y="_Middle-20" align="CentreLeft" size="large" />
+      <text value="5" x="_Middle-46" y="_Middle" align="CentreLeft" size="large" />
+      <text value="6" x="_Middle-46" y="_Middle+20" align="CentreLeft" size="large"/>
+      <text value="7" x="_Middle-46" y="_Middle+40" align="CentreLeft" size="large"/>
+      <text value="8" x="_Middle-46" y="_Middle+60" align="CentreLeft" size="large"/>
+      <text value="9" x="_Middle-46" y="_Middle+80" align="CentreLeft" size="large" />
+      <text value="10" x="_Middle-46" y="_Middle+100" align="CentreLeft" size="large" />
+      <text value="Vdd" x="_Middle-46" y="_Middle+120" align="CentreLeft" size="large" />
+      <text value="Vss" x="_Middle-46" y="_Middle+140" align="CentreLeft" size="large" />
+      <text value="13" x="_Middle-46" y="_Middle+160" align="CentreLeft" size="large" />
+      <text value="14" x="_Middle-46" y="_Middle+180" align="CentreLeft" size="large" />
+      <text value="15" x="_Middle-46" y="_Middle+200" align="CentreLeft" size="large" />
+      <text value="16" x="_Middle-46" y="_Middle+220" align="CentreLeft" size="large" />
+      <text value="17" x="_Middle-46" y="_Middle+240" align="CentreLeft" size="large" />
+      <text value="18" x="_Middle-46" y="_Middle+260" align="CentreLeft" size="large" />
+      <text value="19" x="_Middle-46" y="_Middle+280" align="CentreLeft" size="large" />
+      <text value="20" x="_Middle-46" y="_Middle+300" align="CentreLeft" size="large" />
+
+        
+        
+      <text value="40" x="_Middle+46" y="_Middle-80" align="CentreRight" size="large"/>
+      <text value="39" x="_Middle+46" y="_Middle-60" align="CentreRight" size="large"/>
+      <text value="38" x="_Middle+46" y="_Middle-40" align="CentreRight" size="large"/>
+      <text value="37" x="_Middle+46" y="_Middle-20" align="CentreRight" size="large"/>
+      <text value="36" x="_Middle+46" y="_Middle" align="CentreRight" size="large"/>
+      <text value="35" x="_Middle+46" y="_Middle+20" align="CentreRight" size="large"/>
+      <text value="34" x="_Middle+46" y="_Middle+40" align="CentreRight" size="large"/>
+      <text value="33" x="_Middle+46" y="_Middle+60" align="CentreRight" size="large"/>
+      <text value="Vdd" x="_Middle+46" y="_Middle+80" align="CentreRight" size="large"/>
+      <text value="Vss" x="_Middle+46" y="_Middle+100" align="CentreRight" size="large"/>
+      <text value="30" x="_Middle+46" y="_Middle+120" align="CentreRight" size="large"/>
+      <text value="29" x="_Middle+46" y="_Middle+140" align="CentreRight" size="large"/>
+      <text value="28" x="_Middle+46" y="_Middle+160" align="CentreRight" size="large"/>
+      <text value="27" x="_Middle+46" y="_Middle+180" align="CentreRight" size="large"/>
+      <text value="26" x="_Middle+46" y="_Middle+200" align="CentreRight" size="large"/>
+      <text value="25" x="_Middle+46" y="_Middle+220" align="CentreRight" size="large"/>
+      <text value="24" x="_Middle+46" y="_Middle+240" align="CentreRight" size="large"/>
+      <text value="23" x="_Middle+46" y="_Middle+260" align="CentreRight" size="large"/>
+      <text value="22" x="_Middle+46" y="_Middle+280" align="CentreRight" size="large"/>
+      <text value="21" x="_Middle+46" y="_Middle+300" align="CentreRight" size="large"/>
+      <text value="PIC16" x="_Middle-12" y="_Middle+100" align="CentreLeft" size="medium"/>
+      <text value="F887" x="_Middle-12" y="_Middle+120" align="CentreLeft" size="medium" />
+
+     
+    </group>
+  </render>
+</component>
