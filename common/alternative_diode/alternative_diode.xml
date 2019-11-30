@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<component xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml" version="1.0" target="1.2">
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
 
   <declaration>
     <meta name="name" value="Alternative Diode" />
+    <meta name="version" value="1.1.0" />
     <meta name="author" value="O Luasa" />
     <meta name="guid" value="0405563d-c144-4a60-8945-4f96bed2266f" />
     <meta name="minsize" value="40" />
     <meta name="canflip" value="true" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
 
     <property name="Reference" type="string" default="D1" serialize="reference" display="Reference No." />
 
@@ -23,82 +25,82 @@
     </property>
 
     <configurations>
-      <configuration name="Diode" value="Type:Diode" />
-      <configuration name="Zener Diode" value="Type:Zener" />
-      <configuration name="Schottky Diode" value="Type:Schottky" />
+      <configuration name="Diode" value="Type:Diode" implements="diode" />
+      <configuration name="Zener Diode" value="Type:Zener" implements="zenerdiode" />
+      <configuration name="Schottky Diode" value="Type:Schottky" implements="schottkydiode" />
       <configuration name="Varactor Diode" value="Type:Varactor" />
       <configuration name="Tunnel Diode" value="Type:Tunnel" />
-      <configuration name="Light Emitting Diode" value="Type:LED" />
-      <configuration name="Photodiode" value="Type:Photodiode" />
+      <configuration name="Light Emitting Diode" value="Type:LED" implements="led" />
+      <configuration name="Photodiode" value="Type:Photodiode" implements="photodiode" />
     </configurations>
   </declaration>
 
   <connections>
-    <group conditions="_Horizontal,!$Type(eq_Varactor)">
+    <group conditions="horizontal,!$Type==Varactor">
       <connection name="a" start="_Start" end="_Middle-10x" edge="Start" />
       <connection name="c" start="_Middle+10x" end="_End" edge="End" />
     </group>
 
-    <group conditions="!_Horizontal,!$Type(eq_Varactor)">
+    <group conditions="!horizontal,$Type!=Varactor">
       <connection name="a" start="_Start" end="_Middle-10y" edge="Start" />
       <connection name="c" start="_Middle+10y" end="_End" edge="End" />
     </group>
 
-    <group conditions="_Horizontal,$Type(eq_Varactor)">
+    <group conditions="horizontal,$Type==Varactor">
       <connection name="a" start="_Start" end="_Middle-10x" edge="Start" />
       <connection name="c" start="_Middle+16x" end="_End" edge="End" />
     </group>
 
-    <group conditions="!_Horizontal,$Type(eq_Varactor)">
+    <group conditions="!horizontal,$Type==Varactor">
       <connection name="a" start="_Start" end="_Middle-10y" edge="Start" />
       <connection name="c" start="_Middle+16y" end="_End" edge="End" />
     </group>
   </connections>
 
   <render>
-    <group conditions="_Horizontal,!$Type(eq_Varactor)">
+    <group conditions="horizontal,$Type!=Varactor">
       <line start="_Start" end="_Middle-9x" />
       <path start="_Middle-9x" data="l 0,10 l 17,-10 l -17,-10 l 0,10" />
       <line start="_Middle+9x" end="_End" />
       <line start="_Middle+9x+10y" end="_Middle+9x-10y" />
     </group>
 
-    <group conditions="!_Horizontal,!$Type(eq_Varactor)">
+    <group conditions="!horizontal,$Type!=Varactor">
       <line start="_Start" end="_Middle-9y" />
       <path start="_Middle-9y" data="l 10,0 l -10,17 l -10,-17 l 10,0" />
       <line start="_Middle+9y" end="_End" />
       <line start="_Middle+10x+9y" end="_Middle-10x+9y" />
     </group>
 
-    <group conditions="_Horizontal,!$Type(eq_LED),!$Type(eq_Photodiode)">
+    <group conditions="horizontal,!$Type==LED,$Type!=Photodiode">
       <text value="$Reference" x="_Middle" y="_Middle-23" align="BottomCentre" />
       <text value="$Value" x="_Middle" y="_Middle-13" align="BottomCentre" />
     </group>
 
-    <group conditions="!_Horizontal,!$Type(eq_LED),!$Type(eq_Photodiode)">
+    <group conditions="!horizontal,$Type!=LED,$Type!=Photodiode">
       <text value="$Reference" x="_Middle-15" y="_Middle-5" align="CentreRight" />
       <text value="$Value" x="_Middle-15" y="_Middle+5" align="CentreRight" />
     </group>
 
-    <group conditions="_Horizontal,$Type(eq_Zener)">
+    <group conditions="horizontal,$Type==Zener">
       <line start="_Middle+9x+10y" end="_Middle+14x+13y" />
       <line start="_Middle+9x-10y" end="_Middle+5x-13y" />
     </group>
 
-    <group conditions="!_Horizontal,$Type(eq_Zener)">
+    <group conditions="!horizontal,$Type==Zener">
       <line start="_Middle-10x+9y" end="_Middle-13x+14y" />
       <line start="_Middle+10x+9y" end="_Middle+13x+5y" />
     </group>
 
-    <group conditions="_Horizontal,$Type(eq_Schottky)">
+    <group conditions="horizontal,$Type==Schottky">
       <path start="_Middle+9x+10y" data="l 4,0 l 0,-4 m -4,-16 l -4,0 l 0,4" />
     </group>
 
-    <group conditions="!_Horizontal,$Type(eq_Schottky)">
+    <group conditions="!horizontal,$Type==Schottky">
       <path start="_Middle-10x+9y" data="l 0,4 l 4,0 m 16,-4 l 0,-4 l -4,0" />
     </group>
 
-    <group conditions="_Horizontal,$Type(eq_Varactor)">
+    <group conditions="horizontal,$Type==Varactor">
       <line start="_Start" end="_Middle-12x" />
       <path start="_Middle-12x" data="l 0,10 l 17,-10 l -17,-10 l 0,10" />
       <line start="_Middle+12x" end="_End" />
@@ -106,7 +108,7 @@
       <line start="_Middle+12x+10y" end="_Middle+12x-10y" />
     </group>
 
-    <group conditions="!_Horizontal,$Type(eq_Varactor)">
+    <group conditions="!horizontal,$Type==Varactor">
       <line start="_Start" end="_Middle-12y" />
       <path start="_Middle-12y" data="l 10,0 l -10,17 l -10,-17 l 10,0" />
       <line start="_Middle+12y" end="_End" />
@@ -114,38 +116,38 @@
       <line start="_Middle+10x+12y" end="_Middle-10x+12y" />
     </group>
 
-    <group conditions="_Horizontal,$Type(eq_Tunnel)">
+    <group conditions="horizontal,$Type==Tunnel">
       <line start="_Middle+9x+10y" end="_Middle+5x+10y" />
       <line start="_Middle+9x-10y" end="_Middle+5x-10y" />
     </group>
 
-    <group conditions="!_Horizontal,$Type(eq_Tunnel)">
+    <group conditions="!horizontal,$Type==Tunnel">
       <line start="_Middle-10x+9y" end="_Middle-10x+5y" />
       <line start="_Middle+10x+9y" end="_Middle+10x+5y" />
     </group>
 
-    <group conditions="_Horizontal,$Type(eq_LED)">
+    <group conditions="horizontal,$Type==LED">
       <path start="_Middle-5x-15y" data="l 10,-10 l -1,6 l -5,-5 l 6,-1" fill="true" />
       <path start="_Middle+5x-15y" data="l 10,-10 l -1,6 l -5,-5 l 6,-1" fill="true" />
       <text value="$Reference" x="_Middle" y="_Middle+13" align="TopCentre" />
       <text value="$Value" x="_Middle" y="_Middle+23" align="TopCentre" />
     </group>
 
-    <group conditions="!_Horizontal,$Type(eq_LED)">
+    <group conditions="!horizontal,$Type==LED">
       <path start="_Middle+15x-5y" data="l 10,-10 l -1,6 l -5,-5 l 6,-1" fill="true" />
       <path start="_Middle+15x+5y" data="l 10,-10 l -1,6 l -5,-5 l 6,-1" fill="true" />
       <text value="$Reference" x="_Middle-15" y="_Middle-5" align="CentreRight" />
       <text value="$Value" x="_Middle-15" y="_Middle+5" align="CentreRight" />
     </group>
 
-    <group conditions="_Horizontal,$Type(eq_Photodiode)">
+    <group conditions="horizontal,$Type==Photodiode">
       <path start="_Middle-10x-25y" data="l 10,10 l -6,-1 l 5,-5 l 1,6" fill="true" />
       <path start="_Middle-20x-25y" data="l 10,10 l -6,-1 l 5,-5 l 1,6" fill="true" />
       <text value="$Reference" x="_Middle" y="_Middle+13" align="TopCentre" />
       <text value="$Value" x="_Middle" y="_Middle+23" align="TopCentre" />
     </group>
 
-    <group conditions="!_Horizontal,$Type(eq_Photodiode)">
+    <group conditions="!horizontal,$Type==Photodiode">
       <path start="_Middle-25x-10y" data="l 10,10 l -1,-6 l -5,5 l 6,1" fill="true" />
       <path start="_Middle-25x-20y" data="l 10,10 l -1,-6 l -5,5 l 6,1" fill="true" />
       <text value="$Reference" x="_Middle+15" y="_Middle-5" align="CentreLeft" />
