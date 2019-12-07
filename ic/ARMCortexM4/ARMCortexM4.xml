@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+	<declaration>
+
+		<!-- Describe the component -->
+		<meta name="name" value="ARM Cortex M4" />
+		<meta name="version" value="1.0" />
+		<meta name="minsize" value="120" />
+		<meta name="author" value="Kieran Grayshon" />
+		<meta name="additionalinformation" value="grayshonprogrammer@gmail.com" />
+		<meta name="guid" value="ddb51002-1163-4435-98f2-37a8ff98898b" />
+
+		<!-- Can only be displayed horizontally -->
+		<flags>
+			<option>horizontalonly</option>
+		</flags>
+
+	</declaration>
+	<connections>
+
+		<!-- Allow other components to connect to each of the pins -->
+		<group>
+          <connection start="_Middle-300x-160y" end="_Middle-200x-160y"  edge="Start"/>
+          <connection start="_Middle-300x-140y" end="_Middle-200x-140y"  edge="Start"/>
+          <connection start="_Middle-300x-120y" end="_Middle-200x-120y"  edge="Start"/>
+          <connection start="_Middle-300x-100y" end="_Middle-200x-100y"  edge="Start"/>
+          <connection start="_Middle-300x-80y" end="_Middle-200x-80y"  edge="Start"/>
+          <connection start="_Middle-300x-60y" end="_Middle-200x-60y"  edge="Start"/>
+          <connection start="_Middle-300x-40y" end="_Middle-200x-40y"  edge="Start"/>
+          <connection start="_Middle-300x-20y" end="_Middle-200x-20y"  edge="Start"/>
+          <connection start="_Middle-300x" end="_Middle-200x"  edge="Start"/>
+          <connection start="_Middle-300x+20y" end="_Middle-200x+20y"  edge="Start"/>
+          <connection start="_Middle-300x+40y" end="_Middle-200x+40y"  edge="Start"/>
+          <connection start="_Middle-300x+60y" end="_Middle-200x+60y"  edge="Start"/>
+          <connection start="_Middle-300x+80y" end="_Middle-200x+80y"  edge="Start"/>
+          <connection start="_Middle-300x+100y" end="_Middle-200x+100y"  edge="Start"/>
+          <connection start="_Middle-300x+120y" end="_Middle-200x+120y"  edge="Start"/>
+          <connection start="_Middle-300x+140y" end="_Middle-200x+140y"  edge="Start"/>
+
+           <connection start="_Middle+200x-160y" end="_Middle+300x-160y" edge="End"/>
+          <connection start="_Middle+200x-140y" end="_Middle+300x-140y" edge="End" />
+          <connection start="_Middle+200x-120y" end="_Middle+300x-120y" edge="End"/>
+          <connection start="_Middle+200x-100y" end="_Middle+300x-100y" edge="End"/>
+          <connection start="_Middle+200x-80y" end="_Middle+300x-80y" edge="End"/>
+          <connection start="_Middle+200x-60y" end="_Middle+300x-60y" edge="End"/>
+          <connection start="_Middle+200x-40y" end="_Middle+300x-40y" edge="End"/>
+          <connection start="_Middle+200x-20y" end="_Middle+300x-20y" edge="End"/>
+          <connection start="_Middle+200x" end="_Middle+300x" edge="End"/>
+          <connection start="_Middle+200x+20y" end="_Middle+300x+20y" edge="End"/>
+          <connection start="_Middle+200x+40y" end="_Middle+300x+40y" edge="End"/>
+          <connection start="_Middle+200x+60y" end="_Middle+300x+60y" edge="End"/>
+          <connection start="_Middle+200x+80y" end="_Middle+300x+80y" edge="End"/>
+          <connection start="_Middle+200x+100y" end="_Middle+300x+100y" edge="End"/>
+          <connection start="_Middle+200x+120y" end="_Middle+300x+120y" edge="End"/>
+          <connection start="_Middle+200x+140y" end="_Middle+300x+140y" edge="End"/>
+
+          <connection start="_Middle-205x+200y" end="_Middle-205x+300y" edge="End"/>
+          <connection start="_Middle-178.25x+200y" end="_Middle-178.25x+300y" edge="End"/>
+          <connection start="_Middle-151.8x+200y" end="_Middle-151.8x+300y" edge="End"/>
+          <connection start="_Middle-120.6x+200y" end="_Middle-120.6x+300y" edge="End"/>
+          <connection start="_Middle-99.3x+200y" end="_Middle-99.3x+300y" edge="End"/>
+          <connection start="_Middle-73.1x+200y" end="_Middle-73.1x+300y" edge="End"/>
+          <connection start="_Middle-46.9x+200y" end="_Middle-46.9x+300y" edge="End"/>
+          <connection start="_Middle-20.6x+200y" end="_Middle-20.6x+300y" edge="End"/>
+          <connection start="_Middle+5.63x+200y" end="_Middle+5.63x+300y" edge="End"/>
+          <connection start="_Middle+31.8x+200y" end="_Middle+31.8x+300y" edge="End"/>
+          <connection start="_Middle+58.1x+200y" end="_Middle+58.1x+300y" edge="End"/>
+          <connection start="_Middle+84.3x+200y" end="_Middle+84.3x+300y" edge="End"/>
+          <connection start="_Middle+110.6x+200y" end="_Middle+110.6x+300y" edge="End"/>
+          <connection start="_Middle+136.9x+200y" end="_Middle+136.9x+300y" edge="End"/>
+          <connection start="_Middle+168.1x+200y" end="_Middle+168.1x+300y" edge="End"/>
+          <connection start="_Middle+199.4x+200y" end="_Middle+199.4x+300y" edge="End"/>
+
+          <connection start="_Middle-205x-200y" end="_Middle-205x-300y" edge="End"/>
+          <connection start="_Middle-178.25x-200y" end="_Middle-178.25x-300y" edge="End"/>
+          <connection start="_Middle-151.8x-200y" end="_Middle-151.8x-300y" edge="End"/>
+          <connection start="_Middle-120.6x-200y" end="_Middle-120.6x-300y" edge="End"/>
+          <connection start="_Middle-99.3x-200y" end="_Middle-99.3x-300y" edge="End"/>
+          <connection start="_Middle-73.1x-200y" end="_Middle-73.1x-300y" edge="End"/>
+          <connection start="_Middle-46.9x-200y" end="_Middle-46.9x-300y" edge="End"/>
+          <connection start="_Middle-20.6x-200y" end="_Middle-20.6x-300y" edge="End"/>
+          <connection start="_Middle+5.63x-200y" end="_Middle+5.63x-300y" edge="End"/>
+          <connection start="_Middle+31.8x-200y" end="_Middle+31.8x-300y" edge="End"/>
+          <connection start="_Middle+58.1x-200y" end="_Middle+58.1x-300y" edge="End"/>
+          <connection start="_Middle+84.3x-200y" end="_Middle+84.3x-300y" edge="End"/>
+          <connection start="_Middle+110.6x-200y" end="_Middle+110.6x-300y" edge="End"/>
+          <connection start="_Middle+136.9x-200y" end="_Middle+136.9x-300y" edge="End"/>
+          <connection start="_Middle+168.1x-200y" end="_Middle+168.1x-300y" edge="End"/>
+          <connection start="_Middle+199.4x-200y" end="_Middle+199.4x-300y" edge="End"/>
+
+		</group>
+
+	</connections>
+	<render>
+
+		<group>
+			<!-- Draw the rectangle representing the chip -->
+			<rect x="_Middle-225" y="_Middle-225" width="450" height="450" />
+
+
+
+			<!-- Draw a line to each pin -->
+		  <line start="_Middle-300x-160y" end="_Middle-200x-160y" />
+          <line start="_Middle-300x-140y" end="_Middle-200x-140y" />
+          <line start="_Middle-300x-120y" end="_Middle-200x-120y" />
+          <line start="_Middle-300x-100y" end="_Middle-200x-100y" />
+          <line start="_Middle-300x-80y" end="_Middle-200x-80y" />
+          <line start="_Middle-300x-60y" end="_Middle-200x-60y" />
+          <line start="_Middle-300x-40y" end="_Middle-200x-40y" />
+          <line start="_Middle-300x-20y" end="_Middle-200x-20y" />
+          <line start="_Middle-300x" end="_Middle-200x" />
+          <line start="_Middle-300x+20y" end="_Middle-200x+20y" />
+          <line start="_Middle-300x+40y" end="_Middle-200x+40y" />
+          <line start="_Middle-300x+60y" end="_Middle-200x+60y" />
+          <line start="_Middle-300x+80y" end="_Middle-200x+80y" />
+          <line start="_Middle-300x+100y" end="_Middle-200x+100y" />
+          <line start="_Middle-300x+120y" end="_Middle-200x+120y" />
+          <line start="_Middle-300x+140y" end="_Middle-200x+140y" />
+
+          <line start="_Middle+200x-160y" end="_Middle+300x-160y" />
+          <line start="_Middle+200x-140y" end="_Middle+300x-140y" />
+          <line start="_Middle+200x-120y" end="_Middle+300x-120y" />
+          <line start="_Middle+200x-100y" end="_Middle+300x-100y" />
+          <line start="_Middle+200x-80y" end="_Middle+300x-80y" />
+          <line start="_Middle+200x-60y" end="_Middle+300x-60y" />
+          <line start="_Middle+200x-40y" end="_Middle+300x-40y" />
+          <line start="_Middle+200x-20y" end="_Middle+300x-20y" />
+          <line start="_Middle+200x" end="_Middle+300x" />
+          <line start="_Middle+200x+20y" end="_Middle+300x+20y" />
+          <line start="_Middle+200x+40y" end="_Middle+300x+40y" />
+          <line start="_Middle+200x+60y" end="_Middle+300x+60y" />
+          <line start="_Middle+200x+80y" end="_Middle+300x+80y" />
+          <line start="_Middle+200x+100y" end="_Middle+300x+100y" />
+          <line start="_Middle+200x+120y" end="_Middle+300x+120y" />
+          <line start="_Middle+200x+140y" end="_Middle+300x+140y" />
+
+          <line start="_Middle-205x+200y" end="_Middle-205x+300y"/>
+          <line start="_Middle-178.25x+200y" end="_Middle-178.25x+300y"/>
+          <line start="_Middle-151.8x+200y" end="_Middle-151.8x+300y"/>
+          <line start="_Middle-120.6x+200y" end="_Middle-120.6x+300y"/>
+          <line start="_Middle-99.3x+200y" end="_Middle-99.3x+300y"/>
+          <line start="_Middle-73.1x+200y" end="_Middle-73.1x+300y"/>
+          <line start="_Middle-46.9x+200y" end="_Middle-46.9x+300y"/>
+          <line start="_Middle-20.6x+200y" end="_Middle-20.6x+300y"/>
+          <line start="_Middle+5.63x+200y" end="_Middle+5.63x+300y"/>
+          <line start="_Middle+31.8x+200y" end="_Middle+31.8x+300y"/>
+          <line start="_Middle+58.1x+200y" end="_Middle+58.1x+300y"/>
+          <line start="_Middle+84.3x+200y" end="_Middle+84.3x+300y"/>
+          <line start="_Middle+110.6x+200y" end="_Middle+110.6x+300y"/>
+          <line start="_Middle+136.9x+200y" end="_Middle+136.9x+300y"/>
+          <line start="_Middle+168.1x+200y" end="_Middle+168.1x+300y"/>
+          <line start="_Middle+199.4x+200y" end="_Middle+199.4x+300y"/>
+
+          <line start="_Middle-205x-200y" end="_Middle-205x-300y"/>
+          <line start="_Middle-178.25x-200y" end="_Middle-178.25x-300y"/>
+          <line start="_Middle-151.8x-200y" end="_Middle-151.8x-300y"/>
+          <line start="_Middle-120.6x-200y" end="_Middle-120.6x-300y"/>
+          <line start="_Middle-99.3x-200y" end="_Middle-99.3x-300y"/>
+          <line start="_Middle-73.1x-200y" end="_Middle-73.1x-300y"/>
+          <line start="_Middle-46.9x-200y" end="_Middle-46.9x-300y"/>
+          <line start="_Middle-20.6x-200y" end="_Middle-20.6x-300y"/>
+          <line start="_Middle+5.63x-200y" end="_Middle+5.63x-300y"/>
+          <line start="_Middle+31.8x-200y" end="_Middle+31.8x-300y"/>
+          <line start="_Middle+58.1x-200y" end="_Middle+58.1x-300y"/>
+          <line start="_Middle+84.3x-200y" end="_Middle+84.3x-300y"/>
+          <line start="_Middle+110.6x-200y" end="_Middle+110.6x-300y"/>
+          <line start="_Middle+136.9x-200y" end="_Middle+136.9x-300y"/>
+          <line start="_Middle+168.1x-200y" end="_Middle+168.1x-300y"/>
+          <line start="_Middle+199.4x-200y" end="_Middle+199.4x-300y"/>
+
+			<!-- Draw a label at each pin -->
+
+          <text x="_Middle-190" y="_Middle-160" align="CentreLeft" size="large" value="VDD" />
+          <text x="_Middle-190" y="_Middle-140" align="CentreLeft" size="large" value="PC13" />
+          <text x="_Middle-190" y="_Middle-120" align="CentreLeft" size="large" value="PC14" />
+          <text x="_Middle-190" y="_Middle-100" align="CentreLeft" size="large" value="PC15" />
+          <text x="_Middle-190" y="_Middle-80" align="CentreLeft" size="large" value="PF0" />
+          <text x="_Middle-190" y="_Middle-60" align="CentreLeft" size="large" value="PF1" />
+          <text x="_Middle-190" y="_Middle-40" align="CentreLeft" size="large" value="NRST" />
+          <text x="_Middle-190" y="_Middle-20" align="CentreLeft" size="large" value="PC0" />
+          <text x="_Middle-190" y="_Middle" align="CentreLeft" size="large" value="PC1" />
+          <text x="_Middle-190" y="_Middle+20" align="CentreLeft" size="large" value="PC2" />
+          <text x="_Middle-190" y="_Middle+40" align="CentreLeft" size="large" value="PC3" />
+          <text x="_Middle-190" y="_Middle+60" align="CentreLeft" size="large" value="VSSA GND" />
+          <text x="_Middle-190" y="_Middle+80" align="CentreLeft" size="large" value="VDDA POWER" />
+          <text x="_Middle-190" y="_Middle+100" align="CentreLeft" size="large" value="PA0" />
+          <text x="_Middle-190" y="_Middle+120" align="CentreLeft" size="large" value="PA1" />
+          <text x="_Middle-190" y="_Middle+140" align="CentreLeft" size="large" value="PA2" />
+
+          <text x="_Middle+190" y="_Middle-160" align="CentreRight" size="large" value="PF7" />
+          <text x="_Middle+190" y="_Middle-140" align="CentreRight" size="large" value="PF6" />
+          <text x="_Middle+190" y="_Middle-120" align="CentreRight" size="large" value="PA13" />
+          <text x="_Middle+190" y="_Middle-100" align="CentreRight" size="large" value="PA12" />
+          <text x="_Middle+190" y="_Middle-80" align="CentreRight" size="large" value="PA11" />
+          <text x="_Middle+190" y="_Middle-60" align="CentreRight" size="large" value="PA10" />
+          <text x="_Middle+190" y="_Middle-40" align="CentreRight" size="large" value="PA9" />
+          <text x="_Middle+190" y="_Middle-20" align="CentreRight" size="large" value="PA8" />
+          <text x="_Middle+190" y="_Middle" align="CentreRight" size="large" value="PC9" />
+          <text x="_Middle+190" y="_Middle+20" align="CentreRight" size="large" value="PC8" />
+          <text x="_Middle+190" y="_Middle+40" align="CentreRight" size="large" value="PC7" />
+          <text x="_Middle+190" y="_Middle+60" align="CentreRight" size="large" value="PC6" />
+          <text x="_Middle+190" y="_Middle+80" align="CentreRight" size="large" value="PB15" />
+          <text x="_Middle+190" y="_Middle+100" align="CentreRight" size="large" value="PB14" />
+          <text x="_Middle+190" y="_Middle+120" align="CentreRight" size="large" value="PB13" />
+          <text x="_Middle+190" y="_Middle+140" align="CentreRight" size="large" value="PB12" />
+
+           <text x="_Middle-215" y="_Middle+180" align="CentreLeft" size="small" value="PA3" />
+           <text x="_Middle-188.25" y="_Middle+180" align="CentreLeft" size="small" value="PF4" />
+           <text x="_Middle-161.8" y="_Middle+180" align="CentreLeft" size="small" value="PF5" />
+           <text x="_Middle-130.6" y="_Middle+180" align="CentreLeft" size="small" value="PA4" />
+           <text x="_Middle-109.3" y="_Middle+180" align="CentreLeft" size="small" value="PA5" />
+           <text x="_Middle-83.1" y="_Middle+180" align="CentreLeft" size="small" value="PA6" />
+           <text x="_Middle-56.9" y="_Middle+180" align="CentreLeft" size="small" value="PA7" />
+           <text x="_Middle-30.6" y="_Middle+180" align="CentreLeft" size="small" value="PC4" />
+           <text x="_Middle-4.37" y="_Middle+180" align="CentreLeft" size="small" value="PC5" />
+           <text x="_Middle+21.8" y="_Middle+180" align="CentreLeft" size="small" value="PB0" />
+           <text x="_Middle+48.1" y="_Middle+180" align="CentreLeft" size="small" value="PB1" />
+           <text x="_Middle+74.3" y="_Middle+180" align="CentreLeft" size="small" value="PB2" />
+           <text x="_Middle+100.6" y="_Middle+180" align="CentreLeft" size="small" value="PB10" />
+           <text x="_Middle+126.9" y="_Middle+180" align="CentreLeft" size="small" value="PB11" />
+           <text x="_Middle+158.1" y="_Middle+170" align="CentreLeft" size="small" value="VSS" />
+          <text x="_Middle+158.1" y="_Middle+180" align="CentreLeft" size="small" value="GND" />
+           <text x="_Middle+189.4" y="_Middle+180" align="CentreLeft" size="small" value="VDD" />
+
+            <text x="_Middle-215" y="_Middle-180" align="CentreLeft" size="small" value="VDD" />
+          <text x="_Middle-188.25" y="_Middle-190" align="CentreLeft" size="small" value="VSS" />
+           <text x="_Middle-188.25" y="_Middle-180" align="CentreLeft" size="small" value="GND" />
+           <text x="_Middle-161.8" y="_Middle-180" align="CentreLeft" size="small" value="PB9" />
+           <text x="_Middle-130.6" y="_Middle-180" align="CentreLeft" size="small" value="PB8" />
+           <text x="_Middle-109.3" y="_Middle-190" align="CentreLeft" size="small" value="BO" />
+          <text x="_Middle-109.3" y="_Middle-180" align="CentreLeft" size="small" value="OT0" />
+           <text x="_Middle-83.1" y="_Middle-180" align="CentreLeft" size="small" value="PB7" />
+           <text x="_Middle-56.9" y="_Middle-180" align="CentreLeft" size="small" value="PB6" />
+           <text x="_Middle-30.6" y="_Middle-180" align="CentreLeft" size="small" value="PB5" />
+           <text x="_Middle-4.37" y="_Middle-180" align="CentreLeft" size="small" value="PB4" />
+           <text x="_Middle+21.8" y="_Middle-180" align="CentreLeft" size="small" value="PB3" />
+           <text x="_Middle+48.1" y="_Middle-180" align="CentreLeft" size="small" value="PD2" />
+           <text x="_Middle+74.3" y="_Middle-180" align="CentreLeft" size="small" value="PC12" />
+           <text x="_Middle+100.6" y="_Middle-180" align="CentreLeft" size="small" value="PC11" />
+           <text x="_Middle+126.9" y="_Middle-180" align="CentreLeft" size="small" value="PC10" />
+          <text x="_Middle+158.1" y="_Middle-180" align="CentreLeft" size="small" value="PA15" />
+           <text x="_Middle+189.4" y="_Middle-180" align="CentreLeft" size="small" value="PA14" />
+
+
+           <text x="_Middle" y="_Middle" align="CentreCentre" size="large" value="ARM Cortex M4" />
+		</group>
+
+	</render>
+</component>
