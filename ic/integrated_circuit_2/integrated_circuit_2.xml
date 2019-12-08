@@ -2,10 +2,12 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Integrated Circuit 2" />
+    <meta name="version" value="1.1.0" />
     <meta name="minsize" value="120" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="2cd49d7c-eb1a-4fe4-9104-c45023e3fc95" />
+    <meta name="description" value="A configurable integrated circuit with up to 40 pins in 2 columns." />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="microcontroller" />
 
@@ -30,6 +32,11 @@
       <option>26</option>
       <option>28</option>
       <option>30</option>
+      <option>32</option>
+      <option>34</option>
+      <option>36</option>
+      <option>38</option>
+      <option>40</option>
     </property>
 
     <property name="Pin0" type="string" default="" serialize="p0" display="Pin 0" />
@@ -62,6 +69,16 @@
     <property name="Pin27" type="string" default="" serialize="p27" display="Pin 27" />
     <property name="Pin28" type="string" default="" serialize="p28" display="Pin 28" />
     <property name="Pin29" type="string" default="" serialize="p29" display="Pin 29" />
+    <property name="Pin30" type="string" default="" serialize="p30" display="Pin 30" />
+    <property name="Pin31" type="string" default="" serialize="p31" display="Pin 31" />
+    <property name="Pin32" type="string" default="" serialize="p32" display="Pin 32" />
+    <property name="Pin33" type="string" default="" serialize="p33" display="Pin 33" />
+    <property name="Pin34" type="string" default="" serialize="p34" display="Pin 34" />
+    <property name="Pin35" type="string" default="" serialize="p35" display="Pin 35" />
+    <property name="Pin36" type="string" default="" serialize="p36" display="Pin 36" />
+    <property name="Pin37" type="string" default="" serialize="p37" display="Pin 37" />
+    <property name="Pin38" type="string" default="" serialize="p38" display="Pin 38" />
+    <property name="Pin39" type="string" default="" serialize="p39" display="Pin 39" />
 
     <configurations>
       <configuration
@@ -189,6 +206,46 @@
     <group conditions="$Pin29">
       <connection start="_Middle+50x+140y" end="_End+140y" edge="End" />
     </group>
+
+    <group conditions="$Pin30">
+      <connection start="_Start+150y" end="_Middle-50x+150y" edge="Start" />
+    </group>
+
+    <group conditions="$Pin31">
+      <connection start="_Middle+50x+150y" end="_End+150y" edge="End" />
+    </group>
+
+    <group conditions="$Pin32">
+      <connection start="_Start+160y" end="_Middle-50x+160y" edge="Start" />
+    </group>
+
+    <group conditions="$Pin33">
+      <connection start="_Middle+50x+160y" end="_End+160y" edge="End" />
+    </group>
+
+    <group conditions="$Pin34">
+      <connection start="_Start+170y" end="_Middle-50x+170y" edge="Start" />
+    </group>
+
+    <group conditions="$Pin35">
+      <connection start="_Middle+50x+170y" end="_End+170y" edge="End" />
+    </group>
+
+    <group conditions="$Pin36">
+      <connection start="_Start+180y" end="_Middle-50x+180y" edge="Start" />
+    </group>
+
+    <group conditions="$Pin37">
+      <connection start="_Middle+50x+180y" end="_End+180y" edge="End" />
+    </group>
+
+    <group conditions="$Pin38">
+      <connection start="_Start+190y" end="_Middle-50x+190y" edge="Start" />
+    </group>
+
+    <group conditions="$Pin39">
+      <connection start="_Middle+50x+190y" end="_End+190y" edge="End" />
+    </group>
   </connections>
   <render>
     <group conditions="$Header">
@@ -249,6 +306,26 @@
 
     <group conditions="$Size==30">
       <rect x="_Middle-50" y="_Middle-10" width="100" height="160" />
+    </group>
+
+    <group conditions="$Size==32">
+      <rect x="_Middle-50" y="_Middle-10" width="100" height="170" />
+    </group>
+
+    <group conditions="$Size==34">
+      <rect x="_Middle-50" y="_Middle-10" width="100" height="180" />
+    </group>
+
+    <group conditions="$Size==36">
+      <rect x="_Middle-50" y="_Middle-10" width="100" height="190" />
+    </group>
+
+    <group conditions="$Size==38">
+      <rect x="_Middle-50" y="_Middle-10" width="100" height="200" />
+    </group>
+
+    <group conditions="$Size==40">
+      <rect x="_Middle-50" y="_Middle-10" width="100" height="210" />
     </group>
 
     <group conditions="$Pin0">
@@ -399,6 +476,56 @@
     <group conditions="$Pin29">
       <line start="_Middle+50x+140y" end="_End+140y" />
       <text x="_Middle+46" y="_Middle+140" align="CentreRight" value="$Pin29" />
+    </group>
+
+    <group conditions="$Pin30">
+      <line start="_Start+150y" end="_Middle-50x+150y" />
+      <text x="_Middle-46" y="_Middle+150" align="CentreLeft" value="$Pin30" />
+    </group>
+
+    <group conditions="$Pin31">
+      <line start="_Middle+50x+150y" end="_End+150y" />
+      <text x="_Middle+46" y="_Middle+150" align="CentreRight" value="$Pin31" />
+    </group>
+
+    <group conditions="$Pin32">
+      <line start="_Start+160y" end="_Middle-50x+160y" />
+      <text x="_Middle-46" y="_Middle+160" align="CentreLeft" value="$Pin32" />
+    </group>
+
+    <group conditions="$Pin33">
+      <line start="_Middle+50x+160y" end="_End+160y" />
+      <text x="_Middle+46" y="_Middle+160" align="CentreRight" value="$Pin33" />
+    </group>
+
+    <group conditions="$Pin34">
+      <line start="_Start+170y" end="_Middle-50x+170y" />
+      <text x="_Middle-46" y="_Middle+170" align="CentreLeft" value="$Pin34" />
+    </group>
+
+    <group conditions="$Pin35">
+      <line start="_Middle+50x+170y" end="_End+170y" />
+      <text x="_Middle+46" y="_Middle+170" align="CentreRight" value="$Pin35" />
+    </group>
+
+    <group conditions="$Pin36">
+      <line start="_Start+180y" end="_Middle-50x+180y" />
+      <text x="_Middle-46" y="_Middle+180" align="CentreLeft" value="$Pin36" />
+    </group>
+
+    <group conditions="$Pin37">
+      <line start="_Middle+50x+180y" end="_End+180y" />
+      <text x="_Middle+46" y="_Middle+180" align="CentreRight" value="$Pin37" />
+    </group>
+
+    <group conditions="$Pin38">
+      <line start="_Start+190y" end="_Middle-50x+190y" />
+      <text x="_Middle-46" y="_Middle+190" align="CentreLeft" value="$Pin38" />
+    </group>
+
+    <group conditions="$Pin39">
+      <line start="_Middle+50x+190y" end="_End+190y" />
+      <text x="_Middle+46" y="_Middle+190" align="CentreRight" value="$Pin39" />
     </group>
   </render>
 </component>
