@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="T Flip-Flop" />
+    <meta name="description" value="If the T input is high, the T flip-flop changes state (toggles) whenever the clock input is strobed. If the T input is low, the flip-flop holds the previous value." />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="StefanKlinge" />
+    <meta name="implementitem" value="tflipflop" />
+    <flags>
+      <option>horizontalonly</option>
+      <option>middlemustalign</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection name="t" start="_Start-20y" end="_Middle-20x-20y" edge="start" />
+      <connection name="ck" start="_Start" end="_Middle-20x" edge="start" />
+      <connection name="q" start="_Middle+20x-20y" end="_End-20y" edge="end" />
+      <connection name="nq" start="_Middle+20x+20y" end="_End+20y" edge="end" />
+    </group>
+  </connections>
+  <render>
+    <group>
+      <rect x="_Middle-20" y="_Middle-30" width="40" height="60" />
+      <line start="_Start+20y" end="_Middle-20x+20y" />
+      <line start="_Start-20y" end="_Middle-20x-20y" />
+      <line start="_Middle+20x-20y" end="_End-20y" />
+      <line start="_Middle+20x+20y" end="_End+20y" />
+      <!-- Labels -->
+      <path start="_Middle-20x+14y" data="l 6,6 l -6,6" thickness="1" />
+      <text value="T" x="_Middle-17" y="_Middle-20" align="CentreLeft" size="large" />
+      <text value="Q" x="_Middle+17" y="_Middle-20" align="CentreRight" size="large" />
+      <line start="_Middle+8x+13.5y" end="_Middle+16x+13.5y" thickness="1" />
+      <text value="Q" x="_Middle+17" y="_Middle+20" align="CentreRight" size="large" />
+    </group>
+  </render>
+</component>
