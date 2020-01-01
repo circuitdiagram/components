@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Relay" />
-    <meta name="version" value="2.0" />
+    <meta name="version" value="2.0.1" />
     <meta name="minsize" value="100" />
     <meta name="canflip" value="false" />
     <meta name="author" value="Unknown" />
@@ -26,7 +26,7 @@
 
   <render>
     <group>
-      <rect x="_Middle-40x" y="_Middle-40y" width="80" height="80" />
+      <rect x="_Middle-40" y="_Middle-40" width="80" height="80" />
 
       <ellipse centre="_Middle-20x+20y" rx="5" ry="10" />
       <ellipse centre="_Middle-15x+20y" rx="5" ry="10" />

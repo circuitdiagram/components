@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Resistor" />
-    <meta name="version" value="3.1.0" />
+    <meta name="version" value="3.1.1" />
     <meta name="minsize" value="50" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -80,7 +80,7 @@
       <line start="_Middle+20x" end="_End" />
     </group>
     <group conditions="horizontal,$Style!=US">
-      <rect x="_Middle-20x" y="_Start-8y" width="40" height="16" />
+      <rect x="_Middle-20" y="_Start-8" width="40" height="16" />
     </group>
     <group conditions="horizontal,$Style==US">
       <path start="_Middle-20x" data="l 2,0 l 3,-7 6,14 6,-14 6,14 6,-14 6,14 3,-7 2,0" />
@@ -93,7 +93,7 @@
       <line start="_Middle+20y" end="_End" />
     </group>
     <group conditions="!horizontal,$Style!=US">
-      <rect x="_Start-8x" y="_Middle-20y" width="16" height="40" />
+      <rect x="_Start-8" y="_Middle-20" width="16" height="40" />
     </group>
     <group conditions="!horizontal,$Style==US">
       <path start="_Middle-20y" data="l 0,2 l -7,3 14,6 -14,6 14,6 -14,6 14,6 -7,3 0,2" />

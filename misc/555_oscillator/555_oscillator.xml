@@ -3,6 +3,7 @@
 
   <declaration>
     <meta name="name" value="555 Oscillator" />
+    <meta name="version" value="1.0.1" />
     <meta name="author" value="O Luasa" />
     <meta name="guid" value="19c03d9c-f521-4ffc-b1dd-bbacae85b973" />
     <meta name="minsize" value="180" />
@@ -58,7 +59,7 @@
       <line start="_Middle-30x+80y" end="_Middle-30x+100y" />
       <line start="_Middle+30x+80y" end="_Middle+30x+100y" />
       <line start="_Middle+70x" end="_End" />
-      <rect x="_Middle-70x" y="_Middle-80y" width="140" height="160" />
+      <rect x="_Middle-70" y="_Middle-80" width="140" height="160" />
 
       <text value="Reset" x="_Middle+30" y="_Middle-75" align="TopCentre" />
       <text value="Vcc" x="_Middle-30" y="_Middle-75" align="TopCentre" />
@@ -89,7 +90,7 @@
       <line start="_Middle+40x+70y" end="_Middle+40x+90y" />
       <line start="_Middle+80x-30y" end="_End-30y" />
       <line start="_Middle+80x+30y" end="_End+30y" />
-      <rect x="_Middle-80x" y="_Middle-70y" width="160" height="140" />
+      <rect x="_Middle-80" y="_Middle-70" width="160" height="140" />
 
       <text value="Vcc" x="_Middle+40" y="_Middle-65" align="TopCentre" />
       <text value="R1" x="_Middle-40" y="_Middle-65" align="TopCentre" />

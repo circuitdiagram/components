@@ -3,7 +3,7 @@
   <declaration>
     <meta name="name" value="7 Segment Display" />
     <meta name="description" value="Displays decimal numerals and optionally a decimal point using 7 + 1 LEDs." />
-    <meta name="version" value="1.1" />
+    <meta name="version" value="1.0.1" />
     <meta name="minsize" value="70" />
     <meta name="author" value="circuitdiagram" />
     <meta name="guid" value="4fa8d87e-d312-4b8d-979a-93888c521ff7" />
@@ -86,7 +86,7 @@
       <line start="_Start-30y" end="_End-60x-30y" />
       <text value="c" x="_End-58" y="_End-20" align="CentreLeft" />
       <line start="_Start-20y" end="_End-60x-20y" />
-      <text value="d" x="_End-58" y="_End-10y" align="CentreLeft" />
+      <text value="d" x="_End-58" y="_End-10" align="CentreLeft" />
       <line start="_Start-10y" end="_End-60x-10y" />
       <text value="e" x="_End-58" y="_End" align="CentreLeft" />
       <line start="_Start" end="_End-60x" />

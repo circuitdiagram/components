@@ -2,7 +2,7 @@
 <component xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml" version="1.0" target="1.2">
   <declaration>
     <meta name="name" value="Capacitor" />
-    <meta name="version" value="2.1.0" />
+    <meta name="version" value="2.1.1" />
     <meta name="minsize" value="50" />
     <meta name="canflip" value="true" />
     <meta name="author" value="Circuit Diagram" />
@@ -88,8 +88,8 @@
     <group conditions="_Horizontal,$Type(eq_Polarised)">
       <line start="_Start" end="_Middle-6x" />
       <line start="_Middle+6x" end="_End" />
-      <rect x="_Middle-6x" y="_Middle-14" width="4" height="28" />
-      <rect x="_Middle+2x" y="_Middle-14" width="4" height="28" fill="true" />
+      <rect x="_Middle-6" y="_Middle-14" width="4" height="28" />
+      <rect x="_Middle+2" y="_Middle-14" width="4" height="28" fill="true" />
       <path start="_Middle-7x" data="m -8,-12 l 6,0 m -3,-3 l 0,7" />
     </group>
     <group conditions="!_Horizontal,$Type(eq_Polarised)">

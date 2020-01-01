@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="AC-DC Converter" />
-    <meta name="version" value="1.0" />
+    <meta name="version" value="1.0.1" />
     <meta name="minsize" value="60" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -38,7 +38,7 @@
   <render>
     <group conditions="horizontal">
       <line start="_Start" end="_Middle-25x" />
-      <line start="_Middle+25x" end="_End" />  
+      <line start="_Middle+25x" end="_End" />
     </group>
     <group conditions="!horizontal">
         <line start="_Start" end="_Middle-25y" />
@@ -46,7 +46,7 @@
     </group>
 
     <group>
-      <rect x="_Middle-25x" y="_Middle-25x" width="50" height="50" />
+      <rect x="_Middle-25" y="_Middle-25" width="50" height="50" />
       <line start="_Middle-24x+24y" end="_Middle+24x-24y" />
     </group>
 
