@@ -2,6 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="D Flip-Flop" />
+    <meta name="version" value="1.0.1" />
     <meta name="description" value="Captures the value at D on a rising clock edge." />
     <meta name="minsize" value="60" />
     <meta name="author" value="Circuit Diagram" />
@@ -46,8 +47,8 @@
     <group conditions="$SetReset">
       <line start="_Middle-40y" end="_Middle-30y" />
       <line start="_Middle+30y" end="_Middle+40y" />
-      <text value="S" x="_Middle" y="_Middle-29" align="TopCentre" size="large" />
-      <text value="R" x="_Middle" y="_Middle+29" align="BottomCentre" size="large" />
+      <text value="S" x="_Middle" y="_Middle-27" align="TopCentre" size="large" />
+      <text value="R" x="_Middle" y="_Middle+27" align="BottomCentre" size="large" />
     </group>
   </render>
 </component>
