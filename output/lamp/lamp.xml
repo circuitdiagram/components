@@ -1,50 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<component version="1.2"
-           xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml"
-           xmlns:sim="http://schemas.circuit-diagram.org/circuitDiagramDocument/2018/component/simulation">
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Lamp" />
     <meta name="minsize" value="40" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
-    <meta name="version" value="2.0" />
-    <meta name="guid" value="C0DA4646-FFAF-48F0-8A56-2E8E07148ECF" />
+    <meta name="version" value="3.0.0" />
+    <meta name="guid" value="c0da4646-ffaf-48f0-8a56-2e8e07148ecf" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="lamp" />
     <meta name="org.circuit-diagram.bundled" value="true" />
-    
-    <property name="Lit" type="bool" default="false" serialize="islit" display="Light On"
-              sim:settable="true" />
+
+    <property name="Type" type="enum" default="Generic" serialize="t" display="Type">
+      <option>Generic</option>
+      <option>Incandescent</option>
+      <option>Neon</option>
+      <option>Flash</option>
+    </property>
+
+    <property name="Lit" type="bool" default="false" serialize="islit" display="Light On" />
+
+    <configurations>
+      <configuration name="Lamp" value="Type:Generic" />
+      <configuration name="Incandescent Bulb" value="Type:Incandescent" />
+      <configuration name="Neon Lamp" value="Type:Neon" />
+      <configuration name="Flash Bulb" value="Type:Flash" />
+    </configurations>
   </declaration>
-  <connections>
-    <group conditions="horizontal">
-      <connection name="a" start="_Start" end="_Middle-15x" edge="start" />
-      <connection name="b" start="_Middle+15x" end="_End" edge="end" />
-    </group>
-    <group conditions="!horizontal">
-      <connection name="a" start="_Start" end="_Middle-15y" edge="start" />
-      <connection name="b" start="_Middle+15y" end="_End" edge="end" />
-    </group>
+  <connections autorotate="HorizontalToVertical">
+    <connection name="a" start="_Start" end="_Middle-15x" edge="start" />
+    <connection name="b" start="_Middle+15x" end="_End" edge="end" />
   </connections>
-  <render>
-    <group conditions="horizontal">
-      <line start="_Start" end="_Middle-12x" />
-      <line start="_Middle+12x" end="_End" />
+  <render autorotate="HorizontalToVertical">
+    <line start="_Start" end="_Middle-12x" />
+    <line start="_Middle+12x" end="_End" />
+    <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
+
+    <g conditions="$Type==Generic">
       <line start="_Middle-8x-8y" end="_Middle+8x+8y" />
       <line start="_Middle-8x+8y" end="_Middle+8x-8y" />
-      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
-    </group>
-    
-    <group conditions="!horizontal">
-      <line start="_Start" end="_Middle-12y" />
-      <line start="_Middle+12y" end="_End" />
-      <line start="_Middle-8x-8y" end="_Middle+8x+8y" />
-      <line start="_Middle-8x+8y" end="_Middle+8x-8y" />
-      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
-    </group>
-    
+    </g>
+
+    <g conditions="$Type==Incandescent" autorotate="HorizontalToVertical,FlipSecondary">
+      <path start="_Middle-12x" data="l 7,0 a 5 5 180 0 1 10 0  l 7,0" />
+    </g>
+
+    <g conditions="$Type==Neon" autorotate="HorizontalToVertical,FlipSecondary">
+      <line start="_Middle-12x" end="_Middle-2x" />
+      <line start="_Middle+2x" end="_Middle+12x" />
+      <line start="_Middle-2x-5y" end="_Middle-2x+5y" />
+      <line start="_Middle+2x-5y" end="_Middle+2x+5y" />
+      <ellipse centre="_Middle-6x-4y" rx="1" ry="1" fill="true" />
+    </g>
+
+    <g conditions="$Type==Flash">
+      <path start="_Middle-12x" data="l 5,0 m 4,0 l 0,-4 a 4 4 180 0 0 0 8 l 0,-4" fill="true" />
+      <path start="_Middle+12x" data="l -5,0 m -4,0 l 0,-4 a 4 4 180 0 1 0 8 l 0,-4" fill="true" />
+    </g>
+
     <group conditions="$Lit">
-      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" fill="true" />
+      <path start="_Middle" data="m 0,-16 l 0,-3 m 0,19 m 11.31,-11.31 l 2.12,-2.12 m -13.43,13.43 m 11.31,11.31 l 2.12,2.12 m -13.43,-13.43 m 0,15 l 0,3 m 0,-19 m -11.31,11.31 l -2.12,2.12 m 13.43,-13.43 m -11.31,-11.31 l -2.12,-2.12" />
     </group>
   </render>
 </component>
