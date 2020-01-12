@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Generator" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="15c74cca-a629-47f8-8b11-67ca282523ad" />
+
+    <property name="Type" type="enum" default="Standard" serialize="t" display="Type">
+      <option>Standard</option>
+      <option>Generic</option>
+      <option>MHD</option>
+      <option>AC</option>
+      <option>DC</option>
+      <option>Homopolar</option>
+    </property>
+
+    <flags conditions="$Type==Homopolar">
+      <option>FlipPrimary</option>
+    </flags>
+
+    <configurations>
+      <configuration name="Generator" value="Type:Standard" />
+      <configuration name="Generic Generator" value="Type:Generic" />
+      <configuration name="MHD Generator" value="Type:MHD" />
+      <configuration name="AC Generator" value="Type:AC" />
+      <configuration name="DC Generator" value="Type:DC"  />
+      <configuration name="Homopolar Generator" value="Type:Homopolar" />
+    </configurations>
+  </declaration>
+  <connections autorotate="HorizontalToVertical">
+    <g conditions="$Type==Standard|$Type==MHD">
+      <connection start="_Start" end="_Middle-15x" edge="start" />
+      <connection start="_Middle+15x" end="_End" edge="end" />
+    </g>
+    <g conditions="$Type==Generic|$Type==AC|$Type==DC|$Type==Homopolar">
+      <connection start="_Start" end="_Middle-30x" edge="start" />
+      <connection start="_Middle+30x" end="_End" edge="end" />
+    </g>
+  </connections>
+  <render autorotate="HorizontalToVertical">
+    <g conditions="$Type==Standard|$Type==MHD">
+      <line start="_Start" end="_Middle-13x" />
+      <line start="_Middle+13x" end="_End" />
+      <text x="_Middle" y="_Middle" value="G" align="CentreCentre" size="large" />
+    </g>
+    <g conditions="$Type==Standard">
+      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
+    </g>
+    <g conditions="$Type==MHD">
+      <rect x="_Middle-12" y="_Middle-12" width="24" height="24" />
+    </g>
+
+    <g conditions="$Type==Generic|$Type==AC|$Type==DC|$Type==Homopolar">
+      <line start="_Start" end="_Middle-15x" />
+      <line start="_Middle+15x" end="_End" />
+      <ellipse x="_Middle" y="_Middle" rx="15" ry="15" />
+    </g>
+    <g conditions="$Type==Generic">
+      <path start="_Middle-15x" data="l 5,0 l 14,8" />
+      <ellipse centre="_Middle" rx="4" ry="4" />
+      <path start="_Middle+15x" data="l -5,0 l -14,-8" />
+    </g>
+    <g conditions="$Type==AC" autorotate="off">
+      <text x="_Middle" y="_Middle-6" value="G" align="CentreCentre" size="large" />
+      <path start="_Middle+6y" data="m -6,0 a 3 3 180 0 1 6 0 a 3 3 180 0 0 6 0" />
+    </g>
+    <g conditions="$Type==DC" autorotate="off">
+      <text x="_Middle" y="_Middle-3" value="G" align="CentreCentre" size="large" />
+      <line start="_Middle-4x+6y" end="_Middle+4x+6y" />
+    </g>
+    <g conditions="$Type==Homopolar">
+      <text x="_Middle" y="_Middle" value="G" align="CentreCentre" size="large" />
+      <line start="_Middle-15x-15y" end="_Middle-15x+15y" />
+      <line start="_Middle+15x-15y" end="_Middle+15x+15y" />
+    </g>
+    <g conditions="horizontal,$Type==Homopolar" autorotate="off">
+      <path start="_Middle-28x-10y" data="l 8,0 m -4,-4 l 0,8" />
+      <path start="_Middle+20x-10y" data="l 8,0" />
+    </g>
+    <g conditions="!horizontal,$Type==Homopolar" autorotate="off">
+      <path start="_Middle+10x-28y" data="l 0, 8 m -4,-4 l 8,0" />
+      <path start="_Middle+6x+22y" data="l 8,0" />
+    </g>
+  </render>
+</component>
