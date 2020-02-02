@@ -1,6 +1,7 @@
 # [Circuit Diagram](http://www.circuit-diagram.org/) Components
 
 [![Build status](https://ci.appveyor.com/api/projects/status/5udo733v1fnn0pi8/branch/master?svg=true)](https://ci.appveyor.com/project/CircuitDiagram/components/branch/master)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/circuitdiagram/components)
 
 This repository contains components created by users of Circuit Diagram.
 
@@ -10,11 +11,14 @@ You can browse the full range of components and see what they look like when use
 
 Please submit pull requests to this repository with new components you have created.
 
-You can create new components using either:
+You can create new components using one of the following:
 
-- The Visual Studio Code [extension](https://github.com/circuitdiagram/circuitdiagram-vscode)
-**(recommended)**
-- [Component Editor](https://componenteditor.com/), an online tool for creating components
+1. The Circuit Diagram Visual Studio Code
+[extension](https://github.com/circuitdiagram/circuitdiagram-vscode)
+2. [GitPod](https://gitpod.io/#https://github.com/circuitdiagram/components) - an in-browser
+environment for creating components
+3. The [Circuit Diagram CLI](https://www.circuit-diagram.org/downloads) with a text editor of your
+choice
 
 The Component Editor website contains [documentation](https://componenteditor.com/help/) to get
 started making components.

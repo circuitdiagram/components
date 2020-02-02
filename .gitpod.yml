@@ -1,0 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - CircuitDiagram.circuitdiagram-vscode@0.7.0-dev:Ee8i34LAKx6EuDdj6d+0dg==
+
+tasks:
+  - init: mkdir ./.vscode && cp .gitpod.settings.json .vscode/settings.json
