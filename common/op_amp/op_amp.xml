@@ -1,53 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Op Amp" />
+    <meta name="version" value="2.0.0" />
     <meta name="minsize" value="60" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="f13fcce0-ce24-4698-a7b7-31f4ee86e999" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="opamp" />
+
+    <property name="ShowSupply" type="bool" default="false" serialize="showSupply" display="Show Supply" />
     
-    <property name="FlipInputs" type="bool" default="false" serialize="flipinputs" display="Flip inputs" />
+    <flags>
+      <option>FlipPrimary</option>
+      <option>FlipSecondary</option>
+    </flags>
   </declaration>
-  <connections>
-    <group conditions="horizontal">
-      <connection name="ninv" start="_Start-10y" end="_Middle-20x-10y" edge="Start" />
-      <connection name="inv" start="_Start+10y" end="_Middle-20x+10y" edge="Start" />
-      <connection name="out" start="_Middle+24x" end="_End" edge="End" />
-    </group>
-    <group conditions="!horizontal">
-      <connection name="ninv" start="_Start+10x" end="_Middle+10x-20y" edge="Start" />
-      <connection name="inv" start="_Start-10x" end="_Middle-10x-20y" edge="Start" />
-      <connection name="out" start="_Middle+24y" end="_End" edge="End" />
-    </group>
+  <connections autorotate="HorizontalToVertical">
+    <connection name="ninv" start="_Start-10y" end="_Middle-20x-10y" edge="Start" />
+    <connection name="inv" start="_Start+10y" end="_Middle-20x+10y" edge="Start" />
+    <connection name="out" start="_Middle+24x" end="_End" edge="End" />
+
+    <g conditions="$ShowSupply">
+      <connection name="vsp" start="_Middle-40y" end="_Middle-25y" edge="Start" />
+      <connection name="vsn" start="_Middle+25y" end="_Middle+40y" edge="End" />
+    </g>
   </connections>
-  <render>
-    <!-- Horizontal -->
-    <group conditions="horizontal">
-      <line start="_Start-10y" end="_Middle-20x-10y" />
-      <line start="_Start+10y" end="_Middle-20x+10y" />
-      <line start="_Middle+24x" end="_End" />
-    </group>
-    <group conditions="horizontal,!$FlipInputs">
-      <path start="_Middle-20x" data="l 0,30 l 44,-30 l -44,-30 l 0,30 m 5,-10 l 10,0 m -5,-5 l 0,10 m -5,15 l 10,0 m 28,-10" />
-    </group>
-    <group conditions="horizontal,$FlipInputs">
-      <path start="_Middle-20x" data="l 0,30 l 44,-30 l -44,-30 l 0,30 m 5,-10 l 10,0 m -5,15 l 0,10 m -5,-5 l 10,0 m 28,-10" />
-    </group>
-    
-    <!-- Vertical -->
-    <group conditions="!horizontal">
-      <line start="_Start+10x" end="_Middle+10x-20y" />
-      <line start="_Start-10x" end="_Middle-10x-20y" />
-      <line start="_Middle+24y" end="_End" />
-    </group>
-    <group conditions="!horizontal,!$FlipInputs">
-      <path start="_Middle-20y" data="l 30,0 l -30,44 l -30,-44 l 30,0 m -10,5 l 0,10 m -5,-5 l 10,0 m 15,-5 l 0,10 m -10,28" />
-    </group>
-    <group conditions="!horizontal,$FlipInputs">
-      <path start="_Middle-20y" data="l 30,0 l -30,44 l -30,-44 l 30,0 m -10,5 l 0,10 m 15,-5 l 10,0 m -5,-5 l 0,10 m -10,28" />
-    </group>
+  <render autorotate="HorizontalToVertical">
+    <line start="_Start-10y" end="_Middle-20x-10y" />
+    <line start="_Start+10y" end="_Middle-20x+10y" />
+    <line start="_Middle+24x" end="_End" />
+    <path start="_Middle-20x" data="l 0,30 l 44,-30 l -44,-30 l 0,30 m 5,-10 l 10,0 m -5,-5 l 0,10 m -5,15 l 10,0 m 28,-10" />
+
+    <g conditions="$ShowSupply">
+      <line start="_Middle-40y" end="_Middle-18y" />
+      <line start="_Middle+18y" end="_Middle+40y" />
+    </g>
   </render>
 </component>
