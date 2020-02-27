@@ -51,7 +51,7 @@
       <!-- draw text -->
       <text x="_Start-7" y="_Start-20" align="CentreCentre" size="large" value="A" />
       <text x="_End+7" y="_End-20" align="CentreCentre" size="large" value="B" />
-      <text x="_Middle+1" y="_Middle+20y" align="CentreCentre" size="large" value="SUM" />
+      <text x="_Middle+1" y="_Middle+20" align="CentreCentre" size="large" value="SUM" />
       <text x="_Start" y="_Middle" align="CentreCentre" size="large">
         <value>
           <span>C</span>
