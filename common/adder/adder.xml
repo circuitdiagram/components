@@ -2,7 +2,7 @@
 <component version="1.4" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Adder" />
-    <meta name="minsize" value="140" />
+    <meta name="minsize" value="150" />
     <meta name="author" value="Corsaka" />
     <meta name="guid" value="8f754035-10c6-4421-ac7f-5cbd327d4e77" />
     <flags><option>HorizontalOnly</option></flags>
@@ -33,13 +33,7 @@
   <render>
     <group>
       <!-- draw shape -->
-      <line start="_Start+30x+30y" end="_Start-30y" />
-      <line start="_Start+30x+30y" end="_End-30x+30y" />
-      <line start="_Start-30y" end="_Middle-15x-30y" />
-      <line start="_Middle-15x-30y" end="_Middle" />
-      <line start="_Middle" end="_Middle+15x-30y" />
-      <line start="_Middle+15x-30y" end="_End-30y" />
-      <line start="_End-30x+30y" end="_End-30y" />
+      <path start="_Middle" data="m -15,30 l -30,0 -30,-60 60,0 15,30 15,-30 60,0 -30,60 -60,0" />
       <!-- draw connection lines -->
       <line start="_Start+20x-30y" end="_Start+20x-60y" />
       <line start="_End-20x-30y" end="_End-20x-60y" />
