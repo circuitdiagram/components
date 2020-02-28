@@ -17,14 +17,18 @@
     </configurations>
   </declaration>
   <connections>
-    <connection name="A" start="_Start-7x-30y" end="_Start-7x-60y" edge="End" />
-    <connection name="B" start="_End+7x-30y" end="_End+7x-60y" edge="End" />
-    <connection name="Sum" start="_Middle+30y" end="_Middle+60y" edge="End" />
-    <group conditions="$Type==Full" />
-      <connection name="Cin" start="_Start-15x" end="_Start-45x" edge="End" />
-      <connection name="Cout" start="_End+15x" end="_End+45x" edge="End" />
-    <group conditions="$Type==Half" />
-      <connection name="Carry" start="_End+15x" end="_End+45x" edge="End" />
+    <group>
+      <connection name="A" start="_Start-7x-30y" end="_Start-7x-60y" edge="End" />
+      <connection name="B" start="_End+7x-30y" end="_End+7x-60y" edge="End" />
+      <connection name="Sum" start="_Middle+30y" end="_Middle+60y" edge="End" />
+      <group conditions="$Type==Full">
+        <connection name="Cin" start="_Start-15x" end="_Start-45x" edge="End" />
+        <connection name="Cout" start="_End+15x" end="_End+45x" edge="End" />
+      </group>
+      <group conditions="$Type==Half">
+        <connection name="Carry" start="_End+15x" end="_End+45x" edge="End" />
+      </group>
+    </group>
   </connections>
   <render>
     <group>
