@@ -2,10 +2,10 @@
 <component version="1.4" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Adder" />
-    <meta name="minsize" value="50" />
+    <meta name="minsize" value="60" />
     <meta name="author" value="Corsaka" />
     <meta name="guid" value="8f764035-18c6-4421-ac7f-5cbd327d4e78" />
-
+    <flags><option>HorizontalOnly</option></flags>
     <property name="Type" type="enum" default="Full" serialize="t" display="Type">
       <option>Full</option>
       <option>Half</option>
@@ -17,87 +17,48 @@
     </configurations>
   </declaration>
   <connections>
-    <group conditions="horizontal">
-      <connection name="A" start="_Start-7x-30y" end="_Start-7x-60y" edge="End" />
-      <connection name="B" start="_End+7x-30y" end="_End+7x-60y" edge="End" />
-      <connection name="Sum" start="_Middle+30y" end="_Middle+60y" edge="End" />
+    <connection name="A" start="_Start-7x-30y" end="_Start-7x-60y" edge="End" />
+    <connection name="B" start="_End+7x-30y" end="_End+7x-60y" edge="End" />
+    <connection name="Sum" start="_Middle+30y" end="_Middle+60y" edge="End" />
+    <group conditions="$Type==Full" />
       <connection name="Cin" start="_Start-15x" end="_Start-45x" edge="End" />
       <connection name="Cout" start="_End+15x" end="_End+45x" edge="End" />
-    </group>
-    <group conditions="!horizontal">
-      <connection name="A" start="_Start-35y" end="_Start-30x-35y" edge="End" />
-      <connection name="B" start="_Start+35y" end="_Start-30x+35y" edge="End" />
-      <connection name="Sum" start="_End" end="_End+30x" edge="End" />
-      <connection name="Cin" start="_Middle-45y" end="_Middle-75y" edge="End" />
-      <connection name="Cout" start="_Middle+45y" end="_Middle+75y" edge="End" />
-    </group>
+    <group conditions="$Type==Half" />
+      <connection name="Carry" start="_End+15x" end="_End+45x" edge="End" />
   </connections>
   <render>
-    <group conditions="horizontal">
+    <group>
       <!-- draw shape -->
       <line start="_Start+30y" end="_Start-30x-30y" />
       <line start="_Start+30y" end="_End+30y" />
-      <line start="_Start-30x-30y" end="_Start+15x-30y" />
-      <line start="_Start+15x-30y" end="_Middle" />
-      <line start="_Middle" end="_End-15x-30y" />
-      <line start="_End-15x-30y" end="_End+30x-30y" />
+      <line start="_Start-30x-30y" end="_Middle-15x-30y" />
+      <line start="_Middle-15x-30y" end="_Middle" />
+      <line start="_Middle" end="_Middle+15x-30y" />
+      <line start="_Middle+15x-30y" end="_End+30x-30y" />
       <line start="_End+30y" end="_End+30x-30y" />
       <!-- draw connection lines -->
       <line start="_Start-7x-30y" end="_Start-7x-60y" />
       <line start="_End+7x-30y" end="_End+7x-60y" />
       <line start="_Middle+30y" end="_Middle+60y" />
-      <line start="_Start-15x" end="_Start-45x" />
       <line start="_End+15x" end="_End+45x" />
+      <group conditions="$Type==Full">
+        <line start="_Start-15x" end="_Start-45x" />
+      </group>
       <!-- draw text -->
       <text x="_Start-7" y="_Start-20" align="CentreCentre" size="large" value="A" />
       <text x="_End+7" y="_End-20" align="CentreCentre" size="large" value="B" />
       <text x="_Middle+1" y="_Middle+20" align="CentreCentre" size="large" value="SUM" />
-      <text x="_Start" y="_Middle" align="CentreCentre" size="large">
-        <value>
-          <span>C</span>
-          <sub>in</sub>
-        </value>
-      </text>
-      <text x="_End-5" y="_Middle" align="CentreCentre" size="large" value="C">
-        <value>
-          <span>C</span>
-          <sub>out</sub>
-        </value>
-      </text>
-    </group>
-    <group conditions="!horizontal">
-      <!-- draw shape -->
-      <line start="_Start-60y" end="_End-30y" />
-      <line start="_End-30y" end="_End+30y" />
-      <line start="_End+30y" end="_Start+60y" />
-      <line start="_Start+60y" end="_Start+15y" />
-      <line start="_Start+15y" end="_Middle" />
-      <line start="_Middle" end="_Start-15y" />
-      <line start="_Start-15y" end="_Start-60y" />
-      <!-- draw connection lines -->
-      <line start="_Start-35y" end="_Start-30x-35y" />
-      <line start="_Start+35y" end="_Start-30x+35y" />
-      <line start="_End" end="_End+30x" />
-      <line start="_Middle-45y" end="_Middle-75y" />
-      <line start="_Middle+45y" end="_Middle+75y" />
-      <!-- draw text -->
-      <text x="_Start+9" y="_Start-35" align="CentreCentre" size="large" value="A" />
-      <text x="_Start+9" y="_Start+35" align="CentreCentre" size="large" value="B" />
-      <text x="_End-9" y="_Middle-12" align="CentreCentre" size="large" value="S" />
-      <text x="_End-9" y="_Middle+1" align="CentreCentre" size="large" value="U" />
-      <text x="_End-9" y="_Middle+14" align="CentreCentre" size="large" value="M" />
-      <text x="_Middle" y="_Middle-30" align="CentreCentre" size="large" value="C">
-        <value>
-          <span>C</span>
-          <sub>in</sub>
-        </value>
-      </text>
-      <text x="_Middle" y="_Middle+30" align="CentreCentre" size="large" value="C">
-        <value>
-          <span>C</span>
-          <sub>out</sub>
-        </value>
-      </text>
+      <group conditions="$Type==Full">
+        <text x="_Start" y="_Middle" align="CentreCentre" size="large">
+          <value><span>C</span><sub>in</sub></value>
+        </text>
+        <text x="_End-5" y="_Middle" align="CentreCentre" size="large">
+          <value><span>C</span><sub>out</sub></value>
+        </text>
+      </group>
+      <group conditions="$Type==Half">
+        <text x="_End-5" y="_Middle" align="CentreCentre" size="large" value="Carry" />
+      </group>
     </group>
   </render>
 </component>
