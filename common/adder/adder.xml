@@ -4,7 +4,7 @@
     <meta name="name" value="Adder" />
     <meta name="minsize" value="60" />
     <meta name="author" value="Corsaka" />
-    <meta name="guid" value="8f764035-18c6-4421-ac7f-5cbd327d4e78" />
+    <meta name="guid" value="8f754035-10c6-4421-ac7f-5cbd327d4e77" />
     <flags><option>HorizontalOnly</option></flags>
     <property name="Type" type="enum" default="Full" serialize="t" display="Type">
       <option>Full</option>
