@@ -5,62 +5,64 @@
     <meta name="minsize" value="160" />
     <meta name="author" value="Corsaka" />
     <meta name="guid" value="f29bea4c-eeef-44ff-9dc3-fc143e8d7352" />
-    <flags><option>HorizontalOnly</option></flags>
+    <flags>
+      <option>HorizontalOnly</option>
+    </flags>
   </declaration>
   <connections>
     <group>
-      <connection name="PositiveCtrl" start="_Start+10x+30y" end="_Start+30y" edge="End" />
-      <connection name="NegativeCtrl" start="_Start+10x+100y" end="_Start+100y" edge="End" />
-      <connection name="Load1" start="_End-10x+30y" end="_End+30y" edge="End" />
-      <connection name="Load2" start="_End-10x+100y" end="_End+100y" edge="End" />
+      <connection name="PositiveCtrl" start="_Start" end="_Middle-70x" edge="Start" />
+      <connection name="NegativeCtrl" start="_Start+70y" end="_Middle-70x+70y" edge="Start" />
+      <connection name="Load1" start="_Middle+70x" end="_End" edge="End" />
+      <connection name="Load2" start="_Middle+70x+70y" end="_End+70y" edge="End" />
     </group>
   </connections>
   <render>
     <group>
-      <rect x="_Middle-50" y="_Middle" width="100" height="130" />
+      <rect x="_Middle-50" y="_Middle-30" width="100" height="130" />
       <!-- left side -->
-      <line start="_Start+10x+30y" end="_Start+30y" />
-      <path start="_Middle-70x+30y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
-      <line start="_Middle-60x+30y" end="_Middle-30x+30y" />
-      <line start="_Middle-30x+30y" end="_Middle-30x+57y" />
-      <path start="_Middle-30x+73y" data="m -8,0 l 16,0 m-8,0 l 8,-15 l-16,0 l 8,15" />
-      <line start="_Middle-30x+73y" end="_Middle-30x+100y" />
-      <line start="_Middle-30x+100y" end="_Middle-60x+100y" />
-      <path start="_Middle-70x+100y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
-      <line start="_Start+10x+100y" end="_Start+100y" />
+      <line start="_Start" end="_Middle-70x" />
+      <path start="_Middle-70x" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
+      <line start="_Middle-60x" end="_Middle-30x" />
+      <line start="_Middle-30x" end="_Middle-30x+27y" />
+      <path start="_Middle-30x+43y" data="m -8,0 l 16,0 m-8,0 l 8,-15 l-16,0 l 8,15" />
+      <line start="_Middle-30x+43y" end="_Middle-30x+70y" />
+      <line start="_Middle-30x+70y" end="_Middle-60x+70y" />
+      <path start="_Middle-70x+70y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
+      <line start="_Start+70y" end="_Middle-70x+70y" />
       <!-- arrow -->
-      <path start="_Middle-20x+50y" data="m 0,0 l 15,5 l -10,5 l 15,5 l 2,-6 l 6,9 l -10,5 l 2,-7" />
+      <path start="_Middle-20x+20y" data="m 0,0 l 15,5 l -10,5 l 15,5 l 2,-6 l 6,9 l -10,5 l 2,-7" />
       <!-- right side -->
-      <line start="_End+30y" end="_End-10x+30y" />
-      <path start="_Middle+60x+30y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
-      <line start="_Middle+60x+30y" end="_Middle+30x+30y" />
-      <line start="_Middle+30x+100y" end="_Middle+60x+100y" />
-      <path start="_Middle+60x+100y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
-      <line start="_End-10x+100y" end="_End+100y" />
+      <line start="_Middle+70x" end="_End" />
+      <path start="_Middle+60x" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
+      <line start="_Middle+60x" end="_Middle+30x" />
+      <line start="_Middle+30x+70y" end="_Middle+60x+70y" />
+      <path start="_Middle+60x+70y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" />
+      <line start="_Middle+70x+70y" end="_End+70y" />
       <!-- MOSFETs -->
-      <line start="_Middle+30x+27y" end="_Middle+30x+33y" />
-      <line start="_Middle+30x+37y" end="_Middle+30x+43y" />
-      <line start="_Middle+30x+40y" end="_Middle+40x+40y" />
+      <line start="_Middle+30x-3y" end="_Middle+30x+3y" />
+      <line start="_Middle+30x+7y" end="_Middle+30x+13y" />
+      <line start="_Middle+30x+10y" end="_Middle+40x+10y" />
+      <line start="_Middle+30x+17y" end="_Middle+30x+23y" />
+      <line start="_Middle+30x+20y" end="_Middle+40x+20y" />
+      <path start="_Middle+30x+10y" data="l 5,3 l 0,-6 l -5,3" fill="true" />
+
+      <line start="_Middle+40x+10y" end="_Middle+40x+60y" />
+
       <line start="_Middle+30x+47y" end="_Middle+30x+53y" />
       <line start="_Middle+30x+50y" end="_Middle+40x+50y" />
-      <path start="_Middle+30x+40y" data="l 5,3 l 0,-6 l -5,3" fill="#000" />
+      <line start="_Middle+30x+57y" end="_Middle+30x+63y" />
+      <line start="_Middle+30x+60y" end="_Middle+40x+60y" />
+      <line start="_Middle+30x+67y" end="_Middle+30x+73y" />
+      <path start="_Middle+30x+60y" data="l 5,3 l 0,-6 l -5,3" fill="true" />
 
-      <line start="_Middle+40x+40y" end="_Middle+40x+90y" />
-
-      <line start="_Middle+30x+77y" end="_Middle+30x+83y" />
-      <line start="_Middle+30x+80y" end="_Middle+40x+80y" />
-      <line start="_Middle+30x+87y" end="_Middle+30x+93y" />
-      <line start="_Middle+30x+90y" end="_Middle+40x+90y" />
-      <line start="_Middle+30x+97y" end="_Middle+30x+103y" />
-      <path start="_Middle+30x+90y" data="l 5,3 l 0,-6 l -5,3" fill="#000" />
-
-      <line start="_Middle+25x+30y" end="_Middle+25x+50y" />
-      <line start="_Middle+25x+80y" end="_Middle+25x+100y" />
-      <line start="_Middle+25x+40y" end="_Middle+15x+40y" />
-      <line start="_Middle+25x+90y" end="_Middle+15x+90y" />
-      <line start="_Middle+15x+90y" end="_Middle+15x+40y" />
+      <line start="_Middle+25x" end="_Middle+25x+20y" />
+      <line start="_Middle+25x+50y" end="_Middle+25x+70y" />
+      <line start="_Middle+25x+10y" end="_Middle+15x+10y" />
+      <line start="_Middle+25x+60y" end="_Middle+15x+60y" />
+      <line start="_Middle+15x+60y" end="_Middle+15x+10y" />
       <!-- indicator at top left -->
-      <path start="_Middle-40x+15y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" fill="#000" />
+      <path start="_Middle-40x-15y" data="a 5,5 0 0,0 10,0 a 5,5 0 0,0 -10,0" fill="true" />
     </group>
   </render>
 </component>
