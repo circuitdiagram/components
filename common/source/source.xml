@@ -26,6 +26,8 @@
       </other>
     </property>
 
+    <property name="ShowVoltage" type="bool" default="true" serialize="showVoltage" display="Show Voltage" />
+
     <property name="Type" type="enum" default="Rail2" serialize="t" display="Type">
       <option>Rail</option>
       <option>Rail2</option>
@@ -53,7 +55,7 @@
       <configuration name="DC Source" value="Type:DC" implements="cell" />
       <configuration name="Current Source" value="Type:Current" implements="currentsource" />
     </configurations>
-    
+
   </declaration>
   <connections>
     <group conditions="$Type==Rail|$Type==Rail2">
@@ -106,10 +108,10 @@
   </connections>
   <render>
     <!-- Rail -->
-    <group conditions="$Type==Rail,horizontal">
+    <group conditions="$Type==Rail,horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Start-5" y="_Start" align="CentreRight" size="large" />
     </group>
-    <group conditions="$Type==Rail,!horizontal">
+    <group conditions="$Type==Rail,!horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Start" y="_Start-5" align="BottomCentre" size="large" />
     </group>
     <group conditions="$Type==Rail">
@@ -120,16 +122,20 @@
     <group conditions="$Type==Rail2,horizontal">
       <path start="_Start-5x-6y" data="l 10,0 l -5,-10, l -5,10" />
       <line start="_Start-6y" end="_Start" />
+    </group>
+    <group conditions="$Type==Rail2,horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Start-6" y="_Start-12" align="CentreRight" size="large" />
     </group>
     <group conditions="$Type==Rail2,!horizontal">
       <path start="_Start-5x" data="l 10,0 l -5,-10, l -5,10" />
+    </group>
+    <group conditions="$Type==Rail2,!horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Start-6" y="_Start-6" align="CentreRight" size="large" />
     </group>
     <group conditions="$Type==Rail2">
       <line start="_Start" end="_End" />
     </group>
-    
+
     <!-- Ground -->
     <group conditions="$Type==Ground,horizontal">
       <line start="_Start+10x" end="_End" />
@@ -199,13 +205,15 @@
       <line start="_Middle-10y" end="_Middle+5y" />
       <path start="_Middle+5y" data="l 3,0 l -3,5 l -3,-5 l 3,0 z" fill="true" />
     </group>
-    
+
     <!-- Cell -->
     <group conditions="$Type==Cell,horizontal">
       <line start="_Start" end="_Middle-3x" />
       <line start="_Middle-3x-10y" end="_Middle-3x+10y" />
       <line start="_Middle+3x-5y" end="_Middle+3x+5y" thickness="3" />
       <line start="_Middle+3x" end="_End" />
+    </group>
+    <group conditions="$Type==Cell,horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Middle" y="_Middle-12" align="BottomCentre" size="large" />
     </group>
     <group conditions="$Type==Cell,!horizontal">
@@ -213,6 +221,8 @@
       <line start="_Middle-10x-3y" end="_Middle+10x-3y" />
       <line start="_Middle-5x+3y" end="_Middle+5x+3y" thickness="3" />
       <line start="_Middle+3y" end="_End" />
+    </group>
+    <group conditions="$Type==Cell,!horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Middle-14" y="_Middle" align="CentreRight" size="large" />
     </group>
 
@@ -224,6 +234,8 @@
       <line start="_Middle+3x-10y" end="_Middle+3x+10y" />
       <line start="_Middle+9x-5y" end="_Middle+9x+5y" />
       <line start="_Middle+9x" end="_End" />
+    </group>
+    <group conditions="$Type==Battery,horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Middle" y="_Middle-12" align="BottomCentre" size="large" />
     </group>
     <group conditions="$Type==Battery,!horizontal">
@@ -233,6 +245,8 @@
       <line start="_Middle-10x+3y" end="_Middle+10x+3y" />
       <line start="_Middle-5x+9y" end="_Middle+5x+9y" />
       <line start="_Middle+9y" end="_End" />
+    </group>
+    <group conditions="$Type==Battery,!horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Middle-14" y="_Middle" align="CentreRight" size="large" />
     </group>
   </render>
