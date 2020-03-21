@@ -26,7 +26,7 @@
       </other>
     </property>
 
-    <property name="ShowVoltage" type="bool" default="true" serialize="showVoltage" display="Show Voltage" />
+    <property name="ShowVoltage" type="bool" default="true" serialize="showvoltage" display="Show Voltage" />
 
     <property name="Type" type="enum" default="Rail2" serialize="t" display="Type">
       <option>Rail</option>
