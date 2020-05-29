@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Ultrasonic Distance Sensor" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="130" />
+    <meta name="canresize" value="false" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="5322b9ec-23c0-49c1-a5a1-76fea7613f2e" />
+
+    <flags>
+      <option>MiddleMustAlign</option>
+    </flags>
+  </declaration>
+  <connections autorotate="HorizontalToVertical,FlipSecondary">
+    <connection name="vcc" start="_Middle-20x" end="_Middle-20x-8y" edge="start" />
+    <connection name="trig" start="_Middle-10x" end="_Middle-10x-8y" edge="start" />
+    <connection name="echo" start="_Middle" end="_Middle-8y" edge="start" />
+    <connection name="gnd" start="_Middle+10x" end="_Middle+10x-8y" edge="start" />
+  </connections>
+  <render>
+    <g autorotate="HorizontalToVertical,FlipSecondary">
+      <rect x="_Middle-70" y="_Middle-60" width="130" height="50" />
+
+      <line start="_Middle-20x" end="_Middle-20x-10y" />
+      <line start="_Middle-10x" end="_Middle-10x-10y" />
+      <line start="_Middle" end="_Middle-10y" />
+      <line start="_Middle+10x" end="_Middle+10x-10y" />
+
+      <ellipse centre="_Middle-48x-35y" rx="14" ry="14" />
+      <ellipse centre="_Middle+38x-35y" rx="14" ry="14" />
+    </g>
+
+    <g conditions="horizontal">
+      <text x="_Middle-20" y="_Middle-14" align="CentreLeft" rotate="270" value="VCC" />
+      <text x="_Middle-10" y="_Middle-14" align="CentreLeft" rotate="270" value="TRIG" />
+      <text x="_Middle" y="_Middle-14" align="CentreLeft" rotate="270" value="ECHO" />
+      <text x="_Middle+10" y="_Middle-14" align="CentreLeft" rotate="270" value="GND" />
+    </g>
+
+    <g conditions="!horizontal">
+      <text x="_Middle+14" y="_Middle-20" align="CentreLeft" value="VCC" />
+      <text x="_Middle+14" y="_Middle-10" align="CentreLeft"  value="TRIG" />
+      <text x="_Middle+14" y="_Middle" align="CentreLeft" value="ECHO" />
+      <text x="_Middle+14" y="_Middle+10" align="CentreLeft" value="GND" />
+    </g>
+  </render>
+</component>
