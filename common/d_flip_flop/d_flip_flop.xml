@@ -2,8 +2,8 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="D Flip-Flop" />
-    <meta name="version" value="1.0.1" />
-    <meta name="description" value="Captures the value at D on a rising clock edge." />
+    <meta name="version" value="2.0.0" />
+    <meta name="description" value="Captures the value at D on a clock edge." />
     <meta name="minsize" value="60" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -11,7 +11,14 @@
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="dflipflop" />
     
-    <property name="SetReset" type="bool" default="true" serialize="sr" display="Show set/reset" />
+    <property name="Clock" type="enum" default="Rising" serialize="clock" display="Clock">
+      <option>Rising</option>
+      <option>Falling</option>
+    </property>
+    <property name="Set" type="bool" default="true" serialize="set" display="Show set" />
+    <property name="Reset" type="bool" default="true" serialize="reset" display="Show reset" />
+    <property name="Inverted" type="bool" default="true" serialize="inverted" display="Show inverted output" />
+
     <flags>
       <option>horizontalonly</option>
       <option>middlemustalign</option>
@@ -19,35 +26,69 @@
   </declaration>
   <connections>
     <group>
-      <connection name="d" start="_Start-20y" end="_Middle-20x-20y" edge="start" />
-      <connection name="ck" start="_Start" end="_Middle-20x" edge="start" />
+      <connection name="d" start="_Start-20y" end="_Middle-20x-20y" edge="start" />      
       <connection name="q" start="_Middle+20x-20y" end="_End-20y" edge="end" />
+    </group>
+    <group conditions="$Clock==Rising">
+      <connection name="ck" start="_Start" end="_Middle-20x" edge="start" />
+    </group>
+    <group conditions="$Clock==Falling">
+      <connection name="ck" start="_Start" end="_Middle-28x" edge="start" />
+    </group>
+    <group conditions="$Inverted">
       <connection name="nq" start="_Middle+20x+20y" end="_End+20y" edge="end" />
     </group>
-    <group conditions="$SetReset">
+    <group conditions="$Set">
       <connection name="s" start="_Middle-40y" end="_Middle-30y" edge="start" />
+    </group>
+    <group conditions="$Reset">
       <connection name="r" start="_Middle+30y" end="_Middle+40y" edge="end" />
     </group>
   </connections>
   <render>
-    <group>
+    <!-- Container -->
+    <group conditions="$Inverted|$Reset">
       <rect x="_Middle-20" y="_Middle-30" width="40" height="60" />
-      <line start="_Start" end="_Middle-20x" />
+    </group>
+    <group conditions="!$Inverted,!$Reset">
+      <rect x="_Middle-20" y="_Middle-30" width="40" height="40" />
+    </group>
+
+    <!-- Common -->
+    <group>
       <line start="_Start-20y" end="_Middle-20x-20y" />
       <line start="_Middle+20x-20y" end="_End-20y" />
-      <line start="_Middle+20x+20y" end="_End+20y" />
-      
+
       <!-- Labels -->
       <path start="_Middle-20x-6y" data="l 6,6 l -6,6" thickness="1" />
       <text value="D" x="_Middle-17" y="_Middle-20" align="CentreLeft" size="large" />
       <text value="Q" x="_Middle+17" y="_Middle-20" align="CentreRight" size="large" />
+    </group>
+
+    <group conditions="$Clock==Rising">
+      <line start="_Start" end="_Middle-20x" />
+    </group>
+    <group conditions="$Clock==Falling">
+      <line start="_Start" end="_Middle-28x" />
+      <ellipse centre="_Middle-24x" rx="3" ry="3" thickness="1" />
+    </group>
+
+    <!-- Inverted output -->
+    <group conditions="$Inverted">
+      <line start="_Middle+20x+20y" end="_End+20y" />
       <line start="_Middle+8x+13.5y" end="_Middle+16x+13.5y" thickness="1" />
       <text value="Q" x="_Middle+17" y="_Middle+20" align="CentreRight" size="large" />
     </group>
-    <group conditions="$SetReset">
+
+    <!-- Set -->
+    <group conditions="$Set">
       <line start="_Middle-40y" end="_Middle-30y" />
-      <line start="_Middle+30y" end="_Middle+40y" />
       <text value="S" x="_Middle" y="_Middle-27" align="TopCentre" size="large" />
+    </group>
+
+    <!-- Reset -->
+    <group conditions="$Reset">
+      <line start="_Middle+30y" end="_Middle+40y" />
       <text value="R" x="_Middle" y="_Middle+27" align="BottomCentre" size="large" />
     </group>
   </render>
