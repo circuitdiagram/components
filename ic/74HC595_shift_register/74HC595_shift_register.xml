@@ -6,7 +6,7 @@
 		<meta name="name" value="74HC595" />
 		<meta name="version" value="1.0" />
 		<meta name="minsize" value="120" />
-		<meta name="author" value="[Simonetta Ifeji]" />
+		<meta name="author" value="Simonetta Ifeji" />
 		<meta name="additionalinformation" value="A 74HC595 shift register" />
 		<meta name="guid" value="05c1e9a5-3548-49b8-984e-eafab9d8f544" />
 
