@@ -17,10 +17,10 @@ You can create new components using one of the following:
 [extension](https://github.com/circuitdiagram/circuitdiagram-vscode)
 2. [GitPod](https://gitpod.io/#https://github.com/circuitdiagram/components) - an in-browser
 environment for creating components
-3. The [Circuit Diagram CLI](https://www.circuit-diagram.org/downloads) with a text editor of your
+3. The [Circuit Diagram CLI](https://www.circuit-diagram.org/docs/command-line) with a text editor of your
 choice
 
-The Component Editor website contains [documentation](https://componenteditor.com/help/) to get
+View the [documentation](https://www.circuit-diagram.org/docs/components/introduction) to get
 started making components.
 
 ### Folders
