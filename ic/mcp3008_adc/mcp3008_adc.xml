@@ -6,7 +6,7 @@
 <meta value="1.1" name="version"/>
 <meta value="90" name="minsize"/>
 <meta value="circuitdiagram" name="author"/>
-<meta value="a45e7fb6-561b-4fa1-b688-7764d881e114" name="guid"/>
+<meta value="d45e7fb6-561b-4fa1-b688-7764d881e114" name="guid"/>
 <meta value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" name="implementset"/>
 <meta value="MCP3008" name="implementitem"/>
 -<flags>
