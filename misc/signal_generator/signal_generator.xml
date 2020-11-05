@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+
+  <declaration>
+    <meta name="name" value="Signal Generator" />
+    <meta name="version" value="1.0.0" />
+    <meta name="author" value="Corsaka" />
+    <meta name="guid" value="ffffffff-aaaa-aaaa-aaaa-aaaaaaaa0001" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="minsize" value="60" />
+    <flags>
+      <option>FlipPrimary</option>
+      <option>FlipSecondary</option>
+    </flags>
+    <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
+      <option>Sine</option>
+      <option>Square</option>
+      <option>Triangle</option>
+      <option>Saw</option>
+    </property>
+    <configurations>
+      <configuration name="Sine Wave" value="Type:Sine" implements="sine" />
+      <configuration name="Square Wave" value="Type:Square" implements="square" />
+      <configuration name="Triangle Wave" value="Type:Triangle" implements="triangle" />
+      <configuration name="Saw Wave" value="Type:Saw" implements="saw" />
+    </configurations>
+  </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="in" start="_Start" end="_Middle" edge="start" />
+      <connection name="in" start="_Middle" end="_End" edge="end" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="in" start="_Start" end="_Middle" edge="start" />
+      <connection name="in" start="_Middle" end="_End" edge="end" />
+    </group>
+  </connections>
+  <render>
+    <ellipse centre="_Middle" rx="20" ry="20" />
+    <group conditions="horizontal">
+      <line start="_Start" end="_Middle-20x" />
+      <line start="_Middle+20x" end="_End" />
+    </group>
+    <group conditions="!horizontal">
+      <line start="_Start" end="_Middle-20y" />
+      <line start="_Middle+20y" end="_End" />
+    </group>
+    <group conditions="$Type==Sine">
+      <path start="_Middle" data="m -12 0 c 3 -10, 9 -10, 12 0 c 3 10, 9 10, 12 0" />
+    </group>
+    <group conditions="$Type==Square">
+      <path start="_Middle" data="m -12 0 l 0 -10 l 12 0 l 0 20 l 12 0 l 0 -10" />
+    </group>
+    <group conditions="$Type==Triangle">
+      <path start="_Middle" data="m -12 0 l 6 -10 l 12 20 l 6 -10" />
+    </group>
+    <group conditions="$Type==Saw">
+      <path start="_Middle" data="m -12 0 l 12 -10 l 0 20 l 12 -10" />
+    </group>
+  </render>
+</component>
