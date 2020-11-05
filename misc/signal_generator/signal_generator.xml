@@ -12,18 +12,26 @@
       <option>FlipPrimary</option>
       <option>FlipSecondary</option>
     </flags>
-    <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
-      <option>Sine</option>
-      <option>Square</option>
-      <option>Triangle</option>
-      <option>Saw</option>
-    </property>
+
     <configurations>
       <configuration name="Sine Wave" value="Type:Sine" implements="sine" />
       <configuration name="Square Wave" value="Type:Square" implements="square" />
       <configuration name="Triangle Wave" value="Type:Triangle" implements="triangle" />
       <configuration name="Saw Wave" value="Type:Saw" implements="saw" />
     </configurations>
+    <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
+      <option>Sine</option>
+      <option>Square</option>
+      <option>Triangle</option>
+      <option>Saw</option>
+    </property>
+    <property name="Frequency" type="decimal" default="4700" serialize="frequency" display="Frequency">
+      <formatting>
+        <format conditions="$Frequency[lt]1000" value="$Frequency  Hz" />
+        <format conditions="$Frequency[lt]1000000" value="$Frequency(div_1000)(round_1)  kHz" />
+        <format value="$Frequency(div_1000000)(round_1)  MHz" />
+      </formatting>
+    </property>
   </declaration>
   <connections>
     <group conditions="horizontal">
@@ -36,7 +44,16 @@
     </group>
   </connections>
   <render>
+    <!-- text -->
+    <g conditions="horizontal">
+      <text value="$Frequency" x="_Middle" y="_Start+30" align="CentreCentre" />
+    </g>
+    <g conditions="!horizontal">
+      <text value="$Frequency" x="_Middle+30" y="_Start" align="CentreLeft" />
+    </g>
+    <!-- circle -->
     <ellipse centre="_Middle" rx="20" ry="20" />
+    <!-- connection lines -->
     <group conditions="horizontal">
       <line start="_Start" end="_Middle-20x" />
       <line start="_Middle+20x" end="_End" />
@@ -45,6 +62,7 @@
       <line start="_Start" end="_Middle-20y" />
       <line start="_Middle+20y" end="_End" />
     </group>
+    <!-- wave types -->
     <group conditions="$Type==Sine">
       <path start="_Middle" data="m -12 0 c 3 -10, 9 -10, 12 0 c 3 10, 9 10, 12 0" />
     </group>
