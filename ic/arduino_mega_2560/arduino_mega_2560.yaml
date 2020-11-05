@@ -1,0 +1,180 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 06f95e06-7a49-4e7a-abc3-9c6818ca5f70
+  name: Arduino Mega 2560
+template:
+  name: Integrated Circuit 4x25
+  guid: 47dc3f2d-4799-4ab2-ad62-ac135d27255b
+properties:
+- name: Header
+  value: Arduino Mega 2560
+- name: Pin1
+  value: IOREF
+- name: Pin2
+  value: RST
+- name: Pin3
+  value: 3V3
+- name: Pin4
+  value: 5V
+- name: Pin5
+  value: GND
+- name: Pin6
+  value: GND
+- name: Pin7
+  value: VIN
+- name: Pin9
+  value: A0
+- name: Pin10
+  value: A1
+- name: Pin11
+  value: A2
+- name: Pin12
+  value: A3
+- name: Pin13
+  value: A4
+- name: Pin14
+  value: A5
+- name: Pin15
+  value: A6
+- name: Pin16
+  value: A7
+- name: Pin17
+  value: A8
+- name: Pin18
+  value: A9
+- name: Pin19
+  value: A10
+- name: Pin20
+  value: A11
+- name: Pin21
+  value: A12
+- name: Pin22
+  value: A13
+- name: Pin23
+  value: A14
+- name: Pin24
+  value: A15
+- name: Pin25
+  value: GND
+- name: Pin26
+  value: GND
+- name: Pin28
+  value: D53
+- name: Pin29
+  value: D52
+- name: Pin30
+  value: D51
+- name: Pin31
+  value: D50
+- name: Pin32
+  value: D49
+- name: Pin33
+  value: D48
+- name: Pin34
+  value: D47
+- name: Pin35
+  value: D46
+- name: Pin36
+  value: D45
+- name: Pin37
+  value: D44
+- name: Pin38
+  value: D43
+- name: Pin39
+  value: D42
+- name: Pin40
+  value: D41
+- name: Pin41
+  value: D40
+- name: Pin42
+  value: D39
+- name: Pin43
+  value: D38
+- name: Pin44
+  value: D37
+- name: Pin45
+  value: D36
+- name: Pin46
+  value: D35
+- name: Pin47
+  value: D34
+- name: Pin48
+  value: D33
+- name: Pin49
+  value: D32
+- name: Pin50
+  value: D31
+- name: Pin51
+  value: D30
+- name: Pin52
+  value: D29
+- name: Pin53
+  value: D28
+- name: Pin54
+  value: D27
+- name: Pin55
+  value: D26
+- name: Pin56
+  value: D25
+- name: Pin57
+  value: D24
+- name: Pin58
+  value: D23
+- name: Pin59
+  value: D22
+- name: Pin61
+  value: 5V
+- name: Pin62
+  value: 5V
+- name: Pin64
+  value: SCL D21
+- name: Pin65
+  value: SDA D20
+- name: Pin66
+  value: RX1 D19
+- name: Pin67
+  value: TX1 D18
+- name: Pin68
+  value: RX2 D17
+- name: Pin69
+  value: TX2 D16
+- name: Pin70
+  value: RX3 D15
+- name: Pin71
+  value: TX3 D14
+- name: Pin75
+  value: RX0 D0
+- name: Pin76
+  value: TX0 D1
+- name: Pin77
+  value: D2
+- name: Pin78
+  value: D3
+- name: Pin79
+  value: D4
+- name: Pin80
+  value: D5
+- name: Pin81
+  value: D6
+- name: Pin82
+  value: D7
+- name: Pin83
+  value: D8
+- name: Pin84
+  value: D9
+- name: Pin85
+  value: D10
+- name: Pin86
+  value: D11
+- name: Pin87
+  value: D12
+- name: Pin88
+  value: D13
+- name: Pin90
+  value: GND
+- name: Pin91
+  value: AREF
+- name: Pin92
+  value: SCL
+- name: Pin93
+  value: SDA

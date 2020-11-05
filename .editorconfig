@@ -1,0 +1,6 @@
+[*]
+insert_final_newline = true
+
+[*.xml]
+indent_style = space
+indent_size = 2

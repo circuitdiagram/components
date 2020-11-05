@@ -2,6 +2,7 @@
 <component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Arduino Nano" />
+    <meta name="version" value="1.0.1" />
     <meta name="minsize" value="40" />
     <meta name="canflip" value="false" />
     <meta name="author" value="spork" />
@@ -46,9 +47,9 @@
 
 <render>
    <group conditions="_Horizontal">
-      <rect x="_Middle-45x" y="_Middle-30y" width="90" height="160" />
-      <rect x="_Middle-12x" y="_Middle-30y" width="24" height="28" />
-      <rect x="_Middle-15x" y="_Middle+98y" width="30" height="28" />
+      <rect x="_Middle-45" y="_Middle-30" width="90" height="160" />
+      <rect x="_Middle-12" y="_Middle-30" width="24" height="28" />
+      <rect x="_Middle-15" y="_Middle+98" width="30" height="28" />
 
       <ellipse centre="_Middle-10x+120y" radiusx="2" radiusy="2" />
       <ellipse centre="_Middle+120y"     radiusx="2" radiusy="2" />

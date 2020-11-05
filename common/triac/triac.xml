@@ -13,18 +13,18 @@
     <group conditions="horizontal">
       <connection name="a2" start="_Start" end="_Middle-30x" edge="Start" />
       <connection name="a1" start="_Middle+30x" end="_End" edge="End" />
-	    <connection name="g" start="_Middle-20x-20y" end="_Middle-20x-13y" edge="Start" />
+      <connection name="g" start="_Middle-20x-20y" end="_Middle-20x-13y" edge="Start" />
     </group>
 
     <group conditions="!horizontal">
- 	    <connection name="a2" start="_Start" end="_Middle-30y" edge="Start" />
+      <connection name="a2" start="_Start" end="_Middle-30y" edge="Start" />
       <connection name="a1" start="_Middle+30y" end="_End" edge="End" />
-	    <connection name="g" start="_Middle-20x+20y" end="_Middle-13x+20y" edge="Start" />
+      <connection name="g" start="_Middle-20x+20y" end="_Middle-13x+20y" edge="Start" />
     </group>
   </connections>
 
   <render>
-	  <group conditions="horizontal">
+    <group conditions="horizontal">
       <ellipse centre="_Middle" rx="20" ry="20" fill="false" />
       <line start="_Start" end="_Middle-7x" />
       <line start="_Middle+7x" end="_End" />

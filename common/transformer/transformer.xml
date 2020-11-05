@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Transformer" />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="18ba52d2-9da6-444e-93a8-c607ebdb6be9" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="transformer" />
+    <flags>
+      <flag>HorizontalOnly</flag>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection name="pa" start="_Start-20y" end="_Middle-24x-20y" edge="Start" />
+      <connection name="pb" start="_Start+20y" end="_Middle-24x+20y" edge="Start" />
+      <connection name="sa" start="_Middle+24x-20y" end="_End-20y" edge="End" />
+      <connection name="sb" start="_Middle+24x+20y" end="_End+20y" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <group>
+      <line start="_Start-20y" end="_Middle-24x-20y" />
+      <line start="_Start+20y" end="_Middle-24x+20y" />
+      <line start="_Middle+24x-20y" end="_End-20y" />
+      <line start="_Middle+24x+20y" end="_End+20y" />
+      <line start="_Middle-5x-20y" end="_Middle-5x+20y" />
+      <line start="_Middle+5x-20y" end="_Middle+5x+20y" />
+      <path start="_Middle-24x-20y" data="a 1.5,2 90 0 1 0,10 m 0,0 a 1.5,2 90 0 1 0,10 m 0,0 a 1.5,2 90 0 1 0,10 m 0,0 a 1.5,2 90 0 1 0,10 m 0,0" />
+      <path start="_Middle+24x-20y" data="a 1.5,2 90 0 0 0,10 m 0,0 a 1.5,2 90 0 0 0,10 m 0,0 a 1.5,2 90 0 0 0,10 m 0,0 a 1.5,2 90 0 0 0,10 m 0,0" />
+    </group>
+  </render>
+</component>

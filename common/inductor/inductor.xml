@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Inductor" />
+    <meta name="version" value="2.0.0" />
     <meta name="minsize" value="50" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -9,39 +10,59 @@
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="implementitem" value="inductor" />
     <meta name="org.circuit-diagram.bundled" value="true" />
+    <meta name="experimental.definitions.enabled" value="true" />
+
+    <property name="Text" type="string" default="" serialize="text" display="Text" />
 
     <property name="Inductance" type="double" default="0.1" serialize="inductance" display="Inductance">
       <formatting>
-        <format conditions="$Inductance(gt_1)" value="$Inductance  H" />
-        <format conditions="$Inductance(gteq_0.001)" value="$Inductance(mul_1000)(round_1)  mH" />
-        <format conditions="$Inductance(gteq_0.000001)" value="$Inductance(mul_1000000)(round_1)  \u00B5H" />
+        <format conditions="$Inductance[gt]1" value="$Inductance  H" />
+        <format conditions="$Inductance[gteq]0.001" value="$Inductance(mul_1000)(round_1)  mH" />
+        <format conditions="$Inductance[gteq]0.000001" value="$Inductance(mul_1000000)(round_1)  \u00B5H" />
         <format value="$Inductance(mul_1000000000)(round_1)  nH" />
       </formatting>
     </property>
-    
+
+    <property name="ShowInductance" type="bool" default="true" serialize="showInductance" display="Show Inductance" />
   </declaration>
-  <connections>
-    <group conditions="_Horizontal">
-      <connection name="a" start="_Start" end="_Middle-26x" edge="start" />
-      <connection name="b" start="_Middle+26x" end="_End" edge="end" />
-    </group>
-    <group conditions="!_Horizontal">
-      <connection name="a" start="_Start" end="_Middle-26y" edge="start" />
-      <connection name="b" start="_Middle+26y" end="_End" edge="end" />
-    </group>
+  <definitions>
+    <def name="TextAlignment">
+      <when conditions="horizontal" value="BottomCentre" />
+      <when conditions="!horizontal" value="CentreRight" />
+    </def>
+    <def name="TextOffsetS">
+      <when conditions="horizontal,$ShowInductance" value="-26" />
+      <when conditions="horizontal,!$ShowInductance" value="-14" />
+      <when conditions="!horizontal" value="-8" />
+    </def>
+    <def name="TextOffsetP">
+      <when conditions="horizontal|!$ShowInductance" value="0" />
+      <when conditions="!horizontal,$ShowInductance" value="-6" />
+    </def>
+    <def name="InductanceOffsetS">
+      <when conditions="horizontal" value="-14" />
+      <when conditions="!horizontal" value="-8" />
+    </def>
+    <def name="InductanceOffsetP">
+      <when conditions="horizontal|!$Text" value="0" />
+      <when conditions="!horizontal,$Text" value="6" />
+    </def>
+  </definitions>
+  <connections autorotate="HorizontalToVertical">
+    <connection name="a" start="_Start" end="_Middle-26x" edge="start" />
+    <connection name="b" start="_Middle+26x" end="_End" edge="end" />
   </connections>
-  <render>
-    <group conditions="_Horizontal">
-      <line start="_Start" end="_Middle-24x" />
-      <line start="_Middle+24x" end="_End" />
+  <render autorotate="HorizontalToVertical">
+    <line start="_Start" end="_Middle-24x" />
+    <line start="_Middle+24x" end="_End" />
+    <g autorotate="HorizontalToVertical,FlipSecondary">  
       <path start="_Middle-24x" data="a 2,1.5 90 0 1 12,0 m 0,0 a 2,1.5 90 0 1 12,0 m 0,0 a 2,1.5 90 0 1 12,0 m 0,0 a 2,1.5 90 0 1 12,0" />
-      <text value="$Inductance" x="_Middle" y="_Start-17" align="CentreCentre" />
-    </group>
-    <group conditions="!_Horizontal">
-      <line start="_Start" end="_Middle-24y" />
-      <line start="_Middle+24y" end="_End" />
-      <path start="_Middle-24y" data="a 1.5,2 90 0 1 0,12 m 0,0 a 1.5,2 90 0 1 0,12 m 0,0 a 1.5,2 90 0 1 0,12 m 0,0 a 1.5,2 90 0 1 0,12" />
-      <text value="$Inductance" x="_Start-14" y="_Middle" align="CentreRight" />
-    </group>
+    </g>
+    <g conditions="$ShowInductance">
+      <text value="$Inductance" x="_Middle+$InductanceOffsetP" y="_Start+$InductanceOffsetS" align="$TextAlignment" />
+    </g>
+    <g conditions="$Text">
+      <text value="$Text" x="_Middle+$TextOffsetP" y="_Start+$TextOffsetS" align="$TextAlignment" />
+    </g>
   </render>
 </component>

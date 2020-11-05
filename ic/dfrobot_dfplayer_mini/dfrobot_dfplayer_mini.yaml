@@ -1,0 +1,44 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 41933766-d82f-4169-8d73-8dfacfc5e311
+  name: DFrobot DFPlayer Mini
+template:
+  name: Integrated Circuit 2
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+- name: Header
+  value: DFPlayer Mini
+- name: Size
+  value: 16
+- name: Pin0
+  value: VCC
+- name: Pin1
+  value: Busy
+- name: Pin2
+  value: RX
+- name: Pin3
+  value: USB-
+- name: Pin4
+  value: TX
+- name: Pin5
+  value: USB+
+- name: Pin6
+  value: DAC_R
+- name: Pin7
+  value: ADKEY_2
+- name: Pin8
+  value: DAC_I
+- name: Pin9
+  value: ADKEY_1
+- name: Pin10
+  value: SPK_1
+- name: Pin11
+  value: IO_2
+- name: Pin12
+  value: GND
+- name: Pin13
+  value: GND
+- name: Pin14
+  value: SPK_2
+- name: Pin15
+  value: IO_1

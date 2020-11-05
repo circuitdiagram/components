@@ -44,7 +44,7 @@
       <connection start="_Middle+58x+50y" end="_End+50y" edge="End" />
       <connection start="_Middle+58x+60y" end="_End+60y" edge="End" />
       <connection start="_Middle+58x+70y" end="_End+70y" edge="End" />
-      <connection start="_Middle+58x+80y" end="_End+70y" edge="End" />
+      <connection start="_Middle+58x+80y" end="_End+80y" edge="End" />
     </group>
   </connections>
   <render>

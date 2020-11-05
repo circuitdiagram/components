@@ -2,6 +2,7 @@
 <component xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml" version="1.0">
   <declaration>
     <meta name="name" value="Real Time Clock" />
+    <meta name="version" value="1.0.1" />
     <meta name="minsize" value="110" />
     <meta name="canflip" value="true" />
     <meta name="author" value="Walter Carrer Neto" />
@@ -21,16 +22,16 @@
 
       <connection name="11"  start="_Middle+55x-10y"   end="_End-10y"    edge="Both"/>
       <connection name="10"  start="_Middle+55x"       end="_End"        edge="Both"/>
-      <connection name="9"   start="_Middle+55x+10y"   end="_Endx+10y"   edge="Both"/>
-      <connection name="8"   start="_Middle+55x+20y"   end="_Endx+20y"   edge="Both"/>
-      <connection name="7"   start="_Middle+55x+30y"   end="_Endx+30y"   edge="Both"/>
+      <connection name="9"   start="_Middle+55x+10y"   end="_End+10y"   edge="Both"/>
+      <connection name="8"   start="_Middle+55x+20y"   end="_End+20y"   edge="Both"/>
+      <connection name="7"   start="_Middle+55x+30y"   end="_End+30y"   edge="Both"/>
 
    </group>
 </connections>
 
 <render>
    <group conditions="_Horizontal">
-      <rect x="_Middle-55x" y="_Middle-55y" width="110" height="110" />
+      <rect x="_Middle-55" y="_Middle-55" width="110" height="110" />
 
       <ellipse x="_Middle-44" y="_Middle-44" radiusx="5" radiusy="5" />
       <ellipse x="_Middle+44" y="_Middle-44" radiusx="5" radiusy="5" />

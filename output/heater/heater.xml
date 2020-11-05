@@ -2,6 +2,7 @@
 <component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Heater" />
+    <meta name="version" value="1.0.1" />
     <meta name="minsize" value="100" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -24,18 +25,18 @@
     <group conditions="_Horizontal">
       <line start="_Start" end="_Middle-40x" />
       <line start="_Middle+40x" end="_End" />
-      <rect x="_Middle-40x" y="_Middle-10y" width="20" height="20" />
-      <rect x="_Middle-20x" y="_Middle-10y" width="20" height="20" />
-      <rect x="_Middle" y="_Middle-10y" width="20" height="20" />
-      <rect x="_Middle+20x" y="_Middle-10y" width="20" height="20" />
+      <rect x="_Middle-40" y="_Middle-10" width="20" height="20" />
+      <rect x="_Middle-20" y="_Middle-10" width="20" height="20" />
+      <rect x="_Middle" y="_Middle-10" width="20" height="20" />
+      <rect x="_Middle+20" y="_Middle-10" width="20" height="20" />
     </group>
     <group conditions="!_Horizontal">
       <line start="_Start" end="_Middle-40y" />
       <line start="_Middle+40y" end="_End" />
-      <rect x="_Middle-10x" y="_Middle-40y" width="20" height="20" />
-      <rect x="_Middle-10x" y="_Middle-20y" width="20" height="20" />
-      <rect x="_Middle-10x" y="_Middle" width="20" height="20" />
-      <rect x="_Middle-10x" y="_Middle+20y" width="20" height="20" />
+      <rect x="_Middle-10" y="_Middle-40" width="20" height="20" />
+      <rect x="_Middle-10" y="_Middle-20" width="20" height="20" />
+      <rect x="_Middle-10" y="_Middle" width="20" height="20" />
+      <rect x="_Middle-10" y="_Middle+20" width="20" height="20" />
     </group>
   </render>
 </component>

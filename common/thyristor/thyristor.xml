@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Thyristor" />
+    <meta name="minsize" value="40" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="c0d8a231-7ec7-4f6c-a25f-ece956c85ed4" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+
+    <flags>
+      <option>FlipPrimary</option>
+      <option>FlipSecondary</option>
+      <option>MiddleMustAlign</option>
+    </flags>
+
+    <property name="Style" type="enum" default="Empty" serialize="style" display="Style">
+      <option>Empty</option>
+      <option>Full</option>
+      <option>Stroke</option>
+    </property>
+
+    <configurations>
+      <configuration name="Thyristor (Empty)" value="Style:Empty" implements="thyristor" />
+      <configuration name="Thyristor (Full)" value="Style:Full" implements="thyristor" />
+      <configuration name="Thyristor (Stroke)" value="Style:Stroke" implements="thyristor" />
+    </configurations>
+  </declaration>
+
+  <connections>
+    <group conditions="horizontal">
+      <connection name="an" start="_Start" end="_Middle-10x" edge="Start" />
+      <connection name="cat" start="_Middle+10x" end="_End" edge="End" />
+      <connection name="gate" start="_Middle+20x+20y" end="_Middle+20x+13y" edge="Start" />
+    </group>
+
+    <group conditions="!horizontal">
+      <connection name="an" start="_Start" end="_Middle-10y" edge="Start" />
+      <connection name="cat" start="_Middle+10y" end="_End" edge="End" />
+      <connection name="gate" start="_Middle-20x+20y" end="_Middle-11x+20y" edge="Start" />
+    </group>
+  </connections>
+
+  <render>
+    <group conditions="horizontal,$Style!=Stroke">
+      <line start="_Start" end="_Middle-8x" />
+      <line start="_Middle+7x" end="_End" />
+    </group>
+    <group conditions="horizontal,$Style==Stroke">
+      <line start="_Start" end="_End" />
+    </group>
+    <group conditions="horizontal">
+      <path start="_Middle+7x" data="m 0,8 l 0,-16 m 0,8 l -15,-8 l 0,16 l 15,-8 l 13,10 l 0,10" />
+    </group>
+    <group conditions="horizontal,$Style==Full">
+      <path start="_Middle+7x" data="l -15,-8 l 0,16 l 15,-8 z" fill="true" />
+    </group>
+
+    <group conditions="!horizontal,$Style!=Stroke">
+      <line start="_Start" end="_Middle-8y" />
+      <line start="_Middle+7y" end="_End" />
+    </group>
+    <group conditions="!horizontal,$Style==Stroke">
+      <line start="_Start" end="_End" />
+    </group>
+    <group conditions="!horizontal">
+      <path start="_Middle+7y" data="m -8,0 l 16,0 m-8,0 l 8,-15 l-16,0 l 8,15 l -10,13 l -10,0" />
+    </group>
+    <group conditions="!horizontal,$Style==Full">
+      <path start="_Middle+7y" data="l 8,-15 l-16,0 l 8,15 z" fill="true" />
+    </group>
+  </render>
+</component>

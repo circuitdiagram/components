@@ -2,6 +2,7 @@
 <component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="HD44780" />
+    <meta name="version" value="1.0.1" />
     <meta name="minsize" value="220" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -111,7 +112,7 @@
       <ellipse centre="_Middle-93x+43y" radiusx="3" radiusy="3" />
       <ellipse centre="_Middle+98x-53y" radiusx="3" radiusy="3" />
       <ellipse centre="_Middle+98x+43y" radiusx="3" radiusy="3" />
-      <rect x="_Middle-70x" y="_Middle-40x" width="160" height="50" />
+      <rect x="_Middle-70" y="_Middle-40" width="160" height="50" />
       <text value="HD44780" x="_Middle+10" y="_Middle+20" align="CentreCentre" size="large" />
     </group>
   </render>

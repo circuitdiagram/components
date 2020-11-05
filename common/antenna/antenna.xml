@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Antenna" />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="150eb28e-a9c3-47e7-9c9e-3fc38ef55b65" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="antenna" />
+
+    <property name="Style" type="enum" default="Open" serialize="style" display="Style">
+      <option>Open</option>
+      <option>Closed</option>
+    </property>
+
+    <property name="Transmitting" type="bool" default="false" serialize="transmitting" display="Transmitting" />
+    <property name="Receiving" type="bool" default="false" serialize="receiving" display="Receiving" />
+  </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="com" start="_Start" end="_End" edge="start" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="com" start="_Start+30y" end="_End" edge="end" />
+    </group>
+  </connections>
+  <render>
+    <group conditions="horizontal">
+      <line start="_Start" end="_End" />
+      <line start="_End" end="_End-50y" />
+    </group>
+    <group conditions="horizontal,$Style==Open">
+      <path start="_End-50y" data="m 14,0 l -14,22 l -14,-22" />
+    </group>
+    <group conditions="horizontal,$Style==Closed">
+      <path start="_End-50y" data="l 14,0 l -14,22 l -14,-22 l 14,0 \" />
+    </group>
+    <group conditions="horizontal,$Transmitting">
+      <path start="_End-18y" data="l 3,0 l -3,-5 l -3,5 l 3,0 z" fill="true" />
+    </group>
+    <group conditions="horizontal,$Receiving">
+      <path start="_End-14y" data="l 3,0 l -3,5 l -3,-5 l 3,0 z" fill="true" />
+    </group>
+
+    <group conditions="!horizontal">
+      <line start="_Start" end="_End" />
+    </group>
+    <group conditions="!horizontal,$Style==Open">
+      <path start="_Start" data="m 14,0 l -14,22 l -14,-22" />
+    </group>
+    <group conditions="!horizontal,$Style==Closed">
+      <path start="_Start" data="l 14,0 l -14,22 l -14,-22 l 14,0 z" />
+    </group>
+    <group conditions="!horizontal,$Transmitting">
+      <path start="_Start+32y" data="l 3,0 l -3,-5 l -3,5 l 3,0 z" fill="true" />
+    </group>
+    <group conditions="!horizontal,$Receiving">
+      <path start="_Start+36y" data="l 3,0 l -3,5 l -3,-5 l 3,0 z" fill="true" />
+    </group>
+  </render>
+</component>
