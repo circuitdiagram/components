@@ -25,7 +25,7 @@
       <option>Triangle</option>
       <option>Saw</option>
     </property>
-    <property name="Frequency" type="decimal" default="4700" serialize="frequency" display="Frequency">
+    <property name="Frequency" type="decimal" default="120" serialize="frequency" display="Frequency">
       <formatting>
         <format conditions="$Frequency[lt]1000" value="$Frequency  Hz" />
         <format conditions="$Frequency[lt]1000000" value="$Frequency(div_1000)(round_1)  kHz" />
