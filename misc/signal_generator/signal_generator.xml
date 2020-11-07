@@ -8,13 +8,6 @@
     <meta name="guid" value="ffffffff-aaaa-aaaa-aaaa-aaaaaaaa0001" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="minsize" value="60" />
-
-    <configurations>
-      <configuration name="Sine Wave" value="Type:Sine" implements="sine" />
-      <configuration name="Square Wave" value="Type:Square" implements="square" />
-      <configuration name="Triangle Wave" value="Type:Triangle" implements="triangle" />
-      <configuration name="Saw Wave" value="Type:Saw" implements="saw" />
-    </configurations>
     <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
       <option>Sine</option>
       <option>Square</option>
