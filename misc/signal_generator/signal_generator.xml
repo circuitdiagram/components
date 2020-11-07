@@ -8,10 +8,6 @@
     <meta name="guid" value="ffffffff-aaaa-aaaa-aaaa-aaaaaaaa0001" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="minsize" value="60" />
-    <flags>
-      <option>FlipPrimary</option>
-      <option>FlipSecondary</option>
-    </flags>
 
     <configurations>
       <configuration name="Sine Wave" value="Type:Sine" implements="sine" />
