@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+
+  <declaration>
+    <meta name="name" value="Signal Generator" />
+    <meta name="version" value="1.0.0" />
+    <meta name="author" value="Corsaka" />
+    <meta name="guid" value="ca532248-3591-4776-9876-0772783669e9" />
+    <meta name="minsize" value="60" />
+    <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
+      <option>Sine</option>
+      <option>Square</option>
+      <option>Triangle</option>
+      <option>Saw</option>
+    </property>
+    <property name="Frequency" type="decimal" default="120" serialize="frequency" display="Frequency">
+      <formatting>
+        <format conditions="$Frequency[lt]1000" value="$Frequency  Hz" />
+        <format conditions="$Frequency[lt]1000000" value="$Frequency(div_1000)(round_1)  kHz" />
+        <format value="$Frequency(div_1000000)(round_1)  MHz" />
+      </formatting>
+    </property>
+  </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="in" start="_Start" end="_Middle-20x" edge="start" />
+      <connection name="in" start="_Middle+20x" end="_End" edge="end" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="in" start="_Start" end="_Middle-20y" edge="start" />
+      <connection name="in" start="_Middle+20y" end="_End" edge="end" />
+    </group>
+  </connections>
+  <render>
+    <!-- text -->
+    <g conditions="horizontal">
+      <text value="$Frequency" x="_Middle" y="_Start+30" align="CentreCentre" />
+    </g>
+    <g conditions="!horizontal">
+      <text value="$Frequency" x="_Middle+30" y="_Start" align="CentreLeft" />
+    </g>
+    <!-- circle -->
+    <ellipse centre="_Middle" rx="20" ry="20" />
+    <!-- connection lines -->
+    <group conditions="horizontal">
+      <line start="_Start" end="_Middle-20x" />
+      <line start="_Middle+20x" end="_End" />
+    </group>
+    <group conditions="!horizontal">
+      <line start="_Start" end="_Middle-20y" />
+      <line start="_Middle+20y" end="_End" />
+    </group>
+    <!-- wave types -->
+    <group conditions="$Type==Sine">
+      <path start="_Middle" data="m -12 0 c 3 -10, 9 -10, 12 0 c 3 10, 9 10, 12 0" />
+    </group>
+    <group conditions="$Type==Square">
+      <path start="_Middle" data="m -12 0 l 0 -10 l 12 0 l 0 20 l 12 0 l 0 -10" />
+    </group>
+    <group conditions="$Type==Triangle">
+      <path start="_Middle" data="m -12 0 l 6 -10 l 12 20 l 6 -10" />
+    </group>
+    <group conditions="$Type==Saw">
+      <path start="_Middle" data="m -12 0 l 12 -10 l 0 20 l 12 -10" />
+    </group>
+  </render>
+</component>

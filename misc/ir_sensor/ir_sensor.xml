@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+
+  <declaration>
+    <meta name="name" value="IR Sensor" />
+    <meta name="version" value="1.0.0" />
+    <meta name="author" value="Corsaka" />
+    <meta name="guid" value="5e38760a-a04c-4d53-8947-fcde1bd4c1f0" />
+    <meta name="minsize" value="100" />
+    <flags>
+      <option>FlipPrimary</option>
+      <option>FlipSecondary</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="gnd" start="_Start+30y" end="_End-70x+30y" edge="start" />
+      <connection name="vcc" start="_Start" end="_End-70x" edge="start" />
+      <connection name="data" start="_Start-30y" end="_End-70x-30y" edge="start" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="gnd" start="_Start+30x" end="_End+30x-70y" edge="start" />
+      <connection name="vcc" start="_Start" end="_End-70y" edge="start" />
+      <connection name="data" start="_Start-30x" end="_End-30x-70y" edge="start" />
+    </group>
+  </connections>
+  <render>
+    <group conditions="horizontal">
+      <!-- draw holding rect -->
+      <rect x="_End-70" y="_End-50" width="40" height="100" />
+      <!-- draw connection lines -->
+      <line start="_End-70x+30y" end="_Start+30y" />
+      <line start="_End-70x" end="_Start" />
+      <line start="_End-70x-30y" end="_Start-30y" />
+      <!-- add text -->
+      <text value="GND" x="_End-50" y="_End+30" align="CentreCentre" />
+      <text value="VCC" x="_End-50" y="_End" align="CentreCentre" />
+      <text value="DATA" x="_End-50" y="_End-30" align="CentreCentre" />
+      <!-- create half-circle -->
+      <path start="_End-50x" data="m 20 30 a 30 30, 0, 0, 0, 0 -60 z" />
+      <!-- create arrows -->
+      <path start="_End" data="m 4 -38 l -8 8 m -1,1 l 2,-4 l 2,2 l -4,2 l 2,-4" />
+      <path start="_End" data="m 10 -32 l -8 8 m -1,1 l 2,-4 l 2,2 l -4,2 l 2,-4" />
+    </group>
+    <group conditions="!horizontal">
+      <!-- draw holding rect -->
+      <rect x="_End-50" y="_End-70" width="100" height="40" />
+      <!-- draw connection lines -->
+      <line start="_End+30x-70y" end="_Start+30x" />
+      <line start="_End-70y" end="_Start" />
+      <line start="_End-30x-70y" end="_Start-30x" />
+      <!-- add text -->
+      <text value="GND" x="_End-30" y="_End-50" align="CentreCentre" />
+      <text value="VCC" x="_End" y="_End-50" align="CentreCentre" />
+      <text value="DATA" x="_End+30" y="_End-50" align="CentreCentre" />
+      <!-- create half-circle -->
+      <path start="_End-50y" data="m -30 20 a 30 30, 0, 0, 0, 60 0 z" />
+      <!-- create arrows -->
+      <path start="_End" data="m 38 4 l -8 -8 m -1,-1 l 2,4 l 2,-2 l -4,-2 l 2,4" />
+      <path start="_End" data="m 32 10 l -8 -8 m -1,-1 l 2,4 l 2,-2 l -4,-2 l 2,4" />
+    </group>
+  </render>
+</component>
