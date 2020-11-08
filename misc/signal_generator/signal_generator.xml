@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
 
   <declaration>
     <meta name="name" value="Signal Generator" />
     <meta name="version" value="1.0.0" />
     <meta name="author" value="Corsaka" />
-    <meta name="guid" value="ffffffff-aaaa-aaaa-aaaa-aaaaaaaa0001" />
-    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="ca532248-3591-4776-9876-0772783669e9" />
     <meta name="minsize" value="60" />
     <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
       <option>Sine</option>
@@ -24,12 +23,12 @@
   </declaration>
   <connections>
     <group conditions="horizontal">
-      <connection name="in" start="_Start" end="_Middle" edge="start" />
-      <connection name="in" start="_Middle" end="_End" edge="end" />
+      <connection name="in" start="_Start" end="_Middle-20x" edge="start" />
+      <connection name="in" start="_Middle+20x" end="_End" edge="end" />
     </group>
     <group conditions="!horizontal">
-      <connection name="in" start="_Start" end="_Middle" edge="start" />
-      <connection name="in" start="_Middle" end="_End" edge="end" />
+      <connection name="in" start="_Start" end="_Middle-20y" edge="start" />
+      <connection name="in" start="_Middle+20y" end="_End" edge="end" />
     </group>
   </connections>
   <render>
