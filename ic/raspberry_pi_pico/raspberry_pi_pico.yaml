@@ -1,0 +1,94 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 39fe25e7-7df0-42a3-92b4-1de7867be54d
+  name: Raspberry Pi Pico
+  version: "1.0.0"
+  description: Pins for the Raspberry Pi Pico.
+template:
+  name: Integrated Circuit 2
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+- name: Header
+  value: Raspberry Pi Pico
+- name: Size
+  value: 40
+- name: Pin0
+  value: GP0
+- name: Pin1
+  value: VBUS
+- name: Pin2
+  value: GP1
+- name: Pin3
+  value: VSYS
+- name: Pin4
+  value: GND
+- name: Pin5
+  value: GND
+- name: Pin6
+  value: GP2
+- name: Pin7
+  value: 3V3_EN
+- name: Pin8
+  value: GP3
+- name: Pin9
+  value: 3V3_OUT
+- name: Pin10
+  value: GP4
+- name: Pin11
+  value: ADC_VREF
+- name: Pin12
+  value: GP5
+- name: Pin13
+  value: GP28
+- name: Pin14
+  value: GND
+- name: Pin15
+  value: GND
+- name: Pin16
+  value: GP6
+- name: Pin17
+  value: GP27
+- name: Pin18
+  value: GP7
+- name: Pin19
+  value: GP26
+- name: Pin20
+  value: GP8
+- name: Pin21
+  value: RUN
+- name: Pin22
+  value: GP9
+- name: Pin23
+  value: GP22
+- name: Pin24
+  value: GND
+- name: Pin25
+  value: GND
+- name: Pin26
+  value: GP10
+- name: Pin27
+  value: GP21
+- name: Pin28
+  value: GP11
+- name: Pin29
+  value: GP20
+- name: Pin30
+  value: GP12
+- name: Pin31
+  value: GP19
+- name: Pin32
+  value: GP13
+- name: Pin33
+  value: GP18
+- name: Pin34
+  value: GND
+- name: Pin35
+  value: GND
+- name: Pin36
+  value: GP14
+- name: Pin37
+  value: GP17
+- name: Pin38
+  value: GP15
+- name: Pin39
+  value: GP16
