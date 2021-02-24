@@ -98,7 +98,7 @@
     
     <!-- NPN Transistor -->
     <group conditions="horizontal,$Type==NPN">
-      <path start="_Middle+7x-8y" data="l -2,4 l 7,1 l -4,-6 l -1,2" fill="true" />
+      <path start="_Middle+10.5x-9y" data="l -4.5,3 l 5,3 l 0,-6" fill="true" />
     </group>
     <group conditions="!horizontal,$Type==NPN">
       <path start="_Middle-8x+7y" data="l 4,-2 l 1,7 l -6,-4 l 2,-1" fill="true" />
