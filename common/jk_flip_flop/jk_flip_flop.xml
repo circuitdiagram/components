@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="JK Flip-Flop" />
+    <meta name="version" value="1.0.0" />
+    <meta name="guid" value="f283e85c-9cf6-4836-b00a-5183d7a3f3cb" />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="jkflipflop" />
+    <flags>
+      <option>HorizontalOnly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <connection name="j" start="_Start-20y" end="_Middle-20x-20y" edge="start" />
+    <connection name="ck" start="_Start" end="_Middle-20x" edge="start" />
+    <connection name="k" start="_Start+20y" end="_Middle-20x+20y" edge="start" />
+    <connection name="q" start="_Middle+20x-20y" end="_End-20y" edge="end" />
+    <connection name="nq" start="_Middle+20x+20y" end="_End+20y" edge="end" />
+  </connections>
+  <render>
+    <!-- Container -->
+    <rect x="_Middle-20" y="_Middle-30" width="40" height="60" />
+
+    <!-- Inputs -->
+    <line start="_Start-20y" end="_Middle-20x-20y" />
+    <text value="J" x="_Middle-17" y="_Middle-20" align="CentreLeft" size="large" />
+    <line start="_Start" end="_Middle-20x" />
+    <path start="_Middle-20x-6y" data="l 6,6 l -6,6" thickness="1" />
+    <line start="_Start+20y" end="_Middle-20x+20y" />
+    <text value="K" x="_Middle-17" y="_Middle+20" align="CentreLeft" size="large" />
+
+    <!-- Outputs -->
+    <line start="_Middle+20x-20y" end="_End-20y" />
+    <text value="Q" x="_Middle+17" y="_Middle-20" align="CentreRight" size="large" />
+    <line start="_Middle+20x+20y" end="_End+20y" />
+    <line start="_Middle+8x+13.5y" end="_Middle+16x+13.5y" thickness="1" />
+    <text value="Q" x="_Middle+17" y="_Middle+20" align="CentreRight" size="large" />
+  </render>
+</component>
