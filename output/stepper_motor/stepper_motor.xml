@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
-    <meta name="name" value="Motor" />
+    <meta name="name" value="Stepper Motor" />
     <meta name="version" value="2.0.0" />
     <meta name="minsize" value="40" />
     <meta name="author" value="Circuit Diagram" />
