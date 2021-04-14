@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Josephson Junction" />
+    <meta name="minsize" value="50" />
+    <meta name="author" value="err4re" />
+    <meta name="guid" value="97d08ed6-6b4d-4fa2-b456-394a6a94f27e" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
+    <meta name="experimental.definitions.enabled" value="true" />
+
+    <property name="Text" type="string" default="" serialize="text" display="Text" />
+
+    <property name="CriticalCurrent" type="decimal" default="1100" serialize="CriticalCurrent" display="Critical Current (in \u03BCA)">
+      <formatting>
+        <format conditions="$CriticalCurrent[lt]1000" value="$CriticalCurrent  \u03BCA"/>
+        <format conditions="$CriticalCurrent[lt]1000000" value="$CriticalCurrent(div_1000)(round_1)  mA" />
+        <format value="$CriticalCurrent(div_1000000)(round_1)  A" />
+      </formatting>
+    </property>
+
+    <property name="ShowCriticalCurrent" type="bool" default="true" serialize="showCriticalCurrent" display="Show Critical Current" />
+
+  </declaration>
+
+  <definitions>
+    <def name="TextAlignment">
+      <when conditions="horizontal" value="BottomCentre" />
+      <when conditions="!horizontal" value="CentreRight" />
+    </def>
+    <def name="TextOffsetS">
+      <when conditions="!horizontal|!$ShowCriticalCurrent" value="-14" />
+      <when conditions="horizontal,$ShowCriticalCurrent" value="-26" />
+    </def>
+    <def name="TextOffsetP">
+      <when conditions="horizontal|!$ShowCriticalCurrent" value="0" />
+      <when conditions="!horizontal,$ShowCriticalCurrent" value="-6" />
+    </def>
+    <const name="CriticalCurrentOffsetS" value="-18" />
+    <def name="CriticalCurrentOffsetP">
+      <when conditions="horizontal|!$Text" value="0" />
+      <when conditions="!horizontal,$Text" value="6" />
+    </def>
+  </definitions>
+
+  <connections>
+    <group>
+      <connection start="_Start" end="_End" edge="both" />
+    </group>
+  </connections>
+  <render autorotate="HorizontalToVertical">
+    
+    <line start="_Start" end="_End" />
+    <!--<line start="_Start" end="_Middle-10x" />
+    <line start="_Middle+10x" end="_End" />-->
+    <line start="_Middle+10x+10y" end="_Middle-10x-10y" />
+    <line start="_Middle-10x+10y" end="_Middle+10x-10y" />
+    <!--<text value="X" x="_Middle" y="_Middle" align="CentreCentre" size="large" />
+    <rect x="_Middle-10" y="_Middle-10" width="20" height="20" />-->
+    
+  
+  <!-- Text -->
+    <g conditions="$ShowCriticalCurrent">
+      <text value="$CriticalCurrent" x="_Middle+$CriticalCurrentOffsetP" y="_Start+$CriticalCurrentOffsetS" align="$TextAlignment" />
+    </g>
+    <g conditions="$Text">
+      <text value="$Text" x="_Middle+$TextOffsetP" y="_Start+$TextOffsetS" align="$TextAlignment" />
+    </g>
+  </render>
+</component>
