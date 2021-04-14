@@ -5,7 +5,6 @@
     <meta name="minsize" value="50" />
     <meta name="author" value="err4re" />
     <meta name="guid" value="97d08ed6-6b4d-4fa2-b456-394a6a94f27e" />
-    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
     <meta name="org.circuit-diagram.bundled" value="true" />
     <meta name="experimental.definitions.enabled" value="true" />
 
