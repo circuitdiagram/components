@@ -4,7 +4,7 @@
     <meta name="name" value="Stepper Motor" />
     <meta name="version" value="2.0.0" />
     <meta name="minsize" value="40" />
-    <meta name="author" value="Circuit Diagram" />
+    <meta name="author" value="jscoobyced" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="5bd03f7f-1a75-483c-9cae-e563320fd4b2" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
