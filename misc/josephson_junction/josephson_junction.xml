@@ -50,13 +50,8 @@
   <render autorotate="HorizontalToVertical">
     
     <line start="_Start" end="_End" />
-    <!--<line start="_Start" end="_Middle-10x" />
-    <line start="_Middle+10x" end="_End" />-->
     <line start="_Middle+10x+10y" end="_Middle-10x-10y" />
     <line start="_Middle-10x+10y" end="_Middle+10x-10y" />
-    <!--<text value="X" x="_Middle" y="_Middle" align="CentreCentre" size="large" />
-    <rect x="_Middle-10" y="_Middle-10" width="20" height="20" />-->
-    
   
   <!-- Text -->
     <g conditions="$ShowCriticalCurrent">
