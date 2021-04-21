@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Oscilloscope" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="30" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="7958ad29-1bde-4996-a819-6849d8d406f6" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="oscilloscope" />
+    <flags>
+      <option>FlipPrimary</option>
+    </flags>
+  </declaration>
+  <connections autorotate="HorizontalToVertical">
+    <connection name="a" start="_Start" end="_Middle-13x" edge="Start" />
+    <connection name="b" start="_Middle+13x" end="_End" edge="End" />
+  </connections>
+  <render autorotate="HorizontalToVertical">
+    <line start="_Start" end="_Middle-13x" />
+    <line start="_Middle+13x" end="_End" />
+    <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
+    <path start="_Middle" data="m -7,2 l 7,-5 l 0,5 l 7,-5 l 0,5" />
+  </render>
+</component>
