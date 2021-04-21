@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Stepper Motor" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="40" />
+    <meta name="author" value="jscoobyced" />
+    <meta name="guid" value="5bd03f7f-1a75-483c-9cae-e563320fd4b2" />
+  
+    <property name="Pin0" type="string" default="VCC" serialize="p0" display="Pin 0" />
+    <property name="Pin1" type="string" default="IN 1" serialize="p1" display="Pin 1" />
+    <property name="Pin2" type="string" default="IN 2" serialize="p2" display="Pin 2" />
+    <property name="Pin3" type="string" default="IN 3" serialize="p3" display="Pin 3" />
+    <property name="Pin4" type="string" default="IN 4" serialize="p4" display="Pin 4" />
+  
+    <flags>
+      <option>HorizontalOnly</option>
+      <option>FlipSecondary</option>
+    </flags>
+  </declaration>
+
+  <connections>
+    <connection name="p0" start="_Start" end="_Middle-16x" edge="Start" />
+    <connection name="p1" start="_Middle-20x+10y" end="_Middle-10x+10y" edge="Start" />
+    <connection name="p2" start="_Middle+10y" end="_Middle+20y" edge="End" />
+    <connection name="p3" start="_Middle+10x+10y" end="_Middle+20x+10y" edge="End" />
+    <connection name="p4" start="_Middle+16x" end="_End" edge="End" />    
+  </connections>
+
+  <render>
+    <line start="_Start" end="_Middle-16x" />
+    <line start="_Middle+16x" end="_End" />
+    <path start="_Middle" data="m -5,0 l -5,10 -10,0" />
+    <path start="_Middle" data="m 5,0 l 5,10 10,0" />
+    <path start="_Middle-16x" data="l 2,0 4,-4" />
+    <path start="_Middle+16x" data="l -2,0 -4,-4" />
+    <line start="_Middle" end="_Middle+20y" />
+    <ellipse x="_Middle" y="_Middle-15" rx="15" ry="15" />
+    <text x="_Middle" y="_Middle-15" value="M" align="BottomCentre" size="large" />    
+    <path start="_Middle-7x-6y" data="l 0,-4 14,0 0,-4" thickness="1" />
+    <text x="_Middle-30" y="_Middle-7" value="$Pin0" align="CentreCentre" />
+    <text x="_Middle-20" y="_Middle+17" value="$Pin1" align="CentreCentre" />
+    <text x="_Middle+13" y="_Middle+27" value="$Pin2" align="CentreCentre" />
+    <text x="_Middle+20" y="_Middle+17" value="$Pin3" align="CentreCentre" />
+    <text x="_Middle+30" y="_Middle-7" value="$Pin4" align="CentreCentre" />
+  </render>
+</component>
