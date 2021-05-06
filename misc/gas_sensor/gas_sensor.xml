@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.4" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Gas Sensor" />
+    <meta name="minsize" value="50" />
+    <meta name="author" value="chauhannaman98" />
+    <meta name="guid" value="8f764035-18c6-4421-ac7f-5cbd327d4e78" />
+
+    </declaration>
+
+  <connections>
+    <group>
+      <connection name="VCC" start="_Start-30y" end="_Middle-10x-30y" edge="start" />
+      <connection name="GND" start="_Start-10y" end="_Middle-10x-10y" edge="start" />
+      <connection name="A0" start="_Start+10y" end="_Middle-10x+10y" edge="start" />
+      <connection name="D0" start="_Start+30y" end="_Middle-10x+30y" edge="start" />
+    </group>
+  </connections>
+
+  <render>
+    <group>
+      <!-- pins -->
+      <line start="_Start-30y" end="_Middle-10x-30y" />
+      <line start="_Start-10y" end="_Middle-10x-10y" />
+      <line start="_Start+10y" end="_Middle-10x+10y" />
+      <line start="_Start+30y" end="_Middle-10x+30y" />
+      <!-- Labels -->
+      <text value="VCC" x="_Middle+10" y="_Middle-30" align="CentreCentre" />
+      <text value="GND" x="_Middle+10" y="_Middle-10" align="CentreCentre" />
+      <text value="A0" x="_Middle+10" y="_Middle+10" align="CentreCentre" />
+      <text value="D0" x="_Middle+10" y="_Middle+30" align="CentreCentre" />
+      <!-- Sensor body -->
+      <rect x="_Middle-10" y="_Middle-45" width="40" height="90" />
+      <!-- Gas inlet -->
+      <rect x="_Middle+30" y="_Middle-35" width="10" height="70" />
+      <line start="_Start-30y+60x" end="_Middle-30y+40x" />
+      <line start="_Start-25y+60x" end="_Middle-25y+40x" />
+      <line start="_Start-20y+60x" end="_Middle-20y+40x" />
+      <line start="_Start-15y+60x" end="_Middle-15y+40x" />
+      <line start="_Start-10y+60x" end="_Middle-10y+40x" />
+      <line start="_Start-5y+60x" end="_Middle-5y+40x" />
+      <line start="_Start-0y+60x" end="_Middle-0y+40x" />
+      <line start="_Start+5y+60x" end="_Middle+5y+40x" />
+      <line start="_Start+10y+60x" end="_Middle+10y+40x" />
+      <line start="_Start+15y+60x" end="_Middle+15y+40x" />
+      <line start="_Start+20y+60x" end="_Middle+20y+40x" />
+      <line start="_Start+25y+60x" end="_Middle+25y+40x" />
+      <line start="_Start+30y+60x" end="_Middle+30y+40x" />
+    </group>
+  </render>
+  
+</component>
