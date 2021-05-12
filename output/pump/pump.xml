@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Pump" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="40" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="418a85a8-89c9-45b1-b568-4c7f67735244" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="pump" />
+  </declaration>
+  <connections autorotate="HorizontalToVertical">
+    <connection name="a" start="_Start" end="_Middle-13x" edge="Start" />
+    <connection name="b" start="_Middle+13x" end="_End" edge="End" />
+  </connections>
+  <render autorotate="HorizontalToVertical">
+    <line start="_Start" end="_Middle-13x" />
+    <line start="_Middle+13x" end="_End" />
+    <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
+    <path start="_Middle-4x" data="l 0,-2 -4,2 4,2 0,-2" fill="true" />
+  </render>
+</component>
