@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Relay 2" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="80" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="3f8b1eda-6512-4308-956b-80c5bf931901" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+
+    <property name="Type" type="enum" default="SPST_NO" serialize="t" display="Type">
+      <option>SPST_NO</option>
+    </property>
+
+    <configurations>
+      <configuration name="Relay SPST-NO" value="Type:SPST_NO" implements="relayspstno" />
+    </configurations>
+
+    <flags>
+      <option>FlipPrimary</option>
+      <option>FlipSecondary</option>
+    </flags>
+  </declaration>
+
+  <connections autorotate="HorizontalToVertical,FlipSecondary">
+    <connection name="a" start="_Start" end="_Middle-24x" edge="start" />
+    <connection name="b" start="_Middle+24x" end="_End" edge="end" />
+    <connection name="no" start="_Start-30y" end="_Middle-14x-30y" edge="start" />
+    <connection name="com" start="_Middle+14x-30y" end="_End-30y" edge="end" />
+  </connections>
+
+  <render autorotate="HorizontalToVertical,FlipSecondary">
+    <line start="_Start" end="_Middle-24x" />
+    <line start="_Middle+24x" end="_End" />
+    <path start="_Middle-24x" data="a 2,1.5 90 0 1 12,0 m 0,0 a 2,1.5 90 0 1 12,0 m 0,0 a 2,1.5 90 0 1 12,0 m 0,0 a 2,1.5 90 0 1 12,0" />
+
+    <line start="_Middle-24x-15y" end="_Middle+24x-15y" />
+
+    <line start="_Start-30y" end="_Middle-14x-30y" />
+    <line start="_Middle+14x-30y" end="_End-30y" />
+    <ellipse centre="_Middle-11x-30y" rx="3" ry="3" />
+    <ellipse centre="_Middle+11x-30y" rx="3" ry="3" />
+    <line start="_Middle-9x-38y" end="_Middle+8x-32y" />
+  </render>
+</component>
