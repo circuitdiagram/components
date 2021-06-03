@@ -183,11 +183,17 @@
       <line start="_Middle+16x" end="_End" />
       <path start="_Middle" data="m -10,0 l 8,0 m -4,-4 l 0,8 m 10,-4 l 8,0" />
     </group>
+    <group conditions="$Type==DC,horizontal,$ShowVoltage">
+      <text value="$Voltage" x="_Middle" y="_Middle-20" align="BottomCentre" size="large" />
+    </group>
     <group conditions="$Type==DC,!horizontal">
       <line start="_Start" end="_Middle-16y" />
       <ellipse centre="_Middle" rx="16" ry="16" />
       <line start="_Middle+16y" end="_End" />
       <path start="_Middle" data="m 0,-10 l 0,8 m -4,-4 l 8,0 m -8,14 l 8,0" />
+    </group>
+    <group conditions="$Type==DC,!horizontal,$ShowVoltage">
+      <text value="$Voltage" x="_Middle-20" y="_Middle" align="CentreRight" size="large" />
     </group>
 
     <!-- Current Source -->
