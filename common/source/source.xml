@@ -164,15 +164,15 @@
 
     <!-- AC Source -->
     <group conditions="$Type==AC,horizontal">
-      <line start="_Start" end="_Middle-12x" />
-      <ellipse centre="_Middle" rx="12" ry="12" />
-      <line start="_Middle+12x" end="_End" />
+      <line start="_Start" end="_Middle-16x" />
+      <ellipse centre="_Middle" rx="16" ry="16" />
+      <line start="_Middle+16x" end="_End" />
       <path start="_Middle" data="m -8,0 a 4 4 180 0 1 8 0 a 4 4 180 0 0 8 0" />
     </group>
     <group conditions="$Type==AC,!horizontal">
-      <line start="_Start" end="_Middle-12y" />
-      <ellipse centre="_Middle" rx="12" ry="12" />
-      <line start="_Middle+12y" end="_End" />
+      <line start="_Start" end="_Middle-16y" />
+      <ellipse centre="_Middle" rx="16" ry="16" />
+      <line start="_Middle+16y" end="_End" />
       <path start="_Middle" data="m -8,0 a 4 4 180 0 1 8 0 a 4 4 180 0 0 8 0" />
     </group>
 
