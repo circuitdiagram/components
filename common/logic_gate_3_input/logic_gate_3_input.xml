@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Logic Gate (3 Input)" />
+    <meta name="version" value="1.0.0" />
+    <meta name="description" value="Logic gates with 3 inputs." />
+    <meta name="minsize" value="70" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="80af8dff-7c13-4c59-ba78-df5d21dd91c0" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+
+    <flags>
+      <option>FlipPrimary</option>
+    </flags>
+
+    <property name="Type" type="enum" default="NAND" serialize="t" display="Type">
+      <option>AND</option>
+      <option>NAND</option>
+      <option>OR</option>
+      <option>NOR</option>
+    </property>
+
+    <configurations>
+      <configuration name="AND Gate (3 Input)" value="Type:AND" implements="and3" />
+      <configuration name="NAND Gate (3 Input)" value="Type:NAND" implements="nand3" />
+      <configuration name="OR Gate (3 Input)" value="Type:OR" implements="or3" />
+      <configuration name="NOR Gate (3 Input)" value="Type:NOR" implements="nor3" />
+    </configurations>
+  </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="in0" start="_Start-10y" end="_Middle-20x-10y" edge="Start" />
+      <connection name="in1" start="_Start" end="_Middle-20x" edge="Start" />
+      <connection name="in2" start="_Start+10y" end="_Middle-20x+10y" edge="Start" />
+      <connection name="out" start="_Middle+24x" end="_End" edge="End" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="in0" start="_Start+10x" end="_Middle+10x-20y" edge="Start" />
+      <connection name="in1" start="_Start" end="_Middle-20y" edge="Start" />
+      <connection name="in2" start="_Start-10x" end="_Middle-10x-20y" edge="Start" />
+      <connection name="out" start="_Middle+24y" end="_End" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <!-- Common -->
+    <group conditions="horizontal">
+      <line start="_Start-10y" end="_Middle-20x-10y" />
+      <line start="_Start+10y" end="_Middle-20x+10y" />
+    </group>
+    <group conditions="!horizontal">
+      <line start="_Start-10x" end="_Middle-10x-20y" />
+      <line start="_Start+10x" end="_Middle+10x-20y" />
+    </group>
+
+    <group conditions="horizontal,($Type==AND|$Type==NAND)">
+      <line start="_Start" end="_Middle-20x" />
+    </group>
+    <group conditions="!horizontal,($Type==AND|$Type==NAND)">
+      <line start="_Start" end="_Middle-20y" />
+    </group>
+
+    <group conditions="horizontal,($Type==OR|$Type==NOR)">
+      <line start="_Start" end="_Middle-18x" />
+    </group>
+    <group conditions="!horizontal,($Type==OR|$Type==NOR)">
+      <line start="_Start" end="_Middle-18y" />
+    </group>
+
+    <!-- AND -->
+    <group conditions="horizontal,$Type==AND">
+      <path start="_Middle-20x-10y" data="m 0,-10 l 0,40 l 24,0 m -24,-40 l 24,0 m 0,40 a 5,5 90 1 0 0,-40" />
+      <line start="_Middle+26x" end="_End" />
+    </group>
+    <group conditions="!horizontal,$Type==AND">
+      <path start="_Middle-10x-20y" data="m -10,0 l 40,0 l 0,24 m -40,-24 l 0,24 a 5,5 90 1 0 40,0" />
+      <line start="_Middle+25y" end="_End" />
+    </group>
+
+    <!-- NAND -->
+    <group conditions="horizontal,$Type==NAND">
+      <path start="_Middle-20x-10y" data="m 0,-10 l 0,40 l 24,0 m -24,-40 l 24,0 m 0,40 a 5,5 90 1 0 0,-40 m 21,20 a 2,2 -5 0,1 6,0 a 2,2 -5 0,1 -6,0" />
+      <line start="_Middle+31x" end="_End" />
+    </group>
+    <group conditions="!horizontal,$Type==NAND">
+      <path start="_Middle-10x-20y" data="m -10,0 l 40,0 l 0,24 m -40,-24 l 0,24 a 5,5 90 1 0 40,0 m -20,20 a 2,2 5 1,0 0,6 a 2,2 5 1,0 0,-6" />
+      <line start="_Middle+30y" end="_End" />
+    </group>
+
+    <!-- OR -->
+    <group conditions="horizontal,$Type==OR">
+      <path start="_Middle-26x-10y" data="m 0,-10 q 20,20 0,40 m -1,0 q 35,-5 50,-20 q -15,-15 -50,-20" />
+      <line start="_Middle+25x" end="_End" />
+    </group>
+    <group conditions="!horizontal,$Type==OR">
+      <path start="_Middle-10x-26y" data="m -10,0 q 20,20 40,0 m 0,-1 q -5,35 -20,50 q -15,-15 -20,-50" />
+      <line start="_Middle+25y" end="_End" />
+    </group>
+
+    <!-- NOR -->
+    <group conditions="horizontal,$Type==NOR">
+      <path start="_Middle-26x-10y" data="m 0,-10 q 20,20 0,40 m -1,0 q 35,-5 50,-20 q -15,-15 -50,-20 m 51,20 a 2,2 -5 0,1 6,0 a 2,2 -5 0,1 -6,0" />
+      <line start="_Middle+30x" end="_End" />
+    </group>
+    <group conditions="!horizontal,$Type==NOR">
+      <path start="_Middle-10x-26y" data="m -10,0 q 20,20 40,0 m 0,-1 q -5,35 -20,50 q -15,-15 -20,-50 m 20,51 a 2,2 5 1,0 0,6 a 2,2 5 1,0 0,-6" />
+      <line start="_Middle+30y" end="_End" />
+    </group>
+  </render>
+</component>
