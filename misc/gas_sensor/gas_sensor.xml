@@ -11,10 +11,10 @@
 
   <connections>
     <group>
-      <connection name="VCC" start="_Start-30y" end="_Middle-10x-30y" edge="start" />
-      <connection name="GND" start="_Start-10y" end="_Middle-10x-10y" edge="start" />
-      <connection name="A0" start="_Start+10y" end="_Middle-10x+10y" edge="start" />
-      <connection name="D0" start="_Start+30y" end="_Middle-10x+30y" edge="start" />
+      <connection name="VCC" start="_Start-30y" end="_End-50x-30y" edge="start" />
+      <connection name="GND" start="_Start-10y" end="_End-50x-10y" edge="start" />
+      <connection name="A0" start="_Start+10y" end="_End-50x+10y" edge="start" />
+      <connection name="D0" start="_Start+30y" end="_End-50x+30y" edge="start" />
     </group>
   </connections>
 
