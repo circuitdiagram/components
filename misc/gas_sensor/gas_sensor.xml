@@ -2,7 +2,8 @@
 <component version="1.4" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Gas Sensor" />
-    <meta name="minsize" value="50" />
+    <meta name="minsize" value="60" />
+    <meta name="canresize" value="true" />
     <meta name="author" value="chauhannaman98" />
     <meta name="guid" value="8f764035-18c6-4421-ac7f-5cbd327d4e78" />
 
