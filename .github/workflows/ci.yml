@@ -1,0 +1,103 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+    - master
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Determine modified files
+      id: changed-files
+      uses: tj-actions/changed-files@v35
+      with:
+          files: ./**/*.xml
+
+    - name: Download Circuit Diagram CLI
+      run: |
+        curl -L -o circuit-diagram-cli.tar.xz https://github.com/circuitdiagram/circuitdiagram/releases/download/v4.0.2-pre.8/circuit-diagram-cli.4.0.2-pre.8.linux-x64.tar.xz
+        tar -xJf circuit-diagram-cli.tar.xz
+
+    - name: Build
+      run: |
+        mkdir ./build
+        ./circuit-diagram-cli component ./ --components ./ --recursive -o ./build --format binary svg --manifest ./build/manifest.xml --all-configurations
+
+    - name: Lint
+      shell: pwsh
+      run: ./lint.ps1
+
+    - name: Check authors
+      if: github.event_name == 'pull_request'
+      run: |
+        for file in ${{ steps.changed-files.outputs.added_files }}; do
+          echo "New component: $file"
+          author=$(yq -p=xml '.component.declaration.meta[] | select(.+@name=="author").+@value' $file)
+          if [[ "$author" != "${{ github.event.pull_request.user.login }}" ]]
+          then
+            echo "Author mismatch: '$author' != '${{ github.event.pull_request.user.login }}'"
+            echo "For new components, please set the author to your GitHub username."
+            exit 1
+          fi
+        done
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: manifest
+        path: build/manifest.xml
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: previews
+        path: build/*.svg
+
+  Publish:
+    runs-on: windows-latest
+    if: github.ref == 'refs/heads/master'
+    needs:
+    - Build
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/download-artifact@v3
+      with:
+        name: manifest
+        path: build
+    - name: Download CLI
+      shell: pwsh
+      run: |
+        Invoke-WebRequest -Uri ${{ secrets.COMPONENT_REGISTRY_CLI_URL }} -OutFile ComponentRegistryCli.zip
+        Expand-Archive ComponentRegistryCli.zip -DestinationPath .
+    - name: Publish
+      env:
+        COMPONENT_REGISTRY_AUTH_TOKEN: ${{ secrets.COMPONENT_REGISTRY_AUTH_TOKEN }}
+      shell: pwsh
+      run: |
+        [xml]$manifest = Get-Content "build/manifest.xml"
+        
+        foreach ($component in $manifest.components.component)
+        {
+          ./ComponentRegistryCli.exe publish -f circuitdiagram $component.input
+      
+          if ($lastExitCode)
+          {
+              exit $lastExitCode
+          }
+        }
+        
+        foreach ($configuration in ($manifest.components.component.configuration | Where-Object{$_.input -And $_.input.endswith(".yaml")}))
+        {
+          ./ComponentRegistryCli.exe publish -f circuitdiagram $configuration.input
+      
+          if ($lastExitCode)
+          {
+              exit $lastExitCode
+          }
+        }
