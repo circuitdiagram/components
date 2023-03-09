@@ -9,7 +9,7 @@ Get-ChildItem . -Recurse -Filter *.xml | Foreach-Object {
     }
 }
 
-[xml]$manifest = Get-Content "Build/manifest.xml"
+[xml]$manifest = Get-Content "build/manifest.xml"
 
 $inputs = @()
 foreach ($component in $manifest.components.component)
