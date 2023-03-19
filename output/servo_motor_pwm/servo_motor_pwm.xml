@@ -3,7 +3,7 @@
   <declaration>
     <meta name="name" value="Servo Motor" />
     <meta name="minsize" value="30" />
-    <meta name="author" value="Circuit Diagram" />
+    <meta name="author" value="Brian Nicholls" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="47f5c83d-a23b-484a-a1f3-2ea0d6c98e0b" />
     <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
