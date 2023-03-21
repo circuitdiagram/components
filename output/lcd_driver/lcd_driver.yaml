@@ -2,6 +2,7 @@ kind: ComponentConfiguration/v1
 metadata:
   guid: 33900f2a-9e92-40e8-96a4-f91cb8729b87
   name: LCD Driver
+  version: "1.0.0"
 template:
   name: Integrated Circuit 2
   guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
