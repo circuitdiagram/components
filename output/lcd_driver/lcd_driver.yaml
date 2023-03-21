@@ -1,0 +1,44 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 33900f2a-9e92-40e8-96a4-f91cb8729b87
+  name: LCD Driver
+template:
+  name: Integrated Circuit 2
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+  - name: Header
+    value: LCD
+  - name: Size
+    value: 16
+  - name: Pin0
+    value: LED-
+  - name: Pin1
+    value: LED+
+  - name: Pin2
+    value: DB7
+  - name: Pin3
+    value: DB6
+  - name: Pin4
+    value: DB5
+  - name: Pin5
+    value: DB4
+  - name: Pin6
+    value: DB3
+  - name: Pin7
+    value: DB2
+  - name: Pin8
+    value: DB1
+  - name: Pin9
+    value: DB0
+  - name: Pin10
+    value: E
+  - name: Pin11
+    value: R/W
+  - name: Pin12
+    value: RS
+  - name: Pin13
+    value: V0
+  - name: Pin14
+    value: VDD
+  - name: Pin15
+    value: VSS
