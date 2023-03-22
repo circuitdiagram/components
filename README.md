@@ -1,7 +1,6 @@
 # [Circuit Diagram](http://www.circuit-diagram.org/) Components
 
-[![Build status](https://ci.appveyor.com/api/projects/status/5udo733v1fnn0pi8/branch/master?svg=true)](https://ci.appveyor.com/project/CircuitDiagram/components/branch/master)
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/circuitdiagram/components)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=master&repo=44014445)
 
 This repository contains components created by users of Circuit Diagram.
 
