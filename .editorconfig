@@ -1,6 +1,6 @@
 [*]
 insert_final_newline = true
 
-[*.xml]
+[*.{xml,json,yaml]
 indent_style = space
 indent_size = 2

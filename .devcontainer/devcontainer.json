@@ -1,5 +1,6 @@
 {
   "build":{
     "dockerfile": "Dockerfile"
-  }
+  },
+  "postAttachCommand": "code --install-extension /app/ext/*"
 }
