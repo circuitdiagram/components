@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Constant Phase Element" />
+    <meta name="minsize" value="50" />
+    <meta name="author" value="ssaamrasool" />
+    <meta name="guid" value="46f7bbab-a3b4-4b3e-81a4-22f4b34a1470" />
+  </declaration>
+  <property name="mag" type="decimal" default="Standard" serialize="m" display="Q\u208x">
+  </property>
+  <property name="angle" type="decimal" default="Standard" serialize="a" display="n">
+  </property>
+  <connections>
+    <connection start="_Start" end="_End" edge="both" />
+  </connections>
+  <render>
+    <group conditions="horizontal">
+      <line start="_Start" end="_Middle-6x" />
+      <line start="_Middle-6x" end="_Middle-12x-18y" />
+      <line start="_Middle-6x" end="_Middle-12x+18y" />
+      <line start="_Middle+8x" end="_Middle+2x-18y" />
+      <line start="_Middle+8x" end="_Middle+2x+18y" />
+      <line start="_Middle+8x" end="_End" />
+    </group>
+    <group conditions="!horizontal">
+      <text value="!Q\u208x = $mag " x="_Middle" y="_Start-30" align="CentreCentre" />
+    </group>
+    <group conditions="!horizontal">
+      <text value="!n = $angle" x="_Middle" y="_Start+30" align="CentreCentre" />
+    </group>
+  </render>
+</component>
