@@ -1,0 +1,153 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: c893311f-5562-483d-9b5f-33647b77cfdb
+  name: ESP32
+  version: "1.0.0"
+  description: >-
+    Pins for the ESP32 DevKit v1.
+template:
+  name: Integrated Circuit 3
+  guid: f7465d91-799f-448d-bffa-306786261178
+properties:
+  - name: Header
+    value: ESP32
+  - name: Pins
+    value: 36
+  - name: Size
+    value: Small
+  - name: Pin1
+    value: EN
+  - name: Pin2
+    value: GPIO23
+  - name: Label2
+    value: VSPI MOSI
+  - name: Pin3
+    value: GPIO36
+  - name: Label3
+    value: ADC1 CH0
+  - name: Pin4
+    value: GPIO22
+  - name: Label4
+    value: I2C SCL
+  - name: Pin5
+    value: GPIO39
+  - name: Label5
+    value: ADC1 CH3
+  - name: Pin6
+    value: GPIO1
+  - name: Label6
+    value: UART 0 TX
+  - name: Pin7
+    value: GPIO34
+  - name: Label7
+    value: ADC1 CH6
+  - name: Pin8
+    value: GPIO3
+  - name: Label8
+    value: UART 0 RX
+  - name: Pin9
+    value: GPIO35
+  - name: Label9
+    value: ADC1 CH7
+  - name: Pin10
+    value: GPIO21
+  - name: Label10
+    value: I2C SDA
+  - name: Pin11
+    value: GPIO32
+  - name: Label11
+    value: ADC1 CH4
+  - name: Pin12
+    value: GPIO19
+  - name: Label12
+    value: VSPI MISO
+  - name: Pin13
+    value: GPIO33
+  - name: Label13
+    value: ADC1 CH5
+  - name: Pin14
+    value: GPIO18
+  - name: Label14
+    value: VSPI CLK
+  - name: Pin15
+    value: GPIO25
+  - name: Label15
+    value: ADC2 CH8
+  - name: Pin16
+    value: GPIO5
+  - name: Label16
+    value: VSPI CS0
+  - name: Pin17
+    value: GPIO26
+  - name: Label17
+    value: ADC2 CH9
+  - name: Pin18
+    value: GPIO17
+  - name: Label18
+    value: UART 2 TX
+  - name: Pin19
+    value: GPIO27
+  - name: Label19
+    value: ADC2 CH7
+  - name: Pin20
+    value: GPIO16
+  - name: Label20
+    value: UART 2 RX
+  - name: Pin21
+    value: GPIO14
+  - name: Label21
+    value: ADC2 CH6
+  - name: Pin22
+    value: GPIO4
+  - name: Label22
+    value: ADC2 CH0
+  - name: Pin23
+    value: GPIO12
+  - name: Label23
+    value: ADC2 CH5
+  - name: Pin24
+    value: GPIO2
+  - name: Label24
+    value: ADC2 CH2
+  - name: Pin25
+    value: GPIO13
+  - name: Label25
+    value: ADC2 CH4
+  - name: Pin26
+    value: GPIO15
+  - name: Label26
+    value: ADC2 CH3
+  - name: Pin27
+    value: GPIO9
+  - name: Label27
+    value: SHD/SD2
+  - name: Pin28
+    value: GPIO0
+  - name: Label28
+    value: ADC2 CH1
+  - name: Pin29
+    value: GPIO10
+  - name: Label29
+    value: SWP/SD3
+  - name: Pin30
+    value: GPIO8
+  - name: Label30
+    value: SDI/SD1
+  - name: Pin31
+    value: GPIO11
+  - name: Label31
+    value: CSC/CMD
+  - name: Pin32
+    value: GPIO7
+  - name: Label32
+    value: SDO/SD0
+  - name: Pin33
+    value: GND
+  - name: Pin34
+    value: GPIO6
+  - name: Label34
+    value: SCK/CLK
+  - name: Pin35
+    value: VIN
+  - name: Pin36
+    value: 3V3
