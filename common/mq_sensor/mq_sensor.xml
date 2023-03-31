@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="MQ Sensor" />
+    <meta name="minsize" value="200" />
+    <meta name="author" value="Me" />
+    <meta name="canflip" value="true" />
+    <meta name="guid" value="d453945d-ff1d-401c-a9db-9a2bfec499ce" />
+    <property name="SensorName" type="string" default="MQ" serialize="name" display="Name" />
+    <property name="pin1" type="string" default="VCC" serialize="pin1" display="pin1" />
+    <property name="pin2" type="string" default="GND" serialize="pin2" display="pin2" />
+    <property name="pin3" type="string" default="AO" serialize="pin3" display="pin3" />
+    <property name="pin4" type="string" default="DO" serialize="pin4" display="pin4" />
+  </declaration>
+  <connections>
+    <connection name="$pin1" start="_End-30y" end="_End-30y" edge="end" />
+    <connection name="$pin2" start="_End-10y" end="_End-10y" edge="end" />
+    <connection name="$pin3" start="_End+10y" end="_End+10y" edge="end" />
+    <connection name="$pin4" start="_End+30y" end="_End+30y" edge="end" />
+  </connections>
+  <render>
+    <line start="_End-20x-30y" end="_End+20x-30y" />
+    <line start="_End-20x-10y" end="_End+20x-10y" />
+    <line start="_End-20x+10y" end="_End+20x+10y" />
+    <line start="_End-20x+30y" end="_End+20x+30y" />
+
+    <ellipse centre="_Middle-60x" rx="30" ry="30" />
+
+    <text value="$pin1" x="_End-30" y="_End-30" align="CentreRight" />
+    <text value="$pin2" x="_End-30" y="_End-10" align="CentreRight" />
+    <text value="$pin3" x="_End-30" y="_End+10" align="CentreRight" />
+    <text value="$pin4" x="_End-30" y="_End+30" align="CentreRight" />
+    
+    <text value="$SensorName" x="_Middle+10" y="_Middle-10" align="CentreCentre" size="large"  />
+    <text value="Sensor" x="_Middle+10" y="_Middle+10" align="CentreCentre" size="large"  />
+
+    <rect x="_Middle-100" y="_Middle-50" width="200" height="100" />
+  </render>
+</component>
