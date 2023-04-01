@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="QT Py" />
+    <meta name="version" value="1.0.0" />
+    <meta name="guid" value="c277b644-5b30-48f8-866c-47a32b56ebfa" />
+    <meta name="description" value="Pins for the Adafruit QT Py." />
+    <meta name="minsize" value="110" />
+    <meta name="author" value="Circuit Diagram" />
+
+    <property name="Text1" type="string" default="" serialize="t1" display="Text 1" />
+    <property name="Text2" type="string" default="" serialize="t2" display="Text 2" />
+
+    <flags>
+      <option>HorizontalOnly</option>
+      <option>MiddleMustAlign</option>
+    </flags>
+
+    <configurations>
+      <configuration name="QT Py ESP32-C3" value="Text1:ESP32,Text2:C3" />
+      <configuration name="QT Py RP2040" value="Text1:RP2040" />
+    </configurations>
+  </declaration>
+  <connections>
+    <!-- Left side pins -->
+    <connection name="a0" start="_Start-40y" end="_Middle-58x-40y" edge="Start" />
+    <connection name="a1" start="_Start-30y" end="_Middle-58x-30y" edge="Start" />
+    <connection name="a2" start="_Start-20y" end="_Middle-58x-20y" edge="Start" />
+    <connection name="a3" start="_Start-10y" end="_Middle-58x-10y" edge="Start" />
+    <connection name="sda0" start="_Start" end="_Middle-58x" edge="Start" />
+    <connection name="scl0" start="_Start+10y" end="_Middle-58x+10y" edge="Start" />
+    <connection name="tx" start="_Start+20y" end="_Middle-58x+20y" edge="Start" />
+
+    <!-- Right side pins -->
+    <connection name="v5" start="_Middle+48x-40y" end="_End-40y" edge="End" />
+    <connection name="gnd0" start="_Middle+48x-30y" end="_End-30y" edge="End" />
+    <connection name="v33n0" start="_Middle+48x-20y" end="_End-20y" edge="End" />
+    <connection name="mosi" start="_Middle+48x-10y" end="_End-10y" edge="End" />
+    <connection name="miso" start="_Middle+48x" end="_End" edge="End" />
+    <connection name="sck" start="_Middle+48x+10y" end="_End+10y" edge="End" />
+    <connection name="rx" start="_Middle+48x+20y" end="_End+20y" edge="End" />
+
+    <!-- Bottom pins -->
+    <connection name="gnd1" start="_Middle-20x+58y" end="_Middle-20x+60y" edge="End" />
+    <connection name="v33n1" start="_Middle-10x+58y" end="_Middle-10x+60y" edge="End" />
+    <connection name="sda1" start="_Middle+58y" end="_Middle+60y" edge="End" />
+    <connection name="scl1" start="_Middle+10x+58y" end="_Middle+10x+60y" edge="End" />
+  </connections>
+  <render>
+    <group>
+      <path start="_Middle" data="m -55,-55 l 45,0 a 5 5 180 0 0 10 0 l 45,0 l 0,110 l -100,0 l 0,-110 z" />
+      <text value="$Text1" x="_Middle-5" y="_Middle-35" align="CentreCentre" />
+      <text value="$Text2" x="_Middle-5" y="_Middle-25" align="CentreCentre" />
+
+      <!-- Left side pins -->
+      <text value="A0" x="_Middle-51" y="_Middle-40" align="CentreLeft" size="Small" />
+      <line start="_Start-40y" end="_Middle-55x-40y" />
+      <text value="A1" x="_Middle-51" y="_Middle-30" align="CentreLeft" size="Small" />
+      <line start="_Start-30y" end="_Middle-55x-30y" />
+      <text value="A2" x="_Middle-51" y="_Middle-20" align="CentreLeft" size="Small" />
+      <line start="_Start-20y" end="_Middle-55x-20y" />
+      <text value="A3" x="_Middle-51" y="_Middle-10" align="CentreLeft" size="Small" />
+      <line start="_Start-10y" end="_Middle-55x-10y" />
+      <text value="SDA" x="_Middle-51" y="_Middle" align="CentreLeft" size="Small" />
+      <line start="_Start" end="_Middle-55x" />
+      <text value="SCL" x="_Middle-51" y="_Middle+10" align="CentreLeft" size="Small" />
+      <line start="_Start+10y" end="_Middle-55x+10y" />
+      <text value="TX" x="_Middle-51" y="_Middle+20" align="CentreLeft" size="Small" />
+      <line start="_Start+20y" end="_Middle-55x+20y" />
+
+      <!-- Right side pins -->
+      <text value="5V" x="_Middle+41" y="_Middle-40" align="CentreRight" size="Small" />
+      <line start="_Middle+45x-40y" end="_End-40y" />
+      <text value="GND" x="_Middle+41" y="_Middle-30" align="CentreRight" size="Small" />
+      <line start="_Middle+45x-30y" end="_End-30y" />
+      <text value="3.3V" x="_Middle+41" y="_Middle-20" align="CentreRight" size="Small" />
+      <line start="_Middle+45x-20y" end="_End-20y" />
+      <text value="MOSI" x="_Middle+41" y="_Middle-10" align="CentreRight" size="Small" />
+      <line start="_Middle+45x-10y" end="_End-10y" />
+      <text value="MISO" x="_Middle+41" y="_Middle" align="CentreRight" size="Small" />
+      <line start="_Middle+45x" end="_End" />
+      <text value="SCK" x="_Middle+41" y="_Middle+10" align="CentreRight" size="Small" />
+      <line start="_Middle+45x+10y" end="_End+10y" />
+      <text value="RX" x="_Middle+41" y="_Middle+20" align="CentreRight" size="Small" />
+      <line start="_Middle+45x+20y" end="_End+20y" />
+
+      <!-- Bottom pins -->
+      <text value="GND" x="_Middle-20" y="_Middle+51" align="CentreLeft" size="Small" rotate="270" />
+      <line start="_Middle-20x+55y" end="_Middle-20x+60y" />
+      <text value="3.3V" x="_Middle-10" y="_Middle+51" align="CentreLeft" size="Small" rotate="270" />
+      <line start="_Middle-10x+55y" end="_Middle-10x+60y" />
+      <text value="SDA" x="_Middle" y="_Middle+51" align="CentreLeft" size="Small" rotate="270" />
+      <line start="_Middle+55y" end="_Middle+60y" />
+      <text value="SCL" x="_Middle+10" y="_Middle+51" align="CentreLeft" size="Small" rotate="270" />
+      <line start="_Middle+10x+55y" end="_Middle+10x+60y" />
+    </group>
+  </render>
+</component>
