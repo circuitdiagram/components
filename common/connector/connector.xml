@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Connector" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="30" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="guid" value="e141b0b1-3fd6-4232-bf5a-b22baf7adade" />
+
+    <property name="Type" type="enum" default="Plug" serialize="t" display="Type">
+      <option>Plug</option>
+      <option>Socket</option>
+    </property>
+
+    <flags>
+      <option>FlipPrimary</option>
+    </flags>
+
+    <configurations>
+      <configuration name="Plug" value="Type:Plug" />
+      <configuration name="Socket" value="Type:Socket" />
+    </configurations>
+  </declaration>
+  <connections autorotate="HorizontalToVertical">
+    <connection name="com" start="_Start" end="_End-15x" edge="start" />
+  </connections>
+  <render autorotate="HorizontalToVertical">
+    <g conditions="$Type==Plug">
+      <line start="_Start" end="_End" />
+      <path start="_End" data="m -10,-8 l 10,8 l -10,8" />
+    </g>
+    <g conditions="$Type==Socket">
+      <line start="_Start" end="_End-10x" />
+      <path start="_End-10x" data="m 10,-8 l -10,8 l 10,8" />
+    </g>
+  </render>
+</component>
