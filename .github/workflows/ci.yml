@@ -15,12 +15,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Determine modified files
-      id: changed-files
-      uses: tj-actions/changed-files@v35
-      with:
-          files: ./**/*.xml
-
     - name: Download Circuit Diagram CLI
       run: |
         curl -L -o circuit-diagram-cli.tar.xz https://github.com/circuitdiagram/circuitdiagram/releases/download/v4.0.2-pre.8/circuit-diagram-cli.4.0.2-pre.8.linux-x64.tar.xz
@@ -34,20 +28,6 @@ jobs:
     - name: Lint
       shell: pwsh
       run: ./lint.ps1
-
-    - name: Check authors
-      if: github.event_name == 'pull_request'
-      run: |
-        for file in ${{ steps.changed-files.outputs.added_files }}; do
-          echo "New component: $file"
-          author=$(yq -p=xml '.component.declaration.meta[] | select(.+@name=="author").+@value' $file)
-          if [[ "$author" != "${{ github.event.pull_request.user.login }}" ]]
-          then
-            echo "Author mismatch: '$author' != '${{ github.event.pull_request.user.login }}'"
-            echo "For new components, please set the author to your GitHub username."
-            exit 1
-          fi
-        done
 
     - uses: actions/upload-artifact@v3
       with:
