@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Bus" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="50" />
+    <meta name="author" value="everlastingwonder" />
+    <meta name="guid" value="de225cd0-4c97-45f4-83c8-087bd4f0cedb" />
+    <meta name="experimental.definitions.enabled" value="true" /><!-- Not sure what this does but most similarly-styled components (inductor, resistor, etc.) have it -->
+
+    <property name="Text" type="string" default="" serialize="text" display="Text" />
+
+    <property name="BusWidth" type="int" default="8" serialize="busWidth" display="Width" />
+
+    <property name="ShowBusWidth" type="bool" default="true" serialize="showBusWidth" display="Show Width" />
+  </declaration>
+
+  <definitions><!--I copied these verbatim from josephson_junction.xml since it's the same size and format as this component so the text positioning is identical-->
+    <def name="TextAlignment">
+      <when conditions="horizontal" value="BottomCentre" />
+      <when conditions="!horizontal" value="CentreRight" />
+    </def>
+    <def name="TextOffsetS">
+      <when conditions="!horizontal|!$ShowBusWidth" value="-18" />
+      <when conditions="horizontal,$ShowBusWidth" value="-30" />
+    </def>
+    <def name="TextOffsetP">
+      <when conditions="horizontal|!$ShowBusWidth" value="0" />
+      <when conditions="!horizontal,$ShowBusWidth" value="-6" />
+    </def>
+    <const name="BusWidthOffsetS" value="-18" />
+    <def name="BusWidthOffsetP">
+      <when conditions="horizontal|!$Text" value="0" />
+      <when conditions="!horizontal,$Text" value="6" />
+    </def>
+  </definitions>
+
+  <!--Not clear on exactly what the autorotate attribute here does either, but again, similar components have it
+  (and are missing rotation-related code that presumably would otherwise be necessary) so I assume it's important-->
+  <connections autorotate="HorizontalToVertical">
+    <group>
+      <connection name="a" start="_Start" end="_Middle-10x" edge="start" />
+      <connection name="b" start="_Middle+10x" end="_End" edge="end" />
+    </group>
+  </connections>
+
+  <render autorotate="HorizontalToVertical">
+    <line start="_Start" end="_End" /><!--The documentation sort of implies that all elements should be in groups but this seems to work fine so who knows-->
+    <line start="_Middle-10x+10y" end="_Middle+10x-10y" />
+
+    <g conditions="$ShowBusWidth"><!--As far as I can tell, <g> is just an alias for <group>-->
+      <text value="$BusWidth" x="_Middle+$BusWidthOffsetP" y="_Start+$BusWidthOffsetS" align="$TextAlignment" />
+    </g>
+    <g conditions="$Text">
+      <text value="$Text" x="_Middle+$TextOffsetP" y="_Start+$TextOffsetS" align="$TextAlignment" />
+    </g>
+  </render>
+</component>
