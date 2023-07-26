@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Ceramic Resonator" />
+    <meta name="minsize" value="50" />
+    <meta name="canflip" value="true" />
+    <meta name="author" value="G1OJS" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="4d710e75-9d5b-4e50-bb6f-9708d4908e74" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+ </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="a" start="_Start+8y" end="_Middle-20x+8y" edge="Start"/>
+      <connection name="b" start="_Start-8y" end="_Middle-20x-8y" edge="Start"/> // Input
+      <connection name="Gnd" start="_Middle+12x" end="_End" edge="end" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="a" start="_Start+8x" end="_Middle-20y+8x" edge="Start"/>
+      <connection name="b" start="_Start-8x" end="_Middle-20y-8x" edge="Start"/> // Input
+       <connection name="Gnd" start="_Middle+12y" end="_End" edge="end" />
+    </group>
+  </connections>
+  <render>
+    <group conditions="horizontal">
+      <line start="_Start-8y" end="_Middle-8x-8y" />
+      <line start="_Start+8y" end="_Middle-8x+8y" />
+      <line start="_Middle+8x" end="_End" />
+      <line start="_Middle-8x-5y" end="_Middle-8x-11y" />
+      <line start="_Middle-8x+5y" end="_Middle-8x+11y" />
+      <line start="_Middle+8x-4y" end="_Middle+8x+4y" />
+      <rect x="_Middle-4" y="_Middle-14" width="8" height="28" />
+    </group>
+    <group conditions="!horizontal">
+      <line start="_Start-8x" end="_Middle-8x-8y" />
+      <line start="_Start+8x" end="_Middle+8x-8y" />
+      <line start="_Middle+8y" end="_End" />
+      <line start="_Middle-5x-8y" end="_Middle-11x-8y" />
+      <line start="_Middle+5x-8y" end="_Middle+11x-8y" />
+      <line start="_Middle-4x+8y" end="_Middle+4x+8y" />
+      <rect x="_Middle-14" y="_Middle-4" width="28" height="8" />
+    </group>
+  </render>
+</component>
