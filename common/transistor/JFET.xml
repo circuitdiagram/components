@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+
   <declaration>
     <meta name="name" value="JFET" />
     <meta name="minsize" value="60" />
@@ -23,56 +24,59 @@
     <configurations default="N_Channel">
       <configuration name="N-Channel JFET" value="Type:N_Channel" implements="jfetnch" />
       <configuration name="P-Channel JFET" value="Type:P_Channel" implements="jfetpch" />
-   </configurations>
+    </configurations>
 
   </declaration>
+
   <connections>
     <!-- JFET -->
     <group conditions="horizontal">
-      <connection name="Source" start="_Start" end="_Middle-16x" edge="Start" />
-      <connection name="Gate" start="_Middle-40y" end="_Middle-16y" edge="Start" />
-      <connection name="Drain" start="_Middle+16x" end="_End" edge="End" />
-    </group>
+      <connection name="Source" start="_Middle-22y" end="_Middle-13y" edge="end" />
+      <connection name="Gate" start="_Middle-40x" end="_Middle-16x" edge="start" />
+      <connection name="Drain" start="_Middle+13y" end="_Middle+22y" edge="start" />
+    </group>    
     <group conditions="!horizontal">
-      <connection name="Source" start="_Middle+16y" end="_End" edge="End" />
-      <connection name="Gate" start="_Middle-40x" end="_Middle-16x" edge="Start" />
-      <connection name="Drain" start="_Start" end="_Middle-16y" edge="Start" />
+      <connection name="Source" start="_Middle-22x" end="_Middle-13x" edge="start" />
+      <connection name="Gate" start="_Middle-40y" end="_Middle-16y" edge="start" />
+      <connection name="Drain" start="_Middle+13x" end="_Middle+22x" edge="end" />
     </group>
   </connections>
+
   <render>
     <!-- JFET Common -->
     <group conditions="horizontal">
-       <line start="_Middle-40y" end="_Middle-14y" /> <!--Gate-->
-       <line start="_Middle-16x-14.5y" end="_Middle+16x-14.5y" thickness="4" /> <!--Substrate-->
-       <line start="_Middle-13x-14.5y" end="_Middle-13x" /> <!--Source-->
-       <line start="_Start" end="_Middle-13x" /> <!--Source Leg-->
-       <line start="_Middle+13x-14.5y" end="_Middle+13x" /> <!--Drain-->
-       <line start="_Middle+13x" end="_End" /> <!--Drain Leg-->    </group>
-    <group conditions="!horizontal">
        <line start="_Middle-40x" end="_Middle-14x" /> <!--Gate-->
        <line start="_Middle-14.5x-16y" end="_Middle-14.5x+16y" thickness="4" />
        <line start="_Middle-14.5x-13y" end="_Middle-13y"  /> <!--Source-->
-       <line start="_Start" end="_Middle-13y" /> <!--Source Leg-->
+       <line start="_Middle-22y" end="_Middle-13y" /> <!--Source Leg-->
        <line start="_Middle-14.5x+13y" end="_Middle+13y" /> <!--Drain-->
-       <line start="_Middle+13y" end="_End" /> <!--Drain Leg-->
-  </group>
+       <line start="_Middle+13y" end="_Middle+22y" /> <!--Drain Leg-->
+    </group>
+    <group conditions="!horizontal">
+       <line start="_Middle-40y" end="_Middle-14y" /> <!--Gate-->
+       <line start="_Middle-16x-14.5y" end="_Middle+16x-14.5y" thickness="4" /> <!--Substrate-->
+       <line start="_Middle-13x-14.5y" end="_Middle-13x" /> <!--Source-->
+       <line start="_Middle-22x" end="_Middle-13x" /> <!--Source Leg-->
+       <line start="_Middle+13x-14.5y" end="_Middle+13x" /> <!--Drain-->
+       <line start="_Middle+13x" end="_Middle+22x" /> <!--Drain Leg-->    
+    </group>
 
     <!-- N Channel JFET -->
     <group conditions="horizontal,$Type==N_Channel">
-      <path start="_Middle-4x-24y" data="l 4,4 l 4,-4 l -8,0" fill="true" />
+      <path start="_Middle-22x-0y" data="l -4,-4 l 0,8 l 4,-4" fill="true" />   
     </group>
     <group conditions="!horizontal,$Type==N_Channel">
-      <path start="_Middle-22x-0y" data="l -4,-4 l 0,8 l 4,-4" fill="true" />   
+      <path start="_Middle-4x-24y" data="l 4,4 l 4,-4 l -8,0" fill="true" />
     </group>
     
     <!-- P Channel JFET -->
-    <group conditions="horizontal,$Type!=N_Channel">
-     <path start="_Middle-4x-20y" data="l 4,-4 l 4,4 l -8,0" fill="true" />
-    </group>
-    <group conditions="!horizontal,$Type!=N_Channel"> 
+    <group conditions="horizontal,$Type!=N_Channel"> 
       <path start="_Middle-24x-0y" data="l 4,4 l 0,-8 l -4,4" fill="true" /> 
     </group>
-    
-    
+    <group conditions="!horizontal,$Type!=N_Channel">
+     <path start="_Middle-4x-20y" data="l 4,-4 l 4,4 l -8,0" fill="true" />
+    </group>
+
   </render>
+
 </component>
