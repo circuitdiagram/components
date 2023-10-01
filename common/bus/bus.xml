@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Bus" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="120" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="cf17d038-e185-4912-a80f-2e326c0dac9d" />
+
+    <property name="Label" type="text" default="BUS" serialize="label" display="Label" />
+
+    <property name="Variant" type="enum" default="Opposite Sides" serialize="variant" display="Variant">
+      <option>Opposite Sides</option>
+    </property>
+
+    <property name="Width" type="enum" default="4" serialize="width" display="Width">
+      <option>4</option>
+      <option>8</option>
+    </property>
+
+    <flags>
+      <option>FlipSecondary</option>
+    </flags>
+
+    <configurations>
+      <configuration name="Bus" value="Variant:Opposite Sides,Width:4" />
+    </configurations>
+  </declaration>
+  <connections autorotate="HorizontalToVertical">
+    <g conditions="$Width==4">
+      <!-- Start -->
+      <connection name="a1" start="_Start-60y" end="_Start+8x-60y" edge="start" />
+      <connection name="a2" start="_Start-50y" end="_Start+8x-50y" edge="start" />
+      <connection name="a3" start="_Start-40y" end="_Start+8x-40y" edge="start" />
+      <connection name="a4" start="_Start-30y" end="_Start+8x-30y" edge="start" />
+      <!-- End -->
+      <connection name="b1" start="_End-8x+30y" end="_End+30y" edge="end" />
+      <connection name="b2" start="_End-8x+40y" end="_End+40y" edge="end" />
+      <connection name="b3" start="_End-8x+50y" end="_End+50y" edge="end" />
+      <connection name="b4" start="_End-8x+60y" end="_End+60y" edge="end" />
+    </g>
+    <g conditions="$Width==8">
+      <!-- Start -->
+      <connection name="a1" start="_Start-100y" end="_Start+8x-100y" edge="start" />
+      <connection name="a2" start="_Start-90y" end="_Start+8x-90y" edge="start" />
+      <connection name="a3" start="_Start-80y" end="_Start+8x-80y" edge="start" />
+      <connection name="a4" start="_Start-70y" end="_Start+8x-70y" edge="start" />
+      <connection name="a5" start="_Start-60y" end="_Start+8x-60y" edge="start" />
+      <connection name="a6" start="_Start-50y" end="_Start+8x-50y" edge="start" />
+      <connection name="a7" start="_Start-40y" end="_Start+8x-40y" edge="start" />
+      <connection name="a8" start="_Start-30y" end="_Start+8x-30y" edge="start" />
+      <!-- End -->
+      <connection name="b1" start="_End-8x+30y" end="_End+30y" edge="end" />
+      <connection name="b2" start="_End-8x+40y" end="_End+40y" edge="end" />
+      <connection name="b3" start="_End-8x+50y" end="_End+50y" edge="end" />
+      <connection name="b4" start="_End-8x+60y" end="_End+60y" edge="end" />
+      <connection name="b5" start="_End-8x+70y" end="_End+70y" edge="end" />
+      <connection name="b6" start="_End-8x+80y" end="_End+80y" edge="end" />
+      <connection name="b7" start="_End-8x+90y" end="_End+90y" edge="end" />
+      <connection name="b8" start="_End-8x+100y" end="_End+100y" edge="end" />
+    </g>
+  </connections>
+  <render autorotate="HorizontalToVertical">
+    <!-- Bus line -->
+    <line start="_Start+40x" end="_End-30x" thickness="3" />
+    <g conditions="$Width==4">
+      <path start="_Start+45x" data="l -15,0 l -10,-10 l 0,-30" thickness="3" />
+      <path start="_End-45x" data="l 15,0 l 10,10 l 0,30" thickness="3" />
+    </g>
+    <g conditions="$Width==8">
+      <path start="_Start+45x" data="l -15,0 l -10,-10 l 0,-70" thickness="3" />
+      <path start="_End-45x" data="l 15,0 l 10,10 l 0,70" thickness="3" />
+    </g>
+
+    <!-- Start connectors -->
+
+    <g conditions="$Width==8">
+      <path start="_Start+20x-80y" data="l 0,-10 l -10,-10 l -10,0" />
+      <path start="_Start+20x-80y" data="l -10,-10 l -10,0" />
+      <path start="_Start+20x-70y" data="l -10,-10 l -10,0" />
+      <path start="_Start+20x-60y" data="l -10,-10 l -10,0" />
+    </g>
+
+    <path start="_Start+20x-40y" data="l 0,-10 l -10,-10 l -10,0" />
+    <path start="_Start+20x-40y" data="l -10,-10 l -10,0" />
+    <path start="_Start+20x-30y" data="l -10,-10 l -10,0" />
+    <path start="_Start+20x-20y" data="l -10,-10 l -10,0" />
+
+    <g conditions="$Width==4">
+      <text x="_Start+3" y="_Start-65" align="CentreCentre" value="1" size="xxs" />
+      <text x="_Start+3" y="_Start-55" align="CentreCentre" value="2" size="xxs" />
+      <text x="_Start+3" y="_Start-45" align="CentreCentre" value="3" size="xxs" />
+      <text x="_Start+3" y="_Start-35" align="CentreCentre" value="4" size="xxs" />
+    </g>
+    <g conditions="$Width==8">
+      <text x="_Start+3" y="_Start-105" align="CentreCentre" value="1" size="xxs" />
+      <text x="_Start+3" y="_Start-95" align="CentreCentre" value="2" size="xxs" />
+      <text x="_Start+3" y="_Start-85" align="CentreCentre" value="3" size="xxs" />
+      <text x="_Start+3" y="_Start-75" align="CentreCentre" value="4" size="xxs" />
+      <text x="_Start+3" y="_Start-65" align="CentreCentre" value="5" size="xxs" />
+      <text x="_Start+3" y="_Start-55" align="CentreCentre" value="6" size="xxs" />
+      <text x="_Start+3" y="_Start-45" align="CentreCentre" value="7" size="xxs" />
+      <text x="_Start+3" y="_Start-35" align="CentreCentre" value="8" size="xxs" />
+    </g>
+
+    <!-- End connectors -->
+
+    <path start="_End-20x+20y" data="l 10,10 l 10,0" />    
+    <path start="_End-20x+30y" data="l 10,10 l 10,0" />    
+    <path start="_End-20x+40y" data="l 10,10 l 10,0" />    
+    <path start="_End-20x+40y" data="l 0,10 l 10,10 l 10,0" />
+    <g conditions="$Width==8">
+      <path start="_End-20x+60y" data="l 10,10 l 10,0" />    
+      <path start="_End-20x+70y" data="l 10,10 l 10,0" />    
+      <path start="_End-20x+80y" data="l 10,10 l 10,0" />    
+      <path start="_End-20x+80y" data="l 0,10 l 10,10 l 10,0" />
+    </g>
+
+    <text x="_End-6" y="_End+25" align="CentreCentre" value="1" size="xxs" />
+    <text x="_End-6" y="_End+35" align="CentreCentre" value="2" size="xxs" />
+    <text x="_End-6" y="_End+45" align="CentreCentre" value="3" size="xxs" />
+    <text x="_End-6" y="_End+55" align="CentreCentre" value="4" size="xxs" />
+    <g conditions="$Width==8">
+      <text x="_End-6" y="_End+65" align="CentreCentre" value="5" size="xxs" />
+      <text x="_End-6" y="_End+75" align="CentreCentre" value="6" size="xxs" />
+      <text x="_End-6" y="_End+85" align="CentreCentre" value="7" size="xxs" />
+      <text x="_End-6" y="_End+95" align="CentreCentre" value="8" size="xxs" />
+    </g>
+
+    <!-- Decorations -->
+    <line start="_Start+35x-5y" end="_Start+40x+5y" thickness="1" />
+    <line start="_End-35x-5y" end="_End-40x+5y" thickness="1" />
+    <g conditions="horizontal,$Label" autorotate="off">
+      <text value="$Label" x="_Middle" y="_Middle-5" align="BottomCentre" />
+    </g>
+    <g conditions="!horizontal,$Label" autorotate="off">
+      <text value="$Label" x="_Middle+5" y="_Middle" align="CentreLeft" />
+    </g>
+  </render>
+</component>
