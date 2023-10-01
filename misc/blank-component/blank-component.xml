@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Blank Component" />
+    <meta name="minsize" value="60" />
+    <meta name="canresize" value="true" />
+    <meta name="author" value="Corsaka" />
+    <meta name="additionalinformation" value="Remove text to delete second input" />
+    <meta name="guid" value="3fbef82b-c1b8-470e-a5e7-02f2c4d1abf0" />
+    
+    <property name="Text" type="string" default="(empty)" serialize="text" display="Text" />
+    <property name="Input1" type="string" default="(empty)" serialize="input1" display="Input 1" />
+    <property name="Input2" type="string" default="(empty)" serialize="input2" display="Input 2" />
+
+  </declaration>
+  <connections>
+    <connection name="input1" start="_Start" end="_Middle-20x" edge="Start" />
+    <g conditions="$Input2">
+      <connection name="input2" start="_Middle+20x" end="_End" edge="End" />
+    </g>
+  </connections>
+  <render>
+    <g conditions="horizontal,$Text">
+      <text x="_Middle" y="_Middle+40" align="CentreCentre" value="$Text" />
+    </g>
+    <g conditions="!horizontal,$Text">
+      <text x="_Middle+40" y="_Middle" align="CentreLeft" value="$Text" />
+    </g>
+
+    <rect x="_Middle-20" y="_Middle-20" width="40" height="40" />
+
+
+    <line start="_Start" end="_Middle-20x" />
+    <g conditions="horizontal,$Input1">
+      <text x="_Middle-25" y="_Middle-15" align="CentreRight" value="$Input1" size="sm" />
+    </g>
+    <g conditions="!horizontal,$Input1">
+      <text x="_Middle+15" y="_Middle+30" align="CentreLeft" value="$Input1" size="sm" />
+    </g>
+
+    <g conditions="$Input2">
+      <line start="_Middle+20x" end="_End" />
+      <g conditions="horizontal">
+        <text x="_Middle+25" y="_Middle-15" align="CentreLeft" value="$Input2" size="sm" />
+      </g>
+      <g conditions="!horizontal">
+        <text x="_Middle+15" y="_Middle-30" align="CentreLeft" value="$Input2" size="sm" />
+      </g>
+    </g>
+  </render>
+</component>
