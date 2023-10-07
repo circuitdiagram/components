@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.4" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="STM32 4x16 - STM32F446RETx" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="250" />
+    <meta name="author" value="Oscar JUNCO" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="47dc3f2d-4799-4ab2-ad62-ac135d27255b" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="microcontroller" />
+
+    <flags>
+      <option>HorizontalOnly</option>
+      <option>MiddleMustAlign</option>
+    </flags>
+    
+    
+    <property name="Header" type="String" default="STM32F446RETx" serialize="header" display="Header" />
+
+	<property name="Pin0" type="string" default="VBAT" serialize="p0" display="VBAT"/>
+	<property name="Pin1" type="string" default="PC13" serialize="p1" display="PC13"/>
+	<property name="Pin2" type="string" default="PC14" serialize="p2" display="PC14"/>
+	<property name="Pin3" type="string" default="PC15" serialize="p3" display="PC15"/>	
+	<property name="Pin4" type="string" default="PH0" serialize="p4" display="PH0"/>
+	<property name="Pin5" type="string" default="PH1" serialize="p5" display="PH1"/>
+	<property name="Pin6" type="string" default="NRST" serialize="p6" display="NRST"/>
+	<property name="Pin7" type="string" default="PC0" serialize="p7" display="PC0"/>
+	<property name="Pin8" type="string" default="PC1" serialize="p8" display="PC1"/>
+	<property name="Pin9" type="string" default="PC2" serialize="p9" display="PC2"/>
+	<property name="Pin10" type="string" default="PC3" serialize="p10" display="PC3"/>
+	<property name="Pin11" type="string" default="VSSA" serialize="p11" display="VSSA"/>
+	<property name="Pin12" type="string" default="VDDA" serialize="p12" display="VDDA"/>
+	<property name="Pin13" type="string" default="PA0" serialize="p13" display="PA0"/>
+	<property name="Pin14" type="string" default="PA1" serialize="p14" display="PA1"/>
+	<property name="Pin15" type="string" default="PA2" serialize="p15" display="PA2"/>
+	<property name="Pin16" type="string" default="PA3" serialize="p16" display="PA3"/>
+	<property name="Pin17" type="string" default="VSS" serialize="p17" display="VSS"/>
+	<property name="Pin18" type="string" default="VDD" serialize="p18" display="VDD"/>
+	<property name="Pin19" type="string" default="PA4" serialize="p19" display="PA4"/>
+	<property name="Pin20" type="string" default="PA5" serialize="p20" display="PA5"/>
+	<property name="Pin21" type="string" default="PA6" serialize="p21" display="PA6"/>
+	<property name="Pin22" type="string" default="PA7" serialize="p22" display="PA7"/>
+	<property name="Pin23" type="string" default="PC4" serialize="p23" display="PC4"/>
+	<property name="Pin24" type="string" default="PC5" serialize="p24" display="PC5"/>
+	<property name="Pin25" type="string" default="PB0" serialize="p25" display="PB0"/>
+	<property name="Pin26" type="string" default="PB1" serialize="p26" display="PB1"/>
+	<property name="Pin27" type="string" default="PB2" serialize="p27" display="PB2"/>
+	<property name="Pin28" type="string" default="PB10" serialize="p28" display="PB10"/>
+	<property name="Pin29" type="string" default="VCAP" serialize="p29" display="VCAP"/>
+	<property name="Pin30" type="string" default="VSS" serialize="p30" display="VSS"/>
+	<property name="Pin31" type="string" default="VDD" serialize="p31" display="VDD"/>
+	<property name="Pin32" type="string" default="PB12" serialize="p32" display="PB12"/>
+	<property name="Pin33" type="string" default="PB13" serialize="p33" display="PB13"/>
+	<property name="Pin34" type="string" default="PB14" serialize="p34" display="PB14"/>
+	<property name="Pin35" type="string" default="PB15" serialize="p35" display="PB15"/>
+	<property name="Pin36" type="string" default="PC6" serialize="p36" display="PC6"/>
+	<property name="Pin37" type="string" default="PC7" serialize="p37" display="PC7"/>
+	<property name="Pin38" type="string" default="PC8" serialize="p38" display="PC8"/>
+	<property name="Pin39" type="string" default="PC9" serialize="p39" display="PC9"/>
+	<property name="Pin40" type="string" default="PA8" serialize="p40" display="PA8"/>
+	<property name="Pin41" type="string" default="PA9" serialize="p41" display="PA9"/>
+	<property name="Pin42" type="string" default="PA10" serialize="p42" display="PA10"/>
+	<property name="Pin43" type="string" default="PA11" serialize="p43" display="PA11"/>
+	<property name="Pin44" type="string" default="PA12" serialize="p44" display="PA12"/>
+	<property name="Pin45" type="string" default="PA13" serialize="p45" display="PA13"/>
+	<property name="Pin46" type="string" default="VSS" serialize="p46" display="VSS"/>
+	<property name="Pin47" type="string" default="VDD" serialize="p47" display="VDD"/>
+	<property name="Pin48" type="string" default="PA14" serialize="p48" display="PA14"/>
+	<property name="Pin49" type="string" default="PA15" serialize="p49" display="PA15"/>
+	<property name="Pin50" type="string" default="PC10" serialize="p50" display="PC10"/>
+	<property name="Pin51" type="string" default="PC11" serialize="p51" display="PC11"/>
+	<property name="Pin52" type="string" default="PC12" serialize="p52" display="PC12"/>
+	<property name="Pin53" type="string" default="PD2" serialize="p53" display="PD2"/>
+	<property name="Pin54" type="string" default="PB3" serialize="p54" display="PB3"/>
+	<property name="Pin55" type="string" default="PB4" serialize="p55" display="PB4"/>
+	<property name="Pin56" type="string" default="PB5" serialize="p56" display="PB5"/>
+	<property name="Pin57" type="string" default="PB6" serialize="p57" display="PB6"/>
+	<property name="Pin58" type="string" default="PB7" serialize="p58" display="PB7"/>
+	<property name="Pin59" type="string" default="BOOT0" serialize="p59" display="BOOT0"/>
+	<property name="Pin60" type="string" default="PB8" serialize="p60" display="PB8"/>
+	<property name="Pin61" type="string" default="PB9" serialize="p61" display="PB9"/>
+	<property name="Pin62" type="string" default="VSS" serialize="p62" display="VSS"/>
+	<property name="Pin63" type="string" default="VDD" serialize="p63" display="VDD"/>
+    <configurations>
+      <configuration name="STM32 4x16 - STM32F446RETx" value="Header:STM32 4x16 - STM32F446RETx,Pin0:PIN0,Pin1:PIN1,Pin2:PIN2,Pin3:PIN3,Pin4:PIN4,Pin5:PIN5,Pin6:PIN6,Pin7:PIN7,Pin8:PIN8,Pin9:PIN9,Pin10:PIN10,Pin11:PIN11,Pin12:PIN12,Pin13:PIN13,Pin14:PIN14,Pin15:PIN15,Pin16:PIN16,Pin17:PIN17,Pin18:PIN18,Pin19:PIN19,Pin20:PIN20,Pin21:PIN21,Pin22:PIN22,Pin23:PIN23,Pin24:PIN24,Pin25:PIN25,Pin26:PIN26,Pin27:PIN27,Pin28:PIN28,Pin29:PIN29,Pin30:PIN30,Pin31:PIN31,Pin32:PIN32,Pin33:PIN33,Pin34:PIN34,Pin35:PIN35,Pin36:PIN36,Pin37:PIN37,Pin38:PIN38,Pin39:PIN39,Pin40:PIN40,Pin41:PIN41,Pin42:PIN42,Pin43:PIN43,Pin44:PIN44,Pin45:PIN45,Pin46:PIN46,Pin47:PIN47,Pin48:PIN48,Pin49:PIN49,Pin50:PIN50,Pin51:PIN51,Pin52:PIN52,Pin53:PIN53,Pin54:PIN54,Pin55:PIN55,Pin56:PIN56,Pin57:PIN57,Pin58:PIN58,Pin59:PIN59,Pin60:PIN60,Pin61:PIN61,Pin62:PIN62,Pin63:PIN63,Pin64:PIN64" />
+    </configurations>
+  </declaration>
+<connections>
+
+<!-- Side: Left -->
+
+	<group conditions="$Pin0">
+		<connection start="_Middle-125x-80y" end="_Middle-115x-80y" edge="Start" />
+	</group>
+	<group conditions="$Pin1">
+		<connection start="_Middle-125x-70y" end="_Middle-115x-70y" edge="Start" />
+	</group>
+	<group conditions="$Pin2">
+		<connection start="_Middle-125x-60y" end="_Middle-115x-60y" edge="Start" />
+	</group>
+	<group conditions="$Pin3">
+		<connection start="_Middle-125x-50y" end="_Middle-115x-50y" edge="Start" />
+	</group>
+	<group conditions="$Pin4">
+		<connection start="_Middle-125x-40y" end="_Middle-115x-40y" edge="Start" />
+	</group>
+	<group conditions="$Pin5">
+		<connection start="_Middle-125x-30y" end="_Middle-115x-30y" edge="Start" />
+	</group>
+	<group conditions="$Pin6">
+		<connection start="_Middle-125x-20y" end="_Middle-115x-20y" edge="Start" />
+	</group>
+	<group conditions="$Pin7">
+		<connection start="_Middle-125x-10y" end="_Middle-115x-10y" edge="Start" />
+	</group>
+	<group conditions="$Pin8">
+		<connection start="_Middle-125x+0y" end="_Middle-115x+0y" edge="Start" />
+	</group>
+	<group conditions="$Pin9">
+		<connection start="_Middle-125x+10y" end="_Middle-115x+10y" edge="Start" />
+	</group>
+	<group conditions="$Pin10">
+		<connection start="_Middle-125x+20y" end="_Middle-115x+20y" edge="Start" />
+	</group>
+	<group conditions="$Pin11">
+		<connection start="_Middle-125x+30y" end="_Middle-115x+30y" edge="Start" />
+	</group>
+	<group conditions="$Pin12">
+		<connection start="_Middle-125x+40y" end="_Middle-115x+40y" edge="Start" />
+	</group>
+	<group conditions="$Pin13">
+		<connection start="_Middle-125x+50y" end="_Middle-115x+50y" edge="Start" />
+	</group>
+	<group conditions="$Pin14">
+		<connection start="_Middle-125x+60y" end="_Middle-115x+60y" edge="Start" />
+	</group>
+	<group conditions="$Pin15">
+		<connection start="_Middle-125x+70y" end="_Middle-115x+70y" edge="Start" />
+	</group>
+
+<!-- Side: Bottom -->
+
+	<group conditions="$Pin16">
+		<connection start="_Middle-80x+125y" end="_Middle-80x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin17">
+		<connection start="_Middle-70x+125y" end="_Middle-70x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin18">
+		<connection start="_Middle-60x+125y" end="_Middle-60x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin19">
+		<connection start="_Middle-50x+125y" end="_Middle-50x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin20">
+		<connection start="_Middle-40x+125y" end="_Middle-40x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin21">
+		<connection start="_Middle-30x+125y" end="_Middle-30x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin22">
+		<connection start="_Middle-20x+125y" end="_Middle-20x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin23">
+		<connection start="_Middle-10x+125y" end="_Middle-10x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin24">
+		<connection start="_Middle+0x+125y" end="_Middle+0x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin25">
+		<connection start="_Middle+10x+125y" end="_Middle+10x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin26">
+		<connection start="_Middle+20x+125y" end="_Middle+20x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin27">
+		<connection start="_Middle+30x+125y" end="_Middle+30x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin28">
+		<connection start="_Middle+40x+125y" end="_Middle+40x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin29">
+		<connection start="_Middle+50x+125y" end="_Middle+50x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin30">
+		<connection start="_Middle+60x+125y" end="_Middle+60x+115y" edge="Start" />
+	</group>
+	<group conditions="$Pin31">
+		<connection start="_Middle+70x+125y" end="_Middle+70x+115y" edge="Start" />
+	</group>
+
+<!-- Side: Right -->
+
+	<group conditions="$Pin32">
+		<connection start="_Middle+115x+80y" end="_Middle+125x+80y" edge="End" />
+	</group>
+	<group conditions="$Pin33">
+		<connection start="_Middle+115x+70y" end="_Middle+125x+70y" edge="End" />
+	</group>
+	<group conditions="$Pin34">
+		<connection start="_Middle+115x+60y" end="_Middle+125x+60y" edge="End" />
+	</group>
+	<group conditions="$Pin35">
+		<connection start="_Middle+115x+50y" end="_Middle+125x+50y" edge="End" />
+	</group>
+	<group conditions="$Pin36">
+		<connection start="_Middle+115x+40y" end="_Middle+125x+40y" edge="End" />
+	</group>
+	<group conditions="$Pin37">
+		<connection start="_Middle+115x+30y" end="_Middle+125x+30y" edge="End" />
+	</group>
+	<group conditions="$Pin38">
+		<connection start="_Middle+115x+20y" end="_Middle+125x+20y" edge="End" />
+	</group>
+	<group conditions="$Pin39">
+		<connection start="_Middle+115x+10y" end="_Middle+125x+10y" edge="End" />
+	</group>
+	<group conditions="$Pin40">
+		<connection start="_Middle+115x+0y" end="_Middle+125x+0y" edge="End" />
+	</group>
+	<group conditions="$Pin41">
+		<connection start="_Middle+115x-10y" end="_Middle+125x-10y" edge="End" />
+	</group>
+	<group conditions="$Pin42">
+		<connection start="_Middle+115x-20y" end="_Middle+125x-20y" edge="End" />
+	</group>
+	<group conditions="$Pin43">
+		<connection start="_Middle+115x-30y" end="_Middle+125x-30y" edge="End" />
+	</group>
+	<group conditions="$Pin44">
+		<connection start="_Middle+115x-40y" end="_Middle+125x-40y" edge="End" />
+	</group>
+	<group conditions="$Pin45">
+		<connection start="_Middle+115x-50y" end="_Middle+125x-50y" edge="End" />
+	</group>
+	<group conditions="$Pin46">
+		<connection start="_Middle+115x-60y" end="_Middle+125x-60y" edge="End" />
+	</group>
+	<group conditions="$Pin47">
+		<connection start="_Middle+115x-70y" end="_Middle+125x-70y" edge="End" />
+	</group>
+
+<!-- Side: Top -->
+
+	<group conditions="$Pin48">
+		<connection start="_Middle+80x-115y" end="_Middle+80x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin49">
+		<connection start="_Middle+70x-115y" end="_Middle+70x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin50">
+		<connection start="_Middle+60x-115y" end="_Middle+60x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin51">
+		<connection start="_Middle+50x-115y" end="_Middle+50x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin52">
+		<connection start="_Middle+40x-115y" end="_Middle+40x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin53">
+		<connection start="_Middle+30x-115y" end="_Middle+30x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin54">
+		<connection start="_Middle+20x-115y" end="_Middle+20x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin55">
+		<connection start="_Middle+10x-115y" end="_Middle+10x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin56">
+		<connection start="_Middle+0x-115y" end="_Middle+0x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin57">
+		<connection start="_Middle-10x-115y" end="_Middle-10x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin58">
+		<connection start="_Middle-20x-115y" end="_Middle-20x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin59">
+		<connection start="_Middle-30x-115y" end="_Middle-30x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin60">
+		<connection start="_Middle-40x-115y" end="_Middle-40x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin61">
+		<connection start="_Middle-50x-115y" end="_Middle-50x-125y" edge="End" />
+	</group>
+	<group conditions="$Pin62">
+		<connection start="_Middle-60x-115y" end="_Middle-60x-125y" edge="End" />
+	</group>
+
+</connections>
+  <render>
+    <group>
+      <path start="_Middle-115x" data="l 0,115 l 230,0 l 0,-230 l -220,0 l -10,10 l 0,105" />
+    </group>
+
+    <group conditions="$Header">
+      <text x="_Middle" y="_Middle" align="CentreCentre" value="$Header" />
+    </group>
+
+    <!-- Side: Left -->
+
+
+
+	<group conditions="$Pin0">
+		<line start="_Middle-125x-80y" end="_Middle-115x-80y" />
+		<text x="_Middle-113" y="_Middle-80" align="CentreLeft" value="$Pin0" />
+	</group>
+	<group conditions="$Pin1">
+		<line start="_Middle-125x-70y" end="_Middle-115x-70y" />
+		<text x="_Middle-113" y="_Middle-70" align="CentreLeft" value="$Pin1" />
+	</group>
+	<group conditions="$Pin2">
+		<line start="_Middle-125x-60y" end="_Middle-115x-60y" />
+		<text x="_Middle-113" y="_Middle-60" align="CentreLeft" value="$Pin2" />
+	</group>
+	<group conditions="$Pin3">
+		<line start="_Middle-125x-50y" end="_Middle-115x-50y" />
+		<text x="_Middle-113" y="_Middle-50" align="CentreLeft" value="$Pin3" />
+	</group>
+	<group conditions="$Pin4">
+		<line start="_Middle-125x-40y" end="_Middle-115x-40y" />
+		<text x="_Middle-113" y="_Middle-40" align="CentreLeft" value="$Pin4" />
+	</group>
+	<group conditions="$Pin5">
+		<line start="_Middle-125x-30y" end="_Middle-115x-30y" />
+		<text x="_Middle-113" y="_Middle-30" align="CentreLeft" value="$Pin5" />
+	</group>
+	<group conditions="$Pin6">
+		<line start="_Middle-125x-20y" end="_Middle-115x-20y" />
+		<text x="_Middle-113" y="_Middle-20" align="CentreLeft" value="$Pin6" />
+	</group>
+	<group conditions="$Pin7">
+		<line start="_Middle-125x-10y" end="_Middle-115x-10y" />
+		<text x="_Middle-113" y="_Middle-10" align="CentreLeft" value="$Pin7" />
+	</group>
+	<group conditions="$Pin8">
+		<line start="_Middle-125x+0y" end="_Middle-115x+0y" />
+		<text x="_Middle-113" y="_Middle+0" align="CentreLeft" value="$Pin8" />
+	</group>
+	<group conditions="$Pin9">
+		<line start="_Middle-125x+10y" end="_Middle-115x+10y" />
+		<text x="_Middle-113" y="_Middle+10" align="CentreLeft" value="$Pin9" />
+	</group>
+	<group conditions="$Pin10">
+		<line start="_Middle-125x+20y" end="_Middle-115x+20y" />
+		<text x="_Middle-113" y="_Middle+20" align="CentreLeft" value="$Pin10" />
+	</group>
+	<group conditions="$Pin11">
+		<line start="_Middle-125x+30y" end="_Middle-115x+30y" />
+		<text x="_Middle-113" y="_Middle+30" align="CentreLeft" value="$Pin11" />
+	</group>
+	<group conditions="$Pin12">
+		<line start="_Middle-125x+40y" end="_Middle-115x+40y" />
+		<text x="_Middle-113" y="_Middle+40" align="CentreLeft" value="$Pin12" />
+	</group>
+	<group conditions="$Pin13">
+		<line start="_Middle-125x+50y" end="_Middle-115x+50y" />
+		<text x="_Middle-113" y="_Middle+50" align="CentreLeft" value="$Pin13" />
+	</group>
+	<group conditions="$Pin14">
+		<line start="_Middle-125x+60y" end="_Middle-115x+60y" />
+		<text x="_Middle-113" y="_Middle+60" align="CentreLeft" value="$Pin14" />
+	</group>
+	<group conditions="$Pin15">
+		<line start="_Middle-125x+70y" end="_Middle-115x+70y" />
+		<text x="_Middle-113" y="_Middle+70" align="CentreLeft" value="$Pin15" />
+	</group>
+	
+
+    <!-- Side: Bottom -->
+
+    <group conditions="$Pin16">
+		<line start="_Middle-80x+125y" end="_Middle-80x+115y" />
+		<text x="_Middle-80" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin16" />
+	</group>
+	<group conditions="$Pin17">
+		<line start="_Middle-70x+125y" end="_Middle-70x+115y" />
+		<text x="_Middle-70" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin17" />
+	</group>
+	<group conditions="$Pin18">
+		<line start="_Middle-60x+125y" end="_Middle-60x+115y" />
+		<text x="_Middle-60" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin18" />
+	</group>
+	<group conditions="$Pin19">
+		<line start="_Middle-50x+125y" end="_Middle-50x+115y" />
+		<text x="_Middle-50" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin19" />
+	</group>
+	<group conditions="$Pin20">
+		<line start="_Middle-40x+125y" end="_Middle-40x+115y" />
+		<text x="_Middle-40" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin20" />
+	</group>
+	<group conditions="$Pin21">
+		<line start="_Middle-30x+125y" end="_Middle-30x+115y" />
+		<text x="_Middle-30" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin21" />
+	</group>
+	<group conditions="$Pin22">
+		<line start="_Middle-20x+125y" end="_Middle-20x+115y" />
+		<text x="_Middle-20" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin22" />
+	</group>
+	<group conditions="$Pin23">
+		<line start="_Middle-10x+125y" end="_Middle-10x+115y" />
+		<text x="_Middle-10" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin23" />
+	</group>
+	<group conditions="$Pin24">
+		<line start="_Middle+0x+125y" end="_Middle+0x+115y" />
+		<text x="_Middle+0" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin24" />
+	</group>
+	<group conditions="$Pin25">
+		<line start="_Middle+10x+125y" end="_Middle+10x+115y" />
+		<text x="_Middle+10" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin25" />
+	</group>
+	<group conditions="$Pin26">
+		<line start="_Middle+20x+125y" end="_Middle+20x+115y" />
+		<text x="_Middle+20" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin26" />
+	</group>
+	<group conditions="$Pin27">
+		<line start="_Middle+30x+125y" end="_Middle+30x+115y" />
+		<text x="_Middle+30" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin27" />
+	</group>
+	<group conditions="$Pin28">
+		<line start="_Middle+40x+125y" end="_Middle+40x+115y" />
+		<text x="_Middle+40" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin28" />
+	</group>
+	<group conditions="$Pin29">
+		<line start="_Middle+50x+125y" end="_Middle+50x+115y" />
+		<text x="_Middle+50" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin29" />
+	</group>
+	<group conditions="$Pin30">
+		<line start="_Middle+60x+125y" end="_Middle+60x+115y" />
+		<text x="_Middle+60" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin30" />
+	</group>
+	<group conditions="$Pin31">
+		<line start="_Middle+70x+125y" end="_Middle+70x+115y" />
+		<text x="_Middle+70" y="_Middle+113" align="CentreLeft" rotate="270" value="$Pin31" />
+	</group>
+
+    <!-- Side: Right -->
+
+    <group conditions="$Pin32">
+		<line start="_Middle+115x+80y" end="_Middle+125x+80y" />
+		<text x="_Middle+113" y="_Middle+80" align="CentreRight" value="$Pin32" />
+	</group>
+	<group conditions="$Pin33">
+		<line start="_Middle+115x+70y" end="_Middle+125x+70y" />
+		<text x="_Middle+113" y="_Middle+70" align="CentreRight" value="$Pin33" />
+	</group>
+	<group conditions="$Pin34">
+		<line start="_Middle+115x+60y" end="_Middle+125x+60y" />
+		<text x="_Middle+113" y="_Middle+60" align="CentreRight" value="$Pin34" />
+	</group>
+	<group conditions="$Pin35">
+		<line start="_Middle+115x+50y" end="_Middle+125x+50y" />
+		<text x="_Middle+113" y="_Middle+50" align="CentreRight" value="$Pin35" />
+	</group>
+	<group conditions="$Pin36">
+		<line start="_Middle+115x+40y" end="_Middle+125x+40y" />
+		<text x="_Middle+113" y="_Middle+40" align="CentreRight" value="$Pin36" />
+	</group>
+	<group conditions="$Pin37">
+		<line start="_Middle+115x+30y" end="_Middle+125x+30y" />
+		<text x="_Middle+113" y="_Middle+30" align="CentreRight" value="$Pin37" />
+	</group>
+	<group conditions="$Pin38">
+		<line start="_Middle+115x+20y" end="_Middle+125x+20y" />
+		<text x="_Middle+113" y="_Middle+20" align="CentreRight" value="$Pin38" />
+	</group>
+	<group conditions="$Pin39">
+		<line start="_Middle+115x+10y" end="_Middle+125x+10y" />
+		<text x="_Middle+113" y="_Middle+10" align="CentreRight" value="$Pin39" />
+	</group>
+	<group conditions="$Pin40">
+		<line start="_Middle+115x+0y" end="_Middle+125x+0y" />
+		<text x="_Middle+113" y="_Middle+0" align="CentreRight" value="$Pin40" />
+	</group>
+	<group conditions="$Pin41">
+		<line start="_Middle+115x-10y" end="_Middle+125x-10y" />
+		<text x="_Middle+113" y="_Middle-10" align="CentreRight" value="$Pin41" />
+	</group>
+	<group conditions="$Pin42">
+		<line start="_Middle+115x-20y" end="_Middle+125x-20y" />
+		<text x="_Middle+113" y="_Middle-20" align="CentreRight" value="$Pin42" />
+	</group>
+	<group conditions="$Pin43">
+		<line start="_Middle+115x-30y" end="_Middle+125x-30y" />
+		<text x="_Middle+113" y="_Middle-30" align="CentreRight" value="$Pin43" />
+	</group>
+	<group conditions="$Pin44">
+		<line start="_Middle+115x-40y" end="_Middle+125x-40y" />
+		<text x="_Middle+113" y="_Middle-40" align="CentreRight" value="$Pin44" />
+	</group>
+	<group conditions="$Pin45">
+		<line start="_Middle+115x-50y" end="_Middle+125x-50y" />
+		<text x="_Middle+113" y="_Middle-50" align="CentreRight" value="$Pin45" />
+	</group>
+	<group conditions="$Pin46">
+		<line start="_Middle+115x-60y" end="_Middle+125x-60y" />
+		<text x="_Middle+113" y="_Middle-60" align="CentreRight" value="$Pin46" />
+	</group>
+	<group conditions="$Pin47">
+		<line start="_Middle+115x-70y" end="_Middle+125x-70y" />
+		<text x="_Middle+113" y="_Middle-70" align="CentreRight" value="$Pin47" />
+	</group>
+
+    <!-- Side: Top -->
+
+    <group conditions="$Pin48">
+		<line start="_Middle+80x-115y" end="_Middle+80x-125y" />
+		<text x="_Middle+80" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin48" />
+	</group>
+	<group conditions="$Pin49">
+		<line start="_Middle+70x-115y" end="_Middle+70x-125y" />
+		<text x="_Middle+70" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin49" />
+	</group>
+	<group conditions="$Pin50">
+		<line start="_Middle+60x-115y" end="_Middle+60x-125y" />
+		<text x="_Middle+60" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin50" />
+	</group>
+	<group conditions="$Pin51">
+		<line start="_Middle+50x-115y" end="_Middle+50x-125y" />
+		<text x="_Middle+50" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin51" />
+	</group>
+	<group conditions="$Pin52">
+		<line start="_Middle+40x-115y" end="_Middle+40x-125y" />
+		<text x="_Middle+40" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin52" />
+	</group>
+	<group conditions="$Pin53">
+		<line start="_Middle+30x-115y" end="_Middle+30x-125y" />
+		<text x="_Middle+30" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin53" />
+	</group>
+	<group conditions="$Pin54">
+		<line start="_Middle+20x-115y" end="_Middle+20x-125y" />
+		<text x="_Middle+20" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin54" />
+	</group>
+	<group conditions="$Pin55">
+		<line start="_Middle+10x-115y" end="_Middle+10x-125y" />
+		<text x="_Middle+10" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin55" />
+	</group>
+	<group conditions="$Pin56">
+		<line start="_Middle+0x-115y" end="_Middle+0x-125y" />
+		<text x="_Middle+0" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin56" />
+	</group>
+	<group conditions="$Pin57">
+		<line start="_Middle-10x-115y" end="_Middle-10x-125y" />
+		<text x="_Middle-10" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin57" />
+	</group>
+	<group conditions="$Pin58">
+		<line start="_Middle-20x-115y" end="_Middle-20x-125y" />
+		<text x="_Middle-20" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin58" />
+	</group>
+	<group conditions="$Pin59">
+		<line start="_Middle-30x-115y" end="_Middle-30x-125y" />
+		<text x="_Middle-30" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin59" />
+	</group>
+	<group conditions="$Pin60">
+		<line start="_Middle-40x-115y" end="_Middle-40x-125y" />
+		<text x="_Middle-40" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin60" />
+	</group>
+	<group conditions="$Pin61">
+		<line start="_Middle-50x-115y" end="_Middle-50x-125y" />
+		<text x="_Middle-50" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin61" />
+	</group>
+	<group conditions="$Pin62">
+		<line start="_Middle-60x-115y" end="_Middle-60x-125y" />
+		<text x="_Middle-60" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin62" />
+	</group>
+	<group conditions="$Pin63">
+		<line start="_Middle-70x-115y" end="_Middle-70x-125y" />
+		<text x="_Middle-70" y="_Middle-113" align="CentreRight" rotate="270" value="$Pin63" />
+	</group>
+  </render>
+</component>
