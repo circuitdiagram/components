@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Capacitive Soil Moisture Sensor" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="130" />
+    <meta name="canresize" value="false" />
+    <meta name="author" value="Paul Su" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="5322b9ec-23c0-49c1-a5a1-76fea7613f2e" />
+    <flags>
+      <option>MiddleMustAlign</option>
+    </flags>
+  </declaration>
+  <connections autorotate="HorizontalToVertical,FlipSecondary">
+    <connection name="aout" start="_Middle-10x+50y" end="_Middle-10x+42y" edge="start" />
+    <connection name="vcc" start="_Middle+50y" end="_Middle+42y" edge="start" />
+    <connection name="gnd" start="_Middle+10x+50y" end="_Middle+10x+42y" edge="start" />
+  </connections>
+  <render>
+    <g autorotate="HorizontalToVertical,FlipSecondary">
+      <rect x="_Middle-25" y="_Middle-60" width="50" height="100" />
+      <line start="_Middle-10x+50y" end="_Middle-10x+40y" />
+      <line start="_Middle+50y" end="_Middle+40y"/>
+      <line start="_Middle+10x+50y" end="_Middle+10x+40y" /> 
+      <line start="_Middle+25x-60y" end="_Middle-100y" />
+      <line start="_Middle-25x-60y" end="_Middle-100y" />
+
+
+    </g>
+    <g conditions="horizontal">
+      <text x="_Middle-10" y="_Middle+36" align="CentreLeft" rotate="270" value="AOUT" />
+      <text x="_Middle" y="_Middle+36" align="CentreLeft" rotate="270" value="VCC" />
+      <text x="_Middle+10" y="_Middle+36" align="CentreLeft" rotate="270" value="GND" />
+    </g>
+    <g conditions="!horizontal">
+      <text x="_Middle+14" y="_Middle-10" align="CentreLeft" value="AOUT" />
+      <text x="_Middle+14" y="_Middle" align="CentreLeft" value="VCC" />
+      <text x="_Middle+14" y="_Middle+10" align="CentreLeft" value="GND" />
+    </g>
+  </render>
+</component>
