@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.4"
+  xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Generic I2C SSD1306 OLED Display Module" />
+    <meta name="minsize" value="50" />
+    <meta name="author" value="Peter van Nes" />
+    <meta name="version" value="0.1" />
+    <meta name="additionalinformation" value="A Generic I2C SSD1306 OLED Display" />
+    <meta name="guid" value="37fea23b-39f2-0001-acdc-94ebd62aafd5" />
+  </declaration>
+  <connections>
+    <group >
+      <connection name="gnd" start="_Start+80x-5y" end="_Start+80x+15y" edge="start" label="gnd"/>
+      <connection name="vdd" start="_Start+110x-5y" end="_Start+110x+15y" edge="start" label="vdd"/>
+      <connection name="sck" start="_Start+140x-5y" end="_Start+140x+15y" edge="start" label="sck"/>
+      <connection name="sda" start="_Start+170x-5y" end="_Start+170x+15y" edge="start" label="sda"/>
+    </group>
+  </connections>
+
+  <render>
+    <group>
+      <!-- PCB -->
+      <line start="_Start+0x+0y" end="_Start+250x+0y"/>
+      <line start="_Start+250x+0y" end="_Start+250x+257y"/>
+      <line start="_Start+250x+257y" end="_Start+190x+257y"/>
+      <line start="_Start+190x+257y" end="_Start+190x+237y"/>
+      <line start="_Start+190x+237y" end="_Start+60x+237y"/>
+      <line start="_Start+60x+237y" end="_Start+60x+257y"/>
+      <line start="_Start+60x+257y" end="_Start+0x+257y"/>
+      <line start="_Start+0x+257y" end="_Start+0x+0y"/>
+
+      <ellipse centre="_Start+21x+20y" rx="14" ry="14"/>
+      <ellipse centre="_Start+229x+20y" rx="14" ry="14"/>
+      <ellipse centre="_Start+21x+237y" rx="14" ry="14"/>
+      <ellipse centre="_Start+229x+237y" rx="14" ry="14"/>
+
+      <!-- oled -->
+      <rect x="_Start+12" y="_Start+66" width="226" height="118"/>
+
+      <!-- connectors -->
+      <line start="_Start+80x+15y" end="_Start+80x-5y" />
+      <ellipse centre="_Start+80x+15y" rx="6" ry="6"/>
+      <line start="_Start+110x+15y" end="_Start+110x-5y" />
+      <ellipse centre="_Start+110x+15y" rx="6" ry="6"/>
+      <line start="_Start+140x+15y" end="_Start+140x-5y" />
+      <ellipse centre="_Start+140x+15y" rx="6" ry="6"/>
+      <line start="_Start+170x+15y" end="_Start+170x-5y" />
+      <ellipse centre="_Start+170x+15y" rx="6" ry="6"/>
+
+      <!-- labels -->
+      <text x="_Start+80" y="_Start+25" align="CentreCentre" size="small" value="gnd" />
+      <text x="_Start+110" y="_Start+25" align="CentreCentre" size="small" value="vdd" />
+      <text x="_Start+140" y="_Start+25" align="CentreCentre" size="small" value="sck" />
+      <text x="_Start+170" y="_Start+25" align="CentreCentre" size="small" value="sda" />
+    </group>
+  </render>
+</component>
