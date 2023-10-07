@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Audio 3.5 4pin male jack" />
+    <meta name="minsize" value="80" />
+    <meta name="author" value="andrii.tishchenko" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="d126275e-8243-42e0-ad83-a80db9764e91" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="audiojack3p5male4pin" />
+    <meta name="org.circuit-diagram.bundled" value="true" />
+  </declaration>
+  <connections>
+    <group conditions="_Horizontal">
+      <connection name="MIC" start="_Start+50x-20y" end="_Start+50x-20y" edge="End" />
+      <connection name="GND" start="_Start60x+20y" end="_Start+60x+20y" edge="End" />
+      <connection name="R" start="_Start+70x-10y" end="_Start+70x-10y" edge="End" />
+      <connection name="L" start="_Start+80x+10y" end="_Start+80x+10y" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <group conditions="_Horizontal">
+      <path start="_Start" data="l0,-2 l2,-4 l2,0 l7,2 l0,-2 l30,0 l0,-10 l8,0 l0,10 l10,0 l0,2 l10,0 l0,2 l10,0 l0,2
+                                  l-10,0 l0,2 l-10,0 l0,2 l-10,0 l0,10 l-8,0 l0,-10 l-30,0 l0,-2 l-7,2 l-2,0 l-2,-4
+      " />
+      <line start="_Start+11x+3y" end="_Start+11x-3y" thickness="2" />
+      <line start="_Start+21x+3y" end="_Start+21x-4y" thickness="2" />
+      <line start="_Start+31x+3y" end="_Start+31x-4y" thickness="2" />
+<!-- connectors -->
+<!-- MIC -->
+      <line start="_Start+50x-8y" end="_Start+50x-20y" thickness="2" />
+<!-- GND -->
+      <line start="_Start60x+4y" end="_Start+60x+20y" thickness="2" />
+<!-- R -->
+      <line start="_Start+70x-4y" end="_Start+70x-10y" thickness="2" />
+<!-- L -->
+      <line start="_Start+80x-2y" end="_Start+80x+10y" thickness="2" />      
+    </group>
+  </render>
+</component>
