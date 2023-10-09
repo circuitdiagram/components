@@ -3,6 +3,7 @@
   <declaration>
     <meta name="name" value="Logic Gate (4 Input)" />
     <meta name="version" value="1.0.0" />
+	  <meta name="author" value="martdotnet"/>
     <meta name="description" value="Logic gates with 4 inputs." />
     <meta name="minsize" value="100" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
