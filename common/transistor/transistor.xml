@@ -56,23 +56,23 @@
     <!-- MOSFET -->
     <group conditions="horizontal,$Type==NChannelMosfet">
       <connection name="drn" start="_Start" end="_Middle-21x" edge="Start" />
-      <connection name="gate" start="_Middle+11x" end="_End" edge="End" />
-      <connection name="src" start="_Middle-40y+10x" end="_Middle-25y+10x" edge="Start" />
+      <connection name="src" start="_Middle+11x" end="_End" edge="End" />
+      <connection name="gate" start="_Middle-40y+10x" end="_Middle-25y+10x" edge="Start" />
     </group>
     <group conditions="!horizontal,$Type==NChannelMosfet">
       <connection name="drn" start="_Start" end="_Middle-21y" edge="Start" />
-      <connection name="gate" start="_Middle+11y" end="_End" edge="End" />
-      <connection name="src" start="_Middle-40x+10y" end="_Middle-25x+10y" edge="Start" />
+      <connection name="src" start="_Middle+11y" end="_End" edge="End" />
+      <connection name="gate" start="_Middle-40x+10y" end="_Middle-25x+10y" edge="Start" />
     </group>
     <group conditions="horizontal,$Type==PChannelMosfet">
       <connection name="src" start="_Start" end="_Middle-21x" edge="Start" />
-      <connection name="gate" start="_Middle+11x" end="_End" edge="End" />
-      <connection name="drn" start="_Middle-40y+10x" end="_Middle-25y+10x" edge="Start" />
+      <connection name="drn" start="_Middle+11x" end="_End" edge="End" />
+      <connection name="gate" start="_Middle-40y+10x" end="_Middle-25y+10x" edge="Start" />
     </group>
     <group conditions="!horizontal,$Type==PChannelMosfet">
       <connection name="src" start="_Start" end="_Middle-21y" edge="Start" />
-      <connection name="gate" start="_Middle+11y" end="_End" edge="End" />
-      <connection name="drn" start="_Middle-40x+10y" end="_Middle-25x+10y" edge="Start" />
+      <connection name="drn" start="_Middle+11y" end="_End" edge="End" />
+      <connection name="gate" start="_Middle-40x+10y" end="_Middle-25x+10y" edge="Start" />
     </group>
   </connections>
   <render>
