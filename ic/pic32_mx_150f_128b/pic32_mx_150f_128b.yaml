@@ -1,0 +1,70 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: cb3db2b2-536b-40dd-894d-ce1d3bc2e44e
+  name: PIC32MX150F128B
+  version: 
+  description: 
+template:
+  name: PIC32MX150F128B
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+- name: Header
+  value: PIC32MX150F128B
+- name: Size
+  value: 28
+- name: Pin0
+  value: 1 MCLR
+- name: Pin1
+  value: AVdd 28
+- name: Pin2
+  value: 2 RA0
+- name: Pin3
+  value: AVss 27
+- name: Pin4
+  value: 3 RA1
+- name: Pin5
+  value: RB15 26
+- name: Pin6
+  value: 4 RB0
+- name: Pin7
+  value: RB14 25
+- name: Pin8
+  value: 5 RB1
+- name: Pin9
+  value: RB13 24
+- name: Pin10
+  value: 6 RB2
+- name: Pin11
+  value: RB12 23
+- name: Pin12
+  value: 7 RB3
+- name: Pin13
+  value: RB11 22
+- name: Pin14
+  value: 8 Vss
+- name: Pin15
+  value: RB10 21
+- name: Pin16
+  value: 9 RA2
+- name: Pin17
+  value: Vcap 20
+- name: Pin18
+  value: 10 RA3
+- name: Pin19
+  value: Vss 19
+- name: Pin20
+  value: 11 RB4
+- name: Pin21
+  value: RB9 18
+- name: Pin22
+  value: 12 RA4
+- name: Pin23
+  value: RB8 17
+- name: Pin24
+  value: 13 Vdd
+- name: Pin25
+  value: RB7 16
+- name: Pin26
+  value: 14 RB5
+- name: Pin27
+  value: RB6 15
