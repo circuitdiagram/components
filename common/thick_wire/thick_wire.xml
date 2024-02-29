@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="thick Wire" />
-    <meta name="author" value="Pavel Korepanov" />
+    <meta name="author" value="kavaiyy" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <meta name="guid" value="6403832b-5208-4f8f-a73b-19c1cc82b94f" />
     <meta name="org.circuit-diagram.bundled" value="true" />
