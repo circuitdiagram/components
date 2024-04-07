@@ -2,7 +2,7 @@
 <component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Op Amp" />
-    <meta name="version" value="2.0.0" />
+    <meta name="version" value="2.0.1" />
     <meta name="minsize" value="60" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -31,7 +31,8 @@
     <line start="_Start-10y" end="_Middle-20x-10y" />
     <line start="_Start+10y" end="_Middle-20x+10y" />
     <line start="_Middle+24x" end="_End" />
-    <path start="_Middle-20x" data="l 0,30 l 44,-30 l -44,-30 l 0,30 m 5,-10 l 10,0 m -5,-5 l 0,10 m -5,15 l 10,0 m 28,-10" />
+    <path start="_Middle-20x" data="l 0,30 l 44,-30 l -44,-30 l 0,30 z" />
+    <path start="_Middle-20x" data="m 5,-10 l 10,0 m -5,-5 l 0,10 m -5,15 l 10,0 m 28,-10" />
 
     <g conditions="$ShowSupply">
       <line start="_Middle-40y" end="_Middle-18y" />
