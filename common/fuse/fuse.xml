@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Fuse" />
-    <meta name="version" value="1.1.0" />
+    <meta name="version" value="1.1.1" />
     <meta name="minsize" value="50" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -32,12 +32,12 @@
     <group conditions="horizontal">
       <rect x="_Middle-20" y="_Start-8" width="40" height="16" />
       <line start="_Start" end="_End" />
-      <text value="$Value" x="_Middle" y="_Start-17" align="CentreCentre" />
+      <text value="$Value" x="_Middle" y="_Middle-17" align="CentreCentre" />
     </group>
     <group conditions="!horizontal">
-      <rect x="_Start-8" y="_Middle-20" width="16" height="40" />
+      <rect location="_Middle-8x-20y" width="16" height="40" />
       <line start="_Start" end="_End" />
-      <text value="$Value" x="_Start-14" y="_Middle" align="CentreRight" />
+      <text value="$Value" x="_Middle-14" y="_Middle" align="CentreRight" />
     </group>
   </render>
 </component>
