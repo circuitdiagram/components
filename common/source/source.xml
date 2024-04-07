@@ -2,7 +2,7 @@
 <component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Source" />
-    <meta name="version" value="1.2.0" />
+    <meta name="version" value="1.2.1" />
     <meta name="minsize" value="10" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -120,14 +120,14 @@
 
     <!-- Rail 2 -->
     <group conditions="$Type==Rail2,horizontal">
-      <path start="_Start-5x-6y" data="l 10,0 l -5,-10, l -5,10" />
+      <path start="_Start-5x-6y" data="l 10,0 l -5,-10, l -5,10 z" />
       <line start="_Start-6y" end="_Start" />
     </group>
     <group conditions="$Type==Rail2,horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Start-6" y="_Start-12" align="CentreRight" size="large" />
     </group>
     <group conditions="$Type==Rail2,!horizontal">
-      <path start="_Start-5x" data="l 10,0 l -5,-10, l -5,10" />
+      <path start="_Start-5x" data="l 10,0 l -5,-10, l -5,10 z" />
     </group>
     <group conditions="$Type==Rail2,!horizontal,$ShowVoltage">
       <text value="$Voltage" x="_Start-6" y="_Start-6" align="CentreRight" size="large" />
@@ -140,11 +140,11 @@
     <group conditions="$Type==Ground,horizontal">
       <line start="_Start+10x" end="_End" />
       <line start="_Start+10x" end="_Start+10x+8y" />
-      <path start="_Start+2x+8y" data="l 16,0 l -8,8, l -8,-8" />
+      <path start="_Start+2x+8y" data="l 16,0 l -8,8, l -8,-8 z" />
     </group>
     <group conditions="$Type==Ground,!horizontal">
       <line start="_Start" end="_End-8y" />
-      <path start="_End-8x-8y" data="l 16,0 l -8,8, l -8,-8" />
+      <path start="_End-8x-8y" data="l 16,0 l -8,8, l -8,-8 z" />
     </group>
 
     <!-- Earth -->
