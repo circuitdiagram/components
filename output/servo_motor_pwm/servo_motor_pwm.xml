@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component version="1.3" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Servo Motor" />
+    <meta name="minsize" value="30" />
+    <meta name="author" value="briannicholls" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="47f5c83d-a23b-484a-a1f3-2ea0d6c98e0b" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="motor" />
+  </declaration>
+  <connections>
+    <group conditions="horizontal">
+      <connection name="vin" start="_Start" end="_Middle-13x" edge="Start" />
+      <connection name="pwmin" start="_Middle+26y" end="_Middle+13y" edge="_Middle+26y" />
+      <connection name="gnd" start="_Middle+13x" end="_End" edge="End" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="vin" start="_Start" end="_Middle-13y" edge="Start" />
+      <connection name="pwmin" start="_Middle+26x" end="_Middle+13x" edge="_Middle+26x" />
+      <connection name="gnd" start="_Middle+13y" end="_End" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <group conditions="horizontal">
+      <line start="_Start" end="_Middle-13x" />
+      <line start="_Middle+26y" end="_Middle+13y" />
+      <line start="_Middle+13x" end="_End" />
+    </group>
+    <group conditions="!horizontal">
+      <line start="_Start" end="_Middle-13y" />
+      <line start="_Middle+26x" end="_Middle+13x" />
+      <line start="_Middle+13y" end="_End" />
+    </group>
+    <group>
+      <ellipse x="_Middle" y="_Middle" rx="12" ry="12" />
+      <text x="_Middle" y="_Middle" value="S" align="CentreCentre" size="large" />
+    </group>
+  </render>
+</component>
