@@ -2,10 +2,10 @@
 <component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
 
   <declaration>
-    <meta name="name" value="Signal Generator New" />
+    <meta name="name" value="Signal Generator" />
     <meta name="version" value="2.0.0" />
     <meta name="author" value="Corsaka, MrF83" />
-    <meta name="guid" value="ca532248-3591-4746-9876-0772483649e9" />
+    <meta name="guid" value="ca532248-3591-4776-9876-0772783669e9" />
     <meta name="minsize" value="60" />
 
     <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
