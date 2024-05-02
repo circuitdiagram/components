@@ -3,16 +3,20 @@
 
   <declaration>
     <meta name="name" value="Signal Generator" />
-    <meta name="version" value="1.0.0" />
-    <meta name="author" value="Corsaka" />
+    <meta name="version" value="2.0.0" />
+    <meta name="author" value="Corsaka, MrF83" />
     <meta name="guid" value="ca532248-3591-4776-9876-0772783669e9" />
     <meta name="minsize" value="60" />
+
     <property name="Type" type="enum" default="Sine" serialize="t" display="Type">
       <option>Sine</option>
       <option>Square</option>
       <option>Triangle</option>
       <option>Saw</option>
     </property>
+
+    <property name="Text" type="string" default="" serialize="text" display="Text" />
+
     <property name="Frequency" type="decimal" default="120" serialize="frequency" display="Frequency">
       <formatting>
         <format conditions="$Frequency[lt]1000" value="$Frequency  Hz" />
@@ -20,6 +24,9 @@
         <format value="$Frequency(div_1000000)(round_1)  MHz" />
       </formatting>
     </property>
+
+    <property name="ShowFrequency" type="bool" default="true" serialize="showFrequency" display="Show Frequency" />
+
   </declaration>
   <connections>
     <group conditions="horizontal">
@@ -33,11 +40,25 @@
   </connections>
   <render>
     <!-- text -->
-    <g conditions="horizontal">
+    <g conditions="horizontal,$ShowFrequency,!$Text">
       <text value="$Frequency" x="_Middle" y="_Start+30" align="CentreCentre" />
     </g>
-    <g conditions="!horizontal">
+    <g conditions="!horizontal,$ShowFrequency,!$Text">
       <text value="$Frequency" x="_Middle+30" y="_Start" align="CentreLeft" />
+    </g>
+    <g conditions="horizontal,!$ShowFrequency,$Text">
+      <text value="$Text" x="_Middle" y="_Start+30" align="CentreCentre" />
+    </g>
+    <g conditions="!horizontal,!$ShowFrequency,$Text">
+      <text value="$Text" x="_Middle+30" y="_Start" align="CentreLeft" />
+    </g>
+    <g conditions="horizontal,$ShowFrequency,$Text">
+      <text value="$Text" x="_Middle" y="_Start+30" align="CentreCentre" />
+      <text value="$Frequency" x="_Middle" y="_Start+36" align="CentreCentre" />
+    </g>
+    <g conditions="!horizontal,$ShowFrequency,$Text">
+      <text value="$Text" x="_Middle+30" y="_Start+3" align="CentreLeft" />
+      <text value="$Frequency" x="_Middle+30" y="_Start-3" align="CentreLeft" />
     </g>
     <!-- circle -->
     <ellipse centre="_Middle" rx="20" ry="20" />
