@@ -17,7 +17,7 @@ jobs:
 
     - name: Download Circuit Diagram CLI
       run: |
-        curl -L -o circuit-diagram-cli.tar.xz https://github.com/circuitdiagram/circuitdiagram/releases/download/v4.0.2-pre.8/circuit-diagram-cli.4.0.2-pre.8.linux-x64.tar.xz
+        curl -L -o circuit-diagram-cli.tar.xz https://github.com/circuitdiagram/circuitdiagram/releases/download/v4.0.2-pre.19/circuit-diagram-cli.4.0.2-pre.19.linux-x64.tar.xz
         tar -xJf circuit-diagram-cli.tar.xz
 
     - name: Build
