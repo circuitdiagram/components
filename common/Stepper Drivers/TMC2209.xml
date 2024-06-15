@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="TMC2209 Stepper Driver" />
+
+    <meta name="canresize" value="false" />
+    <meta name="author" value="Jgrund532" />
+    <meta name="guid" value="cfb353ce-6542-46a8-b640-cdd584e907b5" />
+  </declaration>
+
+  <flags>
+  <property name="Type" type="enum" default="Standard" serialize="t" display="Type"></property>
+  <option>horizontalonly</option>
+</flags>
+
+<connections>
+    <connection name="EN" start="_Middle-60x-80y" end="_Middle-50x-80y" edge="middle" />
+    <connection name="MS1" start="_Middle-60x-60y" end="_Middle-50x-60y" edge="middle" />
+    <connection name="MS2" start="_Middle-60x-40y" end="_Middle-50x-40y" edge="middle" />
+    <connection name="TX" start="_Middle-60x-20y" end="_Middle-50x-20y" edge="middle" />
+    <connection name="RX" start="_Middle-60x" end="_Middle-50x" edge="middle" />
+    <connection name="CLK" start="_Middle-60x+20y" end="_Middle-50x+20y" edge="middle" />
+    <connection name="STEP" start="_Middle-60x+40y" end="_Middle-50x+40y" edge="middle" />
+    <connection name="DIR" start="_Middle-60x+60y" end="_Middle-50x+60y" edge="middle" />
+
+    <connection name="VM" start="_Middle+60x-80y" end="_Middle+50x-80y" edge="middle" />
+    <connection name="GND" start="_Middle+60x-60y" end="_Middle+50x-60y" edge="middle" />
+    <connection name="A2" start="_Middle+60x-40y" end="_Middle+50x-40y" edge="middle" />
+    <connection name="A1" start="_Middle+60x-20y" end="_Middle+50x-20y" edge="middle" />
+    <connection name="B1" start="_Middle+60x" end="_Middle+50x" edge="middle" />
+    <connection name="B2" start="_Middle+60x+20y" end="_Middle+50x+20y" edge="middle" />
+    <connection name="VIO" start="_Middle+60x+40y" end="_Middle+50x+40y" edge="middle" />
+    <connection name="GND" start="_Middle+60x+60y" end="_Middle+50x+60y" edge="middle" />
+</connections>
+
+  <render>
+    <rect x="_Middle-50" y="_Middle-100" width="100" height="180" />
+    <line start="_Middle-60x-80y" end="_Middle-50x-80y" />
+    <line start="_Middle-60x-60y" end="_Middle-50x-60y" />
+    <line start="_Middle-60x-40y" end="_Middle-50x-40y" />
+    <line start="_Middle-60x-20y" end="_Middle-50x-20y" />
+    <line start="_Middle-60x" end="_Middle-50x" />
+    <line start="_Middle-60x+20y" end="_Middle-50x+20y" />
+    <line start="_Middle-60x+40y" end="_Middle-50x+40y" />
+    <line start="_Middle-60x+60y" end="_Middle-50x+60y" />
+
+    <line start="_Middle+60x-80y" end="_Middle+50x-80y" />
+    <line start="_Middle+60x-60y" end="_Middle+50x-60y" />
+    <line start="_Middle+60x-40y" end="_Middle+50x-40y" />
+    <line start="_Middle+60x-20y" end="_Middle+50x-20y" />
+    <line start="_Middle+60x" end="_Middle+50x" />
+    <line start="_Middle+60x+20y" end="_Middle+50x+20y" />
+    <line start="_Middle+60x+40y" end="_Middle+50x+40y" />
+    <line start="_Middle+60x+60y" end="_Middle+50x+60y" />
+
+
+    
+
+    <text value="EN" x="_Middle-40" y="_Middle-80" align="CentreLeft"  />
+    <text value="MS1" x="_Middle-40" y="_Middle-60" align="CentreLeft"  />
+    <text value="MS2" x="_Middle-40" y="_Middle-40" align="CentreLeft"  />
+    <text value="TX" x="_Middle-40" y="_Middle-20" align="CentreLeft"  />
+    <text value="RX" x="_Middle-40" y="_Middle" align="CentreLeft"  />
+    <text value="CLK" x="_Middle-40" y="_Middle+20" align="CentreLeft"  />
+    <text value="STEP" x="_Middle-40" y="_Middle+40" align="CentreLeft"  />
+    <text value="DIR" x="_Middle-40" y="_Middle+60" align="CentreLeft"  />
+
+    <text value="VM" x="_Middle+40" y="_Middle-80" align="CentreRight"  />
+    <text value="GND" x="_Middle+40" y="_Middle-60" align="CentreRight"  />
+    <text value="A2" x="_Middle+40" y="_Middle-40" align="CentreRight"  />
+    <text value="A1" x="_Middle+40" y="_Middle-20" align="CentreRight"  />
+    <text value="B1" x="_Middle+40" y="_Middle" align="CentreRight"  />
+    <text value="B2" x="_Middle+40" y="_Middle+20" align="CentreRight" />
+    <text value="VIO" x="_Middle+40" y="_Middle+40" align="CentreRight"  />
+    <text value="GND" x="_Middle+40" y="_Middle+60" align="CentreRight" />
+
+  </render>
+
+</component>
+
