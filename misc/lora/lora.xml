@@ -5,47 +5,50 @@
     <meta name="description" value="Can receive and transmit data to other LoRa modules." />
     <meta name="minsize" value="120" />
     <meta name="author" value="Me" />
-    <meta name="canresize" value="true" />
     <meta name="guid" value="4b29ab95-740e-4575-911d-737ce5d30808" />
-    <meta name="canflip" value="true" />
+
+    <flags>
+      <option>FlipPrimary</option>
+      <option>FlipSecondary</option>
+    </flags>
   </declaration>
 
-  <connections>
-    <group conditions="horizontal">
-      <connection name="GND" start="_Start-20y" end="_Start+20x-20y" edge="end" />
-      <connection name="TXD" start="_Start-10y" end="_Start+20x-10y" edge="end" />
-      <connection name="RXD" start="_Start" end="_Start+20x" edge="end" />
-      <connection name="RST" start="_Start+10y" end="_Start+20x+10y" edge="end" />
-      <connection name="VDD" start="_Start+20y" end="_Start+20x+20y" edge="end" />
+  <connections autorotate="HorizontalToVertical">
+    <group conditions="horizontal"> 
+      <connection name="GND" start="_Start-20y" end="_End-100x-20y" edge="end" />
+      <connection name="TXD" start="_Start-10y" end="_End-100x-10y" edge="end" />
+      <connection name="RXD" start="_Start" end="_End-100x" edge="end" />
+      <connection name="RST" start="_Start+10y" end="_End-100x+10y" edge="end" />
+      <connection name="VDD" start="_Start+20y" end="_End-100x+20y" edge="end" />
     </group>
   </connections>
 
-  <render>
-    <group conditions="horizontal">
+  <render autorotate="HorizontalToVertical">
+    <group conditions="horizontal"> 
       <!-- Container -->
-      <rect x="_Start+20" y="_Start-30" width="60" height="60" />
-      <ellipse centre="_Start+85x-20y" rx="5" ry="10" />
-      <ellipse centre="_Start+90x-20y" rx="5" ry="10" />
-      <ellipse centre="_Start+95x-20y" rx="5" ry="10" />
-      <ellipse centre="_Start+100x-20y" rx="5" ry="10" />
-      <ellipse centre="_Start+105x-20y" rx="5" ry="10" />
-      <ellipse centre="_Start+110x-20y" rx="5" ry="10" />
-      <ellipse centre="_Start+115x-20y" rx="5" ry="10" />
+      <rect x="_End-100" y="_Start-30" width="60" height="60" />
+      <ellipse centre="_End-35x-20y" rx="5" ry="10" />
+      <ellipse centre="_End-30x-20y" rx="5" ry="10" />
+      <ellipse centre="_End-25x-20y" rx="5" ry="10" />
+      <ellipse centre="_End-20x-20y" rx="5" ry="10" />
+      <ellipse centre="_End-15x-20y" rx="5" ry="10" />
+      <ellipse centre="_End-10x-20y" rx="5" ry="10" />
+      <ellipse centre="_End-5x-20y" rx="5" ry="10" />
 
       <!-- IO Wires -->
-      <line start="_Start-20y" end="_Start+20x-20y" />
-      <line start="_Start-10y" end="_Start+20x-10y" />
-      <line start="_Start" end="_Start+20x" />
-      <line start="_Start+10y" end="_Start+20x+10y" />
-      <line start="_Start+20y" end="_Start+20x+20y" />
+      <line start="_Start-20y" end="_End-100x-20y" />
+      <line start="_Start-10y" end="_End-100x-10y" />
+      <line start="_Start" end="_End-100x" />
+      <line start="_Start+10y" end="_End-100x+10y" />
+      <line start="_Start+20y" end="_End-100x+20y" />
 
       <!-- IO Labels -->
-      <text value="GND" x="_Start+25" y="_End-24" />
-      <text value="TXD" x="_Start+25" y="_End-14" />
-      <text value="RXD" x="_Start+25" y="_End-4" />
-      <text value="RST" x="_Start+25" y="_End+6" />
-      <text value="VDD" x="_Start+25" y="_End+16" />
-    </group>
+      <text value="GND" x="_End-85" y="_End-24" align="TopCentre"/>
+      <text value="TXD" x="_End-85" y="_End-14" align="TopCentre"/>
+      <text value="RXD" x="_End-85" y="_End-4" align="TopCentre"/>
+      <text value="RST" x="_End-85" y="_End+6" align="TopCentre"/>
+      <text value="VDD" x="_End-85" y="_End+16" align="TopCentre"/>
+    </group> 
   </render>
 
 </component>
