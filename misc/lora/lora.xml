@@ -4,7 +4,7 @@
     <meta name="name" value="LoRa Transceiver" />
     <meta name="description" value="Can receive and transmit data to other LoRa modules." />
     <meta name="minsize" value="120" />
-    <meta name="author" value="Me" />
+    <meta name="author" value="NarekGermirlian" />
     <meta name="guid" value="4b29ab95-740e-4575-911d-737ce5d30808" />
 
     <flags>
@@ -20,6 +20,13 @@
       <connection name="RXD" start="_Start" end="_End-100x" edge="end" />
       <connection name="RST" start="_Start+10y" end="_End-100x+10y" edge="end" />
       <connection name="VDD" start="_Start+20y" end="_End-100x+20y" edge="end" />
+    </group>
+    <group conditions="!horizontal">
+      <connection name="GND" start="_Start-10y" end="_End-100x-10y" edge="end" />
+      <connection name="TXD" start="_Start+10y" end="_End-100x+10y" edge="end" />
+      <connection name="RXD" start="_Start+30y" end="_End-100x+30y" edge="end" />
+      <connection name="RST" start="_Start+50y" end="_End-100x+50y" edge="end" />
+      <connection name="VDD" start="_Start+70y" end="_End-100x+70y" edge="end" />
     </group>
   </connections>
 
@@ -48,7 +55,33 @@
       <text value="RXD" x="_End-85" y="_End-4" align="TopCentre"/>
       <text value="RST" x="_End-85" y="_End+6" align="TopCentre"/>
       <text value="VDD" x="_End-85" y="_End+16" align="TopCentre"/>
-    </group> 
+    </group>
+
+    <group conditions="!horizontal">
+      <!-- Container -->
+      <rect x="_End-100" y="_Start-30" width="60" height="120" />
+      <ellipse centre="_End-35x-20y" rx="10" ry="5" />
+      <ellipse centre="_End-30x-20y" rx="10" ry="5" />
+      <ellipse centre="_End-25x-20y" rx="10" ry="5" />
+      <ellipse centre="_End-20x-20y" rx="10" ry="5" />
+      <ellipse centre="_End-15x-20y" rx="10" ry="5" />
+      <ellipse centre="_End-10x-20y" rx="10" ry="5" />
+      <ellipse centre="_End-5x-20y" rx="10" ry="5" />
+
+      <!-- IO Wires -->
+      <line start="_Start-10y" end="_End-100x-10y" />
+      <line start="_Start+10y" end="_End-100x+10y" />
+      <line start="_Start+30y" end="_End-100x+30y" />
+      <line start="_Start+50y" end="_End-100x+50y" />
+      <line start="_Start+70y" end="_End-100x+70y" />
+
+      <!-- IO Labels -->
+      <text value="GND" x="_End-85" y="_End-10" align="TopCentre"/>
+      <text value="TXD" x="_End-85" y="_End+10" align="TopCentre"/>
+      <text value="RXD" x="_End-85" y="_End+30" align="TopCentre"/>
+      <text value="RST" x="_End-85" y="_End+50" align="TopCentre"/>
+      <text value="VDD" x="_End-85" y="_End+70" align="TopCentre"/>
+    </group>
   </render>
 
 </component>
