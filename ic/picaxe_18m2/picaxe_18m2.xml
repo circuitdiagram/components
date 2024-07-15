@@ -57,7 +57,7 @@
       <line start="_Start+80y" end="_Middle-50x+80y" />
       <line start="_Middle+50x+80y" end="_End+80y" />
       <!-- Draw a label at each pin -->
-      <text x="_Middle-13" y="_Middle-100" align="CentreLeft" size="large" value="16F88 (18M2+)" />
+      <text x="_Middle-40" y="_Middle-100" align="CentreLeft" size="large" value="16F88 (18M2+)" />
       <text x="_Middle-46" y="_Middle-80" align="CentreLeft" size="large" value="A.2" />
       <text x="_Middle-46" y="_Middle-60" align="CentreLeft" size="large" value="TXD" />
       <text x="_Middle+46" y="_Middle-80" align="CentreRight" size="large" value="A.1" />
