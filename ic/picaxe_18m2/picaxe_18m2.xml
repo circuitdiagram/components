@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="16F88 (18M2+)" />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="120" />
+    <meta name="author" value="barleybobs" />
+    <meta name="additionalinformation" value="A microcontroller made by PICAXE." />
+    <meta name="guid" value="5a7d247a-e996-4eec-b00c-6be519bf6b37" />
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection start="_Start-80y" end="_Middle-48x-80y" edge="Start" />
+      <connection start="_Start-60y" end="_Middle-48x-60y" edge="Start" />
+      <connection start="_Middle+48x-80y" end="_End-80y" edge="End" />
+      <connection start="_Middle+48x-60y" end="_End-60y" edge="End" />
+      <connection start="_Start-40y" end="_Middle-48x-40y" edge="Start" />
+      <connection start="_Middle+48x-40y" end="_End-40y" edge="End" />
+      <connection start="_Start-20y" end="_Middle-48x-20y" edge="Start" />
+      <connection start="_Middle+48x-20y" end="_End-20y" edge="End" />
+      <connection start="_Start" end="_Middle-48x" edge="Start" />
+      <connection start="_Middle+48x" end="_End" edge="End" />
+      <connection start="_Start+20y" end="_Middle-48x+20y" edge="Start" />
+      <connection start="_Middle+48x+20y" end="_End+20y" edge="End" />
+      <connection start="_Start+40y" end="_Middle-48x+40y" edge="Start" />
+      <connection start="_Middle+48x+40y" end="_End+40y" edge="End" />
+      <connection start="_Start+60y" end="_Middle-48x+60y" edge="Start" />
+      <connection start="_Middle+48x+60y" end="_End+60y" edge="End" />
+      <connection start="_Start+80y" end="_Middle-50x+80y" edge="Start"/>
+      <connection start="_Middle+50x+80y" end="_End+80y" edge="End"/>
+    </group>
+  </connections>
+  <render>
+    <group>
+      <!-- Draw the rectangle representing the chip -->
+      <rect x="_Middle-50" y="_Middle-110" width="100" height="200" />
+      <!-- Draw a line to each pin -->
+      <line start="_Start-80y" end="_Middle-50x-80y" />
+      <line start="_Start-60y" end="_Middle-50x-60y" />
+      <line start="_Middle+50x-80y" end="_End-80y" />
+      <line start="_Middle+50x-60y" end="_End-60y" />
+      <line start="_Start-40y" end="_Middle-50x-40y" />
+      <line start="_Middle+50x-40y" end="_End-40y" />
+      <line start="_Start-20y" end="_Middle-50x-20y" />
+      <line start="_Middle+50x-20y" end="_End-20y" />
+      <line start="_Start" end="_Middle-50x" />
+      <line start="_Middle+50x" end="_End" />
+      <line start="_Start+20y" end="_Middle-50x+20y" />
+      <line start="_Middle+50x+20y" end="_End+20y" />
+      <line start="_Start+40y" end="_Middle-50x+40y" />
+      <line start="_Middle+50x+40y" end="_End+40y" />
+      <line start="_Start+60y" end="_Middle-50x+60y" />
+      <line start="_Middle+50x+60y" end="_End+60y" />
+      <line start="_Start+80y" end="_Middle-50x+80y" />
+      <line start="_Middle+50x+80y" end="_End+80y" />
+      <!-- Draw a label at each pin -->
+      <text x="_Middle-13" y="_Middle-100" align="CentreLeft" size="large" value="16F88 (18M2+)" />
+      <text x="_Middle-46" y="_Middle-80" align="CentreLeft" size="large" value="A.2" />
+      <text x="_Middle-46" y="_Middle-60" align="CentreLeft" size="large" value="TXD" />
+      <text x="_Middle+46" y="_Middle-80" align="CentreRight" size="large" value="A.1" />
+      <text x="_Middle+46" y="_Middle-60" align="CentreRight" size="large" value="A.0" />
+      <text x="_Middle-46" y="_Middle-40" align="CentreLeft" size="large" value="RXD" />
+      <text x="_Middle+46" y="_Middle-40" align="CentreRight" size="large" value="A.7" />
+      <text x="_Middle-46" y="_Middle-20" align="CentreLeft" size="large" value="A.5" />
+      <text x="_Middle+46" y="_Middle-20" align="CentreRight" size="large" value="A.6" />
+      <text x="_Middle-46" y="_Middle" align="CentreLeft" size="large" value="0V" />
+      <text x="_Middle+46" y="_Middle" align="CentreRight" size="large" value="+V" />
+      <text x="_Middle-46" y="_Middle+20" align="CentreLeft" size="large" value="B.0" />
+      <text x="_Middle+46" y="_Middle+20" align="CentreRight" size="large" value="B.7" />
+      <text x="_Middle-46" y="_Middle+40" align="CentreLeft" size="large" value="B.1" />
+      <text x="_Middle+46" y="_Middle+40" align="CentreRight" size="large" value="B.6" />
+      <text x="_Middle-46" y="_Middle+60" align="CentreLeft" size="large" value="B.2" />
+      <text x="_Middle+46" y="_Middle+60" align="CentreRight" size="large" value="B.5" />
+      <text x="_Middle-46" y="_Middle+80" align="CentreLeft" size="large" value="B.3" />
+      <text x="_Middle+46" y="_Middle+80" align="CentreRight" size="large" value="B.4" />
+    </group>
+  </render>
+</component>
