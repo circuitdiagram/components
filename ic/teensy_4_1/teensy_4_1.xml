@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Teensy 4.1" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="120" />
+    <meta name="author" value="prrobinson81" />
+    <meta name="guid" value="975ff436-4107-4d06-aeab-2b51cc68c188" />
+    <meta name="description" value="An integrated circuit with 48 pins in 2 columns with support for pin names and labels." />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="microcontroller" />
+    <meta name="experimental.definitions.enabled" value="true" />
+    <flags>
+      <option>HorizontalOnly</option>
+    </flags>
+    <property name="Header" type="string" default="" serialize="header" display="Header" />
+    <property name="Pins" type="enum" default="48" serialize="pins" display="Pins" />
+    <property name="Size" type="enum" default="Small" serialize="size" display="Size">
+      <option>Small</option>
+      <option>Large</option>
+    </property>
+    <property name="Pin1" type="string" default="" serialize="p1" display="Pin 1" />
+    <property name="Label1" type="string" default="" serialize="label1" display="Label 1" />
+    <property name="Pin2" type="string" default="" serialize="p2" display="Pin 2" />
+    <property name="Label2" type="string" default="" serialize="label2" display="Label 2" />
+    <property name="Pin3" type="string" default="" serialize="p3" display="Pin 3" />
+    <property name="Label3" type="string" default="" serialize="label3" display="Label 3" />
+    <property name="Pin4" type="string" default="" serialize="p4" display="Pin 4" />
+    <property name="Label4" type="string" default="" serialize="label4" display="Label 4" />
+    <property name="Pin5" type="string" default="" serialize="p5" display="Pin 5" />
+    <property name="Label5" type="string" default="" serialize="label5" display="Label 5" />
+    <property name="Pin6" type="string" default="" serialize="p6" display="Pin 6" />
+    <property name="Label6" type="string" default="" serialize="label6" display="Label 6" />
+    <property name="Pin7" type="string" default="" serialize="p7" display="Pin 7" />
+    <property name="Label7" type="string" default="" serialize="label7" display="Label 7" />
+    <property name="Pin8" type="string" default="" serialize="p8" display="Pin 8" />
+    <property name="Label8" type="string" default="" serialize="label8" display="Label 8" />
+    <property name="Pin9" type="string" default="" serialize="p9" display="Pin 9" />
+    <property name="Label9" type="string" default="" serialize="label9" display="Label 9" />
+    <property name="Pin10" type="string" default="" serialize="p10" display="Pin 10" />
+    <property name="Label10" type="string" default="" serialize="label10" display="Label 10" />
+    <property name="Pin11" type="string" default="" serialize="p11" display="Pin 11" />
+    <property name="Label11" type="string" default="" serialize="label11" display="Label 11" />
+    <property name="Pin12" type="string" default="" serialize="p12" display="Pin 12" />
+    <property name="Label12" type="string" default="" serialize="label12" display="Label 12" />
+    <property name="Pin13" type="string" default="" serialize="p13" display="Pin 13" />
+    <property name="Label13" type="string" default="" serialize="label13" display="Label 13" />
+    <property name="Pin14" type="string" default="" serialize="p14" display="Pin 14" />
+    <property name="Label14" type="string" default="" serialize="label14" display="Label 14" />
+    <property name="Pin15" type="string" default="" serialize="p15" display="Pin 15" />
+    <property name="Label15" type="string" default="" serialize="label15" display="Label 15" />
+    <property name="Pin16" type="string" default="" serialize="p16" display="Pin 16" />
+    <property name="Label16" type="string" default="" serialize="label16" display="Label 16" />
+    <property name="Pin17" type="string" default="" serialize="p17" display="Pin 17" />
+    <property name="Label17" type="string" default="" serialize="label17" display="Label 17" />
+    <property name="Pin18" type="string" default="" serialize="p18" display="Pin 18" />
+    <property name="Label18" type="string" default="" serialize="label18" display="Label 18" />
+    <property name="Pin19" type="string" default="" serialize="p19" display="Pin 19" />
+    <property name="Label19" type="string" default="" serialize="label19" display="Label 19" />
+    <property name="Pin20" type="string" default="" serialize="p20" display="Pin 20" />
+    <property name="Label20" type="string" default="" serialize="label20" display="Label 20" />
+    <property name="Pin21" type="string" default="" serialize="p21" display="Pin 21" />
+    <property name="Label21" type="string" default="" serialize="label21" display="Label 21" />
+    <property name="Pin22" type="string" default="" serialize="p22" display="Pin 22" />
+    <property name="Label22" type="string" default="" serialize="label22" display="Label 22" />
+    <property name="Pin23" type="string" default="" serialize="p23" display="Pin 23" />
+    <property name="Label23" type="string" default="" serialize="label23" display="Label 23" />
+    <property name="Pin24" type="string" default="" serialize="p24" display="Pin 24" />
+    <property name="Label24" type="string" default="" serialize="label24" display="Label 24" />
+    <property name="Pin25" type="string" default="" serialize="p25" display="Pin 25" />
+    <property name="Label25" type="string" default="" serialize="label25" display="Label 25" />
+    <property name="Pin26" type="string" default="" serialize="p26" display="Pin 26" />
+    <property name="Label26" type="string" default="" serialize="label26" display="Label 26" />
+    <property name="Pin27" type="string" default="" serialize="p27" display="Pin 27" />
+    <property name="Label27" type="string" default="" serialize="label27" display="Label 27" />
+    <property name="Pin28" type="string" default="" serialize="p28" display="Pin 28" />
+    <property name="Label28" type="string" default="" serialize="label28" display="Label 28" />
+    <property name="Pin29" type="string" default="" serialize="p29" display="Pin 29" />
+    <property name="Label29" type="string" default="" serialize="label29" display="Label 29" />
+    <property name="Pin30" type="string" default="" serialize="p30" display="Pin 30" />
+    <property name="Label30" type="string" default="" serialize="label30" display="Label 30" />
+    <property name="Pin31" type="string" default="" serialize="p31" display="Pin 31" />
+    <property name="Label31" type="string" default="" serialize="label31" display="Label 31" />
+    <property name="Pin32" type="string" default="" serialize="p32" display="Pin 32" />
+    <property name="Label32" type="string" default="" serialize="label32" display="Label 32" />
+    <property name="Pin33" type="string" default="" serialize="p33" display="Pin 33" />
+    <property name="Label33" type="string" default="" serialize="label33" display="Label 33" />
+    <property name="Pin34" type="string" default="" serialize="p34" display="Pin 34" />
+    <property name="Label34" type="string" default="" serialize="label34" display="Label 34" />
+    <property name="Pin35" type="string" default="" serialize="p35" display="Pin 35" />
+    <property name="Label35" type="string" default="" serialize="label35" display="Label 35" />
+    <property name="Pin36" type="string" default="" serialize="p36" display="Pin 36" />
+    <property name="Label36" type="string" default="" serialize="label36" display="Label 36" />
+    <property name="Pin37" type="string" default="" serialize="p37" display="Pin 37" />
+    <property name="Label37" type="string" default="" serialize="label37" display="Label 37" />
+    <property name="Pin38" type="string" default="" serialize="p38" display="Pin 38" />
+    <property name="Label38" type="string" default="" serialize="label38" display="Label 38" />
+    <property name="Pin39" type="string" default="" serialize="p39" display="Pin 39" />
+    <property name="Label39" type="string" default="" serialize="label39" display="Label 39" />
+    <property name="Pin40" type="string" default="" serialize="p40" display="Pin 40" />
+    <property name="Label40" type="string" default="" serialize="label40" display="Label 40" />
+    <property name="Pin41" type="string" default="" serialize="p41" display="Pin 41" />
+    <property name="Label41" type="string" default="" serialize="label41" display="Label 41" />
+    <property name="Pin42" type="string" default="" serialize="p42" display="Pin 42" />
+    <property name="Label42" type="string" default="" serialize="label42" display="Label 42" />
+    <property name="Pin43" type="string" default="" serialize="p43" display="Pin 43" />
+    <property name="Label43" type="string" default="" serialize="label43" display="Label 43" />
+    <property name="Pin44" type="string" default="" serialize="p44" display="Pin 44" />
+    <property name="Label44" type="string" default="" serialize="label44" display="Label 44" />
+    <property name="Pin45" type="string" default="" serialize="p45" display="Pin 45" />
+    <property name="Label45" type="string" default="" serialize="label45" display="Label 45" />
+    <property name="Pin46" type="string" default="" serialize="p46" display="Pin 46" />
+    <property name="Label46" type="string" default="" serialize="label46" display="Label 46" />
+    <property name="Pin47" type="string" default="" serialize="p47" display="Pin 47" />
+    <property name="Label47" type="string" default="" serialize="label47" display="Label 47" />
+    <property name="Pin48" type="string" default="" serialize="p48" display="Pin 48" />
+    <property name="Label48" type="string" default="" serialize="label48" display="Label 48" />
+    <configurations>
+      <configuration name="Teensy 4.1" value="Header:Teensy 4.1,Pins:48,Size:Small,Pin1:G,Pin2:Vin,Pin3:0,Pin4:GND,Pin5:1,Pin6:3.3V,Pin7:2,Pin8:23,Pin9:3,Pin10:22,Pin11:4,Pin12:21,Pin13:5,Pin14:20,Pin15:6,Pin16:19,Pin17:7,Pin18:18,Pin19:8,Pin20:17,Pin21:9,Pin22:16,Pin23:10,Pin24:15,Pin25:11,Pin26:14,Pin27:12,Pin28:13 (LED),Pin29:3.3V,Pin30:GND,Pin31:24,Pin32:41,Pin33:25,Pin34:40,Pin35:26,Pin36:39,Pin37:27,Pin38:38,Pin39:28,Pin40:37,Pin41:29,Pin42:36,Pin43:30,Pin44:35,Pin45:31,Pin46:34,Pin47:32,Pin48:33,Label1:GND,Label2:Vin,Label3:0 | RX1 | CS1 | CRX2 | PWM,Label4:GND,Label5:1 | TX1 | MIS01 | CTX2 | PWM,Label6:3.3V,Label7:2 | OUT2 | PWM,Label8:23 | A9 | CRX1 | MCLK1 | PWM,Label9:3 | LRCLK2 | PWM,Label10:22 | A8 | CTX1 | PWM,Label11:4 | BCLK2 | PWM,Label12:21 | A7 | RX5 | BCLK1,Label13:5 | IN2 | PWM,Label14:20 | A6 | TX5 | LRCLK1,Label15:6 | OUT1D | PWM,Label16:19 | A5 | SCL | PWM,Label17:7 | RX2 | OUT1A | PWM,Label18:18 | A4 | SDA | PWM,Label19:8 | TX2 | IN1 | PWM,Label20:17 | A3 | TX4 | SDA1,Label21:9 | OUT1C | PWM,Label22:16 | A2 | RX4 | SCL1,Label23:10 | CS | MQSR | PWM,Label24:15 | A1 | RX3 | S/PDIF IN | PWM,Label25:11 | MOSI | CTX1 | PWM,Label26:14 | A0 | TX3 | S/PDIF OUT | PWM,Label27:12 | MISO | MQSL | PWM,Label28:13 (LED) | SCK | PWM,Label29:3.3V,Label30:GND,Label31:24 | A10 | TX6 | SCL2 | PWM,Label32:41 | A17,Label33:25 | A11 | RX6 | SDA2 | PWM,Label34:40 | A16,Label35:26 | A12 | MOSI1,Label36:39 | A15 | MISO1 | OUT1A,Label37:27 | A13 | SCK1,Label38:38 | A14 | CS1 | IN1,Label39:28 | RX7 | PWM,Label40:37 | CS | PWM,Label41:29 | TX7 | PWM,Label42:36 | CS | PWM,Label43:30 | CRX3,Label44:35 | TX8,Label45:31 | CTX3,Label46:34 | RX8,Label47:32 | OUT1B,Label48:33 | MCLK2 | PWM" />
+    </configurations>
+  </declaration>
+  <definitions>
+    <def name="PinOffset">
+      <when conditions="$Size==Small" value="46" />
+      <when conditions="$Size==Large" value="86" />
+    </def>
+    <def name="LabelOffset">
+      <when conditions="$Size==Small" value="54" />
+      <when conditions="$Size==Large" value="94" />
+    </def>
+    <def name="ContainerWidth">
+      <when conditions="$Size==Small" value="100" />
+      <when conditions="$Size==Large" value="180" />
+    </def>
+    <def name="ContainerOffset">
+      <when conditions="$Size==Small" value="50" />
+      <when conditions="$Size==Large" value="90" />
+    </def>
+  </definitions>
+  <connections>
+    <g conditions="$Pin1|$Label1">
+      <connection name="pin1" start="_Start+0y" end="_Middle-$ContainerOffsetx+0y" edge="Start" />
+    </g>
+    <g conditions="$Pin2|$Label2">
+      <connection name="pin2" start="_Middle+$ContainerOffsetx+0y" end="_End+0y" edge="End" />
+    </g>
+    <g conditions="$Pin3|$Label3">
+      <connection name="pin3" start="_Start+10y" end="_Middle-$ContainerOffsetx+10y" edge="Start" />
+    </g>
+    <g conditions="$Pin4|$Label4">
+      <connection name="pin4" start="_Middle+$ContainerOffsetx+10y" end="_End+10y" edge="End" />
+    </g>
+    <g conditions="$Pin5|$Label5">
+      <connection name="pin5" start="_Start+20y" end="_Middle-$ContainerOffsetx+20y" edge="Start" />
+    </g>
+    <g conditions="$Pin6|$Label6">
+      <connection name="pin6" start="_Middle+$ContainerOffsetx+20y" end="_End+20y" edge="End" />
+    </g>
+    <g conditions="$Pin7|$Label7">
+      <connection name="pin7" start="_Start+30y" end="_Middle-$ContainerOffsetx+30y" edge="Start" />
+    </g>
+    <g conditions="$Pin8|$Label8">
+      <connection name="pin8" start="_Middle+$ContainerOffsetx+30y" end="_End+30y" edge="End" />
+    </g>
+    <g conditions="$Pin9|$Label9">
+      <connection name="pin9" start="_Start+40y" end="_Middle-$ContainerOffsetx+40y" edge="Start" />
+    </g>
+    <g conditions="$Pin10|$Label10">
+      <connection name="pin10" start="_Middle+$ContainerOffsetx+40y" end="_End+40y" edge="End" />
+    </g>
+    <g conditions="$Pin11|$Label11">
+      <connection name="pin11" start="_Start+50y" end="_Middle-$ContainerOffsetx+50y" edge="Start" />
+    </g>
+    <g conditions="$Pin12|$Label12">
+      <connection name="pin12" start="_Middle+$ContainerOffsetx+50y" end="_End+50y" edge="End" />
+    </g>
+    <g conditions="$Pin13|$Label13">
+      <connection name="pin13" start="_Start+60y" end="_Middle-$ContainerOffsetx+60y" edge="Start" />
+    </g>
+    <g conditions="$Pin14|$Label14">
+      <connection name="pin14" start="_Middle+$ContainerOffsetx+60y" end="_End+60y" edge="End" />
+    </g>
+    <g conditions="$Pin15|$Label15">
+      <connection name="pin15" start="_Start+70y" end="_Middle-$ContainerOffsetx+70y" edge="Start" />
+    </g>
+    <g conditions="$Pin16|$Label16">
+      <connection name="pin16" start="_Middle+$ContainerOffsetx+70y" end="_End+70y" edge="End" />
+    </g>
+    <g conditions="$Pin17|$Label17">
+      <connection name="pin17" start="_Start+80y" end="_Middle-$ContainerOffsetx+80y" edge="Start" />
+    </g>
+    <g conditions="$Pin18|$Label18">
+      <connection name="pin18" start="_Middle+$ContainerOffsetx+80y" end="_End+80y" edge="End" />
+    </g>
+    <g conditions="$Pin19|$Label19">
+      <connection name="pin19" start="_Start+90y" end="_Middle-$ContainerOffsetx+90y" edge="Start" />
+    </g>
+    <g conditions="$Pin20|$Label20">
+      <connection name="pin20" start="_Middle+$ContainerOffsetx+90y" end="_End+90y" edge="End" />
+    </g>
+    <g conditions="$Pin21|$Label21">
+      <connection name="pin21" start="_Start+100y" end="_Middle-$ContainerOffsetx+100y" edge="Start" />
+    </g>
+    <g conditions="$Pin22|$Label22">
+      <connection name="pin22" start="_Middle+$ContainerOffsetx+100y" end="_End+100y" edge="End" />
+    </g>
+    <g conditions="$Pin23|$Label23">
+      <connection name="pin23" start="_Start+110y" end="_Middle-$ContainerOffsetx+110y" edge="Start" />
+    </g>
+    <g conditions="$Pin24|$Label24">
+      <connection name="pin24" start="_Middle+$ContainerOffsetx+110y" end="_End+110y" edge="End" />
+    </g>
+    <g conditions="$Pin25|$Label25">
+      <connection name="pin25" start="_Start+120y" end="_Middle-$ContainerOffsetx+120y" edge="Start" />
+    </g>
+    <g conditions="$Pin26|$Label26">
+      <connection name="pin26" start="_Middle+$ContainerOffsetx+120y" end="_End+120y" edge="End" />
+    </g>
+    <g conditions="$Pin27|$Label27">
+      <connection name="pin27" start="_Start+130y" end="_Middle-$ContainerOffsetx+130y" edge="Start" />
+    </g>
+    <g conditions="$Pin28|$Label28">
+      <connection name="pin28" start="_Middle+$ContainerOffsetx+130y" end="_End+130y" edge="End" />
+    </g>
+    <g conditions="$Pin29|$Label29">
+      <connection name="pin29" start="_Start+140y" end="_Middle-$ContainerOffsetx+140y" edge="Start" />
+    </g>
+    <g conditions="$Pin30|$Label30">
+      <connection name="pin30" start="_Middle+$ContainerOffsetx+140y" end="_End+140y" edge="End" />
+    </g>
+    <g conditions="$Pin31|$Label31">
+      <connection name="pin31" start="_Start+150y" end="_Middle-$ContainerOffsetx+150y" edge="Start" />
+    </g>
+    <g conditions="$Pin32|$Label32">
+      <connection name="pin32" start="_Middle+$ContainerOffsetx+150y" end="_End+150y" edge="End" />
+    </g>
+    <g conditions="$Pin33|$Label33">
+      <connection name="pin33" start="_Start+160y" end="_Middle-$ContainerOffsetx+160y" edge="Start" />
+    </g>
+    <g conditions="$Pin34|$Label34">
+      <connection name="pin34" start="_Middle+$ContainerOffsetx+160y" end="_End+160y" edge="End" />
+    </g>
+    <g conditions="$Pin35|$Label35">
+      <connection name="pin35" start="_Start+170y" end="_Middle-$ContainerOffsetx+170y" edge="Start" />
+    </g>
+    <g conditions="$Pin36|$Label36">
+      <connection name="pin36" start="_Middle+$ContainerOffsetx+170y" end="_End+170y" edge="End" />
+    </g>
+    <g conditions="$Pin37|$Label37">
+      <connection name="pin37" start="_Start+180y" end="_Middle-$ContainerOffsetx+180y" edge="Start" />
+    </g>
+    <g conditions="$Pin38|$Label38">
+      <connection name="pin38" start="_Middle+$ContainerOffsetx+180y" end="_End+180y" edge="End" />
+    </g>
+    <g conditions="$Pin39|$Label39">
+      <connection name="pin39" start="_Start+190y" end="_Middle-$ContainerOffsetx+190y" edge="Start" />
+    </g>
+    <g conditions="$Pin40|$Label40">
+      <connection name="pin40" start="_Middle+$ContainerOffsetx+190y" end="_End+190y" edge="End" />
+    </g>
+    <g conditions="$Pin41|$Label41">
+      <connection name="pin41" start="_Start+200y" end="_Middle-$ContainerOffsetx+200y" edge="Start" />
+    </g>
+    <g conditions="$Pin42|$Label42">
+      <connection name="pin42" start="_Middle+$ContainerOffsetx+200y" end="_End+200y" edge="End" />
+    </g>
+    <g conditions="$Pin43|$Label43">
+      <connection name="pin43" start="_Start+210y" end="_Middle-$ContainerOffsetx+210y" edge="Start" />
+    </g>
+    <g conditions="$Pin44|$Label44">
+      <connection name="pin44" start="_Middle+$ContainerOffsetx+210y" end="_End+210y" edge="End" />
+    </g>
+    <g conditions="$Pin45|$Label45">
+      <connection name="pin45" start="_Start+220y" end="_Middle-$ContainerOffsetx+220y" edge="Start" />
+    </g>
+    <g conditions="$Pin46|$Label46">
+      <connection name="pin46" start="_Middle+$ContainerOffsetx+220y" end="_End+220y" edge="End" />
+    </g>
+    <g conditions="$Pin47|$Label47">
+      <connection name="pin47" start="_Start+230y" end="_Middle-$ContainerOffsetx+230y" edge="Start" />
+    </g>
+    <g conditions="$Pin48|$Label48">
+      <connection name="pin48" start="_Middle+$ContainerOffsetx+230y" end="_End+230y" edge="End" />
+    </g>
+  </connections>
+  <render>
+    <g conditions="$Pins==8">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="50" />
+    </g>
+    <g conditions="$Pins==10">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="60" />
+    </g>
+    <g conditions="$Pins==12">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="70" />
+    </g>
+    <g conditions="$Pins==14">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="80" />
+    </g>
+    <g conditions="$Pins==16">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="90" />
+    </g>
+    <g conditions="$Pins==18">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="100" />
+    </g>
+    <g conditions="$Pins==20">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="110" />
+    </g>
+    <g conditions="$Pins==22">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="120" />
+    </g>
+    <g conditions="$Pins==24">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="130" />
+    </g>
+    <g conditions="$Pins==26">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="140" />
+    </g>
+    <g conditions="$Pins==28">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="150" />
+    </g>
+    <g conditions="$Pins==30">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="160" />
+    </g>
+    <g conditions="$Pins==32">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="170" />
+    </g>
+    <g conditions="$Pins==34">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="180" />
+    </g>
+    <g conditions="$Pins==36">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="190" />
+    </g>
+    <g conditions="$Pins==38">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="200" />
+    </g>
+    <g conditions="$Pins==40">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="210" />
+    </g>
+    <g conditions="$Pins==42">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="220" />
+    </g>
+    <g conditions="$Pins==44">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="230" />
+    </g>
+    <g conditions="$Pins==46">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="240" />
+    </g>
+    <g conditions="$Pins==48">
+      <rect x="_Middle-$ContainerOffset" y="_Middle-10" width="$ContainerWidth" height="250" />
+    </g>
+    <g conditions="$Header">
+      <text x="_Middle" y="_Middle-20" align="CentreCentre" value="$Header" />
+    </g>
+    <g conditions="$Pin1|$Label1">
+      <line start="_Start+0y" end="_Middle-$ContainerOffsetx+0y" />
+      <text x="_Middle-$PinOffset" y="_Middle" align="CentreLeft" value="$Pin1" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+-2" align="BottomRight" value="$Label1" size="xxs" />
+    </g>
+    <g conditions="$Pin2|$Label2">
+      <line start="_Middle+$ContainerOffsetx+0y" end="_End+0y" />
+      <text x="_Middle+$PinOffset" y="_Middle" align="CentreRight" value="$Pin2" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+-2" align="BottomLeft" value="$Label2" size="xxs" />
+    </g>
+    <g conditions="$Pin3|$Label3">
+      <line start="_Start+10y" end="_Middle-$ContainerOffsetx+10y" />
+      <text x="_Middle-$PinOffset" y="_Middle+10" align="CentreLeft" value="$Pin3" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+8" align="BottomRight" value="$Label3" size="xxs" />
+    </g>
+    <g conditions="$Pin4|$Label4">
+      <line start="_Middle+$ContainerOffsetx+10y" end="_End+10y" />
+      <text x="_Middle+$PinOffset" y="_Middle+10" align="CentreRight" value="$Pin4" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+8" align="BottomLeft" value="$Label4" size="xxs" />
+    </g>
+    <g conditions="$Pin5|$Label5">
+      <line start="_Start+20y" end="_Middle-$ContainerOffsetx+20y" />
+      <text x="_Middle-$PinOffset" y="_Middle+20" align="CentreLeft" value="$Pin5" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+18" align="BottomRight" value="$Label5" size="xxs" />
+    </g>
+    <g conditions="$Pin6|$Label6">
+      <line start="_Middle+$ContainerOffsetx+20y" end="_End+20y" />
+      <text x="_Middle+$PinOffset" y="_Middle+20" align="CentreRight" value="$Pin6" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+18" align="BottomLeft" value="$Label6" size="xxs" />
+    </g>
+    <g conditions="$Pin7|$Label7">
+      <line start="_Start+30y" end="_Middle-$ContainerOffsetx+30y" />
+      <text x="_Middle-$PinOffset" y="_Middle+30" align="CentreLeft" value="$Pin7" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+28" align="BottomRight" value="$Label7" size="xxs" />
+    </g>
+    <g conditions="$Pin8|$Label8">
+      <line start="_Middle+$ContainerOffsetx+30y" end="_End+30y" />
+      <text x="_Middle+$PinOffset" y="_Middle+30" align="CentreRight" value="$Pin8" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+28" align="BottomLeft" value="$Label8" size="xxs" />
+    </g>
+    <g conditions="$Pin9|$Label9">
+      <line start="_Start+40y" end="_Middle-$ContainerOffsetx+40y" />
+      <text x="_Middle-$PinOffset" y="_Middle+40" align="CentreLeft" value="$Pin9" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+38" align="BottomRight" value="$Label9" size="xxs" />
+    </g>
+    <g conditions="$Pin10|$Label10">
+      <line start="_Middle+$ContainerOffsetx+40y" end="_End+40y" />
+      <text x="_Middle+$PinOffset" y="_Middle+40" align="CentreRight" value="$Pin10" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+38" align="BottomLeft" value="$Label10" size="xxs" />
+    </g>
+    <g conditions="$Pin11|$Label11">
+      <line start="_Start+50y" end="_Middle-$ContainerOffsetx+50y" />
+      <text x="_Middle-$PinOffset" y="_Middle+50" align="CentreLeft" value="$Pin11" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+48" align="BottomRight" value="$Label11" size="xxs" />
+    </g>
+    <g conditions="$Pin12|$Label12">
+      <line start="_Middle+$ContainerOffsetx+50y" end="_End+50y" />
+      <text x="_Middle+$PinOffset" y="_Middle+50" align="CentreRight" value="$Pin12" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+48" align="BottomLeft" value="$Label12" size="xxs" />
+    </g>
+    <g conditions="$Pin13|$Label13">
+      <line start="_Start+60y" end="_Middle-$ContainerOffsetx+60y" />
+      <text x="_Middle-$PinOffset" y="_Middle+60" align="CentreLeft" value="$Pin13" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+58" align="BottomRight" value="$Label13" size="xxs" />
+    </g>
+    <g conditions="$Pin14|$Label14">
+      <line start="_Middle+$ContainerOffsetx+60y" end="_End+60y" />
+      <text x="_Middle+$PinOffset" y="_Middle+60" align="CentreRight" value="$Pin14" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+58" align="BottomLeft" value="$Label14" size="xxs" />
+    </g>
+    <g conditions="$Pin15|$Label15">
+      <line start="_Start+70y" end="_Middle-$ContainerOffsetx+70y" />
+      <text x="_Middle-$PinOffset" y="_Middle+70" align="CentreLeft" value="$Pin15" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+68" align="BottomRight" value="$Label15" size="xxs" />
+    </g>
+    <g conditions="$Pin16|$Label16">
+      <line start="_Middle+$ContainerOffsetx+70y" end="_End+70y" />
+      <text x="_Middle+$PinOffset" y="_Middle+70" align="CentreRight" value="$Pin16" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+68" align="BottomLeft" value="$Label16" size="xxs" />
+    </g>
+    <g conditions="$Pin17|$Label17">
+      <line start="_Start+80y" end="_Middle-$ContainerOffsetx+80y" />
+      <text x="_Middle-$PinOffset" y="_Middle+80" align="CentreLeft" value="$Pin17" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+78" align="BottomRight" value="$Label17" size="xxs" />
+    </g>
+    <g conditions="$Pin18|$Label18">
+      <line start="_Middle+$ContainerOffsetx+80y" end="_End+80y" />
+      <text x="_Middle+$PinOffset" y="_Middle+80" align="CentreRight" value="$Pin18" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+78" align="BottomLeft" value="$Label18" size="xxs" />
+    </g>
+    <g conditions="$Pin19|$Label19">
+      <line start="_Start+90y" end="_Middle-$ContainerOffsetx+90y" />
+      <text x="_Middle-$PinOffset" y="_Middle+90" align="CentreLeft" value="$Pin19" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+88" align="BottomRight" value="$Label19" size="xxs" />
+    </g>
+    <g conditions="$Pin20|$Label20">
+      <line start="_Middle+$ContainerOffsetx+90y" end="_End+90y" />
+      <text x="_Middle+$PinOffset" y="_Middle+90" align="CentreRight" value="$Pin20" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+88" align="BottomLeft" value="$Label20" size="xxs" />
+    </g>
+    <g conditions="$Pin21|$Label21">
+      <line start="_Start+100y" end="_Middle-$ContainerOffsetx+100y" />
+      <text x="_Middle-$PinOffset" y="_Middle+100" align="CentreLeft" value="$Pin21" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+98" align="BottomRight" value="$Label21" size="xxs" />
+    </g>
+    <g conditions="$Pin22|$Label22">
+      <line start="_Middle+$ContainerOffsetx+100y" end="_End+100y" />
+      <text x="_Middle+$PinOffset" y="_Middle+100" align="CentreRight" value="$Pin22" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+98" align="BottomLeft" value="$Label22" size="xxs" />
+    </g>
+    <g conditions="$Pin23|$Label23">
+      <line start="_Start+110y" end="_Middle-$ContainerOffsetx+110y" />
+      <text x="_Middle-$PinOffset" y="_Middle+110" align="CentreLeft" value="$Pin23" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+108" align="BottomRight" value="$Label23" size="xxs" />
+    </g>
+    <g conditions="$Pin24|$Label24">
+      <line start="_Middle+$ContainerOffsetx+110y" end="_End+110y" />
+      <text x="_Middle+$PinOffset" y="_Middle+110" align="CentreRight" value="$Pin24" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+108" align="BottomLeft" value="$Label24" size="xxs" />
+    </g>
+    <g conditions="$Pin25|$Label25">
+      <line start="_Start+120y" end="_Middle-$ContainerOffsetx+120y" />
+      <text x="_Middle-$PinOffset" y="_Middle+120" align="CentreLeft" value="$Pin25" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+118" align="BottomRight" value="$Label25" size="xxs" />
+    </g>
+    <g conditions="$Pin26|$Label26">
+      <line start="_Middle+$ContainerOffsetx+120y" end="_End+120y" />
+      <text x="_Middle+$PinOffset" y="_Middle+120" align="CentreRight" value="$Pin26" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+118" align="BottomLeft" value="$Label26" size="xxs" />
+    </g>
+    <g conditions="$Pin27|$Label27">
+      <line start="_Start+130y" end="_Middle-$ContainerOffsetx+130y" />
+      <text x="_Middle-$PinOffset" y="_Middle+130" align="CentreLeft" value="$Pin27" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+128" align="BottomRight" value="$Label27" size="xxs" />
+    </g>
+    <g conditions="$Pin28|$Label28">
+      <line start="_Middle+$ContainerOffsetx+130y" end="_End+130y" />
+      <text x="_Middle+$PinOffset" y="_Middle+130" align="CentreRight" value="$Pin28" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+128" align="BottomLeft" value="$Label28" size="xxs" />
+    </g>
+    <g conditions="$Pin29|$Label29">
+      <line start="_Start+140y" end="_Middle-$ContainerOffsetx+140y" />
+      <text x="_Middle-$PinOffset" y="_Middle+140" align="CentreLeft" value="$Pin29" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+138" align="BottomRight" value="$Label29" size="xxs" />
+    </g>
+    <g conditions="$Pin30|$Label30">
+      <line start="_Middle+$ContainerOffsetx+140y" end="_End+140y" />
+      <text x="_Middle+$PinOffset" y="_Middle+140" align="CentreRight" value="$Pin30" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+138" align="BottomLeft" value="$Label30" size="xxs" />
+    </g>
+    <g conditions="$Pin31|$Label31">
+      <line start="_Start+150y" end="_Middle-$ContainerOffsetx+150y" />
+      <text x="_Middle-$PinOffset" y="_Middle+150" align="CentreLeft" value="$Pin31" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+148" align="BottomRight" value="$Label31" size="xxs" />
+    </g>
+    <g conditions="$Pin32|$Label32">
+      <line start="_Middle+$ContainerOffsetx+150y" end="_End+150y" />
+      <text x="_Middle+$PinOffset" y="_Middle+150" align="CentreRight" value="$Pin32" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+148" align="BottomLeft" value="$Label32" size="xxs" />
+    </g>
+    <g conditions="$Pin33|$Label33">
+      <line start="_Start+160y" end="_Middle-$ContainerOffsetx+160y" />
+      <text x="_Middle-$PinOffset" y="_Middle+160" align="CentreLeft" value="$Pin33" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+158" align="BottomRight" value="$Label33" size="xxs" />
+    </g>
+    <g conditions="$Pin34|$Label34">
+      <line start="_Middle+$ContainerOffsetx+160y" end="_End+160y" />
+      <text x="_Middle+$PinOffset" y="_Middle+160" align="CentreRight" value="$Pin34" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+158" align="BottomLeft" value="$Label34" size="xxs" />
+    </g>
+    <g conditions="$Pin35|$Label35">
+      <line start="_Start+170y" end="_Middle-$ContainerOffsetx+170y" />
+      <text x="_Middle-$PinOffset" y="_Middle+170" align="CentreLeft" value="$Pin35" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+168" align="BottomRight" value="$Label35" size="xxs" />
+    </g>
+    <g conditions="$Pin36|$Label36">
+      <line start="_Middle+$ContainerOffsetx+170y" end="_End+170y" />
+      <text x="_Middle+$PinOffset" y="_Middle+170" align="CentreRight" value="$Pin36" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+168" align="BottomLeft" value="$Label36" size="xxs" />
+    </g>
+    <g conditions="$Pin37|$Label37">
+      <line start="_Start+180y" end="_Middle-$ContainerOffsetx+180y" />
+      <text x="_Middle-$PinOffset" y="_Middle+180" align="CentreLeft" value="$Pin37" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+178" align="BottomRight" value="$Label37" size="xxs" />
+    </g>
+    <g conditions="$Pin38|$Label38">
+      <line start="_Middle+$ContainerOffsetx+180y" end="_End+180y" />
+      <text x="_Middle+$PinOffset" y="_Middle+180" align="CentreRight" value="$Pin38" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+178" align="BottomLeft" value="$Label38" size="xxs" />
+    </g>
+    <g conditions="$Pin39|$Label39">
+      <line start="_Start+190y" end="_Middle-$ContainerOffsetx+190y" />
+      <text x="_Middle-$PinOffset" y="_Middle+190" align="CentreLeft" value="$Pin39" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+188" align="BottomRight" value="$Label39" size="xxs" />
+    </g>
+    <g conditions="$Pin40|$Label40">
+      <line start="_Middle+$ContainerOffsetx+190y" end="_End+190y" />
+      <text x="_Middle+$PinOffset" y="_Middle+190" align="CentreRight" value="$Pin40" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+188" align="BottomLeft" value="$Label40" size="xxs" />
+    </g>
+    <g conditions="$Pin41|$Label41">
+      <line start="_Start+200y" end="_Middle-$ContainerOffsetx+200y" />
+      <text x="_Middle-$PinOffset" y="_Middle+200" align="CentreLeft" value="$Pin41" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+198" align="BottomRight" value="$Label41" size="xxs" />
+    </g>
+    <g conditions="$Pin42|$Label42">
+      <line start="_Middle+$ContainerOffsetx+200y" end="_End+200y" />
+      <text x="_Middle+$PinOffset" y="_Middle+200" align="CentreRight" value="$Pin42" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+198" align="BottomLeft" value="$Label42" size="xxs" />
+    </g>
+    <g conditions="$Pin43|$Label43">
+      <line start="_Start+210y" end="_Middle-$ContainerOffsetx+210y" />
+      <text x="_Middle-$PinOffset" y="_Middle+210" align="CentreLeft" value="$Pin43" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+208" align="BottomRight" value="$Label43" size="xxs" />
+    </g>
+    <g conditions="$Pin44|$Label44">
+      <line start="_Middle+$ContainerOffsetx+210y" end="_End+210y" />
+      <text x="_Middle+$PinOffset" y="_Middle+210" align="CentreRight" value="$Pin44" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+208" align="BottomLeft" value="$Label44" size="xxs" />
+    </g>
+    <g conditions="$Pin45|$Label45">
+      <line start="_Start+220y" end="_Middle-$ContainerOffsetx+220y" />
+      <text x="_Middle-$PinOffset" y="_Middle+220" align="CentreLeft" value="$Pin45" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+218" align="BottomRight" value="$Label45" size="xxs" />
+    </g>
+    <g conditions="$Pin46|$Label46">
+      <line start="_Middle+$ContainerOffsetx+220y" end="_End+220y" />
+      <text x="_Middle+$PinOffset" y="_Middle+220" align="CentreRight" value="$Pin46" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+218" align="BottomLeft" value="$Label46" size="xxs" />
+    </g>
+    <g conditions="$Pin47|$Label47">
+      <line start="_Start+230y" end="_Middle-$ContainerOffsetx+230y" />
+      <text x="_Middle-$PinOffset" y="_Middle+230" align="CentreLeft" value="$Pin47" size="sm" />
+      <text x="_Middle-$LabelOffset" y="_Middle+228" align="BottomRight" value="$Label47" size="xxs" />
+    </g>
+    <g conditions="$Pin48|$Label48">
+      <line start="_Middle+$ContainerOffsetx+230y" end="_End+230y" />
+      <text x="_Middle+$PinOffset" y="_Middle+230" align="CentreRight" value="$Pin48" size="sm" />
+      <text x="_Middle+$LabelOffset" y="_Middle+228" align="BottomLeft" value="$Label48" size="xxs" />
+    </g>
+  </render>
+</component>
