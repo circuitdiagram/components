@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="RelayModule" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="100" />
+    <meta name="canflip" value="false" />
+    <meta name="author" value="Unknown" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="your-guid-here" />
+
+    <flags>
+      <option>HorizontalOnly</option>
+    </flags>
+  </declaration>
+
+  <connections>
+    <group>
+      <connection name="IN8" start="_Start+20x-80y" end="_Middle-160x-80y" edge="Start"/>
+      <connection name="IN7" start="_Start+40x-80y" end="_Middle-140x-80y" edge="Start"/>
+      <connection name="IN6" start="_Start+60x-80y" end="_Middle-120x-80y" edge="Start"/>
+      <connection name="IN5" start="_Start+80x-80y" end="_Middle-100x-80y" edge="Start"/>
+      <connection name="IN4" start="_Start+100x-80y" end="_Middle-80x-80y" edge="Start"/>
+      <connection name="IN3" start="_Start+120x-80y" end="_Middle-60x-80y" edge="Start"/>
+      <connection name="IN2" start="_Start+140x-80y" end="_Middle-40x-80y" edge="Start"/>
+      <connection name="IN1" start="_Start+160x-80y" end="_Middle-20x-80y" edge="Start"/>
+      <connection name="-DC" start="_Start+180x-80y" end="_Middle+20x-80y" edge="Start"/>
+      <connection name="+DC" start="_Start+200x-80y" end="_Middle+40x-80y" edge="Start"/>
+    </group>
+  </connections>
+
+  <render>
+    <group>
+      <rect x="_Middle-220" y="_Middle-40" width="440" height="80" />
+
+      <text value="IN8" x="_Middle-160x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="IN7" x="_Middle-140x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="IN6" x="_Middle-120x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="IN5" x="_Middle-100x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="IN4" x="_Middle-80x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="IN3" x="_Middle-60x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="IN2" x="_Middle-40x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="IN1" x="_Middle-20x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="-DC" x="_Middle+20x-30" y="_Middle-60" align="CentreCentre" />
+      <text value="+DC" x="_Middle+40x-30" y="_Middle-60" align="CentreCentre" />
+
+      <rect x="_Middle-220" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle-180" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle-140" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle-100" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle-60" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle-20" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle+20" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle+60" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle+100" y="_Middle-10" width="40" height="20" />
+      <rect x="_Middle+140" y="_Middle-10" width="40" height="20" />
+
+      <text value="Relay Module" x="_Middle" y="_Middle-30" align="CentreCentre" />
+    </group>
+  </render>
+</component>
