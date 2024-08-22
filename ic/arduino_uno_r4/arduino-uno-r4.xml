@@ -3,7 +3,8 @@
   <declaration>
     <meta name="name" value="Arduino Uno R4" />
     <meta name="minsize" value="150" />
-    <meta name="author" value="MZ" />
+    <meta name="author" value="milziz" />
+    <meta name="guid" value="db80b188-116c-4356-8dc6-f0ef8fb7eef0" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
     <flags>
       <option>horizontalonly</option>
@@ -102,7 +103,7 @@
       <text value="GND" x="_Middle+66" y="_Middle-70" align="CentreRight" />
       <text value="D13" x="_Middle+66" y="_Middle-60" align="CentreRight" />
       <text value="D12" x="_Middle+66" y="_Middle-50" align="CentreRight" />
-      <text value="~ D11" x="_Middle+66" y="_Middle-40" align="CentreRight" />
+      <text value="PWM D11" x="_Middle+66" y="_Middle-40" align="CentreRight" />
       <text value="PWM D10" x="_Middle+66" y="_Middle-30" align="CentreRight" />
       <text value="PWM   D9" x="_Middle+66" y="_Middle-20" align="CentreRight" />
       <text value="D8" x="_Middle+66" y="_Middle-10" align="CentreRight" />
