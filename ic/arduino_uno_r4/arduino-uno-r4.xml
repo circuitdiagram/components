@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Arduino Uno R4" />
+    <meta name="minsize" value="150" />
+    <meta name="author" value="MZ" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection start="_Start-50y" end="_Middle-68x-50y" edge="Start" />
+      <connection start="_Start-40y" end="_Middle-68x-40y" edge="Start" />
+      <connection start="_Start-30y" end="_Middle-68x-30y" edge="Start" />
+      <connection start="_Start-20y" end="_Middle-68x-20y" edge="Start" />
+      <connection start="_Start-10y" end="_Middle-68x-10y" edge="Start" />
+      <connection start="_Start" end="_Middle-68x" edge="Start" />
+      <connection start="_Start+10y" end="_Middle-68x+10y" edge="Start" />
+      <connection start="_Start+30y" end="_Middle-68x+30y" edge="Start" />
+      <connection start="_Start+40y" end="_Middle-68x+40y" edge="Start" />
+      <connection start="_Start+50y" end="_Middle-68x+50y" edge="Start" />
+      <connection start="_Start+60y" end="_Middle-68x+60y" edge="Start" />
+      <connection start="_Start+70y" end="_Middle-68x+70y" edge="Start" />
+      <connection start="_Start+80y" end="_Middle-68x+80y" edge="Start" />
+      <connection start="_Middle+68x-100y" end="_End-100y" edge="End" />
+      <connection start="_Middle+68x-90y" end="_End-90y" edge="End" />
+      <connection start="_Middle+68x-80y" end="_End-80y" edge="End" />
+      <connection start="_Middle+68x-70y" end="_End-70y" edge="End" />
+      <connection start="_Middle+68x-60y" end="_End-60y" edge="End" />
+      <connection start="_Middle+68x-50y" end="_End-50y" edge="End" />
+      <connection start="_Middle+68x-40y" end="_End-40y" edge="End" />
+      <connection start="_Middle+68x-30y" end="_End-30y" edge="End" />
+      <connection start="_Middle+68x-20y" end="_End-20y" edge="End" />
+      <connection start="_Middle+68x-10y" end="_End-10y" edge="End" />
+      <connection start="_Middle+68x+10y" end="_End+10y" edge="End" />
+      <connection start="_Middle+68x+20y" end="_End+20y" edge="End" />
+      <connection start="_Middle+68x+30y" end="_End+30y" edge="End" />
+      <connection start="_Middle+68x+40y" end="_End+40y" edge="End" />
+      <connection start="_Middle+68x+50y" end="_End+50y" edge="End" />
+      <connection start="_Middle+68x+60y" end="_End+60y" edge="End" />
+      <connection start="_Middle+68x+70y" end="_End+70y" edge="End" />
+      <connection start="_Middle+68x+80y" end="_End+80y" edge="End" />
+    </group>
+  </connections>
+  <render>
+    <group>
+      <!-- Container -->
+      <rect x="_Middle-70" y="_Middle-120" width="140" height="210" />
+      <text value="ARDUINO" x="_Middle-24" y="_Middle-90" align="CentreLeft" />
+      <text value="UNO r4 WiFi" x="_Middle-31" y="_Middle-80" align="CentreLeft" />
+      <!-- IO Wires -->
+      <line start="_Start-50y" end="_Middle-70x-50y" />
+      <line start="_Start-40y" end="_Middle-70x-40y" />
+      <line start="_Start-30y" end="_Middle-70x-30y" />
+      <line start="_Start-20y" end="_Middle-70x-20y" />
+      <line start="_Start-10y" end="_Middle-70x-10y" />
+      <line start="_Start" end="_Middle-70x" />
+      <line start="_Start+10y" end="_Middle-70x+10y" />
+      <line start="_Start+30y" end="_Middle-70x+30y" />
+      <line start="_Start+40y" end="_Middle-70x+40y" />
+      <line start="_Start+50y" end="_Middle-70x+50y" />
+      <line start="_Start+60y" end="_Middle-70x+60y" />
+      <line start="_Start+70y" end="_Middle-70x+70y" />
+      <line start="_Start+80y" end="_Middle-70x+80y" />
+      <line start="_Middle+70x-100y" end="_End-100y" />
+      <line start="_Middle+70x-90y" end="_End-90y" />
+      <line start="_Middle+70x-80y" end="_End-80y" />
+      <line start="_Middle+70x-70y" end="_End-70y" />
+      <line start="_Middle+70x-60y" end="_End-60y" />
+      <line start="_Middle+70x-50y" end="_End-50y" />
+      <line start="_Middle+70x-40y" end="_End-40y" />
+      <line start="_Middle+70x-30y" end="_End-30y" />
+      <line start="_Middle+70x-20y" end="_End-20y" />
+      <line start="_Middle+70x-10y" end="_End-10y" />
+      <line start="_Middle+70x+10y" end="_End+10y" />
+      <line start="_Middle+70x+20y" end="_End+20y" />
+      <line start="_Middle+70x+30y" end="_End+30y" />
+      <line start="_Middle+70x+40y" end="_End+40y" />
+      <line start="_Middle+70x+50y" end="_End+50y" />
+      <line start="_Middle+70x+60y" end="_End+60y" />
+      <line start="_Middle+70x+70y" end="_End+70y" />
+      <line start="_Middle+70x+80y" end="_End+80y" />
+      <!-- IO Labels -->
+      <text value="IOREF" x="_Middle-66" y="_Middle-50" align="CentreLeft" />
+      <text value="RESET" x="_Middle-66" y="_Middle-40" align="CentreLeft" />
+      <text value="3.3V" x="_Middle-66" y="_Middle-30" align="CentreLeft" />
+      <text value="5V" x="_Middle-66" y="_Middle-20" align="CentreLeft" />
+      <text value="GND" x="_Middle-66" y="_Middle-10" align="CentreLeft" />
+      <text value="GND" x="_Middle-66" y="_Middle" align="CentreLeft" />
+      <text value="Vin" x="_Middle-66" y="_Middle+10" align="CentreLeft" />
+      <text value="A0" x="_Middle-66" y="_Middle+30" align="CentreLeft" />
+      <text value="A1" x="_Middle-66" y="_Middle+40" align="CentreLeft" />
+      <text value="A2" x="_Middle-66" y="_Middle+50" align="CentreLeft" />
+      <text value="A3" x="_Middle-66" y="_Middle+60" align="CentreLeft" />
+      <text value="A4" x="_Middle-66" y="_Middle+70" align="CentreLeft" />
+      <text value="A5" x="_Middle-66" y="_Middle+80" align="CentreLeft" />
+      <text value="SCL" x="_Middle+66" y="_Middle-100" align="CentreRight" />
+      <text value="SDA" x="_Middle+66" y="_Middle-90" align="CentreRight" />
+      <text value="AREF" x="_Middle+66" y="_Middle-80" align="CentreRight" />
+      <text value="GND" x="_Middle+66" y="_Middle-70" align="CentreRight" />
+      <text value="D13" x="_Middle+66" y="_Middle-60" align="CentreRight" />
+      <text value="D12" x="_Middle+66" y="_Middle-50" align="CentreRight" />
+      <text value="~ D11" x="_Middle+66" y="_Middle-40" align="CentreRight" />
+      <text value="PWM D10" x="_Middle+66" y="_Middle-30" align="CentreRight" />
+      <text value="PWM   D9" x="_Middle+66" y="_Middle-20" align="CentreRight" />
+      <text value="D8" x="_Middle+66" y="_Middle-10" align="CentreRight" />
+      <text value="D7" x="_Middle+66" y="_Middle+10" align="CentreRight" />
+      <text value="PWM   D6" x="_Middle+66" y="_Middle+20" align="CentreRight" />
+      <text value="PWM   D5" x="_Middle+66" y="_Middle+30" align="CentreRight" />
+      <text value="D4" x="_Middle+66" y="_Middle+40" align="CentreRight" />
+      <text value="PWM   D3" x="_Middle+66" y="_Middle+50" align="CentreRight" />
+      <text value="D2" x="_Middle+66" y="_Middle+60" align="CentreRight" />
+      <text value="TX   D1" x="_Middle+66" y="_Middle+70" align="CentreRight" />
+      <text value="RX   D0" x="_Middle+66" y="_Middle+80" align="CentreRight" />
+      <!-- Logo -->
+      <path start="_Middle-105y" thickness="2" data="M0 0 C 2 9, 15 9, 15 0 C 15 -9, 2 -9, 0 0" />
+      <path start="_Middle-105y" thickness="2" data="M0 0 C -2 -9, -15 -9, -15 0 C -15 9, -2 9, 0 0" />
+      <line start="_Middle+6x-105y" end="_Middle+10x-105y" />
+      <line start="_Middle+8x-103y" end="_Middle+8x-107y" />
+      <line start="_Middle-6x-105y" end="_Middle-10x-105y" />
+    </group>
+  </render>
+</component>
