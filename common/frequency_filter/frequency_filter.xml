@@ -34,7 +34,7 @@
       <group conditions="$SwitchedCapacitor">
         <connection name="clk" start="_Middle+25x" end="_Middle+30x" edge="End" />
       </group>
-	  </group>
+    </group>
   </connections>
   <render>
     <group conditions="horizontal">
