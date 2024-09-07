@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Frequency filter" />
+    <meta name="version" value="1.0.1" />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="MarioS" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="00dd0344-ad3f-4ebd-b587-308296be0d13" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <property name="SwitchedCapacitor" type="bool" default="false" serialize="switchedcapacitor" display="Switched Capacitor Control Pin" />
+    <property name="Type" type="enum" default="BS" serialize="type" display="Filter Type">
+      <option>LP</option>
+      <option>HP</option>
+      <option>BP</option>
+      <option>BS</option>
+    </property>
+    <configurations>
+      <configuration name="Low-pass Filter" value="Type:LP" implements="lowpassfilter" />
+      <configuration name="High-pass Filter" value="Type:HP" implements="highpassfilter" />
+      <configuration name="Band-pass Filter" value="Type:BP" implements="bandpassfilter" />
+      <configuration name="Band-stop Filter" value="Type:BS" implements="bandstopfilter" />
+    </configurations>
+  </declaration>
+  <connections autorotate="HorizontalToVertical">
+    <group conditions="horizontal">
+		<connection name="in" start="_Start" end="_Middle-20x" edge="Start" />
+		<connection name="out" start="_Middle+24x" end="_End" edge="End" />
+		<group conditions="$SwitchedCapacitor">
+			<connection name="clk" start="_Middle+25y" end="_Middle+30y" edge="End" />
+		</group>
+    </group>
+    <group conditions="!horizontal">
+ 		<connection name="in" start="_Start" end="_Middle-20y" edge="Start" />
+		<connection name="out" start="_Middle+24y" end="_End" edge="End" />
+		<group conditions="$SwitchedCapacitor">
+			<connection name="clk" start="_Middle+25x" end="_Middle+30x" edge="End" />
+		</group>
+	</group>
+  </connections>
+  <render autorotate="HorizontalToVertical">
+    <group conditions="horizontal">
+		<line start="_Start" end="_Middle-25x" />
+		<line start="_Middle+25x" end="_End" />
+		<group conditions="$SwitchedCapacitor">
+			<line start="_Middle+25y" end="_Middle+30y" edge="End" />
+		</group>
+    </group>
+    <group conditions="!horizontal">
+		<line start="_Start" end="_Middle-25y" />
+		<line start="_Middle+25y" end="_End" />
+		 <group conditions="$SwitchedCapacitor">
+			<line start="_Middle+25x" end="_Middle+30x" edge="End" />
+		</group>
+	</group>
+	<rect x="_Middle-25" y="_Middle-25" width="50" height="50" />
+	<path start="_Middle-10x-10y" data="m -10,0 a 15 10 180 0 1 20 0 a 15 10 180 0 0 20 0" />
+	<path start="_Middle-10x+10y" data="m -10,0 a 15 10 180 0 1 20 0 a 15 10 180 0 0 20 0" />
+    <group conditions="$SwitchedCapacitor">
+		<line start="_Middle+25y" end="_Middle+30y" edge="End" />
+	</group>
+	<group conditions="$Type==LP">
+		<line start="_Middle-10x-5y" end="_Middle+10x-15y" />
+	</group>
+	<group conditions="$Type==HP">
+		<line start="_Middle-10x+15y" end="_Middle+10x+5y" />
+	</group>
+	<group conditions="$Type==BP">
+		<line start="_Middle-10x-5y" end="_Middle+10x-15y" />
+		<line start="_Middle-10x+15y" end="_Middle+10x+5y" />
+		<path start="_Middle-10x" data="m -10,0 a 15 10 180 0 1 20 0 a 15 10 180 0 0 20 0" />
+	</group>
+	<group conditions="$Type==BS">
+		<line start="_Middle-10x+5y" end="_Middle+10x-5y" />
+		<path start="_Middle-10x" data="m -10,0 a 15 10 180 0 1 20 0 a 15 10 180 0 0 20 0" />
+	</group>
+  </render>
+</component>
