@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="74LS390" />
+    <meta name="version" value="1.0" />
+    <meta name="minsize" value="120" />
+    <meta name="author" value="Doraemon" />
+    <meta name="additionalinformation" value="A 74LS390 IC chip." />
+    <meta name="guid" value="24247c60-d337-4f1d-b003-8f35a12a772e" />
+
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection start="_Middle+48x-120y" end="_End-120y" edge="End" />
+      <connection start="_Middle+48x-100y" end="_End-100y" edge="End" />
+      <connection start="_Middle+48x-80y" end="_End-80y" edge="End" />
+      <connection start="_Middle+48x-60y" end="_End-60y" edge="End" />
+      <connection start="_Middle+48x-40y" end="_End-40y" edge="End" />
+      <connection start="_Middle+48x-20y" end="_End-20y" edge="End" />
+      <connection start="_Middle+48x" end="_End" edge="End" />
+      <connection start="_Middle+48x+20y" end="_End+20y" edge="End" />
+      <connection start="_Middle+48x+40y" end="_End+40y" edge="End" />
+      <connection start="_Middle+48x+60y" end="_End+60y" edge="End" />
+      <connection start="_Start-80y" end="_Middle-48x-80y" edge="Start" />
+      <connection start="_Start-60y" end="_Middle-48x-60y" edge="Start" />
+      <connection start="_Start-40y" end="_Middle-48x-40y" edge="Start" />
+      <connection start="_Start-20y" end="_Middle-48x-20y" edge="Start" />
+      <connection start="_Start" end="_Middle-48x" edge="Start" />
+      <connection start="_Start+20y" end="_Middle-48x+20y" edge="Start" />
+    </group>
+  </connections>
+  <render>
+    <group>
+      <!-- Draw the rectangle representing the chip -->
+      <rect x="_Middle-50" y="_Middle-130" width="100" height="200" />
+
+      <!-- Draw a line to each pin -->
+      <line start="_Middle+50x-89y" end="_End-89y" />
+      <line start="_Middle+50x-69y" end="_End-69y" />
+      <line start="_Middle+50x-49y" end="_End-49y" />
+      <line start="_Middle+50x-29y" end="_End-29y" />
+      <line start="_Middle+50x-9y" end="_End-9y" />
+      <line start="_Middle+50x+9y" end="_End+9y" />
+      <line start="_Middle+50x+29y" end="_End+29y" />
+      <line start="_Middle+50x+49y" end="_End+49y" />
+      <line start="_Start-89y" end="_Middle-50x-89y" />
+      <line start="_Start-69y" end="_Middle-50x-69y" />
+      <line start="_Start-49y" end="_Middle-50x-49y" />
+      <line start="_Start-29y" end="_Middle-50x-29y" />
+      <line start="_Start-9y" end="_Middle-50x-9y" />
+      <line start="_Start+9y" end="_Middle-50x+9y" />
+      <line start="_Start+29y" end="_Middle-50x+29y" />
+      <line start="_Start+49y" end="_Middle-50x+49y" />
+
+
+      <!-- "outputs" lines -->
+
+      <!-- Pin labels -->
+      <text x="_Middle+20" y="_Middle-115" align="CentreRight" size="large" value="74LS390" />
+      <text x="_Middle+46" y="_Middle-90" align="CentreRight" size="large" value="Vcc" />
+      <text x="_Middle+46" y="_Middle-70" align="CentreRight" size="large" value="2CKA" />
+      <text x="_Middle+46" y="_Middle-50" align="CentreRight" size="large" value="2CLR" />
+      <text x="_Middle+46" y="_Middle-30" align="CentreRight" size="large" value="2QA" />
+      <text x="_Middle+46" y="_Middle-10" align="CentreRight" size="large" value="2CKA" />
+      <text x="_Middle+46" y="_Middle+10" align="CentreRight" size="large" value="2QB" />
+      <text x="_Middle+46" y="_Middle+29" align="CentreRight" size="large" value="2QC" />
+      <text x="_Middle+46" y="_Middle+49" align="CentreRight" size="large" value="2QD" />
+      <text x="_Middle-46" y="_Middle-90" align="CentreLeft" size="large" value="1CKA" />
+      <text x="_Middle-46" y="_Middle-70" align="CentreLeft" size="large" value="1CLR" />
+      <text x="_Middle-46" y="_Middle-50" align="CentreLeft" size="large" value="1QA" />
+      <text x="_Middle-46" y="_Middle-30" align="CentreLeft" size="large" value="1CKB" />
+      <text x="_Middle-46" y="_Middle-10" align="CentreLeft" size="large" value="1QB" />
+      <text x="_Middle-46" y="_Middle+10" align="CentreLeft" size="large" value="1QC" />
+      <text x="_Middle-46" y="_Middle+29" align="CentreLeft" size="large" value="1QD" />
+      <text x="_Middle-46" y="_Middle+49" align="CentreLeft" size="large" value="GND" />
+    </group>
+  </render>
+</component>
