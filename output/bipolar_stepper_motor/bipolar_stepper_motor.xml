@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Bipolar Stepper Motor" />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="80" />
+    <meta name="author" value="Circuit Diagram" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="8586a4fe-7420-4cae-870d-5f02975e3883" />
+    <meta name="canresize" value="false" />
+
+    <property name="Text" type="string" default="" serialize="text" display="Text" />
+
+    <flags>
+      <option>HorizontalOnly</option>
+      <option>MiddleMustAlign</option>
+    </flags>
+  </declaration>
+  <connections>
+    <connection name="a1" start="_Middle-40x-10y" end="_Middle-38x-10y" edge="start" />
+    <connection name="a2" start="_Middle-40x+10y" end="_Middle-38x+10y" edge="start" />
+    <connection name="b1" start="_Middle-10x+38y" end="_Middle-10x+40y" edge="end" />
+    <connection name="b2" start="_Middle+10x+38y" end="_Middle+10x+40y" edge="end" />
+  </connections>
+  <render>
+    <text x="_Middle" y="_Middle-26" value="$Text" align="BottomCentre" />
+
+    <rect x="_Middle-20" y="_Middle-20" width="40" height="40" />
+    <ellipse x="_Middle" y="_Middle" rx="8" ry="8" />
+
+    <line start="_Middle-40x-10y" end="_Middle-20x-10y" />
+    <text x="_Middle-38" y="_Middle-13" value="A1" align="BottomLeft" />
+    <line start="_Middle-40x+10y" end="_Middle-20x+10y" />
+    <text x="_Middle-38" y="_Middle+13" value="A2" align="TopLeft" /> 
+    <path start="_Middle-20x-10y" data="l 3,0 a 2,4 90 0 1 0,5 a 2,4 90 0 1 0,5 a 2,4 90 0 1 0,5 a 2,4 90 0 1 0,5 l -3,0" />
+
+    <line start="_Middle-10x+20y" end="_Middle-10x+40y" />
+    <text x="_Middle-13" y="_Middle+38" value="B1" align="BottomRight" />
+    <line start="_Middle+10x+20y" end="_Middle+10x+40y" />
+    <text x="_Middle+13" y="_Middle+38" value="B2" align="BottomLeft" />
+    <path start="_Middle-10x+20y" data="l 0,-3 a 4,2 90 0 1 5,0 a 4,2 90 0 1 5,0 a 4,2 90 0 1 5,0 a 4,2 90 0 1 5,0 l 0,3" />
+  </render>
+</component>
