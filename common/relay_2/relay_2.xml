@@ -2,7 +2,7 @@
 <component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Relay 2" />
-    <meta name="version" value="1.0.0" />
+    <meta name="version" value="1.1.0" />
     <meta name="minsize" value="80" />
     <meta name="author" value="Circuit Diagram" />
     <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
@@ -11,10 +11,14 @@
 
     <property name="Type" type="enum" default="SPST_NO" serialize="t" display="Type">
       <option>SPST_NO</option>
+      <option>SPST_NC</option>
     </property>
+
+    <property name="Energised" type="bool" default="false" serialize="energised" display="Energised" />
 
     <configurations>
       <configuration name="Relay SPST-NO" value="Type:SPST_NO" implements="relayspstno" />
+      <configuration name="Relay SPST-NC" value="Type:SPST_NC" implements="relayspstnc" />
     </configurations>
 
     <flags>
@@ -41,6 +45,17 @@
     <line start="_Middle+14x-30y" end="_End-30y" />
     <ellipse centre="_Middle-11x-30y" rx="3" ry="3" />
     <ellipse centre="_Middle+11x-30y" rx="3" ry="3" />
-    <line start="_Middle-9x-38y" end="_Middle+8x-32y" />
+    <group conditions="$Type==SPST_NO,!$Energised">
+      <line start="_Middle-9x-38y" end="_Middle+8x-32y" />
+    </group>
+    <group conditions="$Type==SPST_NO,$Energised">
+      <line start="_Middle-9x-34y" end="_Middle+8x-32y" />
+    </group>
+    <group conditions="$Type==SPST_NC,!$Energised">
+      <line start="_Middle-9x-26y" end="_Middle+8x-28y" />
+    </group>
+    <group conditions="$Type==SPST_NC,$Energised">
+      <line start="_Middle-9x-22y" end="_Middle+8x-28y" />
+    </group>
   </render>
 </component>
