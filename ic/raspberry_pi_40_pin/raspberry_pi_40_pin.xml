@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.4" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Raspberry Pi 40-Pin GPIO" />
+    <meta name="author" value="taylorhicken" />
+    <meta name="guid" value="8f764035-18c6-4421-ac7f-5cbd327d4e78" />
+    <meta name="description" value="A component representing the Sparkfun Pi Wedge 40-Pin, with connections for each of its GPIO pins." />
+  
+    <flags>
+      <option>horizontalonly</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection start="_Start" end="_End" edge="both" />
+    </group>
+  </connections>
+  <render>
+    <group>
+      <!-- Container -->
+      <rect x="_Middle-50" y="_Middle-170" width="100" height="340" />
+
+      <!-- IO Wires -->
+      <line start="_Start+10x-160y" end="_Middle-50x-160y" />
+      <line start="_Start+10x-140y" end="_Middle-50x-140y" />
+      <line start="_Start+10x-120y" end="_Middle-50x-120y" />
+      <line start="_Start+10x-100y" end="_Middle-50x-100y" />
+      <line start="_Start+10x-80y" end="_Middle-50x-80y" />
+      <line start="_Start+10x-60y" end="_Middle-50x-60y" />
+      <line start="_Start+10x-40y" end="_Middle-50x-40y" />
+      <line start="_Start+10x-20y" end="_Middle-50x-20y" />
+      <line start="_Start+10x" end="_Middle-50x" />
+      <line start="_Start+10x+20y" end="_Middle-50x+20y" />
+      <line start="_Start+10x+40y" end="_Middle-50x+40y" />
+      <line start="_Start+10x+60y" end="_Middle-50x+60y" />
+      <line start="_Start+10x+80y" end="_Middle-50x+80y" />
+      <line start="_Start+10x+100y" end="_Middle-50x+100y" />
+      <line start="_Start+10x+120y" end="_Middle-50x+120y" />
+      <line start="_Start+10x+140y" end="_Middle-50x+140y" />
+      <line start="_Start+10x+160y" end="_Middle-50x+160y" />
+
+      <line start="_Middle+50x-160y" end="_End-10x-160y" />
+      <line start="_Middle+50x-140y" end="_End-10x-140y" />
+      <line start="_Middle+50x-120y" end="_End-10x-120y" />
+      <line start="_Middle+50x-100y" end="_End-10x-100y" />
+      <line start="_Middle+50x-80y" end="_End-10x-80y" />
+      <line start="_Middle+50x-60y" end="_End-10x-60y" />
+      <line start="_Middle+50x-40y" end="_End-10x-40y" />
+      <line start="_Middle+50x-20y" end="_End-10x-20y" />
+      <line start="_Middle+50x" end="_End-10x" />
+      <line start="_Middle+50x+20y" end="_End-10x+20y" />
+      <line start="_Middle+50x+40y" end="_End-10x+40y" />
+      <line start="_Middle+50x+60y" end="_End-10x+60y" />
+      <line start="_Middle+50x+80y" end="_End-10x+80y" />
+      <line start="_Middle+50x+100y" end="_End-10x+100y" />
+      <line start="_Middle+50x+120y" end="_End-10x+120y" />
+      <line start="_Middle+50x+140y" end="_End-10x+140y" />
+      <line start="_Middle+50x+160y" end="_End-10x+160y" />
+
+      <!-- Pin Labels -->
+      <text value="G17" x="_Middle-48" y="_Middle-160" align="CentreLeft" />
+      <text value="G16" x="_Middle-48" y="_Middle-140" align="CentreLeft" />
+      <text value="G13" x="_Middle-48" y="_Middle-120" align="CentreLeft" />
+      <text value="G12" x="_Middle-48" y="_Middle-100" align="CentreLeft" />
+      <text value="G6" x="_Middle-48" y="_Middle-80" align="CentreLeft" />
+      <text value="G5" x="_Middle-48" y="_Middle-60" align="CentreLeft" />
+      <text value="G4" x="_Middle-48" y="_Middle-40" align="CentreLeft" />
+      <text value="CE1" x="_Middle-48" y="_Middle-20" align="CentreLeft" />
+      <text value="CE0" x="_Middle-48" y="_Middle" align="CentreLeft" />
+      <text value="MOSI" x="_Middle-48" y="_Middle+20" align="CentreLeft" />
+      <text value="MISO" x="_Middle-48" y="_Middle+40" align="CentreLeft" />
+      <text value="SCK" x="_Middle-48" y="_Middle+60" align="CentreLeft" />
+      <text value="RXI" x="_Middle-48" y="_Middle+80" align="CentreLeft" />
+      <text value="TXO" x="_Middle-48" y="_Middle+100" align="CentreLeft" />
+      <text value="5V" x="_Middle-48" y="_Middle+120" align="CentreLeft" />
+      <text value="3.3V" x="_Middle-48" y="_Middle+140" align="CentreLeft" />
+      <text value="GND" x="_Middle-48" y="_Middle+160" align="CentreLeft" />
+
+      <text value="G18" x="_Middle+48" y="_Middle-160" align="CentreRight" />
+      <text value="G19" x="_Middle+48" y="_Middle-140" align="CentreRight" />
+      <text value="G20" x="_Middle+48" y="_Middle-120" align="CentreRight" />
+      <text value="G21" x="_Middle+48" y="_Middle-100" align="CentreRight" />
+      <text value="G22" x="_Middle+48" y="_Middle-80" align="CentreRight" />
+      <text value="G23" x="_Middle+48" y="_Middle-60" align="CentreRight" />
+      <text value="G24" x="_Middle+48" y="_Middle-40" align="CentreRight" />
+      <text value="G25" x="_Middle+48" y="_Middle-20" align="CentreRight" />
+      <text value="G26" x="_Middle+48" y="_Middle" align="CentreRight" />
+      <text value="G27" x="_Middle+48" y="_Middle+20" align="CentreRight" />
+      <text value="SCL" x="_Middle+48" y="_Middle+40" align="CentreRight" />
+      <text value="SDA" x="_Middle+48" y="_Middle+60" align="CentreRight" />
+      <text value="IDSC" x="_Middle+48" y="_Middle+80" align="CentreRight" />
+      <text value="IDSD" x="_Middle+48" y="_Middle+100" align="CentreRight" />
+      <text value="5V" x="_Middle+48" y="_Middle+120" align="CentreRight" />
+      <text value="3.3V" x="_Middle+48" y="_Middle+140" align="CentreRight" />
+      <text value="GND" x="_Middle+48" y="_Middle+160" align="CentreRight" />
+    </group>
+  </render>
+</component>
