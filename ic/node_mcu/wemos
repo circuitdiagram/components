@@ -1,0 +1,47 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 4a8d2a10-f719-4b2c-834f-7bbb30f03406
+  name: wemos
+  description: >-
+    Pins for the wemos.
+template:
+  name: Integrated Circuit 2
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+  - name: Header
+    value: wemos
+  - name: Size
+    value: 15
+  - name: Pin0
+    value: RST
+  - name: Pin1
+    value: A0
+  - name: Pin2
+    value: D0
+  - name: Pin3
+    value: D5
+  - name: Pin4
+    value: D6
+  - name: Pin5
+    value: D7
+  - name: Pin6
+    value: D8
+  - name: Pin7
+    value: 3.3V
+  - name: Pin8
+    value: 5V
+  - name: Pin9
+    value: GND
+  - name: Pin10
+    value: D4
+  - name: Pin11
+    value: D3
+  - name: Pin12
+    value: D2
+  - name: Pin13
+    value: D1
+  - name: Pin14
+    value: Rx
+  - name: Pin15
+    value: Tx
+  
