@@ -1,0 +1,90 @@
+kind: ComponentConfiguration/v1
+metadata:
+  guid: 4d4c05ee-5e2c-46b8-9b04-caba73475342
+  name: Arduino MKR WiFi 1010
+template:
+  name: Integrated Circuit 2
+  guid: 2cd49d7c-eb1a-4fe4-9104-c45023e3fc95
+properties:
+- name: Header
+  value: Arduino MKR WiFi 1010
+- name: Size
+  value: 40
+- name: Pin1
+  value: GND
+- name: Pin2
+  value:
+- name: Pin3
+  value: SDA
+- name: Pin4
+  value:
+- name: Pin5
+  value: SCL
+- name: Pin6
+  value:
+- name: Pin7
+  value: WK
+- name: Pin8
+  value:
+- name: Pin9
+  value: +5V
+- name: Pin10
+  value:
+- name: Pin11
+  value:
+- name: Pin12
+  value: AREF
+- name: Pin13
+  value: +5V
+- name: Pin14
+  value: A0
+- name: Pin15
+  value: VIN
+- name: Pin16
+  value: A1
+- name: Pin17
+  value: +3V3
+- name: Pin18
+  value: A2
+- name: Pin19
+  value: GND
+- name: Pin20
+  value: A3
+- name: Pin21
+  value: RESET
+- name: Pin22
+  value: A4
+- name: Pin23
+  value: D14
+- name: Pin24
+  value: A5
+- name: Pin25
+  value: D13
+- name: Pin26
+  value: A6
+- name: Pin27
+  value: D12
+- name: Pin28
+  value: D0
+- name: Pin29
+  value: D11
+- name: Pin30
+  value: D1
+- name: Pin31
+  value: D10
+- name: Pin32
+  value: D2
+- name: Pin33
+  value: D9
+- name: Pin34
+  value: D3
+- name: Pin35
+  value: D8
+- name: Pin36
+  value: D4
+- name: Pin37
+  value: D7
+- name: Pin38
+  value: D5
+- name: Pin39
+  value: D6
