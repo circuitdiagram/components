@@ -136,13 +136,25 @@
       <line start="_Middle+14x" end="_Middle+30x" />
     </group>
     
-    <!-- Push to Break -->
-    <group conditions="horizontal,$Type==PushToBreak">
+    <!-- Push to Break (Open) -->
+    <group conditions="horizontal,$Type==PushToBreak,!$Closed">
+      <line start="_Middle-12x+8y" end="_Middle+12x+8y" />
+      <line start="_Middle-5x+2y" end="_Middle+5x+2y" />
+      <line start="_Middle+2y" end="_Middle+8y" />
+    </group>
+    <group conditions="!horizontal,$Type==PushToBreak,!$Closed">
+      <line start="_Middle+8x-12y" end="_Middle+8x+12y" />
+      <line start="_Middle+2x-5y" end="_Middle+2x+5y" />
+      <line start="_Middle+2x" end="_Middle+8x" />
+    </group>
+    
+    <!-- Push to Break (Closed) -->
+    <group conditions="horizontal,$Type==PushToBreak,$Closed">
       <line start="_Middle-12x+5y" end="_Middle+12x+5y" />
       <line start="_Middle-5x-1y" end="_Middle+5x-1y" />
       <line start="_Middle-1y" end="_Middle+5y" />
     </group>
-    <group conditions="!horizontal,$Type==PushToBreak">
+    <group conditions="!horizontal,$Type==PushToBreak,$Closed">
       <line start="_Middle+5x-12y" end="_Middle+5x+12y" />
       <line start="_Middle-1x-5y" end="_Middle-1x+5y" />
       <line start="_Middle-1x" end="_Middle+5x" />
