@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="7 Segment Display (2 Digits)" />
+    <meta name="description" value="Displays decimal numerals and optionally 2 decimal points using 14 + 2 LEDs." />
+    <meta name="version" value="1.0.0" />
+    <meta name="minsize" value="140" />
+    <meta name="author" value="thearcanepowers" />
+    <meta name="guid" value="3f556be9-d4ca-46e2-989b-09e1b9d13502" />
+
+    <flags>
+      <option>MiddleMustAlign</option>
+      <option>HorizontalOnly</option>
+    </flags>
+
+    <property name="Type" type="enum" default="CommonCathode" serialize="t" display="Type">
+      <option>CommonAnode</option>
+      <option>CommonCathode</option>
+    </property>
+
+    <property name="LED_A1"
+              type="bool"
+              default="false"
+              serialize="led_a1"
+              display="LED A1" />
+    <property name="LED_B1"
+              type="bool"
+              default="false"
+              serialize="led_b1"
+              display="LED B1" />
+    <property name="LED_C1"
+              type="bool"
+              default="false"
+              serialize="led_c1"
+              display="LED C1" />
+    <property name="LED_D1"
+              type="bool"
+              default="false"
+              serialize="led_d1"
+              display="LED D1" />
+    <property name="LED_E1"
+              type="bool"
+              default="false"
+              serialize="led_e1"
+              display="LED E1" />
+    <property name="LED_F1"
+              type="bool"
+              default="false"
+              serialize="led_f1"
+              display="LED F1" />
+    <property name="LED_G1"
+              type="bool"
+              default="false"
+              serialize="led_g1"
+              display="LED G1" />
+    <property name="LED_DP1"
+              type="bool"
+              default="false"
+              serialize="led_dp1"
+              display="LED DP1" />
+    <property name="LED_A2"
+              type="bool"
+              default="false"
+              serialize="led_a2"
+              display="LED A2" />
+    <property name="LED_B2"
+              type="bool"
+              default="false"
+              serialize="led_b2"
+              display="LED B2" />
+    <property name="LED_C2"
+              type="bool"
+              default="false"
+              serialize="led_c2"
+              display="LED C2" />
+    <property name="LED_D2"
+              type="bool"
+              default="false"
+              serialize="led_d2"
+              display="LED D2" />
+    <property name="LED_E2"
+              type="bool"
+              default="false"
+              serialize="led_e2"
+              display="LED E2" />
+    <property name="LED_F2"
+              type="bool"
+              default="false"
+              serialize="led_f2"
+              display="LED F2" />
+    <property name="LED_G2"
+              type="bool"
+              default="false"
+              serialize="led_g2"
+              display="LED G2" />
+    <property name="LED_DP2"
+              type="bool"
+              default="false"
+              serialize="led_dp2"
+              display="LED DP2" />
+
+  </declaration>
+  
+  <connections>
+    <!-- top side pins -->_Middle-60x-45y
+    <group>
+      <connection name="a1" start="_Middle-45y-60x" end="_Middle-55y-60x" edge="start" />
+      <connection name="b1" start="_Middle-45y-45x" end="_Middle-55y-45x" edge="start" />
+      <connection name="c1" start="_Middle-45y-30x" end="_Middle-55y-30x" edge="start" />
+      <connection name="d1" start="_Middle-45y-15x" end="_Middle-55y-15x" edge="start" />
+      <connection name="e1" start="_Middle-45y" end="_Middle-55y" edge="start" />
+      <connection name="f1" start="_Middle-45y+15x" end="_Middle-55y+15x" edge="start" />
+      <connection name="g1" start="_Middle-45y+30x" end="_Middle-55y+30x" edge="start" />
+      <connection name="dp1" start="_Middle-45y+45x" end="_Middle-55y+45x" edge="start" />
+      <connection name="com1" start="_Middle-45y+60x" end="_Middle-55y+60x" edge="start" />
+    </group>
+    <!-- bottom side pins -->
+    <group>
+      <connection name="a" start="_Middle+45y-60x" end="_Middle+55y-60x" edge="start" />
+      <connection name="b" start="_Middle+45y-45x" end="_Middle+55y-45x" edge="start" />
+      <connection name="c" start="_Middle+45y-30x" end="_Middle+55y-30x" edge="start" />
+      <connection name="d" start="_Middle+45y-15x" end="_Middle+55y-15x" edge="start" />
+      <connection name="e" start="_Middle+45y" end="_Middle+55y" edge="start" />
+      <connection name="f" start="_Middle+45y+15x" end="_Middle+55y+15x" edge="start" />
+      <connection name="g" start="_Middle+45y+30x" end="_Middle+55y+30x" edge="start" />
+      <connection name="dp" start="_Middle+45y+45x" end="_Middle+55y+45x" edge="start" />
+      <connection name="com" start="_Middle+45y+60x" end="_Middle+55y+60x" edge="start" />
+    </group>
+  </connections>
+  <render>
+    <rect x="_Middle-70" y="_Middle-45" width="140" height="90" />
+
+    <group>
+    <!-- LED segments -->
+      <!-- a1 -->
+      <path start="_End-48x-28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
+      <!-- b1 -->
+      <path start="_End-34x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- c1 -->
+      <path start="_End-34x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- d1 -->
+      <path start="_End-48x+28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
+      <!-- e1 -->
+      <path start="_End-63x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- f1 -->
+      <path start="_End-63x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- g1 -->
+      <path start="_End-49x" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
+      <!-- dp1 -->
+      <ellipse centre="_End-28x+30y" rx="2" ry="2" />
+      <!-- a2 -->
+      <path start="_End-95x-28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
+      <!-- b2 -->
+      <path start="_End-81x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- c2 -->
+      <path start="_End-81x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- d2 -->
+      <path start="_End-95x+28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
+      <!-- e2 -->
+      <path start="_End-109x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- f2 -->
+      <path start="_End-109x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" />
+      <!-- g2 -->
+      <path start="_End-95x" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" />
+      <!-- dp2 -->
+      <ellipse centre="_End-75x+30y" rx="2" ry="2" />
+    </group>
+
+    <!-- LED segment fills -->
+    <group conditions="$LED_A1">
+      <path start="_End-48x-28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_B1">
+      <path start="_End-34x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_C1">
+      <path start="_End-34x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_D1">
+      <path start="_End-48x+28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_E1">
+      <path start="_End-63x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_F1">
+      <path start="_End-63x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_G1">
+      <path start="_End-49x" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_DP1">
+      <ellipse centre="_End-28x+30y" rx="2" ry="2" fill="true" />
+    </group>
+    <group conditions="$LED_A2">
+      <path start="_End-95x-28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_B2">
+      <path start="_End-81x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_C2">
+      <path start="_End-81x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_D2">
+      <path start="_End-95x+28y" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_E2">
+      <path start="_End-109x+14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_F2">
+      <path start="_End-109x-14y" data="m 0,-12 l 4,4 l 0,16 l -4,4 l -4,-4 l 0,-16 l 4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_G2">
+      <path start="_End-95x" data="m -12,0 l 4,-4 l 16,0 l 4,4 l -4,4 l -16,0 l -4,-4 z" fill="true" />
+    </group>
+    <group conditions="$LED_DP2">
+      <ellipse centre="_End-75x+30y" rx="2" ry="2" fill="true" />
+    </group>
+
+    <!-- Top side pins -->
+    <line start="_Middle-60x-45y" end="_Middle-60x-55y" />
+    <text value="a1" x="_Middle-60" y="_Middle-38" align="CentreCentre" />
+    <line start="_Middle-45x-45y" end="_Middle-45x-55y" />
+    <text value="b1" x="_Middle-45" y="_Middle-38" align="CentreCentre" />
+    <line start="_Middle-30x-45y" end="_Middle-30x-55y" />
+    <text value="c1" x="_Middle-30" y="_Middle-38" align="CentreCentre" />
+    <line start="_Middle-15x-45y" end="_Middle-15x-55y" />
+    <text value="d1" x="_Middle-15" y="_Middle-38" align="CentreCentre" />
+    <line start="_Middle-45y" end="_Middle-55y" />
+    <text value="e1" x="_Middle" y="_Middle-38" align="CentreCentre" />
+    <line start="_Middle+15x-45y" end="_Middle+15x-55y" />
+    <text value="f1" x="_Middle+15" y="_Middle-38" align="CentreCentre" />
+    <line start="_Middle+30x-45y" end="_Middle+30x-55y" />
+    <text value="g1" x="_Middle+30" y="_Middle-40" align="CentreCentre" />
+    <line start="_Middle+45x-45y" end="_Middle+45x-55y" />
+    <text value="dp1" x="_Middle+45" y="_Middle-38" align="CentreCentre" />
+    <line start="_Middle+60x-45y" end="_Middle+60x-55y" />
+    <text value="COM1" x="_Middle+60" y="_Middle-28" rotate="270" align="CentreCentre" />
+    <!-- Bottom side pins -->
+    <line start="_Middle-60x+45y" end="_Middle-60x+55y" />
+    <text value="a2" x="_Middle-60" y="_Middle+38" align="CentreCentre" />
+    <line start="_Middle-45x+45y" end="_Middle-45x+55y" />
+    <text value="b2" x="_Middle-45" y="_Middle+38" align="CentreCentre" />
+    <line start="_Middle-30x+45y" end="_Middle-30x+55y" />
+    <text value="c2" x="_Middle-30" y="_Middle+38" align="CentreCentre" />
+    <line start="_Middle-15x+45y" end="_Middle-15x+55y" />
+    <text value="d2" x="_Middle-15" y="_Middle+38" align="CentreCentre" />
+    <line start="_Middle+45y" end="_Middle+55y" />
+    <text value="e2" x="_Middle" y="_Middle+38" align="CentreCentre" />
+    <line start="_Middle+15x+45y" end="_Middle+15x+55y" />
+    <text value="f2" x="_Middle+15" y="_Middle+38" align="CentreCentre" />
+    <line start="_Middle+30x+45y" end="_Middle+30x+55y" />
+    <text value="g2" x="_Middle+30" y="_Middle+36" align="CentreCentre" />
+    <line start="_Middle+45x+45y" end="_Middle+45x+55y" />
+    <text value="dp2" x="_Middle+45" y="_Middle+37" align="CentreCentre" />
+    <line start="_Middle+60x+45y" end="_Middle+60x+55y" />
+    <text value="COM2" x="_Middle+60" y="_Middle+27" rotate="270" align="CentreCentre" />
+
+    <!-- Common anode/cathode -->
+    <group conditions="$Type==CommonAnode">
+      <text value="+" x="_Middle+66" y="_Middle-50" align="CentreRight" />
+      <text value="+" x="_Middle+66" y="_Middle+50" align="CentreRight" />
+    </group>
+    <group conditions="$Type==CommonCathode">
+      <text value="-" x="_Middle+66" y="_Middle-50" align="CentreRight" />
+      <text value="-" x="_Middle+66" y="_Middle+50" align="CentreRight" />
+    </group>
+  </render>
+</component>
