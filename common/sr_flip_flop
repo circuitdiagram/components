@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.2" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="SR Flip-Flop" />
+    <meta name="version" value="1.0.0" />
+    <meta name="description" value="Flip-flop with set and reset input signals. Clock input signal is optional. It can be triggered by raising or failing edge. Master reset (which pulls output low regardless of the state of S and R) is also optional and can be inverted. Such SR flip-flop with inverted master reset is used internally in 555 chip." />
+    <meta name="minsize" value="60" />
+    <meta name="author" value="Ludvik Tesar" />
+    <meta name="additionalinformation" value="http://www.circuit-diagram.org/" />
+    <meta name="guid" value="3458adf4-1551-7a51-634d-abcd6246cd12" />
+    <meta name="implementset" value="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/components/common" />
+    <meta name="implementitem" value="srflipflop" />
+    
+    <property name="Clock" type="enum" default="None" serialize="clock" display="Clock">
+      <option>Rising</option>
+      <option>Falling</option>
+      <option>None</option>
+    </property>
+    <property name="MasterReset" type="enum" default="None" serialize="masterreset" display="Master Reset">
+      <option>Normal</option>
+      <option>Inverted</option>
+      <option>None</option>
+    </property>
+    <property name="Inverted" type="bool" default="true" serialize="inverted" display="Show inverted output" />
+
+    <flags>
+      <option>horizontalonly</option>
+      <option>middlemustalign</option>
+    </flags>
+  </declaration>
+  <connections>
+    <group>
+      <connection name="r" start="_Start-20y" end="_Middle-20x-20y" edge="start" />      
+      <connection name="s" start="_Start+20y" end="_Middle-20x+20y" edge="start" />
+      <connection name="q" start="_Middle+20x-20y" end="_End-20y" edge="end" />
+    </group>
+    <group conditions="$Clock==Rising">
+      <connection name="ck" start="_Start" end="_Middle-20x" edge="start" />
+    </group>
+    <group conditions="$Clock==Falling">
+      <connection name="ck" start="_Start" end="_Middle-28x" edge="start" />
+    </group>
+    <group conditions="$Inverted">
+      <connection name="nq" start="_Middle+20x+20y" end="_End+20y" edge="end" />
+    </group>
+    <group conditions="$MasterReset!=None">
+      <connection name="mr" start="_Start-40y" end="_Middle-20x-40y" edge="start" />      
+    </group>
+  </connections>
+  <render>
+    <!-- Container -->
+    <group conditions="$MasterReset==None">
+      <rect x="_Middle-20" y="_Middle-30" width="40" height="60" />
+    </group>
+    <group conditions="$MasterReset!=None">
+      <rect x="_Middle-20" y="_Middle-50" width="40" height="80" />
+    </group>
+    
+    <!-- Clock's symbol -->
+    <group conditions="$Clock!=None">
+      <path start="_Middle-20x-6y" data="l 6,6 l -6,6" thickness="1" />
+    </group>
+
+    <!-- Common -->
+    <group>
+      <!-- Connection lines for R, S and Q -->
+      <line start="_Start-20y" end="_Middle-20x-20y" />
+      <line start="_Start+20y" end="_Middle-20x+20y" />
+      <line start="_Middle+20x-20y" end="_End-20y" />
+    
+      <!-- Labels -->
+      <text value="R" x="_Middle-17" y="_Middle-20" align="CentreLeft"   size="large" />
+      <text value="S" x="_Middle-17" y="_Middle+20" align="CentreLeft"   size="large" />
+      <text value="Q" x="_Middle+17" y="_Middle-20" align="CentreRight"  size="large" />
+    </group>
+
+    <!-- Clock connection line with optional circle for falling edge -->
+    <group conditions="$Clock==Rising">
+      <line start="_Start" end="_Middle-20x" />
+    </group>
+    <group conditions="$Clock==Falling">
+      <line start="_Start" end="_Middle-28x" />
+      <ellipse centre="_Middle-24x" rx="3" ry="3" thickness="1" />
+    </group>
+
+    <!-- Inverted output -->
+    <group conditions="$Inverted">
+      <!-- Connection line for inverted output -->
+      <line start="_Middle+20x+20y" end="_End+20y" />
+      <!-- Bar above Q character for inverted output -->
+      <line start="_Middle+8x+13.5y" end="_Middle+16x+13.5y" thickness="1" />
+      <!-- Q character for inverted output -->
+      <text value="Q" x="_Middle+17" y="_Middle+20" align="CentreRight" size="large" />
+    </group>
+
+    <!-- Master reset -->
+    <group conditions="$MasterReset==Normal">
+      <!-- Connection line for master reset -->
+      <line start="_Start-40y" end="_Middle-20x-40y" />
+      <!-- MR character(s) for master reset -->
+      <text value="MR"  x="_Middle-17" y="_Middle-40" align="CentreLeft" size="large" />
+    </group>
+    <group conditions="$MasterReset==Inverted">
+      <!-- Connection line for master reset -->
+      <line start="_Start-40y" end="_Middle-28x-40y" />
+      <!-- Invertion circle at connection line -->
+      <ellipse centre="_Middle-24x-40y" rx="3" ry="3" thickness="1" />
+      <!-- Bar above MR character(s) for master reset inversion -->
+      <line start="_Middle-16x-46.5y" end="_Middle-1x-46.5y" thickness="1" />
+      <!-- MR character(s) for master reset -->
+      <text value="MR"  x="_Middle-17" y="_Middle-40" align="CentreLeft" size="large" />
+    </group>
+
+  </render>
+</component>
