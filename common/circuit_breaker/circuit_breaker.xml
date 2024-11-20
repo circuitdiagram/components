@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Circuit Breaker" />
+    <meta name="guid" value="dab6d52b-a32b-49b0-bc40-3cda487418aa" />
+    <meta name="minsize" value="50" />
+    <meta name="canresize" value="true" />
+    <meta name="canflip" value="true" />
+  </declaration>
+  <connections>
+    <connection start="_Start" end="_End" edge="both" />
+  </connections>
+  <render>
+      <ellipse centre="_Start-15x" rx="5" ry="5" />
+      <path start="_Start-10x" data="M 0 0 L 12 0" />
+      <path start="_Start+7x-7y" data="m -6 0 a 15 15 180 0 1 51 0 " />
+      <path start="_End-10x" data="M 0 0 L 12 0" />
+      <ellipse centre="_End+7x" rx="5" ry="5" />
+  </render>
+</component>
