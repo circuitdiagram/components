@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name" value="Gas Sensor" />
+    <meta name="minsize" value="60" />
+    <meta name="canresize" value="true" />
+    <meta name="author" value="chauhannaman98" />
+    <meta name="guid" value="8f764035-18c6-4421-ac7f-5cbd327d4e78" />
+
+    </declaration>
+
+  <connections>
+    <group>
+      <connection name="VCC" start="_Start-30y" end="_End-50x-30y" edge="start" />
+      <connection name="GND" start="_Start-10y" end="_End-50x-10y" edge="start" />
+      <connection name="A0" start="_Start+10y" end="_End-50x+10y" edge="start" />
+      <connection name="D0" start="_Start+30y" end="_End-50x+30y" edge="start" />
+    </group>
+  </connections>
+
+  <render>
+    <group>
+      <!-- pins -->
+      <line start="_Start-30y" end="_End-50x-30y" />
+      <line start="_Start-10y" end="_End-50x-10y" />
+      <line start="_Start+10y" end="_End-50x+10y" />
+      <line start="_Start+30y" end="_End-50x+30y" />
+      <!-- Labels -->
+      <text value="VCC" x="_End-30" y="_End-30" align="CentreCentre" />
+      <text value="GND" x="_End-30" y="_End-10" align="CentreCentre" />
+      <text value="A0" x="_End-30" y="_End+10" align="CentreCentre" />
+      <text value="D0" x="_End-30" y="_End+30" align="CentreCentre" />
+      <!-- Sensor body -->
+      <rect x="_End-50" y="_End-45" width="40" height="90" />
+      <!-- Gas inlet -->
+      <rect x="_End-10" y="_End-35" width="10" height="70" />
+      <line start="_End-10x-30y" end="_End-30y" />
+      <line start="_End-10x-25y" end="_End-25y" />
+      <line start="_End-10x-20y" end="_End-20y" />
+      <line start="_End-10x-15y" end="_End-15y" />
+      <line start="_End-10x-10y" end="_End-10y" />
+      <line start="_End-10x-5y" end="_End-5y" />
+      <line start="_End-10x" end="_End" />
+      <line start="_End-10x+5y" end="_End+5y" />
+      <line start="_End-10x+10y" end="_End+10y" />
+      <line start="_End-10x+15y" end="_End+15y" />
+      <line start="_End-10x+20y" end="_End+20y" />
+      <line start="_End-10x+25y" end="_End+25y" />
+      <line start="_End-10x+30y" end="_End+30y" />
+    </group>
+  </render>
+  
+</component>
