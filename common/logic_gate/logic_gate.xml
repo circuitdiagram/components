@@ -2,7 +2,7 @@
 <component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
   <declaration>
     <meta name="name" value="Logic Gate" />
-    <meta name="version" value="1.1.0" />
+    <meta name="version" value="1.1.1" />
     <meta name="minsize" value="70" />
     <meta name="canflip" value="true" />
     <meta name="author" value="Circuit Diagram" />
@@ -99,7 +99,7 @@
     <!-- XOR -->
     <group autorotate="HorizontalToVertical" conditions="$Type==XOR">
       <path start="_Middle-26x-10y" data="m 0,-10 q 20,20 0,40" />
-      <path start="_Middle-26x-10y" data="m 8,-10 q 20,20 0,40 q 35,-5 50,-20 q -15,-15 -50,-20 z m 51,20 a 2,2 0 0 1 6,0 a 2,2 0 0 1 -6,0 z" />
+      <path start="_Middle-26x-10y" data="m 8,-10 q 20,20 0,40 q 35,-5 50,-20 q -15,-15 -50,-20 z" />
       <line start="_Middle+30x" end="_End" />
     </group>
 
